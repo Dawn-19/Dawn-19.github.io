@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>更新计划 on Dawn-19</title>
+        <link>https://Dawn-19.github.io/categories/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/</link>
+        <description>Recent content in 更新计划 on Dawn-19</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Dawn-19</copyright>
+        <lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>更新计划1.0</title>
+        <link>https://Dawn-19.github.io/p/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/</link>
+        <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/</guid>
+        <description>&lt;h1 id=&#34;更新计划&#34;&gt;更新计划
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Mathematica
+&lt;ul&gt;
+&lt;li&gt;xAct 推导爱因斯坦方程&lt;/li&gt;
+&lt;li&gt;xAct 推导施瓦西解，附施瓦西度规手算过程&lt;/li&gt;
+&lt;li&gt;xAct 验证科尔纽曼度规&lt;/li&gt;
+&lt;li&gt;xAct 测地线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;学习笔记
+&lt;ul&gt;
+&lt;li&gt;场论——二次量子化&lt;/li&gt;
+&lt;li&gt;量子力学——基本假设&lt;/li&gt;
+&lt;li&gt;量子力学——WKB近似&lt;/li&gt;
+&lt;li&gt;量子力学——表象变换&lt;/li&gt;
+&lt;li&gt;电动力学——Maxwell方程组&lt;/li&gt;
+&lt;li&gt;电动力学——双生子佯谬&lt;/li&gt;
+&lt;li&gt;统计物理——自由电子&lt;/li&gt;
+&lt;li&gt;统计物理——光子气体&lt;/li&gt;
+&lt;li&gt;统计物理——固体热容&lt;/li&gt;
+&lt;li&gt;经典力学——三体运动+MATLAB代码&lt;/li&gt;
+&lt;li&gt;经典力学——Ostrogradsky理论&lt;/li&gt;
+&lt;li&gt;经典力学——诺特定理&lt;/li&gt;
+&lt;li&gt;机器学习——概率论基础&lt;/li&gt;
+&lt;li&gt;机器学习——线性模型&lt;/li&gt;
+&lt;li&gt;机器学习——卷积&lt;/li&gt;
+&lt;li&gt;机器学习——交叉熵&lt;/li&gt;
+&lt;li&gt;机器学习——马尔可夫链&lt;/li&gt;
+&lt;li&gt;机器学习——玻尔兹曼机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;论文笔记
+&lt;ul&gt;
+&lt;li&gt;2003.01202-Genesis strong coupling&lt;/li&gt;
+&lt;li&gt;2412.03977-Bounce stability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;感想
+&lt;ul&gt;
+&lt;li&gt;《物理夜航船》读后感&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;u&gt;用hugo上传文章的代码&lt;/u&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...\DevBlog&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; hugo new content post/{文件夹名}/index.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...\DevBlog&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
