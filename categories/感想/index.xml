@@ -8,12 +8,12 @@
         <language>zh-cn</language>
         <copyright>Dawn-19</copyright>
         <lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E6%84%9F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>*物理夜航船*——读后感</title>
+        <title>物理夜航船——读后感</title>
         <link>https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/</link>
         <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
         
         <guid>https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/</guid>
-        <description>&lt;img src="https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/wuli.jpg" alt="Featured image of post *物理夜航船*——读后感" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/thinking.png" alt="Featured image of post 物理夜航船——读后感" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
 &lt;/h1&gt;&lt;p&gt;早在大二之时，我就听闻 A.Zee 著作&lt;em&gt;Fly By Night Physics&lt;/em&gt;，但由于英文水平实在糟糕，同时很多物理图像完全没有建立^1，便没有读下去的想法，只是知道此书及其善于各种技巧，用各种花里胡哨的手法得到一个 “大致正确” 的结果。然而时光荏苒，不知不觉间我的本科物理学习生活就要结束了。&lt;em&gt;Fly By Night Physics&lt;/em&gt;也已经有了中文版本《物理夜航船》，我也知道了 A.Zee 原来叫徐一鸿。当然，经过这几年解各式各样的薛定谔方程，麦克斯韦方程组，爱因斯坦方程等方程和使用各种近似如绝热近似，WKB 近似等以及强大的 Mathematica 和 Matlab 之后，从前觉得各种高深的 “拉格朗日”，“哈密顿”，“量子隧穿”，“弯曲时空”，“宇宙奇点” 等等等等名词已经对其完全祛魅。此外，我也不想自己的物理之旅止步于此，于是在推免研究生的过程中毅然决然走向了理论物理的道路。在这样的背景下，我觉得有必要读一读《物理夜航船》，毕竟在物理学中深刻的思想总是朴素的，我想看看如何用朴素的量纲分析得到教材中绝大部分的结果。&lt;/p&gt;
 &lt;p&gt;初看此书目录，最吸引我的还是第四章 —— 普朗克给我们以单位：黑洞辐射和爱因斯坦引力，我想看看广义相对论和量子力学如何用简单的方法就证明其不可能兼容。毕竟量子场论里又是做了各种量子化，又是引入 Klein - Gorden 方程，又是一堆计算才展示出负能解，负几率和因果性被破坏这三个狭义相对论和量子力学的矛盾。由此，我决定后面的内容主要写一写我学习完《物理夜航船》第四章的想法，首先整理一下自然单位制的来源，然后简单地通过量子力学的德布罗意波 $\lambda$ 和广义相对论里的史瓦西半径 $R_S$ 来简单证明量子力学与广义相对论的不可调和之处。&lt;/p&gt;
 &lt;h1 id=&#34;自然单位制--物理学的普适常数&#34;&gt;自然单位制 —— 物理学的普适常数
@@ -27,6 +27,18 @@
 &lt;h1 id=&#34;总结与感想&#34;&gt;总结与感想
 &lt;/h1&gt;&lt;p&gt;不得不承认徐一鸿老师的《物理夜航船》是一本十分有趣的 “物理技巧” 书，但事实上在没有足够清晰的物理图像下是很难领会到夜航船的精神所在。正是如此，这本书的受众才是 “高年级” 大学生。事实上，如果没有经过系统的基本量子力学训练，单纯理解德布罗意波$\lambda$作为特征长度是很困难的，这是因为其对一些基本势能的波函数图像没有把握，这是需要经过一些计算训练才能获得的。同样缺少广义相对论的学习，也难以理解把史瓦西黑洞作为特征长度，这是因为广义相对论在强引力条件下的作用才较为明显，而黑洞视界面附近恰好提供这样的环境，这也是要经过一些繁杂计算才能体会到的 。[^3]: 只是对于我这种普通学生而言。&lt;/p&gt;
 &lt;p&gt;综上所述，夜航船技术的精神虽然有趣且实用，但要真正对其有所体会还是在建立足够扎实的基本物理图像上。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/wuli.jpg&#34;
+	width=&#34;785&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/wuli_hu_a1334f7fc5f1824c.jpg 480w, https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/wuli_hu_7e81c9d167f64e8e.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;331px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;徐一鸿. 物理夜航船. 世界图书出版公司, 2024. 平装.&lt;/p&gt;&lt;/blockquote&gt;
 </description>

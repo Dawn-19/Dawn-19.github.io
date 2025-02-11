@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Dawn-19</copyright>
-        <lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>记录我的第一篇blog</title>
         <link>https://Dawn-19.github.io/p/%E8%AE%B0%E5%BD%95%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/</link>
         <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
@@ -24,7 +24,7 @@
         <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
         
         <guid>https://Dawn-19.github.io/p/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/</guid>
-        <description>&lt;h1 id=&#34;更新计划&#34;&gt;更新计划
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/book.jpg" alt="Featured image of post 更新计划1.0" /&gt;&lt;h1 id=&#34;更新计划&#34;&gt;更新计划
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;Mathematica
 &lt;ul&gt;
@@ -82,27 +82,166 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>*物理夜航船*——读后感</title>
-        <link>https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/</link>
-        <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+        <title>学习笔记-卷积(convolution)</title>
+        <link>https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/</link>
+        <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/</guid>
-        <description>&lt;img src="https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/wuli.jpg" alt="Featured image of post *物理夜航船*——读后感" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
-&lt;/h1&gt;&lt;p&gt;早在大二之时，我就听闻 A.Zee 著作&lt;em&gt;Fly By Night Physics&lt;/em&gt;，但由于英文水平实在糟糕，同时很多物理图像完全没有建立^1，便没有读下去的想法，只是知道此书及其善于各种技巧，用各种花里胡哨的手法得到一个 “大致正确” 的结果。然而时光荏苒，不知不觉间我的本科物理学习生活就要结束了。&lt;em&gt;Fly By Night Physics&lt;/em&gt;也已经有了中文版本《物理夜航船》，我也知道了 A.Zee 原来叫徐一鸿。当然，经过这几年解各式各样的薛定谔方程，麦克斯韦方程组，爱因斯坦方程等方程和使用各种近似如绝热近似，WKB 近似等以及强大的 Mathematica 和 Matlab 之后，从前觉得各种高深的 “拉格朗日”，“哈密顿”，“量子隧穿”，“弯曲时空”，“宇宙奇点” 等等等等名词已经对其完全祛魅。此外，我也不想自己的物理之旅止步于此，于是在推免研究生的过程中毅然决然走向了理论物理的道路。在这样的背景下，我觉得有必要读一读《物理夜航船》，毕竟在物理学中深刻的思想总是朴素的，我想看看如何用朴素的量纲分析得到教材中绝大部分的结果。&lt;/p&gt;
-&lt;p&gt;初看此书目录，最吸引我的还是第四章 —— 普朗克给我们以单位：黑洞辐射和爱因斯坦引力，我想看看广义相对论和量子力学如何用简单的方法就证明其不可能兼容。毕竟量子场论里又是做了各种量子化，又是引入 Klein - Gorden 方程，又是一堆计算才展示出负能解，负几率和因果性被破坏这三个狭义相对论和量子力学的矛盾。由此，我决定后面的内容主要写一写我学习完《物理夜航船》第四章的想法，首先整理一下自然单位制的来源，然后简单地通过量子力学的德布罗意波 $\lambda$ 和广义相对论里的史瓦西半径 $R_S$ 来简单证明量子力学与广义相对论的不可调和之处。&lt;/p&gt;
-&lt;h1 id=&#34;自然单位制--物理学的普适常数&#34;&gt;自然单位制 —— 物理学的普适常数
-&lt;/h1&gt;&lt;p&gt;在现实生活中，一个有意义的物理量肯定是有对应的单位的，如位移，速度，电荷等等。具有相同的物理含义必须使用同一个单位才有比较的意义，如1cm 和1光年都是，但是它们没有相同的单位，两个&amp;quot;1&amp;quot;的比较是毫无意义的。不过这就有个 bug，平时所见的单位如公里，摄氏度，年，千克等等都是人为指定的，但是自然界的规律可不是人定的，那么就会很自然想到，有没有一种自然单位制呢？&lt;/p&gt;
-&lt;p&gt;自然单位制既然由大自然决定，同时基本单位肯定是不变的，那么最容易想到的就是把光速$c$作为一个基本单位。这样的话由于$c = 1$那么长度和时间的量纲都相同了$[\mathbf{L}]=[\mathbf{T}]$。此外，由质能方程 $E = mc^2$，质量和能量也就成了一回事情。&lt;/p&gt;
-&lt;p&gt;虽然我们生活的现实尺度很难理解微观的 “量子效应”，但是宇宙没有义务被我们理解，大自然也不需要区分所谓的 “经典” 与 “量子”，因此 $\hbar = 1$​也能成为一个基本单位。类似的，在宏观上万有引力的作用是巨大的，故可以用牛顿引力常数 $G = 1$​ 作为第三个基本单位。这样，我们就建立了$c = \hbar = G = 1$​的自然单位制，因为所有的物理量都可以和能量建立关系，因此我们仅仅需要质量和电荷就能讨论一切的物理量，不过在本文接下来的讨论范围甚至不需要电荷。&lt;/p&gt;
-&lt;h1 id=&#34;量子力学与广义相对论的不可调和&#34;&gt;量子力学与广义相对论的不可调和
-&lt;/h1&gt;&lt;p&gt;在量子力学中，普朗克常数 $\hbar$ 起着十分关键的作用，同时根据 $E=\hbar\omega$ 我们可以很快得到$[\hbar] = [\mathbf{ML}]$。这里只需知道动能表达式 $ E_k = \frac{1}{2}mv^2$ 就能得到能量量纲为 $[\mathbf{ML^2T^{-2}}] = [\mathbf{M}]$，由于采用自然单位制 $c = 1$ 所以 $[\mathbf{L}]=[\mathbf{T}]$。那么就有 $[\hbar] = [E/\omega] = [\mathbf{MT}]=[\mathbf{ML}]$。&lt;/p&gt;
-&lt;p&gt;在弱场近似下，广义相对论总是要回到牛顿引力，这也代表着牛顿引力常数$G$在广义相对论中也起着很重要的作用。由$[GM/r^2]$为加速度的量纲，那么就有$[GM]=[\mathbf{L^3T^{-2}]=[L]}$，故牛顿引力常数的量纲为$\mathbf{[L/M]}$。将$\hbar$与 $G$ 对比即可发现$[\mathbf{M}]$在两个常数的位置不同，可以据此简单分析出量子力学与广义相对论的不可调和性质。&lt;/p&gt;
-&lt;p&gt;量子力学的理论框架下，一个物体的特征长度由德布罗意波表征。那么对于质量为$m$的物体，其德布罗意波约为$\lambda \simeq \hbar/E\simeq \hbar/m$。在广义相对论中，可以认为物体的特征长度由史瓦西半径表征，那么对于$m$的史瓦西半径为$R_S = 2Gm$。矛盾就此而出，可见，对于越大的$m$，其德布罗意波越小，而史瓦西半径越大，自然就显示出两种理论的不可调和性。从量纲的角度来看，由于特征长度都正比于两个普适常数，而$\hbar$和$G$有不同的质量量纲，这就导致了上述矛盾的出现。&lt;/p&gt;
-&lt;h1 id=&#34;总结与感想&#34;&gt;总结与感想
-&lt;/h1&gt;&lt;p&gt;不得不承认徐一鸿老师的《物理夜航船》是一本十分有趣的 “物理技巧” 书，但事实上在没有足够清晰的物理图像下是很难领会到夜航船的精神所在。正是如此，这本书的受众才是 “高年级” 大学生。事实上，如果没有经过系统的基本量子力学训练，单纯理解德布罗意波$\lambda$作为特征长度是很困难的，这是因为其对一些基本势能的波函数图像没有把握，这是需要经过一些计算训练才能获得的。同样缺少广义相对论的学习，也难以理解把史瓦西黑洞作为特征长度，这是因为广义相对论在强引力条件下的作用才较为明显，而黑洞视界面附近恰好提供这样的环境，这也是要经过一些繁杂计算才能体会到的 。[^3]: 只是对于我这种普通学生而言。&lt;/p&gt;
-&lt;p&gt;综上所述，夜航船技术的精神虽然有趣且实用，但要真正对其有所体会还是在建立足够扎实的基本物理图像上。&lt;/p&gt;
+        <guid>https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/sea.png" alt="Featured image of post 学习笔记-卷积(convolution)" /&gt;&lt;h1 id=&#34;卷积convolution&#34;&gt;卷积(Convolution)
+&lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;第一次听说“卷积”这个词还是在大一时，在完成Matlab的一道&lt;strong&gt;设计扫雷游戏&lt;/strong&gt;的一道课后题，许多同学用所谓的卷积方法，当时的我对此完全不理解，只是自己设计了一套循环来做计算。后来学习了一点卷积神经网络的知识，发现自己用的方法和所谓的卷积其实一回事情。然而，在大二学习数学物理方法后，经过繁多的计算训练后，当时的我却迟迟无法把课本里的卷积和神经网络中的卷积联系起来，这是一件很遗憾的事情。现在随着AI4S的火热，我也打算重新系统性地学习一遍机器学习的有关知识，故有了这篇note，也弥补了当时的遗憾。&lt;/p&gt;
+&lt;h2 id=&#34;数学物理方法中的卷积连续型卷积&#34;&gt;数学物理方法中的卷积——连续型卷积
+&lt;/h2&gt;&lt;p&gt;根据wiki百科，卷积是通过两个函数$f$和$g$生成第三个函数的一种数学算子，表征函数$f$与经过翻转和平移的$g$的乘积函数所围成的曲边梯形的面积。简单来说就是对于定义在实数域$\mathbb{R}$的两个可积函数$ f(t) $与$ g(t) $的一种运算：&lt;/p&gt;
+$$
+s(t) = (f*g)(t) = f(t)*g(t) = \int_{-\infty}^{\infty} f(\tau)g(t-\tau)\mathrm{d}\tau ,
+$$&lt;p&gt;一般可以认为$ g(t) $是卷积核，它随着自变量移动。下图非常直观地解释了这种运算，如$ f*g $是蓝色的$ f $不移动，红色的$ g $一直在往右边走。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution.png&#34;
+	width=&#34;1280&#34;
+	height=&#34;960&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution_hu_f32ff4fb3e9ae629.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution_hu_3d8eb1d8d9a82307.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;undefined&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;此外，卷积具有如下性质&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;linearity:&lt;/strong&gt; $(a_1 f(t) + a_2 f(t))*g(t) = a_1 f(t)*g(t)+a_2f(t)*g(t)$.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;time invariance:&lt;/strong&gt;  $f(t-T) * g(t-T) = (f*g)(t-2T), f(t) g(t-T) = (f * g)(t-T)$ .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在频域上的联系：对于$ f(t) $和$ g(t) $有傅里叶变换&lt;/p&gt;
+$$
+\begin{split}
+F(\omega) = \mathcal{F}\left[f(t)\right] = \int_{-\infty}^\infty f(t)e^{-i\omega t}\mathrm{d}t  ,\\
+G(\omega) = \mathcal{F}\left[g(t)\right] = \int_{-\infty}^\infty g(t)e^{-i\omega t}\mathrm{d}t  ,
+\end{split}
+$$&lt;p&gt;有如下关系&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$\mathcal{F}[f(t)*g(t)] = F(\omega)G(\omega) .$&lt;/li&gt;
+&lt;li&gt;$\mathcal{F}[f(t) \cdot g(t)] = F(\omega)*G(\omega) .$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;多变量卷积公式：&lt;/p&gt;
+$$
+\begin{aligned}
+f(t_1,t_2,...,t_n)*g(t_1,t_2,...,t_n) &amp;= \iint\cdots\int_{\mathbb{R}^n}f(\tau_1,\tau_2,...,\tau_n)g(t_1-\tau_1,t_2-\tau_2,...,t_n-\tau_n)\mathrm{d}\tau_1\mathrm{d}\tau_2\cdots\mathrm{d}\tau_n\\
+&amp; = \int_{\mathbb{R}^n}\mathrm{d}^n \tau f(\tau)g(t-\tau) .
+\end{aligned}
+$$&lt;h2 id=&#34;神经网络中的卷积离散型卷积&#34;&gt;神经网络中的卷积——离散型卷积
+&lt;/h2&gt;&lt;h3 id=&#34;一维离散卷积&#34;&gt;一维离散卷积
+&lt;/h3&gt;&lt;p&gt;对于离散数据，如下为两种等价的记号&lt;/p&gt;
+$$
+\left\{\begin{matrix}
+ x:  x_0,x_1 , ..., x_{N-1}
+\\
+\omega:  \omega_0, \omega_1, ..., \omega_{M-1}
+\end{matrix}\right.
+\Leftrightarrow 
+\left\{\begin{matrix}
+ x[n]: n= 0,1 , ..., N-1
+\\
+\omega[n]: n= 0,1 , ..., M-1
+\end{matrix}\right.  .
+$$&lt;p&gt;一般$x$为$N-1$个输入数据，$\omega$为卷积核，其长度为$M$，卷积的过程与连续的情况类似，这里$\omega$仍然是移动的，卷积的计算公式为&lt;/p&gt;
+$$
+s[n] = \sum_{m=\max(0,n-N)}^{\min(n,M)} x[m]\cdot\omega[n-m] ,\quad n=0.1,...,M+N-2
+$$$$
+\begin{split}
+s_0 &amp;= \omega_0 x_0\\
+s_1 &amp;= \omega_0 x_1 + \omega_1 x_0 \\
+s_2 &amp;= \omega_0 x_2 + \omega_1 x_1 + \omega_2 x_0\\
+s_3 &amp;= \omega_0 x_3 + \omega_1 x_2 + \omega_2 x_1 \\
+s_4 &amp;= \omega_1 x_3 + \omega_2 x_2\\
+s_5 &amp;= \omega_2 x_3
+\end{split}
+$$&lt;p&gt;也可以如下图理解&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution2.jpg&#34;
+	width=&#34;1650&#34;
+	height=&#34;406&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution2_hu_a2454d1258bba4ae.jpg 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution2_hu_a5d3239f60fd3a50.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;406&#34;
+		data-flex-basis=&#34;975px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;此外，还可以将其写作矩阵形式$(N=4, M=3)$:&lt;/p&gt;
+$$
+\mathbf{s} = \begin{bmatrix}
+s_0 &amp; s_1 &amp; \cdots &amp; s_k
+\end{bmatrix} = \begin{bmatrix}
+x_0 &amp; x_1 &amp; \cdots &amp; x_k
+\end{bmatrix} \cdot
+\begin{bmatrix}
+ \omega_0 &amp;  \omega_1 &amp;  \omega_2 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp;  \omega_0 &amp;  \omega_1 &amp;  \omega_2 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp;  \omega_0 &amp;  \omega_1 &amp;  \omega_2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp;  \omega_0 &amp;  \omega_1 &amp;  \omega_2   
+\end{bmatrix} = \mathbf{x} \cdot \mathbf{\omega}
+$$&lt;p&gt;对于深度学习，数据有一个深度的维度，值得注意的是输入数据与卷积核的深度必须是相同的，前面的例子深度都是1，下图是一个深度为3的例子，其中$K$代表卷积核，数据变换格式：[样本个数, 深度，数据个数]，即有&lt;/p&gt;
+$$
+[x]*[K]\to [y] , \Rightarrow[1,3,3]*[1,3,3]\to [1,1,3] ,
+$$&lt;p&gt;第一个$[1,1,3]$代表输入数据，第二个$[1,3,3]$代表卷积核，第三个$[1,1,3]$代表输出数据。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution3.jpg&#34;
+	width=&#34;935&#34;
+	height=&#34;459&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution3_hu_11378160284d2406.jpg 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution3_hu_64d5b2d906e060bd.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;203&#34;
+		data-flex-basis=&#34;488px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;此外，还有&lt;strong&gt;多个卷积核&lt;/strong&gt;的情况，实际就是把输入数据与每一个卷积核做卷积，再将卷积的结果在&lt;strong&gt;深度方向&lt;/strong&gt;上连接得到一个输出张量，如下图所示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution4.jpg&#34;
+	width=&#34;957&#34;
+	height=&#34;587&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution4_hu_6d396b1efee774e7.jpg 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution4_hu_4ddf65e3e1b7e3c6.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;163&#34;
+		data-flex-basis=&#34;391px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;其数据格式变换为：$[1,3,3]*[2,3,2]\to [1,2,3] ,$ 这里由于卷积核2的存在，其结果放在输出数据的深度方向上与卷积核1的结果连接起来。&lt;/p&gt;
+&lt;h3 id=&#34;二维离散卷积&#34;&gt;二维离散卷积
+&lt;/h3&gt;&lt;p&gt;对于二维的情况，原来的数据格式 [数据维度, 深度，数据个数] 需要变为 [样本个数, 深度，数据长度，数据宽度]，也就是数据个数这一栏需要加一个维度，其过程如下图所示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/Conv2d_0p_1s_1inCh.gif&#34;
+	width=&#34;1246&#34;
+	height=&#34;484&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/Conv2d_0p_1s_1inCh_hu_5d09fca31c46d41a.gif 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/Conv2d_0p_1s_1inCh_hu_874ce3fc83db2f2e.gif 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;257&#34;
+		data-flex-basis=&#34;617px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;上图的数据格式变换为：&lt;/p&gt;
+$$
+[1,1,5,5]*[1,1,3,3]\to [1,1,3,3]
+$$&lt;p&gt;对于增加深度维度，以及多个卷积核的运算过程和一维离散的情况完全相同，这里不再赘述。&lt;/p&gt;
+&lt;p&gt;对于开头提到的扫雷游戏的设计其实就是一个二维卷积，把整个扫雷的地图变成矩阵，同时最外圈用0拓展，每一个位置就是矩阵中对应的位置，那么只需要把有雷的位置设置为1，我们称这个矩阵为地图矩阵。通过一个$3\times3$的除了中间位置是0其它全是1的矩阵作为卷积核，那么把地图矩阵和卷积核作卷积即可得到对应的结果，即地图上每个位置周围的雷的个数。&lt;/p&gt;
+&lt;p&gt;当然，卷积可不仅仅用在扫雷上如此简单，其在深度学习的图像处理发挥很大的作用，例如在深度学习中，卷积神经网络（CNN）利用卷积操作来提取图像的特征。与扫雷游戏中的简单卷积不同，深度学习中的卷积核通常是可学习的参数，通过训练数据来自动调整，以捕捉图像中的有用特征。这些特征可以用于各种任务，如图像分类、目标检测和图像分割。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考：&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;徐一鸿. 物理夜航船. 世界图书出版公司, 2024. 平装.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://slides.com/iphysresearch/gwda_coding_4_cnn#/5/3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://slides.com/iphysresearch/gwda_coding_4_cnn#/5/3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://coolgpu.github.io/coolgpu_blog/github/pages/2020/10/04/convolution.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://coolgpu.github.io/coolgpu_blog/github/pages/2020/10/04/convolution.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Convolution&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://en.wikipedia.org/wiki/Convolution&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         <item>
@@ -166,20 +305,20 @@ of
 nonrelativistic sources is actually of order $G_{eff}^{-1/2}\propto t^{-\alpha-\delta/2} $. we need $E_{strong}\gg E_{class}$, and we can obtain a stronger bound&lt;/p&gt;
 $$
 \alpha+\delta/2&lt;1
-$$&lt;p&gt;If $\alpha+\delta/2=0$, the $G_{eff}$ degrade to constant, that is apparenly satisfied the requirement.&lt;/p&gt;
+$$&lt;p&gt;If $\alpha+\delta/2=0$, the $G_{eff}$ degrade to constant, that is apparently satisfied the requirement.&lt;/p&gt;
 &lt;h2 id=&#34;third-order-analysis-only-tensor&#34;&gt;Third-order analysis (Only tensor)
 &lt;/h2&gt;&lt;p&gt;The Lagrangian involving three tensors was derived in Ref[ 	arXiv:1108.3513]:&lt;/p&gt;
 $$
 \mathcal{L}_{h h h}=a^{3}\left[\frac{\mu}{12 N^{3}} \dot{h}_{i j} \dot{h}_{j k} \dot{h}_{k i}+\frac{\mathcal{F}_{T}}{4 a^{2}}\left(h_{i k} h_{j l}-\frac{1}{2} h_{i j} h_{k l}\right) h_{i j, k l}\right],
 $$&lt;p&gt;In the genesis model $G_5=0 \Rightarrow\mu=\dot{\phi}XG_{5X} = 0$, so only one term&lt;/p&gt;
 $$
- \frac{\mathcal{F}_{T}}{4 a^{2}}\left(h_{i k} h_{j l}-\frac{1}{2} h_{i j} h_{k l}\right) h_{i j, k l} 
+\frac{\mathcal{F}_{T}}{4 a^{2}}\left(h_{i k} h_{j l}-\frac{1}{2} h_{i j} h_{k l}\right) h_{i j, k l}
 $$&lt;p&gt;
-is need to analyse.&lt;/p&gt;
+is need to analysis.&lt;/p&gt;
 &lt;p&gt;We can introduce canonically normalized tensor perturbation&lt;/p&gt;
 $$
  q_{ij} = \sqrt{\mathcal{G}_T} h_{ij}\propto (-t)^{-\alpha} h_{ij} ,
-$$&lt;p&gt;&lt;br&gt;
+$$&lt;p&gt;
 the term can be schematically written as&lt;/p&gt;
 $$
 \mathbb{L}_{h h h} \propto \mathcal{F}_{T} \cdot\left(2 \mathcal{G}_{T}\right)^{-3 / 2} \cdot q^{3} \cdot\left(\partial_{t}\right)^{0} \cdot(\partial)^{2} .
@@ -203,6 +342,42 @@ $$&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;参考：arXiv:2003.01202&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>物理夜航船——读后感</title>
+        <link>https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/</link>
+        <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/thinking.png" alt="Featured image of post 物理夜航船——读后感" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
+&lt;/h1&gt;&lt;p&gt;早在大二之时，我就听闻 A.Zee 著作&lt;em&gt;Fly By Night Physics&lt;/em&gt;，但由于英文水平实在糟糕，同时很多物理图像完全没有建立^1，便没有读下去的想法，只是知道此书及其善于各种技巧，用各种花里胡哨的手法得到一个 “大致正确” 的结果。然而时光荏苒，不知不觉间我的本科物理学习生活就要结束了。&lt;em&gt;Fly By Night Physics&lt;/em&gt;也已经有了中文版本《物理夜航船》，我也知道了 A.Zee 原来叫徐一鸿。当然，经过这几年解各式各样的薛定谔方程，麦克斯韦方程组，爱因斯坦方程等方程和使用各种近似如绝热近似，WKB 近似等以及强大的 Mathematica 和 Matlab 之后，从前觉得各种高深的 “拉格朗日”，“哈密顿”，“量子隧穿”，“弯曲时空”，“宇宙奇点” 等等等等名词已经对其完全祛魅。此外，我也不想自己的物理之旅止步于此，于是在推免研究生的过程中毅然决然走向了理论物理的道路。在这样的背景下，我觉得有必要读一读《物理夜航船》，毕竟在物理学中深刻的思想总是朴素的，我想看看如何用朴素的量纲分析得到教材中绝大部分的结果。&lt;/p&gt;
+&lt;p&gt;初看此书目录，最吸引我的还是第四章 —— 普朗克给我们以单位：黑洞辐射和爱因斯坦引力，我想看看广义相对论和量子力学如何用简单的方法就证明其不可能兼容。毕竟量子场论里又是做了各种量子化，又是引入 Klein - Gorden 方程，又是一堆计算才展示出负能解，负几率和因果性被破坏这三个狭义相对论和量子力学的矛盾。由此，我决定后面的内容主要写一写我学习完《物理夜航船》第四章的想法，首先整理一下自然单位制的来源，然后简单地通过量子力学的德布罗意波 $\lambda$ 和广义相对论里的史瓦西半径 $R_S$ 来简单证明量子力学与广义相对论的不可调和之处。&lt;/p&gt;
+&lt;h1 id=&#34;自然单位制--物理学的普适常数&#34;&gt;自然单位制 —— 物理学的普适常数
+&lt;/h1&gt;&lt;p&gt;在现实生活中，一个有意义的物理量肯定是有对应的单位的，如位移，速度，电荷等等。具有相同的物理含义必须使用同一个单位才有比较的意义，如1cm 和1光年都是，但是它们没有相同的单位，两个&amp;quot;1&amp;quot;的比较是毫无意义的。不过这就有个 bug，平时所见的单位如公里，摄氏度，年，千克等等都是人为指定的，但是自然界的规律可不是人定的，那么就会很自然想到，有没有一种自然单位制呢？&lt;/p&gt;
+&lt;p&gt;自然单位制既然由大自然决定，同时基本单位肯定是不变的，那么最容易想到的就是把光速$c$作为一个基本单位。这样的话由于$c = 1$那么长度和时间的量纲都相同了$[\mathbf{L}]=[\mathbf{T}]$。此外，由质能方程 $E = mc^2$，质量和能量也就成了一回事情。&lt;/p&gt;
+&lt;p&gt;虽然我们生活的现实尺度很难理解微观的 “量子效应”，但是宇宙没有义务被我们理解，大自然也不需要区分所谓的 “经典” 与 “量子”，因此 $\hbar = 1$​也能成为一个基本单位。类似的，在宏观上万有引力的作用是巨大的，故可以用牛顿引力常数 $G = 1$​ 作为第三个基本单位。这样，我们就建立了$c = \hbar = G = 1$​的自然单位制，因为所有的物理量都可以和能量建立关系，因此我们仅仅需要质量和电荷就能讨论一切的物理量，不过在本文接下来的讨论范围甚至不需要电荷。&lt;/p&gt;
+&lt;h1 id=&#34;量子力学与广义相对论的不可调和&#34;&gt;量子力学与广义相对论的不可调和
+&lt;/h1&gt;&lt;p&gt;在量子力学中，普朗克常数 $\hbar$ 起着十分关键的作用，同时根据 $E=\hbar\omega$ 我们可以很快得到$[\hbar] = [\mathbf{ML}]$。这里只需知道动能表达式 $ E_k = \frac{1}{2}mv^2$ 就能得到能量量纲为 $[\mathbf{ML^2T^{-2}}] = [\mathbf{M}]$，由于采用自然单位制 $c = 1$ 所以 $[\mathbf{L}]=[\mathbf{T}]$。那么就有 $[\hbar] = [E/\omega] = [\mathbf{MT}]=[\mathbf{ML}]$。&lt;/p&gt;
+&lt;p&gt;在弱场近似下，广义相对论总是要回到牛顿引力，这也代表着牛顿引力常数$G$在广义相对论中也起着很重要的作用。由$[GM/r^2]$为加速度的量纲，那么就有$[GM]=[\mathbf{L^3T^{-2}]=[L]}$，故牛顿引力常数的量纲为$\mathbf{[L/M]}$。将$\hbar$与 $G$ 对比即可发现$[\mathbf{M}]$在两个常数的位置不同，可以据此简单分析出量子力学与广义相对论的不可调和性质。&lt;/p&gt;
+&lt;p&gt;量子力学的理论框架下，一个物体的特征长度由德布罗意波表征。那么对于质量为$m$的物体，其德布罗意波约为$\lambda \simeq \hbar/E\simeq \hbar/m$。在广义相对论中，可以认为物体的特征长度由史瓦西半径表征，那么对于$m$的史瓦西半径为$R_S = 2Gm$。矛盾就此而出，可见，对于越大的$m$，其德布罗意波越小，而史瓦西半径越大，自然就显示出两种理论的不可调和性。从量纲的角度来看，由于特征长度都正比于两个普适常数，而$\hbar$和$G$有不同的质量量纲，这就导致了上述矛盾的出现。&lt;/p&gt;
+&lt;h1 id=&#34;总结与感想&#34;&gt;总结与感想
+&lt;/h1&gt;&lt;p&gt;不得不承认徐一鸿老师的《物理夜航船》是一本十分有趣的 “物理技巧” 书，但事实上在没有足够清晰的物理图像下是很难领会到夜航船的精神所在。正是如此，这本书的受众才是 “高年级” 大学生。事实上，如果没有经过系统的基本量子力学训练，单纯理解德布罗意波$\lambda$作为特征长度是很困难的，这是因为其对一些基本势能的波函数图像没有把握，这是需要经过一些计算训练才能获得的。同样缺少广义相对论的学习，也难以理解把史瓦西黑洞作为特征长度，这是因为广义相对论在强引力条件下的作用才较为明显，而黑洞视界面附近恰好提供这样的环境，这也是要经过一些繁杂计算才能体会到的 。[^3]: 只是对于我这种普通学生而言。&lt;/p&gt;
+&lt;p&gt;综上所述，夜航船技术的精神虽然有趣且实用，但要真正对其有所体会还是在建立足够扎实的基本物理图像上。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/wuli.jpg&#34;
+	width=&#34;785&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/wuli_hu_a1334f7fc5f1824c.jpg 480w, https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/wuli_hu_7e81c9d167f64e8e.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;331px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;徐一鸿. 物理夜航船. 世界图书出版公司, 2024. 平装.&lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         

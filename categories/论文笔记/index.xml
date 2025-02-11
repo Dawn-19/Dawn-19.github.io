@@ -68,20 +68,20 @@ of
 nonrelativistic sources is actually of order $G_{eff}^{-1/2}\propto t^{-\alpha-\delta/2} $. we need $E_{strong}\gg E_{class}$, and we can obtain a stronger bound&lt;/p&gt;
 $$
 \alpha+\delta/2&lt;1
-$$&lt;p&gt;If $\alpha+\delta/2=0$, the $G_{eff}$ degrade to constant, that is apparenly satisfied the requirement.&lt;/p&gt;
+$$&lt;p&gt;If $\alpha+\delta/2=0$, the $G_{eff}$ degrade to constant, that is apparently satisfied the requirement.&lt;/p&gt;
 &lt;h2 id=&#34;third-order-analysis-only-tensor&#34;&gt;Third-order analysis (Only tensor)
 &lt;/h2&gt;&lt;p&gt;The Lagrangian involving three tensors was derived in Ref[ 	arXiv:1108.3513]:&lt;/p&gt;
 $$
 \mathcal{L}_{h h h}=a^{3}\left[\frac{\mu}{12 N^{3}} \dot{h}_{i j} \dot{h}_{j k} \dot{h}_{k i}+\frac{\mathcal{F}_{T}}{4 a^{2}}\left(h_{i k} h_{j l}-\frac{1}{2} h_{i j} h_{k l}\right) h_{i j, k l}\right],
 $$&lt;p&gt;In the genesis model $G_5=0 \Rightarrow\mu=\dot{\phi}XG_{5X} = 0$, so only one term&lt;/p&gt;
 $$
- \frac{\mathcal{F}_{T}}{4 a^{2}}\left(h_{i k} h_{j l}-\frac{1}{2} h_{i j} h_{k l}\right) h_{i j, k l} 
+\frac{\mathcal{F}_{T}}{4 a^{2}}\left(h_{i k} h_{j l}-\frac{1}{2} h_{i j} h_{k l}\right) h_{i j, k l}
 $$&lt;p&gt;
-is need to analyse.&lt;/p&gt;
+is need to analysis.&lt;/p&gt;
 &lt;p&gt;We can introduce canonically normalized tensor perturbation&lt;/p&gt;
 $$
  q_{ij} = \sqrt{\mathcal{G}_T} h_{ij}\propto (-t)^{-\alpha} h_{ij} ,
-$$&lt;p&gt;&lt;br&gt;
+$$&lt;p&gt;
 the term can be schematically written as&lt;/p&gt;
 $$
 \mathbb{L}_{h h h} \propto \mathcal{F}_{T} \cdot\left(2 \mathcal{G}_{T}\right)^{-3 / 2} \cdot q^{3} \cdot\left(\partial_{t}\right)^{0} \cdot(\partial)^{2} .
