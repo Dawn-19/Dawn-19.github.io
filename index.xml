@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Dawn-19</copyright>
-        <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 12 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>记录我的第一篇blog</title>
         <link>https://Dawn-19.github.io/p/%E8%AE%B0%E5%BD%95%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/</link>
         <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
@@ -26,45 +26,81 @@
         <guid>https://Dawn-19.github.io/p/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/</guid>
         <description>&lt;img src="https://Dawn-19.github.io/p/%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/book.jpg" alt="Featured image of post 更新计划1.0" /&gt;&lt;h1 id=&#34;更新计划&#34;&gt;更新计划
 &lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;Mathematica
+&lt;li&gt;
+&lt;h3 id=&#34;学习笔记&#34;&gt;学习笔记
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;场论
 &lt;ul&gt;
-&lt;li&gt;xAct 推导爱因斯坦方程&lt;/li&gt;
+&lt;li&gt;二次量子化&lt;/li&gt;
+&lt;li&gt;路径积分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;相对论与宇宙学
+&lt;ul&gt;
+&lt;li&gt;度规恒等式总结&lt;/li&gt;
+&lt;li&gt;xAct 变分问题&lt;/li&gt;
 &lt;li&gt;xAct 推导施瓦西解，附施瓦西度规手算过程&lt;/li&gt;
 &lt;li&gt;xAct 验证科尔纽曼度规&lt;/li&gt;
 &lt;li&gt;xAct 测地线&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;学习笔记
+&lt;li&gt;量子力学
 &lt;ul&gt;
-&lt;li&gt;场论——二次量子化&lt;/li&gt;
-&lt;li&gt;量子力学——基本假设&lt;/li&gt;
-&lt;li&gt;量子力学——WKB近似&lt;/li&gt;
-&lt;li&gt;量子力学——表象变换&lt;/li&gt;
-&lt;li&gt;电动力学——Maxwell方程组&lt;/li&gt;
-&lt;li&gt;电动力学——双生子佯谬&lt;/li&gt;
-&lt;li&gt;统计物理——自由电子&lt;/li&gt;
-&lt;li&gt;统计物理——光子气体&lt;/li&gt;
-&lt;li&gt;统计物理——固体热容&lt;/li&gt;
-&lt;li&gt;经典力学——三体运动+MATLAB代码&lt;/li&gt;
-&lt;li&gt;经典力学——Ostrogradsky理论&lt;/li&gt;
-&lt;li&gt;经典力学——诺特定理&lt;/li&gt;
-&lt;li&gt;机器学习——概率论基础&lt;/li&gt;
-&lt;li&gt;机器学习——线性模型&lt;/li&gt;
-&lt;li&gt;机器学习——卷积&lt;/li&gt;
-&lt;li&gt;机器学习——交叉熵&lt;/li&gt;
-&lt;li&gt;机器学习——马尔可夫链&lt;/li&gt;
-&lt;li&gt;机器学习——玻尔兹曼机&lt;/li&gt;
+&lt;li&gt;量子力学基本假设&lt;/li&gt;
+&lt;li&gt;表象变换&lt;/li&gt;
+&lt;li&gt;WKB近似&lt;/li&gt;
+&lt;li&gt;朗道能级&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;论文笔记
+&lt;li&gt;电动力学
 &lt;ul&gt;
-&lt;li&gt;2003.01202-Genesis strong coupling&lt;/li&gt;
+&lt;li&gt;Maxwell方程组&lt;/li&gt;
+&lt;li&gt;AB效应&lt;/li&gt;
+&lt;li&gt;超导&lt;/li&gt;
+&lt;li&gt;切伦科夫辐射&lt;/li&gt;
+&lt;li&gt;格林函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;统计物理
+&lt;ul&gt;
+&lt;li&gt;自由电子模型&lt;/li&gt;
+&lt;li&gt;光子气体模型&lt;/li&gt;
+&lt;li&gt;固体热容模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;经典力学
+&lt;ul&gt;
+&lt;li&gt;三体运动+MATLAB代码&lt;/li&gt;
+&lt;li&gt;Ostrogradsky 理论&lt;/li&gt;
+&lt;li&gt;诺特定理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;机器学习
+&lt;ul&gt;
+&lt;li&gt;概率论基础&lt;/li&gt;
+&lt;li&gt;线性模型&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;卷积&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;交叉熵&lt;/li&gt;
+&lt;li&gt;马尔可夫链&lt;/li&gt;
+&lt;li&gt;玻尔兹曼机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;论文笔记&#34;&gt;论文笔记
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2003.01202-Genesis strong coupling&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;2412.03977-Bounce stability&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;感想
-&lt;ul&gt;
-&lt;li&gt;《物理夜航船》读后感&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;感想&#34;&gt;感想
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;《物理夜航船》读后感&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -82,6 +118,86 @@
 &lt;/div&gt;</description>
         </item>
         <item>
+        <title>度规恒等式总结</title>
+        <link>https://Dawn-19.github.io/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/</link>
+        <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/metric.jpg" alt="Featured image of post 度规恒等式总结" /&gt;&lt;h1 id=&#34;度规恒等式总结&#34;&gt;度规恒等式总结
+&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;基本对称性&#34;&gt;基本对称性
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;二阶对称张量：$g_{\mu\nu} = g_{\nu\mu} $ .&lt;/li&gt;
+&lt;li&gt;逆度规的定义：$g^{\mu\alpha} g_{\alpha \nu} = \delta^{\mu}_{~\nu} $ .&lt;/li&gt;
+&lt;li&gt;流形维度： $g^{\mu\nu} g_{\mu\nu} = \delta^{\mu}_{ ~ \mu} = D$.  其中$ D $为流形的维度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;度规相容条件&#34;&gt;度规相容条件
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Riemann几何中基本定理：$\nabla_\rho g^{\mu\nu} = \nabla_{\rho} g_{\mu\nu} = 0 ~$.&lt;/li&gt;
+&lt;li&gt;推论：$g^{\mu\lambda} \nabla_\rho V_\lambda = \nabla_\rho (g^{\mu\lambda} V_{\lambda} ) = \nabla_\rho V^\mu ~$.&lt;/li&gt;
+&lt;li&gt;联络：$ \Gamma^{\lambda}_{\mu\nu} = \frac{1}{2} g^{\lambda\sigma}( \partial _\mu g _{\nu\lambda} + \partial _\nu g _{\mu\lambda} - \partial _\lambda g _{\mu\nu} )$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;行列式相关&#34;&gt;行列式相关
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$ g = \mathrm{det}(g_{\mu\nu})~$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\partial_\mu g = \frac{\partial g}{\partial g_{\alpha\beta}} \frac{\partial g_{\alpha\beta}}{\partial x^{\mu}} = g\cdot g^{\alpha\beta}\partial_\mu g_{\alpha\beta} ~$. &lt;a class=&#34;link&#34; href=&#34;https://spaces.ac.cn/archives/2383&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;详细证明可以参考&lt;/a&gt; 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$ \partial \ln \sqrt{-g} = \frac{1}{2}g^{\alpha \beta}\partial_{\mu} g_{\alpha\beta} = \Gamma^{\alpha}_{\alpha\mu}  ~ $. 其中有&lt;/p&gt;
+$$
+     \partial \ln \sqrt{-g} = \frac{1}{2}\partial_\mu \ln (-g) = \frac{1}{2}\frac{1}{-g}\partial_{\mu}(-g) = \frac{1}{2}g^{\mu\nu}\partial_{\alpha}g_{\mu\nu}
+     $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;协变导数&#34;&gt;协变导数
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$\nabla_\mu V^\mu = \frac{1}{\sqrt{-g}}\partial_{\mu}(\sqrt{-g} V^\mu )  $，简单证明如下：&lt;/p&gt;
+$$
+     \begin{split}
+     \nabla_\mu V^\mu &amp;= \partial_\mu V^\mu + \Gamma^{\mu}_{\mu\lambda} V^\lambda \\
+     &amp; = \partial_\mu V^\mu + (\frac{1}{\sqrt{-g}}\partial_\lambda \sqrt{-g} )V^\lambda\\
+     &amp; = \partial_\mu V^\mu + (\frac{1}{\sqrt{-g}}\partial_\mu\sqrt{-g} )V^\mu\\
+     &amp;= \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} V^\mu ) .
+     \end{split}
+     $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\Box \phi = \nabla_\mu \nabla^\mu \phi = \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} \phi ) $. 这里只需要把$\nabla^\mu \phi$看作上式的$V^\mu$​ 即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;riemann张量与ricci张量&#34;&gt;Riemann张量与Ricci张量
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Riemann张量的定义：$ R^\sigma_{~ \lambda\mu\nu} = \partial_\mu \Gamma^\sigma_{\lambda\nu} + \Gamma^\alpha_{\lambda\nu}\Gamma^\sigma_{\mu\alpha} - (\mu \leftrightarrow  \nu)  $.&lt;/li&gt;
+&lt;li&gt;前两个指标反对称： $ R_{\rho\sigma\mu\nu} = - R_{\sigma\rho\mu\nu} $.&lt;/li&gt;
+&lt;li&gt;交换前后2组指标对称： $ R_{\rho\sigma\mu\nu} = R_{\mu\nu\rho\sigma} $.&lt;/li&gt;
+&lt;li&gt;Bianchi Identity Ⅰ： $ R_{\rho[\sigma\mu\nu]} = R_{\rho\sigma\mu\nu} + R_{\rho\mu\nu\sigma} + R_{\rho\nu\sigma\mu} $.&lt;/li&gt;
+&lt;li&gt;Bianchi Identity Ⅱ：$ \nabla_{[\lambda}R_{\rho\sigma]\mu\nu} = \nabla_\lambda R_{\rho\sigma\mu\nu} + \nabla_\rho R_{\sigma\lambda\mu\nu} + \nabla_\sigma R_{\lambda\rho\mu\nu} $&lt;/li&gt;
+&lt;li&gt;Ricci张量：$ R_{\mu\nu} = R^\beta_{ ~ \mu\beta\nu} =g^{\alpha\beta} R_{\alpha\mu\beta\nu},\quad R_{\mu\nu} = R_{\nu\mu} $&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://spaces.ac.cn/archives/2383&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://spaces.ac.cn/archives/2383&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;广义相对论里两个重要公式的证明 - 物理学渣的文章 - 知乎
+&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/265790629&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/265790629&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;陈斌 .《广义相对论导论》. 北京大学出版社. 2022&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>学习笔记-卷积(convolution)</title>
         <link>https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/</link>
         <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
@@ -89,7 +205,7 @@
         <guid>https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/</guid>
         <description>&lt;img src="https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/sea.png" alt="Featured image of post 学习笔记-卷积(convolution)" /&gt;&lt;h1 id=&#34;卷积convolution&#34;&gt;卷积(Convolution)
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
-&lt;/h2&gt;&lt;p&gt;第一次听说“卷积”这个词还是在大一时，在完成Matlab的一道&lt;strong&gt;设计扫雷游戏&lt;/strong&gt;的一道课后题，许多同学用所谓的卷积方法，当时的我对此完全不理解，只是自己设计了一套循环来做计算。后来学习了一点卷积神经网络的知识，发现自己用的方法和所谓的卷积其实一回事情。然而，在大二学习数学物理方法后，经过繁多的计算训练后，当时的我却迟迟无法把课本里的卷积和神经网络中的卷积联系起来，这是一件很遗憾的事情。现在随着AI4S的火热，我也打算重新系统性地学习一遍机器学习的有关知识，故有了这篇note，也弥补了当时的遗憾。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;第一次听说“卷积”这个词还是在大一时，在完成Matlab的一道&lt;strong&gt;设计扫雷游戏&lt;/strong&gt;的一道课后题，许多同学用所谓的卷积方法，当时的我对此完全不理解，只是自己设计了一套循环来做计算。后来学习了一点卷积神经网络的知识，发现自己用的方法和所谓的卷积其实一回事情。然而，在大二学习数学物理方法后，即使经过繁多的计算训练，当时的我却迟迟无法把课本里的卷积和神经网络中的卷积联系起来，这是一件很遗憾的事情。现在随着AI4S的火热，我也打算重新系统性地学习一遍机器学习的有关知识，故有了这篇note，也弥补了当时的遗憾。&lt;/p&gt;
 &lt;h2 id=&#34;数学物理方法中的卷积连续型卷积&#34;&gt;数学物理方法中的卷积——连续型卷积
 &lt;/h2&gt;&lt;p&gt;根据wiki百科，卷积是通过两个函数$f$和$g$生成第三个函数的一种数学算子，表征函数$f$与经过翻转和平移的$g$的乘积函数所围成的曲边梯形的面积。简单来说就是对于定义在实数域$\mathbb{R}$的两个可积函数$ f(t) $与$ g(t) $的一种运算：&lt;/p&gt;
 $$

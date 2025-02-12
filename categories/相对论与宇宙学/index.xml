@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>相对论与宇宙学 on Dawn-19</title>
+        <link>https://Dawn-19.github.io/categories/%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%8E%E5%AE%87%E5%AE%99%E5%AD%A6/</link>
+        <description>Recent content in 相对论与宇宙学 on Dawn-19</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Dawn-19</copyright>
+        <lastBuildDate>Wed, 12 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%8E%E5%AE%87%E5%AE%99%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>度规恒等式总结</title>
+        <link>https://Dawn-19.github.io/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/</link>
+        <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/metric.jpg" alt="Featured image of post 度规恒等式总结" /&gt;&lt;h1 id=&#34;度规恒等式总结&#34;&gt;度规恒等式总结
+&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;基本对称性&#34;&gt;基本对称性
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;二阶对称张量：$g_{\mu\nu} = g_{\nu\mu} $ .&lt;/li&gt;
+&lt;li&gt;逆度规的定义：$g^{\mu\alpha} g_{\alpha \nu} = \delta^{\mu}_{~\nu} $ .&lt;/li&gt;
+&lt;li&gt;流形维度： $g^{\mu\nu} g_{\mu\nu} = \delta^{\mu}_{ ~ \mu} = D$.  其中$ D $为流形的维度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;度规相容条件&#34;&gt;度规相容条件
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Riemann几何中基本定理：$\nabla_\rho g^{\mu\nu} = \nabla_{\rho} g_{\mu\nu} = 0 ~$.&lt;/li&gt;
+&lt;li&gt;推论：$g^{\mu\lambda} \nabla_\rho V_\lambda = \nabla_\rho (g^{\mu\lambda} V_{\lambda} ) = \nabla_\rho V^\mu ~$.&lt;/li&gt;
+&lt;li&gt;联络：$ \Gamma^{\lambda}_{\mu\nu} = \frac{1}{2} g^{\lambda\sigma}( \partial _\mu g _{\nu\lambda} + \partial _\nu g _{\mu\lambda} - \partial _\lambda g _{\mu\nu} )$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;行列式相关&#34;&gt;行列式相关
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$ g = \mathrm{det}(g_{\mu\nu})~$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\partial_\mu g = \frac{\partial g}{\partial g_{\alpha\beta}} \frac{\partial g_{\alpha\beta}}{\partial x^{\mu}} = g\cdot g^{\alpha\beta}\partial_\mu g_{\alpha\beta} ~$. &lt;a class=&#34;link&#34; href=&#34;https://spaces.ac.cn/archives/2383&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;详细证明可以参考&lt;/a&gt; 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$ \partial \ln \sqrt{-g} = \frac{1}{2}g^{\alpha \beta}\partial_{\mu} g_{\alpha\beta} = \Gamma^{\alpha}_{\alpha\mu}  ~ $. 其中有&lt;/p&gt;
+$$
+     \partial \ln \sqrt{-g} = \frac{1}{2}\partial_\mu \ln (-g) = \frac{1}{2}\frac{1}{-g}\partial_{\mu}(-g) = \frac{1}{2}g^{\mu\nu}\partial_{\alpha}g_{\mu\nu}
+     $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;协变导数&#34;&gt;协变导数
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$\nabla_\mu V^\mu = \frac{1}{\sqrt{-g}}\partial_{\mu}(\sqrt{-g} V^\mu )  $，简单证明如下：&lt;/p&gt;
+$$
+     \begin{split}
+     \nabla_\mu V^\mu &amp;= \partial_\mu V^\mu + \Gamma^{\mu}_{\mu\lambda} V^\lambda \\
+     &amp; = \partial_\mu V^\mu + (\frac{1}{\sqrt{-g}}\partial_\lambda \sqrt{-g} )V^\lambda\\
+     &amp; = \partial_\mu V^\mu + (\frac{1}{\sqrt{-g}}\partial_\mu\sqrt{-g} )V^\mu\\
+     &amp;= \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} V^\mu ) .
+     \end{split}
+     $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\Box \phi = \nabla_\mu \nabla^\mu \phi = \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} \phi ) $. 这里只需要把$\nabla^\mu \phi$看作上式的$V^\mu$​ 即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;riemann张量与ricci张量&#34;&gt;Riemann张量与Ricci张量
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Riemann张量的定义：$ R^\sigma_{~ \lambda\mu\nu} = \partial_\mu \Gamma^\sigma_{\lambda\nu} + \Gamma^\alpha_{\lambda\nu}\Gamma^\sigma_{\mu\alpha} - (\mu \leftrightarrow  \nu)  $.&lt;/li&gt;
+&lt;li&gt;前两个指标反对称： $ R_{\rho\sigma\mu\nu} = - R_{\sigma\rho\mu\nu} $.&lt;/li&gt;
+&lt;li&gt;交换前后2组指标对称： $ R_{\rho\sigma\mu\nu} = R_{\mu\nu\rho\sigma} $.&lt;/li&gt;
+&lt;li&gt;Bianchi Identity Ⅰ： $ R_{\rho[\sigma\mu\nu]} = R_{\rho\sigma\mu\nu} + R_{\rho\mu\nu\sigma} + R_{\rho\nu\sigma\mu} $.&lt;/li&gt;
+&lt;li&gt;Bianchi Identity Ⅱ：$ \nabla_{[\lambda}R_{\rho\sigma]\mu\nu} = \nabla_\lambda R_{\rho\sigma\mu\nu} + \nabla_\rho R_{\sigma\lambda\mu\nu} + \nabla_\sigma R_{\lambda\rho\mu\nu} $&lt;/li&gt;
+&lt;li&gt;Ricci张量：$ R_{\mu\nu} = R^\beta_{ ~ \mu\beta\nu} =g^{\alpha\beta} R_{\alpha\mu\beta\nu},\quad R_{\mu\nu} = R_{\nu\mu} $&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://spaces.ac.cn/archives/2383&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://spaces.ac.cn/archives/2383&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;广义相对论里两个重要公式的证明 - 物理学渣的文章 - 知乎
+&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/265790629&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/265790629&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;陈斌 .《广义相对论导论》. 北京大学出版社. 2022&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
