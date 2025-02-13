@@ -37,8 +37,10 @@
 &lt;/li&gt;
 &lt;li&gt;相对论与宇宙学
 &lt;ul&gt;
-&lt;li&gt;度规恒等式总结&lt;/li&gt;
-&lt;li&gt;xAct 变分问题&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://dawn-19.github.io/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;度规恒等式总结&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://dawn-19.github.io/p/%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0-%e7%9b%b8%e5%af%b9%e8%ae%ba%e4%b8%ad%e7%9a%84%e5%8f%98%e5%88%86/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;xAct 相对论中的变分&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;xAct 推导施瓦西解，附施瓦西度规手算过程&lt;/li&gt;
 &lt;li&gt;xAct 验证科尔纽曼度规&lt;/li&gt;
 &lt;li&gt;xAct 测地线&lt;/li&gt;
@@ -156,6 +158,18 @@
 $$
      \partial \ln \sqrt{-g} = \frac{1}{2}\partial_\mu \ln (-g) = \frac{1}{2}\frac{1}{-g}\partial_{\mu}(-g) = \frac{1}{2}g^{\mu\nu}\partial_{\alpha}g_{\mu\nu}
      $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$ \frac{\partial}{\partial g^{\mu\nu}} g = -g g_{\mu\nu} $.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$ \frac{\partial}{\partial g_{\mu\nu}} g = g g^{\mu\nu} $.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$ \frac{\partial }{\partial g^{\mu\nu}} \sqrt{-g} = -\frac{1}{2}\sqrt{-g} g_{\mu\nu}$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$ \frac{\partial }{\partial g_{\mu\nu}} \sqrt{-g} = \frac{1}{2}\sqrt{-g} g^{\mu\nu}$.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -179,12 +193,12 @@ $$
 &lt;li&gt;
 &lt;h3 id=&#34;riemann张量与ricci张量&#34;&gt;Riemann张量与Ricci张量
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Riemann张量的定义：$ R^\sigma_{~ \lambda\mu\nu} = \partial_\mu \Gamma^\sigma_{\lambda\nu} + \Gamma^\alpha_{\lambda\nu}\Gamma^\sigma_{\mu\alpha} - (\mu \leftrightarrow  \nu)  $.&lt;/li&gt;
+&lt;li&gt;Riemann张量的定义：$ R^\sigma_{~ \lambda\mu\nu} = [\nabla_\mu,\nabla_\nu] (\Gamma_{\lambda\nu}^\sigma - \Gamma_{\lambda\mu}^\sigma),=\partial_\mu \Gamma^\sigma_{\lambda\nu} + \Gamma^\alpha_{\lambda\nu}\Gamma^\sigma_{\mu\alpha} - (\mu \leftrightarrow  \nu)  $.&lt;/li&gt;
 &lt;li&gt;前两个指标反对称： $ R_{\rho\sigma\mu\nu} = - R_{\sigma\rho\mu\nu} $.&lt;/li&gt;
 &lt;li&gt;交换前后2组指标对称： $ R_{\rho\sigma\mu\nu} = R_{\mu\nu\rho\sigma} $.&lt;/li&gt;
-&lt;li&gt;Bianchi Identity Ⅰ： $ R_{\rho[\sigma\mu\nu]} = R_{\rho\sigma\mu\nu} + R_{\rho\mu\nu\sigma} + R_{\rho\nu\sigma\mu} $.&lt;/li&gt;
-&lt;li&gt;Bianchi Identity Ⅱ：$ \nabla_{[\lambda}R_{\rho\sigma]\mu\nu} = \nabla_\lambda R_{\rho\sigma\mu\nu} + \nabla_\rho R_{\sigma\lambda\mu\nu} + \nabla_\sigma R_{\lambda\rho\mu\nu} $&lt;/li&gt;
-&lt;li&gt;Ricci张量：$ R_{\mu\nu} = R^\beta_{ ~ \mu\beta\nu} =g^{\alpha\beta} R_{\alpha\mu\beta\nu},\quad R_{\mu\nu} = R_{\nu\mu} $&lt;/li&gt;
+&lt;li&gt;Bianchi Identity Ⅰ： $ R_{\rho[\sigma\mu\nu]} = R_{\rho\sigma\mu\nu} + R_{\rho\mu\nu\sigma} + R_{\rho\nu\sigma\mu} = 0  $.&lt;/li&gt;
+&lt;li&gt;Bianchi Identity Ⅱ：$ \nabla_{[\lambda}R_{\rho\sigma]\mu\nu} = \nabla_\lambda R_{\rho\sigma\mu\nu} + \nabla_\rho R_{\sigma\lambda\mu\nu} + \nabla_\sigma R_{\lambda\rho\mu\nu} = 0 $.&lt;/li&gt;
+&lt;li&gt;Ricci张量：$ R_{\mu\nu} = R^\beta_{ ~ \mu\beta\nu} =g^{\alpha\beta} R_{\alpha\mu\beta\nu},\quad R_{\mu\nu} = R_{\nu\mu} = 0 $.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -358,6 +372,312 @@ $$&lt;p&gt;对于增加深度维度，以及多个卷积核的运算过程和一
     &gt;https://coolgpu.github.io/coolgpu_blog/github/pages/2020/10/04/convolution.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Convolution&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://en.wikipedia.org/wiki/Convolution&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>学习笔记-相对论中的变分</title>
+        <link>https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/</link>
+        <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/variation.png" alt="Featured image of post 学习笔记-相对论中的变分" /&gt;&lt;h1 id=&#34;广义相对论中的变分&#34;&gt;广义相对论中的变分
+&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;h2 id=&#34;爱因斯坦场方程&#34;&gt;爱因斯坦场方程
+&lt;/h2&gt;&lt;p&gt;在广义相对论的框架下，考虑物质与引力的耦合，忽略宇宙学常数，可以给出如下作用量:&lt;/p&gt;
+$$
+   S = \int \mathrm{d}^4x \sqrt{-g} \left( \frac{M_{\text{P}}^2}{2}R+\mathscr{L}_m \right) ~,
+   $$&lt;p&gt;其中$g_{\mu\nu}$为对应的时空度规，这里取号差为$(-,+,+,+)$，$M_\text{P}^2 = 1/8\pi G$为普朗克质量，$R = g_{\mu\nu}R^{\mu\nu}$为里奇标量，$R_{\mu\nu} = R_{;\mu\lambda\nu}^{\lambda}$为里奇张量，$R_{;\mu\lambda\nu}^{\sigma}$为黎曼张量，$\mathscr{L}_m$为拉氏量，其能动张量定义为&lt;/p&gt;
+$$
+   T_{\mu\nu}^{(m)} = -\frac{2}{\sqrt{-g}}\frac{\delta }{\delta g^{\mu\nu}} (\sqrt{-g} \mathscr{L}_m) =-2\frac{\partial \mathscr{L}_m}{\partial g^{\mu\nu}} +g_{\mu\nu} \mathscr{L}_m ~.
+   $$&lt;p&gt;这里$\frac{1}{\sqrt{-g}}\frac{\delta }{\delta g^{\mu\nu}} \sqrt{-g} = -\frac{1}{2}g_{\mu\nu}$ . 对度规场作变分，引力部分有&lt;/p&gt;
+$$
+   \begin{split}
+     \delta  \int \mathrm{d}^4 x \sqrt{-g}\frac{M_\text{P}^2}{2}R &amp;= \frac{M_{\text{P}}^2}{2} \int \mathrm{d}^4 x \left( R\delta\sqrt{-g}+\sqrt{-g}R \right) \\
+     &amp; = \frac{M_{\text{P}}^2}{2} \int \mathrm{d}^4 x  \left[
+     -\frac{1}{2}\frac{1}{\sqrt{-g}}R\delta g +\sqrt{-g}\left(R_{\mu\nu}\delta
+     g^{\mu\nu} + g^{\mu\nu}\delta R_{\mu\nu} \right) \right]\\
+     &amp; =  \frac{M_{\text{P}}^2}{2} \int \mathrm{d}^4 x\sqrt{-g}\left[  \left( -\frac{1}{2}g_{\mu\nu}R+ R_{\mu\nu} \right)\delta g^{\mu\nu} + \nabla_{\nu} \left( g^{\mu\nu}\delta\Gamma_{\lambda\mu}^{\nu}-g^{\mu\nu}\delta\Gamma_{\lambda\mu}^\lambda  \right)\right]\\
+     \end{split}
+   $$&lt;p&gt;其中$\delta g = -g g_{\mu\nu}\delta g^{\mu\nu}$，协变导数全微分积分也是边界项，结果为0. 记$G_{\mu\nu} = R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R$ 为爱因斯坦张量，对物质场作变分可得&lt;/p&gt;
+$$
+   \begin{split}
+       \delta \int \mathrm{d}^4 x \sqrt{-g}\mathscr{L}_m &amp;= \int \mathrm{d}^4 x \left( \sqrt{-g}\delta \mathscr{L}_m + \mathscr{L}_m\delta\sqrt{-g} \right)\\
+       &amp;=\int \mathrm{d}^4 x \sqrt{-g}\left( \frac{\partial \mathscr{L}_m}{\partial g^{\mu\nu}}-\frac{1}{2} g_{\mu\nu}\mathscr{L}_m  \right)\delta g^{\mu\nu} \\
+       &amp; =- \frac{1}{2}\int \mathrm{d}^4 x \sqrt{-g} T_{\mu\nu}~,
+       \end{split}
+   $$&lt;p&gt;最终可以得到爱因斯坦场方程：&lt;/p&gt;
+$$
+   G_{\mu\nu} = 8\pi G T_{\mu\nu}.
+   $$&lt;/li&gt;
+&lt;li&gt;
+&lt;h2 id=&#34;klein-gorden方程&#34;&gt;Klein-Gorden方程
+&lt;/h2&gt;&lt;p&gt;在极早期宇宙学中，暴胀可以认为是由一种标量场——暴胀场驱动的，其作用量为&lt;/p&gt;
+$$
+   S = \int \mathrm{d}^4 x \sqrt{-g} [ -\frac{1}{2}g^{\mu\nu}\partial_\mu \phi \partial_\nu \phi - V(\phi) )]
+   $$&lt;p&gt;其中$V(\phi)$为暴胀场的potential，具体形式与选择的模型有关，对其变分有&lt;/p&gt;
+$$
+   \begin{aligned}
+   \delta S &amp;= \int \mathrm{d}^4 x \sqrt{-g} [-\frac{1}{2}g^{\mu\nu}\partial_\mu \phi \partial_\nu \delta \phi - -\frac{1}{2}g^{\mu\nu}\partial_\mu \delta \phi \partial_\nu  \phi) - \frac{\mathrm{d}}{\mathrm{d}\phi}V(\phi)\delta\phi] \\
+   &amp;=\int \mathrm{d}^4 x \sqrt{-g}[-\nabla_\mu \phi \nabla^\mu \delta \phi - \frac{\mathrm{d}}{\mathrm{d}\phi}V(\phi)\delta\phi ]\\
+   &amp;= \int \mathrm{d}^4 x \sqrt{-g} [-\nabla^\mu(\nabla_\mu\phi\delta\phi) + (\nabla^\mu \nabla_\mu \phi - \frac{\mathrm{d}}{\mathrm{d}\phi}V(\phi))\delta\phi ]\\
+   \end{aligned}
+   $$$$
+   \Box \phi = V&#39;(\phi) \Leftrightarrow  \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} g^{\mu\nu} \partial_\nu \phi) = V&#39;(\phi)
+   $$&lt;p&gt;其中$V&amp;rsquo;(\phi) = \mathrm{d}V/\mathrm{d}\phi$，注意在广义相对论中有关系$\nabla_\mu\nabla^\mu \phi = \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} g^{\mu\nu} \partial_\nu \phi)$，&lt;a class=&#34;link&#34; href=&#34;https://dawn-19.github.io/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;可见&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;此外，用能动量守恒能得到相同的结果，暴胀场的能动张量为：&lt;/p&gt;
+$$
+   \begin{aligned}
+   T_{\mu\nu} &amp;= -2 \frac{\partial \mathscr{L}}{\partial g^{\mu\nu}} + g_{\mu\nu}\mathscr{L}\\
+   &amp;= \nabla_\mu\phi\nabla_\nu \phi - \frac{1}{2}g_{\mu\nu}g^{\alpha\beta} \nabla_\alpha \phi \nabla_\beta \phi - g_{\mu\nu}V(\phi)~.
+   \end{aligned}
+   $$&lt;p&gt;由标量场能动张量守恒，可得&lt;/p&gt;
+$$
+   \begin{split}
+       \nabla^{\mu}T_{\mu\nu} &amp;=-g_{\mu\nu}g^{\alpha\beta}(\nabla^\mu \nabla_\alpha \phi)\nabla_\beta \phi - g_{\mu\nu} V&#39;(\phi) \nabla^\mu \phi +(\nabla^\mu \nabla_\mu)\nabla_\nu \phi + \nabla_\mu \phi (\nabla^\mu \nabla_\nu \phi )\\
+       &amp;=-(\nabla_\nu \nabla_\alpha \phi)\nabla^\alpha \phi - V&#39;(\phi)\nabla_\nu \phi +(\nabla^\mu\nabla_\mu)\nabla_\nu \phi + \nabla^\alpha \phi (\nabla_\alpha \nabla_\nu \phi)\\
+       &amp;=\nabla^\alpha \phi [\nabla_\alpha,\nabla_\nu]\phi + (\nabla^\mu \nabla_\mu \phi - V&#39;(\phi))\nabla_\nu \phi=0\,,\\
+   &amp;\Rightarrow  \nabla^\mu \nabla_\mu \phi - V&#39;(\phi)=0 \,.
+       \end{split}
+   $$&lt;p&gt;
+​&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h2 id=&#34;四维真空maxwell方程&#34;&gt;四维真空Maxwell方程
+&lt;/h2&gt;&lt;p&gt;真空中电磁场的作用量为&lt;/p&gt;
+$$
+   S = -\frac{1}{4} \int \mathrm{d}^4 x \sqrt{-g}F_{\mu\nu}F^{\mu\nu}~.
+   $$&lt;p&gt;其中$F_{\mu\nu} = \nabla_\mu A_\nu - \nabla_\nu A_\mu $为电磁场张量，$A^\mu = (\varphi,\vec{A})$为四维电矢势，对作用量进行变分：&lt;/p&gt;
+$$
+   \begin{aligned}
+   \delta S &amp; = -\frac{1}{4}\delta\int \mathrm{d}^4x\sqrt{-g} F_{\mu\nu}F^{\mu\nu}\\
+   &amp; = -\frac{1}{2}\int\mathrm{d}^4x \sqrt{-g}\delta F_{\mu\nu}F^{\mu\nu}\\
+   &amp; = -\frac{1}{2} \int\mathrm{d}^4x\sqrt{-g}  F^{\mu\nu} \delta(\nabla_\mu A_\nu -\nabla_\nu A_\mu)\\
+   &amp; =  -\frac{1}{2} \int\mathrm{d}^4x\sqrt{-g} F^{\mu\nu} \nabla_\mu\delta A_\nu -\frac{1}{2} \int\mathrm{d}^4x\sqrt{-g} (-F^{\nu\mu})(- \nabla_\nu\delta A_\mu)\\
+   &amp; = -\int\mathrm{d}^4 x\sqrt{-g} F^{\mu\nu} \nabla_\mu \delta A_\nu\\
+   &amp; = \int\mathrm{d}^4 x \sqrt{-g}[- \nabla_\mu (F^{\mu\nu}  \delta A_\nu) + \nabla_\mu F^{\mu\nu}\delta A_\nu]~,
+   \end{aligned}
+   $$&lt;p&gt;这里利用了电磁场张量的反对称性$F_{\mu\nu} = -F_{\nu\mu}$，将上式消去边界项，即有$\nabla_\mu F^{\mu\nu} = 0$. 此外，由Bianchi恒等式可知$\nabla_{(\mu}F_{\nu\sigma)} = 0$，所以真空中四维形式的Maxwell方程组为&lt;/p&gt;
+$$
+   \nabla_\mu F^{\mu\nu} = 0 ~ ,\quad \nabla_{(\mu}F_{\nu\sigma)} = 0~.
+   $$&lt;p&gt;真空中电磁场的能动张量：&lt;/p&gt;
+$$
+   \begin{aligned}
+   T_{\mu\nu} &amp;= -\frac{2}{\sqrt{-g}} \frac{\delta}{\delta g^{\mu\nu}} \left( -\frac{1}{4} \sqrt{-g} F_{\alpha\beta} F^{\alpha\beta} \right), \\
+   &amp;= -\frac{2}{\sqrt{-g}} \left\{ \frac{\delta \sqrt{-g}}{\delta g^{\mu\nu}} (-\frac{1}{4}  F_{\alpha\beta} F^{\alpha\beta}) + \sqrt{-g} \frac{\delta}{\delta g^{\mu\nu}} \left( -\frac{1}{4} F_{\alpha\beta} F_{\lambda\sigma} g^{\lambda\alpha} g^{\sigma\beta} \right) \right\} \\
+   &amp;= -\frac{1}{4} g_{\mu\nu} F_{\alpha\beta} F^{\alpha\beta} - 2 \left( -\frac{1}{4} \right) \left[ F_{\alpha\beta} F_{\lambda\sigma} (\delta^{\lambda}_{~\mu} \delta^{\alpha}_{~\nu}g^{\sigma\beta}+
+   \delta^\sigma_{~\mu} \delta^\beta_{~\nu}g^{\lambda\alpha}
+   \right] \\
+   &amp;= -\frac{1}{4} g_{\mu\nu} F_{\alpha\beta} F^{\alpha\beta} + \frac{1}{2} (F_{\nu}^{~ \sigma}F_{\mu\sigma} + F_{\alpha \nu}F^\alpha _{~\mu})\\
+   &amp; = -\frac{1}{4} g_{\mu\nu} F_{\alpha\beta} F^{\alpha\beta} - F_\mu^{~\alpha }F_{\alpha \nu}
+   \end{aligned}
+   $$&lt;/li&gt;
+&lt;li&gt;
+&lt;h2 id=&#34;mathematica的变分计算&#34;&gt;Mathematica的变分计算
+&lt;/h2&gt;&lt;p&gt;通过上面的计算发现，在带有张量的情形下，即使是非常简单的作用量进行变分运算也十分繁杂。对此，可以使用Mathematica的xAct包进行有关计算，在变分的有关计算中，采用 xTras。&lt;/p&gt;
+&lt;p&gt;正式计算前，需要在&lt;a class=&#34;link&#34; href=&#34;www.xAct.es&#34; &gt;官网&lt;/a&gt;下载好xAct压缩包，安装过程可以[参考](关于Mathematica 12.3.1，  张量计算程序包xAct （1.2.0） 安装及使用教程 - 稻草人的文章 - 知乎
+&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/521983518[&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/521983518[&lt;/a&gt;) ，注意这里还需要&lt;a class=&#34;link&#34; href=&#34;https://josmar493.dreamhosters.com/Invar/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在此&lt;/a&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://josmar493.dreamhosters.com/Invar/Riemann.tar.gz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Riemann.tar.gz&lt;/a&gt;: main database file.(对于&lt;strong&gt;Windows系统&lt;/strong&gt;) ，把它解压后放在xAct的Invar文件夹下 否则在计算过程中可能出现如下报错：&lt;/p&gt;
+&lt;p&gt;Rlnv: Can&amp;rsquo;t find the Invar database. You can download it from http:/www.xact.es/invar/.&lt;/p&gt;
+&lt;p&gt;如图所示&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/baocuo.png&#34;
+	width=&#34;1082&#34;
+	height=&#34;329&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/baocuo_hu_df342c28f88ba051.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/baocuo_hu_7f1f4f1262761f96.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;328&#34;
+		data-flex-basis=&#34;789px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;接下来我们正式开始计算，首先，引入需要的包&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Needs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;xAct`xTras`&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;定义流形和度规&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/manifold.png&#34;
+	width=&#34;1126&#34;
+	height=&#34;118&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/manifold_hu_3fb330673d7bc677.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/manifold_hu_ab07219928002056.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;954&#34;
+		data-flex-basis=&#34;2290px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;接下来就可以进行一些变分运算了，比如对度规$g$的行列式进行变分，VarD的内容就是变分的量，不带$-$的指标是上指标，带$-$的指标是下指标&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/metric.png&#34;
+	width=&#34;685&#34;
+	height=&#34;548&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/metric_hu_244a8de0db5c3f20.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/metric_hu_54b4214654239988.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;125&#34;
+		data-flex-basis=&#34;300px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对引力场作用量的引力部分变分，加入ScreenDollarIndices防止其指标乱码：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/gravity_field.png&#34;
+	width=&#34;1137&#34;
+	height=&#34;701&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/gravity_field_hu_edc7e3c742f63809.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/gravity_field_hu_75a3062fff7153c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;162&#34;
+		data-flex-basis=&#34;389px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在对标量场作用量进行变分之前，需要先定义标量场和它的potential&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DefTensor[\[Phi][], M4, PrintAs -&amp;gt; &amp;#34;\[Phi]&amp;#34;];
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DefScalarFunction[V]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;与前面类似，可以计算：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/scalar_field.png&#34;
+	width=&#34;899&#34;
+	height=&#34;363&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/scalar_field_hu_f4eed1d6da7380ed.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/scalar_field_hu_8e0e6112190315ae.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;247&#34;
+		data-flex-basis=&#34;594px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;还可以用 VarL 来计算能动张量，VarL的作用为&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/VarL.png&#34;
+	width=&#34;620&#34;
+	height=&#34;470&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/VarL_hu_6478a55f11e75ee2.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/VarL_hu_f7e45763584fef8e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;316px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;标量场的能动张量&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/scalar_field2.png&#34;
+	width=&#34;1062&#34;
+	height=&#34;432&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/scalar_field2_hu_282f84175df5b14.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/scalar_field2_hu_c7c3da3cb68877c5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;245&#34;
+		data-flex-basis=&#34;590px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;定义电磁场，这里$F_{\mu\nu}$是反对称张量&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM1.png&#34;
+	width=&#34;912&#34;
+	height=&#34;180&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM1_hu_c15ebc9e5b85b19.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM1_hu_dfda3c682875b653.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;506&#34;
+		data-flex-basis=&#34;1216px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;给出$F_{\mu \nu}$与$A_\mu$的关系&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM2.png&#34;
+	width=&#34;925&#34;
+	height=&#34;345&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM2_hu_368a4f68e91ef217.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM2_hu_b8f1f69cb07d9f52.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;268&#34;
+		data-flex-basis=&#34;643px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;对作用量变分，暂时不考虑$\sqrt{-g}$&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM3.png&#34;
+	width=&#34;664&#34;
+	height=&#34;362&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM3_hu_675c5464eaa14ef6.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM3_hu_a45f525a7c2b2501.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;440px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;得到的是$\nabla_\mu F^{\mu\nu}$的展开式，同样可以验证一下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM4.png&#34;
+	width=&#34;668&#34;
+	height=&#34;255&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM4_hu_dfd592d22c6286c5.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM4_hu_681dcc8cac55c025.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;261&#34;
+		data-flex-basis=&#34;628px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;最后是电磁场的能动张量，可以使用VarL：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM5.png&#34;
+	width=&#34;888&#34;
+	height=&#34;592&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM5_hu_bd7241e5fd656237.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM5_hu_5cf1c1f4ac94121.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这里的结果全用电矢势展开了，我们可以验证它是否与我们前面计算的结果是否一致：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM6.png&#34;
+	width=&#34;894&#34;
+	height=&#34;533&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM6_hu_6fda301ed90e1e8f.png 480w, https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM6_hu_7bfc86091c926828.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;167&#34;
+		data-flex-basis=&#34;402px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://physics.ntua.gr/konstant/GR/xAct.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://physics.ntua.gr/konstant/GR/xAct.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wuli.wiki/changed/ElecS.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wuli.wiki/changed/ElecS.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Daniel Baumann  &lt;em&gt;Cosmology&lt;/em&gt; .  Cambridge University Press.2022&lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         <item>
