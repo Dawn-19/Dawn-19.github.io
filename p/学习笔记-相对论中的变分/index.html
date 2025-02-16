@@ -10,7 +10,7 @@
 <meta property='og:description' content="用变分法推导爱因斯坦场方程，Klein-Gorden方程以及四维真空Maxwell方程，同时给出用Mathematica的xAct，xTras的计算方法。">
 <meta property='og:url' content='https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/'>
 <meta property='og:site_name' content='Dawn-19'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-11T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-11T00:00:00&#43;00:00'/><meta property='og:image' content='https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/variation.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/variation.png' />
 <meta name="twitter:title" content="学习笔记-相对论中的变分">
 <meta name="twitter:description" content="用变分法推导爱因斯坦场方程，Klein-Gorden方程以及四维真空Maxwell方程，同时给出用Mathematica的xAct，xTras的计算方法。"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/variation.png' />
@@ -414,7 +414,7 @@ l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Feb 11, 2025</time>
+                <time class="article-time--published">Feb 13, 2025</time>
             </div>
         
 
@@ -437,7 +437,7 @@ l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
 </h2><p>在广义相对论的框架下，考虑物质与引力的耦合，忽略宇宙学常数，可以给出如下作用量:</p>
 $$
    S = \int \mathrm{d}^4x \sqrt{-g} \left( \frac{M_{\text{P}}^2}{2}R+\mathscr{L}_m \right) ~,
-   $$<p>其中$g_{\mu\nu}$为对应的时空度规，这里取号差为$(-,+,+,+)$，$M_\text{P}^2 = 1/8\pi G$为普朗克质量，$R = g_{\mu\nu}R^{\mu\nu}$为里奇标量，$R_{\mu\nu} = R_{;\mu\lambda\nu}^{\lambda}$为里奇张量，$R_{;\mu\lambda\nu}^{\sigma}$为黎曼张量，$\mathscr{L}_m$为拉氏量，其能动张量定义为</p>
+   $$<p>其中$g_{\mu\nu}$为对应的时空度规，这里取号差为$(-,+,+,+)$，$M_\text{P}^2 = 1/8\pi G$为普朗克质量，$R = g_{\mu\nu}R^{\mu\nu}$为里奇标量，$R_{\mu\nu} = R_{<del>\mu\lambda\nu}^{\lambda}$为里奇张量，$R_{</del>\mu\lambda\nu}^{\sigma}$为黎曼张量，$\mathscr{L}_m$为拉氏量，其能动张量定义为</p>
 $$
    T_{\mu\nu}^{(m)} = -\frac{2}{\sqrt{-g}}\frac{\delta }{\delta g^{\mu\nu}} (\sqrt{-g} \mathscr{L}_m) =-2\frac{\partial \mathscr{L}_m}{\partial g^{\mu\nu}} +g_{\mu\nu} \mathscr{L}_m ~.
    $$<p>这里$\frac{1}{\sqrt{-g}}\frac{\delta }{\delta g^{\mu\nu}} \sqrt{-g} = -\frac{1}{2}g_{\mu\nu}$ . 对度规场作变分，引力部分有</p>
@@ -462,17 +462,18 @@ $$
    $$</li>
 <li>
 <h2 id="klein-gorden方程">Klein-Gorden方程
-</h2><p>在极早期宇宙学中，暴胀可以认为是由一种标量场——暴胀场驱动的，其作用量为</p>
+</h2><p>在极早期宇宙学中，暴胀可以认为是由一种标量场——暴胀场驱动的，其作用量为<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 $$
-   S = \int \mathrm{d}^4 x \sqrt{-g} [ -\frac{1}{2}g^{\mu\nu}\partial_\mu \phi \partial_\nu \phi - V(\phi) )]
+   S = \int \mathrm{d}^4 x \sqrt{-g} [ -\frac{1}{2}g^{\mu\nu}\partial_\mu \phi \partial_\nu \phi - V(\phi) ]
    $$<p>其中$V(\phi)$为暴胀场的potential，具体形式与选择的模型有关，对其变分有</p>
 $$
    \begin{aligned}
-   \delta S &= \int \mathrm{d}^4 x \sqrt{-g} [-\frac{1}{2}g^{\mu\nu}\partial_\mu \phi \partial_\nu \delta \phi - -\frac{1}{2}g^{\mu\nu}\partial_\mu \delta \phi \partial_\nu  \phi) - \frac{\mathrm{d}}{\mathrm{d}\phi}V(\phi)\delta\phi] \\
+   \delta S &= \int \mathrm{d}^4 x \sqrt{-g} [-\frac{1}{2}g^{\mu\nu}\partial_\mu \phi \partial_\nu \delta \phi  -\frac{1}{2}g^{\mu\nu}\partial_\mu \delta \phi \partial_\nu  \phi - \frac{\mathrm{d}}{\mathrm{d}\phi}V(\phi)\delta\phi] \\
    &=\int \mathrm{d}^4 x \sqrt{-g}[-\nabla_\mu \phi \nabla^\mu \delta \phi - \frac{\mathrm{d}}{\mathrm{d}\phi}V(\phi)\delta\phi ]\\
    &= \int \mathrm{d}^4 x \sqrt{-g} [-\nabla^\mu(\nabla_\mu\phi\delta\phi) + (\nabla^\mu \nabla_\mu \phi - \frac{\mathrm{d}}{\mathrm{d}\phi}V(\phi))\delta\phi ]\\
    \end{aligned}
-   $$$$
+   $$<p>消去边界项，得到Klein-Gorden方程</p>
+$$
    \Box \phi = V'(\phi) \Leftrightarrow  \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} g^{\mu\nu} \partial_\nu \phi) = V'(\phi)
    $$<p>其中$V&rsquo;(\phi) = \mathrm{d}V/\mathrm{d}\phi$，注意在广义相对论中有关系$\nabla_\mu\nabla^\mu \phi = \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} g^{\mu\nu} \partial_\nu \phi)$，<a class="link" href="https://dawn-19.github.io/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/"  target="_blank" rel="noopener"
     >可见</a>.</p>
@@ -526,9 +527,9 @@ $$
 <li>
 <h2 id="mathematica的变分计算">Mathematica的变分计算
 </h2><p>通过上面的计算发现，在带有张量的情形下，即使是非常简单的作用量进行变分运算也十分繁杂。对此，可以使用Mathematica的xAct包进行有关计算，在变分的有关计算中，采用 xTras。</p>
-<p>正式计算前，需要在<a class="link" href="www.xAct.es" >官网</a>下载好xAct压缩包，安装过程可以[参考](关于Mathematica 12.3.1，  张量计算程序包xAct （1.2.0） 安装及使用教程 - 稻草人的文章 - 知乎
-<a class="link" href="https://zhuanlan.zhihu.com/p/521983518["  target="_blank" rel="noopener"
-    >https://zhuanlan.zhihu.com/p/521983518[</a>) ，注意这里还需要<a class="link" href="https://josmar493.dreamhosters.com/Invar/index.html"  target="_blank" rel="noopener"
+<p>正式计算前，需要在<a class="link" href="https://josmar493.dreamhosters.com/index.html"  target="_blank" rel="noopener"
+    >官网</a>下载好xAct压缩包，安装过程可以<a class="link" href="https://zhuanlan.zhihu.com/p/521983518"  target="_blank" rel="noopener"
+    >参考</a> ，注意这里还需要<a class="link" href="https://josmar493.dreamhosters.com/Invar/index.html"  target="_blank" rel="noopener"
     >在此</a>下载<a class="link" href="https://josmar493.dreamhosters.com/Invar/Riemann.tar.gz"  target="_blank" rel="noopener"
     >Riemann.tar.gz</a>: main database file.(对于<strong>Windows系统</strong>) ，把它解压后放在xAct的Invar文件夹下 否则在计算过程中可能出现如下报错：</p>
 <p>Rlnv: Can&rsquo;t find the Invar database. You can download it from http:/www.xact.es/invar/.</p>
@@ -566,7 +567,7 @@ $$
 		data-flex-basis="2290px"
 	
 ></p>
-<p>接下来就可以进行一些变分运算了，比如对度规$g$的行列式进行变分，VarD的内容就是变分的量，不带$-$的指标是上指标，带$-$的指标是下指标</p>
+<p>接下来就可以进行一些变分运算了，比如对度规$g$的行列式进行变分，VarD中的内容就是变分的量，不带负号的指标是上指标，带负号的指标是下指标</p>
 <p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/metric.png"
 	width="685"
 	height="548"
@@ -683,7 +684,7 @@ $$
 		data-flex-basis="440px"
 	
 ></p>
-<p>得到的是$\nabla_\mu F^{\mu\nu}$的展开式，同样可以验证一下</p>
+<p>得到的是$\nabla_\mu F^{\mu\nu}$的展开式，可以验证一下</p>
 <p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM4.png"
 	width="668"
 	height="255"
@@ -696,7 +697,7 @@ $$
 		data-flex-basis="628px"
 	
 ></p>
-<p>最后是电磁场的能动张量，可以使用VarL：</p>
+<p>没有问题，那么进行下一步，计算电磁场的能动张量，可以使用VarL：</p>
 <p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM5.png"
 	width="888"
 	height="592"
@@ -722,12 +723,27 @@ $$
 		data-flex-basis="402px"
 	
 ></p>
+<p>结果完全相同，证明程序的结果是可靠的。</p>
 <blockquote>
-<p><a class="link" href="https://physics.ntua.gr/konstant/GR/xAct.html"  target="_blank" rel="noopener"
+<p>xAct官网： <a class="link" href="https://josmar493.dreamhosters.com/index.html"  target="_blank" rel="noopener"
+    >https://josmar493.dreamhosters.com/index.html</a></p>
+<p>Mathematica参考代码： <a class="link" href="https://physics.ntua.gr/konstant/GR/xAct.html"  target="_blank" rel="noopener"
     >https://physics.ntua.gr/konstant/GR/xAct.html</a></p>
+<p>(关于Mathematica 12.3.1，  张量计算程序包xAct （1.2.0） 安装及使用教程 - 稻草人的文章 - 知乎
+<a class="link" href="https://zhuanlan.zhihu.com/p/521983518"  target="_blank" rel="noopener"
+    >https://zhuanlan.zhihu.com/p/521983518</a></p>
 <p><a class="link" href="https://wuli.wiki/changed/ElecS.html"  target="_blank" rel="noopener"
     >https://wuli.wiki/changed/ElecS.html</a></p>
-<p>Daniel Baumann  <em>Cosmology</em> .  Cambridge University Press.2022</p></blockquote>
+<p>Daniel Baumann  <em>Cosmology</em> .  Cambridge University Press.2022</p>
+<p>陈斌 .《广义相对论导论》. 北京大学出版社. 2022</p></blockquote>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>标量场当然不仅仅能描述暴胀场啦，这里只是举个例子( • ̀ω•́ )&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
 </section>
 
@@ -787,6 +803,30 @@ $$
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%96%BD%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84schwarzchild-metric/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E6%96%BD%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84schwarzchild-metric/wallhaveny86gzx.96436f35145cc4b7362d1b53080115e0_hu_5931a1b6955ebdc0.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 施瓦西度规(Schwarzchild Metric)"
+                        
+                        data-hash="md5-lkNvNRRcxLc2LRtTCAEV4A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">施瓦西度规(Schwarzchild Metric)</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="has-image">
