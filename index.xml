@@ -1374,14 +1374,14 @@ $$&lt;p&gt;由真空中的爱因斯坦方程$R_{\mu\nu} = 0$可知上式任意�
 		data-flex-basis=&#34;407px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;实际上到这一步剩下的手算也不难了，注意上面的式子都为0，同时没有对时间的导数项，那么总可以重定义$&lt;del&gt;\mathrm{d}t&lt;/del&gt;$使得$~F(t,r) = F(r)$。那么可以把方程组整理为：&lt;/p&gt;
 $$
 \begin{array}{cc}
 \text{F}&#39;&#39;(r)+\text{F}&#39;(r) \left(\frac{2}{r}-\text{G}&#39;(r)\right)+\text{F}&#39;(r)^2=0,\\
 -\text{F}&#39;&#39;(r)+\text{F}&#39;(r) \text{G}&#39;(r)-\text{F}&#39;(r)^2+\frac{2 \text{G}&#39;(r)}{r}=0,\\
 e^{-2 \text{G}(r)} \left(r \left(\text{G}&#39;(r)-\text{F}&#39;(r)\right)-1\right)+1=0
 \end{array}
-$$&lt;p&gt;
-待求解的只有$F(r)$和$G(r)$，只需要两个方程，把第一式与第二式相加后，得到的方程$\frac{F&amp;rsquo;(r)+G&amp;rsquo;(r)}{r}=0$可知$G(r) = -F(r)$，那么只需解出$F(r)$，利用DSolve求解&lt;/p&gt;
+$$&lt;p&gt;待求解的只有$F(r)$和$G(r)$，只需要两个方程，把第一式与第二式相加后，得到的方程$\frac{F&amp;rsquo;(r)+G&amp;rsquo;(r)}{r}=0$可知$G(r) = -F(r)$，那么只需解出$F(r)$，利用DSolve求解&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1

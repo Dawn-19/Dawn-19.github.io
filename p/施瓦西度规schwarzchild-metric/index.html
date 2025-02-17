@@ -729,14 +729,14 @@ $$<p>由真空中的爱因斯坦方程$R_{\mu\nu} = 0$可知上式任意一项�
 		data-flex-basis="407px"
 	
 ></p>
+<p>实际上到这一步剩下的手算也不难了，注意上面的式子都为0，同时没有对时间的导数项，那么总可以重定义$<del>\mathrm{d}t</del>$使得$~F(t,r) = F(r)$。那么可以把方程组整理为：</p>
 $$
 \begin{array}{cc}
 \text{F}''(r)+\text{F}'(r) \left(\frac{2}{r}-\text{G}'(r)\right)+\text{F}'(r)^2=0,\\
 -\text{F}''(r)+\text{F}'(r) \text{G}'(r)-\text{F}'(r)^2+\frac{2 \text{G}'(r)}{r}=0,\\
 e^{-2 \text{G}(r)} \left(r \left(\text{G}'(r)-\text{F}'(r)\right)-1\right)+1=0
 \end{array}
-$$<p>
-待求解的只有$F(r)$和$G(r)$，只需要两个方程，把第一式与第二式相加后，得到的方程$\frac{F&rsquo;(r)+G&rsquo;(r)}{r}=0$可知$G(r) = -F(r)$，那么只需解出$F(r)$，利用DSolve求解</p>
+$$<p>待求解的只有$F(r)$和$G(r)$，只需要两个方程，把第一式与第二式相加后，得到的方程$\frac{F&rsquo;(r)+G&rsquo;(r)}{r}=0$可知$G(r) = -F(r)$，那么只需解出$F(r)$，利用DSolve求解</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
