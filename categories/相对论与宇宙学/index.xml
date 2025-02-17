@@ -930,7 +930,7 @@ $$&lt;p&gt;
 &lt;/div&gt;
 &lt;/div&gt;$$
 0
-$$&lt;p&gt;综上，对于克尔度规的验证就算成功，如果想真正的求解它，最好学习一下外微分，求解过程可以参考[^ 3 ]:&lt;/p&gt;
+$$&lt;p&gt;综上，对于克尔度规的验证就算成功，如果想真正的求解它，最好学习一下外微分，求解过程可以参考&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://itp.uni-frankfurt.de/~hees/gen-phys/derivation-of-the-kerr-metric-Wagner.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -950,6 +950,9 @@ $$&lt;p&gt;综上，对于克尔度规的验证就算成功，如果想真正的
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
 &lt;p&gt;这里展示的结果是 deepseek R1 整理后的，其结果可能有偏差，具体结果以Mathematica计算为准。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;注意用外微分计算得到的黎曼张量可能和Mathematica计算的结果不一样，因为其可能用闵氏度规作升降指标。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -1261,7 +1264,7 @@ $$&lt;p&gt;由真空中的爱因斯坦方程$R_{\mu\nu} = 0$可知上式任意�
 		data-flex-basis=&#34;407px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;实际上到这一步剩下的手算也不难了，注意上面的式子都为0，同时没有对时间的导数项，那么总可以重定义$&lt;del&gt;\mathrm{d}t&lt;/del&gt;$使得$~F(t,r) = F(r)$。那么可以把方程组整理为：&lt;/p&gt;
+&lt;p&gt;实际上到这一步剩下的手算也不难了，注意上面的式子都为0，同时没有对时间的导数项，那么总可以重定义$\mathrm{d}t \Rightarrow F(t,r) = F(r)$。那么可以把方程组整理为：&lt;/p&gt;
 $$
 \begin{array}{cc}
 \text{F}&#39;&#39;(r)+\text{F}&#39;(r) \left(\frac{2}{r}-\text{G}&#39;(r)\right)+\text{F}&#39;(r)^2=0,\\
@@ -1312,8 +1315,8 @@ $$&lt;p&gt;
 &lt;/div&gt;$$
 g_{\mu \nu }=\left(
 \begin{array}{cccc}
- \frac{\text{Rs}}{r}-1 &amp; 0 &amp; 0 &amp; 0 \\
- 0 &amp; \frac{1}{1-\frac{\text{Rs}}{r}} &amp; 0 &amp; 0 \\
+ \frac{R_s}{r}-1 &amp; 0 &amp; 0 &amp; 0 \\
+ 0 &amp; \frac{1}{1-\frac{R_s}{r}} &amp; 0 &amp; 0 \\
  0 &amp; 0 &amp; r^2 &amp; 0 \\
  0 &amp; 0 &amp; 0 &amp; r^2 \sin ^2(\theta ) \\
 \end{array}
@@ -1395,11 +1398,11 @@ $$&lt;p&gt;
 &lt;/div&gt;$$
 \left(
 \begin{array}{cc}
- \Gamma ^0{}_{1,0} &amp; -\frac{\text{Rs}}{2 r  \text{Rs}-2 r ^2} \\
- \Gamma ^1{}_{0,0} &amp; -\frac{\text{Rs} (\text{Rs}-r )}{2 r ^3} \\
- \Gamma ^1{}_{1,1} &amp; \frac{\text{Rs}}{2 r  \text{Rs}-2 r ^2} \\
- \Gamma ^1{}_{2,2} &amp; \text{Rs}-r  \\
- \Gamma ^1{}_{3,3} &amp; \sin ^2(\theta  ) (\text{Rs}-r ) \\
+ \Gamma ^0{}_{1,0} &amp; -\frac{R_s}{2 r  R_s-2 r ^2} \\
+ \Gamma ^1{}_{0,0} &amp; -\frac{R_s (R_s-r )}{2 r ^3} \\
+ \Gamma ^1{}_{1,1} &amp; \frac{R_s}{2 r  R_s-2 r ^2} \\
+ \Gamma ^1{}_{2,2} &amp; R_s-r  \\
+ \Gamma ^1{}_{3,3} &amp; \sin ^2(\theta  ) (R_s-r ) \\
  \Gamma ^2{}_{2,1} &amp; \frac{1}{r } \\
  \Gamma ^2{}_{3,3} &amp; \sin (\theta  ) (-\cos (\theta  )) \\
  \Gamma ^3{}_{3,1} &amp; \frac{1}{r } \\
@@ -1443,8 +1446,8 @@ u^\alpha u^\beta $ :&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;$$
 \begin{split}
-&amp;\frac{d}{d \tau }u^0\text{+(}-\frac{\text{R}_s u^0 u^1}{\text{Rs} r-r^2}\text{)=0}\\
-&amp; \frac{d}{d \tau }u^1\text{+(}\frac{r^2 \left(2 r \left(u^0 u^0+\sin ^2(\theta ) u^1 u^1\right) (\text{Rs}-r)^2+\text{Rs} u^2 u^2 \right)-\text{Rs} (\text{Rs}-r)^2 u^3 u^3}{2 (\text{Rs}-r) r^3}\text{)=0}\\
+&amp;\frac{d}{d \tau }u^0\text{+(}-\frac{\text{R}_s u^0 u^1}{R_s r-r^2}\text{)=0}\\
+&amp; \frac{d}{d \tau }u^1\text{+(}\frac{r^2 \left(2 r \left(u^0 u^0+\sin ^2(\theta ) u^1 u^1\right) (R_s-r)^2+R_s u^2 u^2 \right)-R_s (R_s-r)^2 u^3 u^3}{2 (R_s-r) r^3}\text{)=0}\\
 &amp; \frac{d}{d\tau }u^2\text{+(}\frac{2 u^1 u^2}{r}-\cos (\theta ) \sin (\theta ) u^3 u^3 \text{)=0}\\
 &amp; \frac{d}{d \tau }u^3\text{+(}\frac{2 (u^1 +\cot (\theta ) r u^2) u^3}{r}\text{)=0}
 \end{split}
@@ -1503,8 +1506,8 @@ $$&lt;p&gt;可以改成我们更熟悉的形式&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;$$
 \begin{split}
-&amp; \frac{d}{d \tau }\text{dt}\text{+(}-\frac{\text{Rs} \text{dr} \text{dt}}{\text{Rs} r-r^2}\text{)=0} \\
-&amp; \frac{d}{d \tau }\text{dr}\text{+(}\frac{r^2 \left(\text{Rs} \text{dr}^2+2 (\text{Rs}-r)^2 r \left(\text{d$\theta $}^2+\text{d$\phi $}^2 \sin ^2(\theta )\right)\right)-\text{Rs} \text{dt}^2 (\text{Rs}-r)^2}{2 (\text{Rs}-r) r^3}\text{)=0}\\
+&amp; \frac{d}{d \tau }\text{dt}\text{+(}-\frac{R_s \text{dr} \text{dt}}{R_s r-r^2}\text{)=0} \\
+&amp; \frac{d}{d \tau }\text{dr}\text{+(}\frac{r^2 \left(R_s \text{dr}^2+2 (R_s-r)^2 r \left(\text{d$\theta $}^2+\text{d$\phi $}^2 \sin ^2(\theta )\right)\right)-R_s \text{dt}^2 (R_s-r)^2}{2 (R_s-r) r^3}\text{)=0}\\
 &amp; \frac{d}{d \tau }\text{d$\theta $}\text{+(}\frac{2 \text{dr} \text{d$\theta $}}{r}-\cos (\theta ) \text{d$\phi $}^2 \sin (\theta )\text{)=0}
 \\
 &amp;\frac{d}{d \tau }\text{d$\phi $}\text{+(}\frac{2 \text{d$\phi $} (\text{dr}+\cot (\theta ) \text{d$\theta $} r)}{r}\text{)=0}
@@ -1521,14 +1524,14 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;/div&gt;
 &lt;/div&gt;$$
 \begin{split}
-&amp; \ddot{t}\text{+(}-\frac{\text{Rs} \dot{r} \dot{t}}{\text{Rs} r-r^2}\text{)=0}\\
-&amp; \ddot{r}\text{+(}\frac{r^2 \left(\text{Rs} \dot{r}^2+2 (\text{Rs}-r)^2 r \left(\dot{\theta}^2+\dot{\phi}^2 \sin ^2(\theta )\right)\right)-\text{Rs} \dot{t}^2 (\text{Rs}-r)^2}{2 (\text{Rs}-r) r^3}\text{)=0}\\
+&amp; \ddot{t}\text{+(}-\frac{R_s \dot{r} \dot{t}}{R_s r-r^2}\text{)=0}\\
+&amp; \ddot{r}\text{+(}\frac{r^2 \left(R_s \dot{r}^2+2 (R_s-r)^2 r \left(\dot{\theta}^2+\dot{\phi}^2 \sin ^2(\theta )\right)\right)-R_s \dot{t}^2 (R_s-r)^2}{2 (R_s-r) r^3}\text{)=0}\\
 &amp; \ddot{\theta}\text{+(}\frac{2 \dot{r} \dot{\theta}}{r}-\cos (\theta ) \dot{\phi}^2 \sin (\theta )\text{)=0}
 \\
 &amp;\ddot{\phi}\text{+(}\frac{2 \dot{\phi} (\dot{r}+\cot (\theta ) \dot{\theta} r)}{r}\text{)=0}
 \end{split}
 $$&lt;h2 id=&#34;数值求解测地线方程&#34;&gt;数值求解测地线方程
-&lt;/h2&gt;&lt;p&gt;测地线方程有更简单的求法，可以通过找守恒量消除方程的一些冗余度，但是这里采用&lt;strong&gt;最原始粗暴&lt;/strong&gt;的算法[^ 1 ]。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;测地线方程有更简单的求法，可以通过找守恒量消除方程的一些冗余度，但是这里采用&lt;strong&gt;最原始粗暴&lt;/strong&gt;的算法&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 &lt;p&gt;先给定初始条件，这里是类时测地线，有$g_{\mu\nu}u^\mu u^\nu =0$，为简单考虑，选取$\theta = \frac{\pi}{2}$的平面&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1650,6 +1653,14 @@ $$&lt;h2 id=&#34;数值求解测地线方程&#34;&gt;数值求解测地线方程
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://physics.ntua.gr/konstant/GR/xAct.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://physics.ntua.gr/konstant/GR/xAct.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;陈斌 .《广义相对论导论》. 北京大学出版社. 2022&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;反正用电脑数值求解。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
         </item>
         <item>

@@ -1043,7 +1043,7 @@ $$&lt;p&gt;
 &lt;/div&gt;
 &lt;/div&gt;$$
 0
-$$&lt;p&gt;综上，对于克尔度规的验证就算成功，如果想真正的求解它，最好学习一下外微分，求解过程可以参考[^ 3 ]:&lt;/p&gt;
+$$&lt;p&gt;综上，对于克尔度规的验证就算成功，如果想真正的求解它，最好学习一下外微分，求解过程可以参考&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://itp.uni-frankfurt.de/~hees/gen-phys/derivation-of-the-kerr-metric-Wagner.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1063,6 +1063,9 @@ $$&lt;p&gt;综上，对于克尔度规的验证就算成功，如果想真正的
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
 &lt;p&gt;这里展示的结果是 deepseek R1 整理后的，其结果可能有偏差，具体结果以Mathematica计算为准。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;注意用外微分计算得到的黎曼张量可能和Mathematica计算的结果不一样，因为其可能用闵氏度规作升降指标。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -1374,7 +1377,7 @@ $$&lt;p&gt;由真空中的爱因斯坦方程$R_{\mu\nu} = 0$可知上式任意�
 		data-flex-basis=&#34;407px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;实际上到这一步剩下的手算也不难了，注意上面的式子都为0，同时没有对时间的导数项，那么总可以重定义$&lt;del&gt;\mathrm{d}t&lt;/del&gt;$使得$~F(t,r) = F(r)$。那么可以把方程组整理为：&lt;/p&gt;
+&lt;p&gt;实际上到这一步剩下的手算也不难了，注意上面的式子都为0，同时没有对时间的导数项，那么总可以重定义$\mathrm{d}t \Rightarrow F(t,r) = F(r)$。那么可以把方程组整理为：&lt;/p&gt;
 $$
 \begin{array}{cc}
 \text{F}&#39;&#39;(r)+\text{F}&#39;(r) \left(\frac{2}{r}-\text{G}&#39;(r)\right)+\text{F}&#39;(r)^2=0,\\
@@ -1425,8 +1428,8 @@ $$&lt;p&gt;
 &lt;/div&gt;$$
 g_{\mu \nu }=\left(
 \begin{array}{cccc}
- \frac{\text{Rs}}{r}-1 &amp; 0 &amp; 0 &amp; 0 \\
- 0 &amp; \frac{1}{1-\frac{\text{Rs}}{r}} &amp; 0 &amp; 0 \\
+ \frac{R_s}{r}-1 &amp; 0 &amp; 0 &amp; 0 \\
+ 0 &amp; \frac{1}{1-\frac{R_s}{r}} &amp; 0 &amp; 0 \\
  0 &amp; 0 &amp; r^2 &amp; 0 \\
  0 &amp; 0 &amp; 0 &amp; r^2 \sin ^2(\theta ) \\
 \end{array}
@@ -1508,11 +1511,11 @@ $$&lt;p&gt;
 &lt;/div&gt;$$
 \left(
 \begin{array}{cc}
- \Gamma ^0{}_{1,0} &amp; -\frac{\text{Rs}}{2 r  \text{Rs}-2 r ^2} \\
- \Gamma ^1{}_{0,0} &amp; -\frac{\text{Rs} (\text{Rs}-r )}{2 r ^3} \\
- \Gamma ^1{}_{1,1} &amp; \frac{\text{Rs}}{2 r  \text{Rs}-2 r ^2} \\
- \Gamma ^1{}_{2,2} &amp; \text{Rs}-r  \\
- \Gamma ^1{}_{3,3} &amp; \sin ^2(\theta  ) (\text{Rs}-r ) \\
+ \Gamma ^0{}_{1,0} &amp; -\frac{R_s}{2 r  R_s-2 r ^2} \\
+ \Gamma ^1{}_{0,0} &amp; -\frac{R_s (R_s-r )}{2 r ^3} \\
+ \Gamma ^1{}_{1,1} &amp; \frac{R_s}{2 r  R_s-2 r ^2} \\
+ \Gamma ^1{}_{2,2} &amp; R_s-r  \\
+ \Gamma ^1{}_{3,3} &amp; \sin ^2(\theta  ) (R_s-r ) \\
  \Gamma ^2{}_{2,1} &amp; \frac{1}{r } \\
  \Gamma ^2{}_{3,3} &amp; \sin (\theta  ) (-\cos (\theta  )) \\
  \Gamma ^3{}_{3,1} &amp; \frac{1}{r } \\
@@ -1556,8 +1559,8 @@ u^\alpha u^\beta $ :&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;$$
 \begin{split}
-&amp;\frac{d}{d \tau }u^0\text{+(}-\frac{\text{R}_s u^0 u^1}{\text{Rs} r-r^2}\text{)=0}\\
-&amp; \frac{d}{d \tau }u^1\text{+(}\frac{r^2 \left(2 r \left(u^0 u^0+\sin ^2(\theta ) u^1 u^1\right) (\text{Rs}-r)^2+\text{Rs} u^2 u^2 \right)-\text{Rs} (\text{Rs}-r)^2 u^3 u^3}{2 (\text{Rs}-r) r^3}\text{)=0}\\
+&amp;\frac{d}{d \tau }u^0\text{+(}-\frac{\text{R}_s u^0 u^1}{R_s r-r^2}\text{)=0}\\
+&amp; \frac{d}{d \tau }u^1\text{+(}\frac{r^2 \left(2 r \left(u^0 u^0+\sin ^2(\theta ) u^1 u^1\right) (R_s-r)^2+R_s u^2 u^2 \right)-R_s (R_s-r)^2 u^3 u^3}{2 (R_s-r) r^3}\text{)=0}\\
 &amp; \frac{d}{d\tau }u^2\text{+(}\frac{2 u^1 u^2}{r}-\cos (\theta ) \sin (\theta ) u^3 u^3 \text{)=0}\\
 &amp; \frac{d}{d \tau }u^3\text{+(}\frac{2 (u^1 +\cot (\theta ) r u^2) u^3}{r}\text{)=0}
 \end{split}
@@ -1616,8 +1619,8 @@ $$&lt;p&gt;可以改成我们更熟悉的形式&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;$$
 \begin{split}
-&amp; \frac{d}{d \tau }\text{dt}\text{+(}-\frac{\text{Rs} \text{dr} \text{dt}}{\text{Rs} r-r^2}\text{)=0} \\
-&amp; \frac{d}{d \tau }\text{dr}\text{+(}\frac{r^2 \left(\text{Rs} \text{dr}^2+2 (\text{Rs}-r)^2 r \left(\text{d$\theta $}^2+\text{d$\phi $}^2 \sin ^2(\theta )\right)\right)-\text{Rs} \text{dt}^2 (\text{Rs}-r)^2}{2 (\text{Rs}-r) r^3}\text{)=0}\\
+&amp; \frac{d}{d \tau }\text{dt}\text{+(}-\frac{R_s \text{dr} \text{dt}}{R_s r-r^2}\text{)=0} \\
+&amp; \frac{d}{d \tau }\text{dr}\text{+(}\frac{r^2 \left(R_s \text{dr}^2+2 (R_s-r)^2 r \left(\text{d$\theta $}^2+\text{d$\phi $}^2 \sin ^2(\theta )\right)\right)-R_s \text{dt}^2 (R_s-r)^2}{2 (R_s-r) r^3}\text{)=0}\\
 &amp; \frac{d}{d \tau }\text{d$\theta $}\text{+(}\frac{2 \text{dr} \text{d$\theta $}}{r}-\cos (\theta ) \text{d$\phi $}^2 \sin (\theta )\text{)=0}
 \\
 &amp;\frac{d}{d \tau }\text{d$\phi $}\text{+(}\frac{2 \text{d$\phi $} (\text{dr}+\cot (\theta ) \text{d$\theta $} r)}{r}\text{)=0}
@@ -1634,14 +1637,14 @@ $$&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;/div&gt;
 &lt;/div&gt;$$
 \begin{split}
-&amp; \ddot{t}\text{+(}-\frac{\text{Rs} \dot{r} \dot{t}}{\text{Rs} r-r^2}\text{)=0}\\
-&amp; \ddot{r}\text{+(}\frac{r^2 \left(\text{Rs} \dot{r}^2+2 (\text{Rs}-r)^2 r \left(\dot{\theta}^2+\dot{\phi}^2 \sin ^2(\theta )\right)\right)-\text{Rs} \dot{t}^2 (\text{Rs}-r)^2}{2 (\text{Rs}-r) r^3}\text{)=0}\\
+&amp; \ddot{t}\text{+(}-\frac{R_s \dot{r} \dot{t}}{R_s r-r^2}\text{)=0}\\
+&amp; \ddot{r}\text{+(}\frac{r^2 \left(R_s \dot{r}^2+2 (R_s-r)^2 r \left(\dot{\theta}^2+\dot{\phi}^2 \sin ^2(\theta )\right)\right)-R_s \dot{t}^2 (R_s-r)^2}{2 (R_s-r) r^3}\text{)=0}\\
 &amp; \ddot{\theta}\text{+(}\frac{2 \dot{r} \dot{\theta}}{r}-\cos (\theta ) \dot{\phi}^2 \sin (\theta )\text{)=0}
 \\
 &amp;\ddot{\phi}\text{+(}\frac{2 \dot{\phi} (\dot{r}+\cot (\theta ) \dot{\theta} r)}{r}\text{)=0}
 \end{split}
 $$&lt;h2 id=&#34;数值求解测地线方程&#34;&gt;数值求解测地线方程
-&lt;/h2&gt;&lt;p&gt;测地线方程有更简单的求法，可以通过找守恒量消除方程的一些冗余度，但是这里采用&lt;strong&gt;最原始粗暴&lt;/strong&gt;的算法[^ 1 ]。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;测地线方程有更简单的求法，可以通过找守恒量消除方程的一些冗余度，但是这里采用&lt;strong&gt;最原始粗暴&lt;/strong&gt;的算法&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 &lt;p&gt;先给定初始条件，这里是类时测地线，有$g_{\mu\nu}u^\mu u^\nu =0$，为简单考虑，选取$\theta = \frac{\pi}{2}$的平面&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1763,6 +1766,14 @@ $$&lt;h2 id=&#34;数值求解测地线方程&#34;&gt;数值求解测地线方程
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://physics.ntua.gr/konstant/GR/xAct.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://physics.ntua.gr/konstant/GR/xAct.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;陈斌 .《广义相对论导论》. 北京大学出版社. 2022&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;反正用电脑数值求解。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
         </item>
         <item>
@@ -2449,19 +2460,20 @@ $$&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC
         <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
         
         <guid>https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/</guid>
-        <description>&lt;img src="https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/thinking.png" alt="Featured image of post 物理夜航船——读后感" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
-&lt;/h1&gt;&lt;p&gt;早在大二之时，我就听闻 A.Zee 著作&lt;em&gt;Fly By Night Physics&lt;/em&gt;，但由于英文水平实在糟糕，同时很多物理图像完全没有建立^1，便没有读下去的想法，只是知道此书及其善于各种技巧，用各种花里胡哨的手法得到一个 “大致正确” 的结果。然而时光荏苒，不知不觉间我的本科物理学习生活就要结束了。&lt;em&gt;Fly By Night Physics&lt;/em&gt;也已经有了中文版本《物理夜航船》，我也知道了 A.Zee 原来叫徐一鸿。当然，经过这几年解各式各样的薛定谔方程，麦克斯韦方程组，爱因斯坦方程等方程和使用各种近似如绝热近似，WKB 近似等以及强大的 Mathematica 和 Matlab 之后，从前觉得各种高深的 “拉格朗日”，“哈密顿”，“量子隧穿”，“弯曲时空”，“宇宙奇点” 等等等等名词已经对其完全祛魅。此外，我也不想自己的物理之旅止步于此，于是在推免研究生的过程中毅然决然走向了理论物理的道路。在这样的背景下，我觉得有必要读一读《物理夜航船》，毕竟在物理学中深刻的思想总是朴素的，我想看看如何用朴素的量纲分析得到教材中绝大部分的结果。&lt;/p&gt;
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/thinking.png" alt="Featured image of post 物理夜航船——读后感" /&gt;&lt;h1 id=&#34;物理夜航船读后感&#34;&gt;物理夜航船——读后感
+&lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;早在大二之时，我就听闻 A.Zee 著作&lt;em&gt;Fly By Night Physics&lt;/em&gt;，但由于英文水平实在糟糕，同时很多物理图像完全没有建立^1，便没有读下去的想法，只是知道此书及其善于各种技巧，用各种花里胡哨的手法得到一个 “大致正确” 的结果。然而时光荏苒，不知不觉间我的本科物理学习生活就要结束了。&lt;em&gt;Fly By Night Physics&lt;/em&gt;也已经有了中文版本《物理夜航船》，我也知道了 A.Zee 原来叫徐一鸿。当然，经过这几年解各式各样的薛定谔方程，麦克斯韦方程组，爱因斯坦方程等方程和使用各种近似如绝热近似，WKB 近似等以及强大的 Mathematica 和 Matlab 之后，从前觉得各种高深的 “拉格朗日”，“哈密顿”，“量子隧穿”，“弯曲时空”，“宇宙奇点” 等等等等名词已经对其完全祛魅。此外，我也不想自己的物理之旅止步于此，于是在推免研究生的过程中毅然决然走向了理论物理的道路。在这样的背景下，我觉得有必要读一读《物理夜航船》，毕竟在物理学中深刻的思想总是朴素的，我想看看如何用朴素的量纲分析得到教材中绝大部分的结果。&lt;/p&gt;
 &lt;p&gt;初看此书目录，最吸引我的还是第四章 —— 普朗克给我们以单位：黑洞辐射和爱因斯坦引力，我想看看广义相对论和量子力学如何用简单的方法就证明其不可能兼容。毕竟量子场论里又是做了各种量子化，又是引入 Klein - Gorden 方程，又是一堆计算才展示出负能解，负几率和因果性被破坏这三个狭义相对论和量子力学的矛盾。由此，我决定后面的内容主要写一写我学习完《物理夜航船》第四章的想法，首先整理一下自然单位制的来源，然后简单地通过量子力学的德布罗意波 $\lambda$ 和广义相对论里的史瓦西半径 $R_S$ 来简单证明量子力学与广义相对论的不可调和之处。&lt;/p&gt;
-&lt;h1 id=&#34;自然单位制--物理学的普适常数&#34;&gt;自然单位制 —— 物理学的普适常数
-&lt;/h1&gt;&lt;p&gt;在现实生活中，一个有意义的物理量肯定是有对应的单位的，如位移，速度，电荷等等。具有相同的物理含义必须使用同一个单位才有比较的意义，如1cm 和1光年都是，但是它们没有相同的单位，两个&amp;quot;1&amp;quot;的比较是毫无意义的。不过这就有个 bug，平时所见的单位如公里，摄氏度，年，千克等等都是人为指定的，但是自然界的规律可不是人定的，那么就会很自然想到，有没有一种自然单位制呢？&lt;/p&gt;
+&lt;h2 id=&#34;自然单位制--物理学的普适常数&#34;&gt;自然单位制 —— 物理学的普适常数
+&lt;/h2&gt;&lt;p&gt;在现实生活中，一个有意义的物理量肯定是有对应的单位的，如位移，速度，电荷等等。具有相同的物理含义必须使用同一个单位才有比较的意义，如1cm 和1光年都是，但是它们没有相同的单位，两个&amp;quot;1&amp;quot;的比较是毫无意义的。不过这就有个 bug，平时所见的单位如公里，摄氏度，年，千克等等都是人为指定的，但是自然界的规律可不是人定的，那么就会很自然想到，有没有一种自然单位制呢？&lt;/p&gt;
 &lt;p&gt;自然单位制既然由大自然决定，同时基本单位肯定是不变的，那么最容易想到的就是把光速$c$作为一个基本单位。这样的话由于$c = 1$那么长度和时间的量纲都相同了$[\mathbf{L}]=[\mathbf{T}]$。此外，由质能方程 $E = mc^2$，质量和能量也就成了一回事情。&lt;/p&gt;
 &lt;p&gt;虽然我们生活的现实尺度很难理解微观的 “量子效应”，但是宇宙没有义务被我们理解，大自然也不需要区分所谓的 “经典” 与 “量子”，因此 $\hbar = 1$​也能成为一个基本单位。类似的，在宏观上万有引力的作用是巨大的，故可以用牛顿引力常数 $G = 1$​ 作为第三个基本单位。这样，我们就建立了$c = \hbar = G = 1$​的自然单位制，因为所有的物理量都可以和能量建立关系，因此我们仅仅需要质量和电荷就能讨论一切的物理量，不过在本文接下来的讨论范围甚至不需要电荷。&lt;/p&gt;
-&lt;h1 id=&#34;量子力学与广义相对论的不可调和&#34;&gt;量子力学与广义相对论的不可调和
-&lt;/h1&gt;&lt;p&gt;在量子力学中，普朗克常数 $\hbar$ 起着十分关键的作用，同时根据 $E=\hbar\omega$ 我们可以很快得到$[\hbar] = [\mathbf{ML}]$。这里只需知道动能表达式 $ E_k = \frac{1}{2}mv^2$ 就能得到能量量纲为 $[\mathbf{ML^2T^{-2}}] = [\mathbf{M}]$，由于采用自然单位制 $c = 1$ 所以 $[\mathbf{L}]=[\mathbf{T}]$。那么就有 $[\hbar] = [E/\omega] = [\mathbf{MT}]=[\mathbf{ML}]$。&lt;/p&gt;
+&lt;h2 id=&#34;量子力学与广义相对论的不可调和&#34;&gt;量子力学与广义相对论的不可调和
+&lt;/h2&gt;&lt;p&gt;在量子力学中，普朗克常数 $\hbar$ 起着十分关键的作用，同时根据 $E=\hbar\omega$ 我们可以很快得到$[\hbar] = [\mathbf{ML}]$。这里只需知道动能表达式 $ E_k = \frac{1}{2}mv^2$ 就能得到能量量纲为 $[\mathbf{ML^2T^{-2}}] = [\mathbf{M}]$，由于采用自然单位制 $c = 1$ 所以 $[\mathbf{L}]=[\mathbf{T}]$。那么就有 $[\hbar] = [E/\omega] = [\mathbf{MT}]=[\mathbf{ML}]$。&lt;/p&gt;
 &lt;p&gt;在弱场近似下，广义相对论总是要回到牛顿引力，这也代表着牛顿引力常数$G$在广义相对论中也起着很重要的作用。由$[GM/r^2]$为加速度的量纲，那么就有$[GM]=[\mathbf{L^3T^{-2}]=[L]}$，故牛顿引力常数的量纲为$\mathbf{[L/M]}$。将$\hbar$与 $G$ 对比即可发现$[\mathbf{M}]$在两个常数的位置不同，可以据此简单分析出量子力学与广义相对论的不可调和性质。&lt;/p&gt;
 &lt;p&gt;量子力学的理论框架下，一个物体的特征长度由德布罗意波表征。那么对于质量为$m$的物体，其德布罗意波约为$\lambda \simeq \hbar/E\simeq \hbar/m$。在广义相对论中，可以认为物体的特征长度由史瓦西半径表征，那么对于$m$的史瓦西半径为$R_S = 2Gm$。矛盾就此而出，可见，对于越大的$m$，其德布罗意波越小，而史瓦西半径越大，自然就显示出两种理论的不可调和性。从量纲的角度来看，由于特征长度都正比于两个普适常数，而$\hbar$和$G$有不同的质量量纲，这就导致了上述矛盾的出现。&lt;/p&gt;
-&lt;h1 id=&#34;总结与感想&#34;&gt;总结与感想
-&lt;/h1&gt;&lt;p&gt;不得不承认徐一鸿老师的《物理夜航船》是一本十分有趣的 “物理技巧” 书，但事实上在没有足够清晰的物理图像下是很难领会到夜航船的精神所在。正是如此，这本书的受众才是 “高年级” 大学生。事实上，如果没有经过系统的基本量子力学训练，单纯理解德布罗意波$\lambda$作为特征长度是很困难的，这是因为其对一些基本势能的波函数图像没有把握，这是需要经过一些计算训练才能获得的。同样缺少广义相对论的学习，也难以理解把史瓦西黑洞作为特征长度，这是因为广义相对论在强引力条件下的作用才较为明显，而黑洞视界面附近恰好提供这样的环境，这也是要经过一些繁杂计算才能体会到的 。[^3]: 只是对于我这种普通学生而言。&lt;/p&gt;
+&lt;h2 id=&#34;总结与感想&#34;&gt;总结与感想
+&lt;/h2&gt;&lt;p&gt;不得不承认徐一鸿老师的《物理夜航船》是一本十分有趣的 “物理技巧” 书，但事实上在没有足够清晰的物理图像下是很难领会到夜航船的精神所在。正是如此，这本书的受众才是 “高年级” 大学生。事实上，如果没有经过系统的基本量子力学训练，单纯理解德布罗意波$\lambda$作为特征长度是很困难的，这是因为其对一些基本势能的波函数图像没有把握，这是需要经过一些计算训练才能获得的。同样缺少广义相对论的学习，也难以理解把史瓦西黑洞作为特征长度，这是因为广义相对论在强引力条件下的作用才较为明显，而黑洞视界面附近恰好提供这样的环境，这也是要经过一些繁杂计算才能体会到的 。[^3]: 只是对于我这种普通学生而言。&lt;/p&gt;
 &lt;p&gt;综上所述，夜航船技术的精神虽然有趣且实用，但要真正对其有所体会还是在建立足够扎实的基本物理图像上。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E8%AE%B0%E7%89%A9%E7%90%86%E5%A4%9C%E8%88%AA%E8%88%B9%E8%AF%BB%E5%90%8E%E6%84%9F/wuli.jpg&#34;
 	width=&#34;785&#34;

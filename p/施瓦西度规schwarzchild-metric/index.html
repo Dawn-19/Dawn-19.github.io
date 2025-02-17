@@ -24,7 +24,7 @@
         (function() {
             const colorSchemeKey = 'StackColorScheme';
             if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "dark");
+                localStorage.setItem(colorSchemeKey, "light");
             }
         })();
     </script><script>
@@ -729,7 +729,7 @@ $$<p>由真空中的爱因斯坦方程$R_{\mu\nu} = 0$可知上式任意一项�
 		data-flex-basis="407px"
 	
 ></p>
-<p>实际上到这一步剩下的手算也不难了，注意上面的式子都为0，同时没有对时间的导数项，那么总可以重定义$<del>\mathrm{d}t</del>$使得$~F(t,r) = F(r)$。那么可以把方程组整理为：</p>
+<p>实际上到这一步剩下的手算也不难了，注意上面的式子都为0，同时没有对时间的导数项，那么总可以重定义$\mathrm{d}t \Rightarrow F(t,r) = F(r)$。那么可以把方程组整理为：</p>
 $$
 \begin{array}{cc}
 \text{F}''(r)+\text{F}'(r) \left(\frac{2}{r}-\text{G}'(r)\right)+\text{F}'(r)^2=0,\\
@@ -780,8 +780,8 @@ $$<p>
 </div>$$
 g_{\mu \nu }=\left(
 \begin{array}{cccc}
- \frac{\text{Rs}}{r}-1 & 0 & 0 & 0 \\
- 0 & \frac{1}{1-\frac{\text{Rs}}{r}} & 0 & 0 \\
+ \frac{R_s}{r}-1 & 0 & 0 & 0 \\
+ 0 & \frac{1}{1-\frac{R_s}{r}} & 0 & 0 \\
  0 & 0 & r^2 & 0 \\
  0 & 0 & 0 & r^2 \sin ^2(\theta ) \\
 \end{array}
@@ -863,11 +863,11 @@ $$<p>
 </div>$$
 \left(
 \begin{array}{cc}
- \Gamma ^0{}_{1,0} & -\frac{\text{Rs}}{2 r  \text{Rs}-2 r ^2} \\
- \Gamma ^1{}_{0,0} & -\frac{\text{Rs} (\text{Rs}-r )}{2 r ^3} \\
- \Gamma ^1{}_{1,1} & \frac{\text{Rs}}{2 r  \text{Rs}-2 r ^2} \\
- \Gamma ^1{}_{2,2} & \text{Rs}-r  \\
- \Gamma ^1{}_{3,3} & \sin ^2(\theta  ) (\text{Rs}-r ) \\
+ \Gamma ^0{}_{1,0} & -\frac{R_s}{2 r  R_s-2 r ^2} \\
+ \Gamma ^1{}_{0,0} & -\frac{R_s (R_s-r )}{2 r ^3} \\
+ \Gamma ^1{}_{1,1} & \frac{R_s}{2 r  R_s-2 r ^2} \\
+ \Gamma ^1{}_{2,2} & R_s-r  \\
+ \Gamma ^1{}_{3,3} & \sin ^2(\theta  ) (R_s-r ) \\
  \Gamma ^2{}_{2,1} & \frac{1}{r } \\
  \Gamma ^2{}_{3,3} & \sin (\theta  ) (-\cos (\theta  )) \\
  \Gamma ^3{}_{3,1} & \frac{1}{r } \\
@@ -911,8 +911,8 @@ u^\alpha u^\beta $ :</p>
 </div>
 </div>$$
 \begin{split}
-&\frac{d}{d \tau }u^0\text{+(}-\frac{\text{R}_s u^0 u^1}{\text{Rs} r-r^2}\text{)=0}\\
-& \frac{d}{d \tau }u^1\text{+(}\frac{r^2 \left(2 r \left(u^0 u^0+\sin ^2(\theta ) u^1 u^1\right) (\text{Rs}-r)^2+\text{Rs} u^2 u^2 \right)-\text{Rs} (\text{Rs}-r)^2 u^3 u^3}{2 (\text{Rs}-r) r^3}\text{)=0}\\
+&\frac{d}{d \tau }u^0\text{+(}-\frac{\text{R}_s u^0 u^1}{R_s r-r^2}\text{)=0}\\
+& \frac{d}{d \tau }u^1\text{+(}\frac{r^2 \left(2 r \left(u^0 u^0+\sin ^2(\theta ) u^1 u^1\right) (R_s-r)^2+R_s u^2 u^2 \right)-R_s (R_s-r)^2 u^3 u^3}{2 (R_s-r) r^3}\text{)=0}\\
 & \frac{d}{d\tau }u^2\text{+(}\frac{2 u^1 u^2}{r}-\cos (\theta ) \sin (\theta ) u^3 u^3 \text{)=0}\\
 & \frac{d}{d \tau }u^3\text{+(}\frac{2 (u^1 +\cot (\theta ) r u^2) u^3}{r}\text{)=0}
 \end{split}
@@ -971,8 +971,8 @@ $$<p>可以改成我们更熟悉的形式</p>
 </div>
 </div>$$
 \begin{split}
-& \frac{d}{d \tau }\text{dt}\text{+(}-\frac{\text{Rs} \text{dr} \text{dt}}{\text{Rs} r-r^2}\text{)=0} \\
-& \frac{d}{d \tau }\text{dr}\text{+(}\frac{r^2 \left(\text{Rs} \text{dr}^2+2 (\text{Rs}-r)^2 r \left(\text{d$\theta $}^2+\text{d$\phi $}^2 \sin ^2(\theta )\right)\right)-\text{Rs} \text{dt}^2 (\text{Rs}-r)^2}{2 (\text{Rs}-r) r^3}\text{)=0}\\
+& \frac{d}{d \tau }\text{dt}\text{+(}-\frac{R_s \text{dr} \text{dt}}{R_s r-r^2}\text{)=0} \\
+& \frac{d}{d \tau }\text{dr}\text{+(}\frac{r^2 \left(R_s \text{dr}^2+2 (R_s-r)^2 r \left(\text{d$\theta $}^2+\text{d$\phi $}^2 \sin ^2(\theta )\right)\right)-R_s \text{dt}^2 (R_s-r)^2}{2 (R_s-r) r^3}\text{)=0}\\
 & \frac{d}{d \tau }\text{d$\theta $}\text{+(}\frac{2 \text{dr} \text{d$\theta $}}{r}-\cos (\theta ) \text{d$\phi $}^2 \sin (\theta )\text{)=0}
 \\
 &\frac{d}{d \tau }\text{d$\phi $}\text{+(}\frac{2 \text{d$\phi $} (\text{dr}+\cot (\theta ) \text{d$\theta $} r)}{r}\text{)=0}
@@ -989,14 +989,14 @@ $$<div class="highlight"><div class="chroma">
 </div>
 </div>$$
 \begin{split}
-& \ddot{t}\text{+(}-\frac{\text{Rs} \dot{r} \dot{t}}{\text{Rs} r-r^2}\text{)=0}\\
-& \ddot{r}\text{+(}\frac{r^2 \left(\text{Rs} \dot{r}^2+2 (\text{Rs}-r)^2 r \left(\dot{\theta}^2+\dot{\phi}^2 \sin ^2(\theta )\right)\right)-\text{Rs} \dot{t}^2 (\text{Rs}-r)^2}{2 (\text{Rs}-r) r^3}\text{)=0}\\
+& \ddot{t}\text{+(}-\frac{R_s \dot{r} \dot{t}}{R_s r-r^2}\text{)=0}\\
+& \ddot{r}\text{+(}\frac{r^2 \left(R_s \dot{r}^2+2 (R_s-r)^2 r \left(\dot{\theta}^2+\dot{\phi}^2 \sin ^2(\theta )\right)\right)-R_s \dot{t}^2 (R_s-r)^2}{2 (R_s-r) r^3}\text{)=0}\\
 & \ddot{\theta}\text{+(}\frac{2 \dot{r} \dot{\theta}}{r}-\cos (\theta ) \dot{\phi}^2 \sin (\theta )\text{)=0}
 \\
 &\ddot{\phi}\text{+(}\frac{2 \dot{\phi} (\dot{r}+\cot (\theta ) \dot{\theta} r)}{r}\text{)=0}
 \end{split}
 $$<h2 id="数值求解测地线方程">数值求解测地线方程
-</h2><p>测地线方程有更简单的求法，可以通过找守恒量消除方程的一些冗余度，但是这里采用<strong>最原始粗暴</strong>的算法[^ 1 ]。</p>
+</h2><p>测地线方程有更简单的求法，可以通过找守恒量消除方程的一些冗余度，但是这里采用<strong>最原始粗暴</strong>的算法<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
 <p>先给定初始条件，这里是类时测地线，有$g_{\mu\nu}u^\mu u^\nu =0$，为简单考虑，选取$\theta = \frac{\pi}{2}$的平面</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1118,6 +1118,14 @@ $$<h2 id="数值求解测地线方程">数值求解测地线方程
 <p><a class="link" href="https://physics.ntua.gr/konstant/GR/xAct.html"  target="_blank" rel="noopener"
     >https://physics.ntua.gr/konstant/GR/xAct.html</a></p>
 <p>陈斌 .《广义相对论导论》. 北京大学出版社. 2022</p></blockquote>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>反正用电脑数值求解。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
 </section>
 

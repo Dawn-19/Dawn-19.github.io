@@ -24,7 +24,7 @@
         (function() {
             const colorSchemeKey = 'StackColorScheme';
             if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "dark");
+                localStorage.setItem(colorSchemeKey, "light");
             }
         })();
     </script><script>
@@ -1350,7 +1350,7 @@ $$<p>
 </div>
 </div>$$
 0
-$$<p>综上，对于克尔度规的验证就算成功，如果想真正的求解它，最好学习一下外微分，求解过程可以参考[^ 3 ]:</p>
+$$<p>综上，对于克尔度规的验证就算成功，如果想真正的求解它，最好学习一下外微分，求解过程可以参考<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>:</p>
 <blockquote>
 <ol>
 <li><a class="link" href="https://itp.uni-frankfurt.de/~hees/gen-phys/derivation-of-the-kerr-metric-Wagner.pdf"  target="_blank" rel="noopener"
@@ -1370,6 +1370,9 @@ $$<p>综上，对于克尔度规的验证就算成功，如果想真正的求解
 </li>
 <li id="fn:2">
 <p>这里展示的结果是 deepseek R1 整理后的，其结果可能有偏差，具体结果以Mathematica计算为准。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>注意用外微分计算得到的黎曼张量可能和Mathematica计算的结果不一样，因为其可能用闵氏度规作升降指标。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
