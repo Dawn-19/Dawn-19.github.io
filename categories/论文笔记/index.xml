@@ -7,7 +7,146 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Dawn-19</copyright>
-        <lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>标量诱导引力波</title>
+        <link>https://Dawn-19.github.io/p/%E6%A0%87%E9%87%8F%E8%AF%B1%E5%AF%BC%E5%BC%95%E5%8A%9B%E6%B3%A2/</link>
+        <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E6%A0%87%E9%87%8F%E8%AF%B1%E5%AF%BC%E5%BC%95%E5%8A%9B%E6%B3%A2/</guid>
+        <description>&lt;h1 id=&#34;标量诱导引力波&#34;&gt;标量诱导引力波
+&lt;/h1&gt;&lt;p&gt;一般的诱导引力波产生于Inflation结束和BBN之间，在原初扰动重新进入视界的时刻。诱导引力波有很多种，但目前认为标量诱导引力波是其最主要的部分。&lt;/p&gt;
+&lt;h2 id=&#34;引力波能谱&#34;&gt;引力波能谱
+&lt;/h2&gt;&lt;p&gt;对于引力波，我们观测的是它的能谱，它是一个无量纲量：&lt;/p&gt;
+$$
+\Omega_{\text{GW}} = \frac{1}{3 M_{\text{P}}H^2}\frac{\mathrm{d}\rho_{\text{GW}} }{\mathrm{d} \ln k } = \frac{k^2}{12 a^2 H^2}\sum_\lambda \mathscr{P}_{h,\lambda}(k)
+$$&lt;p&gt;其中$H = \dot{a}/a$为哈勃参数，$\lambda = +,\times$为极化分量的指标，$\mathscr{P}_{h,\lambda}$是引力波的功率谱&lt;/p&gt;
+$$
+\langle h_{\boldsymbol{k},\lambda} h_{-\boldsymbol{k},\lambda} \rangle = \frac{2\pi^2}{k^3} \mathscr{P}_{h,\lambda}(k)~，
+$$&lt;p&gt;其中$h_{ij}$为引力波，$h_{\boldsymbol{k},\lambda}$为其傅里叶变换&lt;/p&gt;
+$$
+h_{i j}(\tau, \mathbf{k})=\sum_{\lambda} \int \frac{d^{3} k}{(2 \pi)^{3}} e_{i j}^{\lambda}(\mathbf{k}) h_{\mathbf{k}, \lambda}(\tau) e^{i \mathbf{k} \mathbf{x}}~,
+$$&lt;p&gt;这里$e_{i j}^{\lambda}(\mathbf{k})$是极化张量，定义为&lt;/p&gt;
+$$
+\begin{aligned}
+e_{ij}^+({\mathbf{k}}) = \frac{1}{\sqrt{2}} [e_i(\mathbf{k})e_j(\mathbf{k}) - \bar{e}_{i}(\mathbf{k})\bar{e}_j(\mathbf{k}) ]\\
+e_{ij}^+({\mathbf{k}}) = \frac{1}{\sqrt{2}} [e_i(\mathbf{k})\bar{e}_j(\mathbf{k}) + \bar{e}_{i}(\mathbf{k})e_j(\mathbf{k}) ]
+\end{aligned}
+$$&lt;p&gt;写成便于理解的形式：&lt;/p&gt;
+$$
+e_{ij} = \begin{bmatrix}
+ 0 &amp;  &amp;  &amp; \\
+  &amp; 1 &amp;0  &amp; \\
+  &amp; 0 &amp; -1 &amp; \\
+  &amp;  &amp;  &amp;0
+\end{bmatrix}
+\to h^+ ~,
+\quad 
+\bar{e}_{ij} = \begin{bmatrix}
+ 0 &amp;  &amp;  &amp; \\
+  &amp; 0 &amp; 1 &amp; \\
+  &amp; 1 &amp; 0 &amp; \\
+  &amp;  &amp;  &amp;0
+\end{bmatrix}
+\to h^\times
+~.
+$$&lt;h2 id=&#34;action与eom&#34;&gt;Action与EoM
+&lt;/h2&gt;&lt;h3 id=&#34;度规形式与作用量&#34;&gt;度规形式与作用量
+&lt;/h3&gt;&lt;p&gt;对于度规：&lt;/p&gt;
+$$
+\mathrm{d}s^2 = -e^{2\Psi} \mathrm{d}t^2 + a^2(t) e^{2\Phi}Y_{ij}\mathrm{d}x^i\mathrm{d}x^j ~,
+$$&lt;p&gt;其中$\mathrm{det} Y =1$，作用量$S = \int\mathrm{d}^4 x\sqrt{-g}[\frac{1}{2}R-\frac{1}{2}g^{\mu\nu}\partial_\mu \varphi\partial_\nu \varphi - V(\varphi)] $可以展开为&lt;/p&gt;
+$$
+\begin{aligned}
+S = \int\mathrm{d}^3 x \mathrm{d}t \{ ae^{\Psi+\Phi}&amp;(\frac{1}{2}R^{(3)}[Y_{ij}] - 2Y^{ij}D_iD_j\Phi - Y^{ij}D_i\Phi D_j \Phi - \frac{1}{2}D_i\varphi D_j \varphi )\\
+&amp;+a^3 e^{3\Phi - \Psi}(\frac{1}{8}Y^{ij}Y^{kl}\dot{Y}_{ik}\dot{Y}_{jl} - 3(H+\dot{\Phi})^2 +\frac{1}{2}\dot{\varphi}^2 )\\
+&amp;-a^3e^{3\Phi+\Psi}V(\varphi)
+\}~.
+\end{aligned}
+$$&lt;p&gt;其中$D_i$为三维的协变导数。&lt;/p&gt;
+&lt;h3 id=&#34;微扰作用量&#34;&gt;微扰作用量
+&lt;/h3&gt;&lt;p&gt;在对$Y_{ij}$进行变分之前，为保持其横向无迹的性质，对$Y_{ij}$采取指数的形式进行展开&lt;/p&gt;
+$$
+Y_{ij} = (e^h)_{ij} = \delta_{ij} + h_{ij} + \frac{1}{2}\delta^{kl}h_{ik}h_{jl} + \mathscr{O}(h^3)~,
+$$$$
+R^{(3)}[e^h] = -\frac{1}{4}\partial_i h_{kl}\partial^i h^{kl} + \mathscr{O}(h^3)~.
+$$$$
+\Psi = \Psi(t,\mathbf{x})~, ~\Phi = \Phi(t,\mathbf{x})~,~\varphi = \bar{\varphi}(t) + \delta\varphi(t,\mathbf{x})~,
+$$&lt;p&gt;
+其中$\bar{\varphi}(t)$是背景，其他都是微扰项。对于无各向异性压力的情况下，有&lt;/p&gt;
+$$
+\Phi + \Psi = 0~.
+$$&lt;p&gt;根据以上，含有二阶作用量的项为：&lt;/p&gt;
+$$
+\begin{aligned}
+\frac{1}{2}R^{(3)}[Y^{ij}] &amp;\to -\frac{1}{8}\partial_i h_{kl}\partial^i h^{kl}~,\\
+-Y^{ij}D_i\Phi D_j \Phi &amp;\to h^{ij}\partial_i\Phi\partial_j\Phi~,\\
+-\frac{1}{2}Y^{ij}D_i\varphi D_j \varphi&amp; \to \frac{1}{2}h^{ij}\partial_i \delta\varphi \partial_j \delta \varphi~,\\
+\frac{1}{8}Y^{ij}Y^{kl}\dot{Y}_{ik}\dot{Y}_{jl}&amp;\to \frac{1}{8}\dot{h}^{ij}\dot{h}_{ij}~.
+\end{aligned}
+$$&lt;p&gt;得到展开后的作用量为&lt;/p&gt;
+$$
+S = \int d^3 x \, dt \left\{ \frac{a^3}{8} h^{ij} h_{ij} - \frac{a}{8} \partial_i h_{kl} \partial^i h^{kl} + a h^{ij} \partial_i \Phi \partial_j \Phi + \frac{a}{2} h^{ij} \partial_i \delta \varphi \partial_j \delta \varphi \right\}~ ,
+$$&lt;p&gt;对$h_{ij}$进行变分后，得到运动方程&lt;/p&gt;
+$$
+\dot{h}_{ij} + 3 H \dot{h}_{ij} - a^{-2} \Delta h_{ij} = a^{-2} {\cal P}^{ab}_{~ ~ ~ ~ij} \left\{ 4 \partial_{a} \Phi \partial_{b} \Phi + 2 \partial_{a} \delta \varphi \partial_{b} \delta \varphi \right\} \, ,
+$$&lt;p&gt;其中${\cal P}^{ab}_{~ ~ ~ ~ij}$是投影算子，把张量从$ab$分量投影到$ij$分量上。&lt;/p&gt;
+&lt;h3 id=&#34;傅里叶空间的运动方程&#34;&gt;傅里叶空间的运动方程
+&lt;/h3&gt;&lt;p&gt;根据动量的限制关系，有&lt;/p&gt;
+$$
+\delta \varphi = - \sqrt{\frac{2}{\epsilon}} (\Phi + \frac{\Phi&#39;}{\mathcal{H}})~,
+$$&lt;p&gt;因此我们只有一个标量自由度，经过傅里叶变换&lt;/p&gt;
+$$
+\Phi(\tau,\mathbf{k}) = \int \frac{\mathrm{d}^3 k}{(2\pi)^3} \Phi_{\mathbf{k}}(\tau)e^{i\mathbf{kx}}~,
+$$&lt;p&gt;可以把$\Phi_{\mathbf{k}}$分解成&lt;/p&gt;
+$$
+\Phi(\mathbf{k},\tau) = T_\Phi(k,\tau)\Phi_{\mathbf{k}}~,
+$$&lt;p&gt;其中$\Phi_{\mathbf{k}}$为原初扰动在超视界尺度的值，$T_\Phi(k,\tau)$为转移函数。&lt;/p&gt;
+&lt;p&gt;在傅里叶空间中，运动方程可以写为&lt;/p&gt;
+$$
+h_{\mathbf{k},\lambda}&#39;&#39; + 2\mathcal{H}h_{\mathbf{k},\lambda}&#39; + k^2 h_{\mathbf{k},\lambda} = S_{\mathbf{k},\lambda}~.
+$$&lt;p&gt;其中有&lt;/p&gt;
+$$
+\begin{aligned}
+\mathcal{S}_{\mathbf{k},\lambda} = 4 \int \frac{\mathrm{d}^3q}{(2\pi)^3} &amp;e^{\imath j}_\lambda(k) q_i q_j \Phi_{\mathbf{q}} \Phi_{|\mathbf{k}-\mathbf{q}|} f(\tau, q, |\mathbf{k}-\mathbf{q}|)~,\\
+f(\tau, q, |\mathbf{k} - \mathbf{q}|) =&amp; ~ T_{\Phi}(q\tau)T_{\Phi}(|\mathbf{k} - \mathbf{q}|\tau)\\
+&amp; + \frac{2}{3(1+w) }\left(T_{\Phi}(q\tau) + \frac{T&#39;_{\Phi}(q\tau)}{\mathcal{H}}\right)\left(T_{\Phi}(|\mathbf{k} - \mathbf{q}|\tau) + \frac{T&#39;_{\Phi}(|\mathbf{k} - \mathbf{q}|\tau)}{\mathcal{H}}\right)~,
+\end{aligned}
+$$&lt;p&gt;这里的$w = P/\rho$为状态方程的参数。&lt;/p&gt;
+&lt;h3 id=&#34;关联函数的计算&#34;&gt;关联函数的计算
+&lt;/h3&gt;&lt;p&gt;对于引力波的两点关联函数&lt;/p&gt;
+$$
+\langle h_{\lambda}(k, \tau) h_{\lambda}(k&#39;, \tau) \rangle = \int_{0}^{\tau} \mathrm{d}\tau_1 \int_{0}^{\tau} \mathrm{d}\tau_2 G(\tau, \tau_1) G(\tau, \tau_2) \langle S_{\lambda}(k, \tau_1) S_{\lambda}(k&#39;, \tau_2) \rangle ~,
+$$&lt;p&gt;其中$G(\tau,\tau_a),a=1,2$是格林函数，形式为&lt;/p&gt;
+$$
+G(\tau,\tau&#39;) = \frac{1}{W(h_1,h_2,\tau&#39;)}\left(h_1(\tau)h_2(\tau&#39;)-h_1(\tau&#39;)h_2(\tau)\right)~,
+$$&lt;p&gt;这里$h_1,h_2$是方程$h_{\mathbf{k},\lambda}&amp;rsquo;&amp;rsquo; + 2\mathcal{H}h_{\mathbf{k},\lambda}&amp;rsquo; + k^2 h_{\mathbf{k},\lambda} =0$的两个齐次解，$W(h_1,h_2,\tau) = h_1&amp;rsquo;(\tau)h_2(\tau)-h_1(\tau)h_2&amp;rsquo;(\tau)$。标量场作为波源可以进一步展开：&lt;/p&gt;
+$$
+\begin{aligned}
+\langle S_{\lambda}(k, \tau_1) S_{\lambda}(k&#39;, \tau_2) \rangle  &amp;= 4^2\int\frac{\mathrm{d}^3 q}{(2\pi)^3}\frac{\mathrm{d}^3 q&#39;}{(2\pi)^3} e^{ij}_{\lambda} (k)e^{ij}_{\lambda}(k&#39;)q_i q_j \\
+&amp;\quad\quad \times f(\tau_1,q,|\mathbf{k}-\mathbf{q}|)f(\tau_2,q&#39;,|\mathbf{k}&#39;-\mathbf{q}&#39;|)\\
+&amp;\quad\quad \times \langle\Phi_q \Phi_{|\mathbf{k}-\mathbf{q}|}\Phi_{q&#39;} \Phi_{|\mathbf{k}&#39;-\mathbf{q}&#39;|} \rangle ~,
+\end{aligned}
+$$&lt;p&gt;这里暂时不考虑原初扰动的非高斯性，标量扰动的四点关联函数为&lt;/p&gt;
+$$
+\begin{aligned}
+\langle\Phi_q \Phi_{|\mathbf{k}-\mathbf{q}|}\Phi_{q&#39;} \Phi_{|\mathbf{k}&#39;-\mathbf{q}&#39;|} \rangle &amp;= \langle\Phi_q \Phi_{|\mathbf{k}-\mathbf{q}|}\rangle\langle \Phi_{q&#39;} \Phi_{|\mathbf{k}&#39;-\mathbf{q}&#39;|} \rangle + \langle\Phi_q \Phi_{q&#39;}\rangle\langle \Phi_{|\mathbf{k}-\mathbf{q}|} \Phi_{|\mathbf{k}&#39;-\mathbf{q}&#39;|} \rangle + \langle\Phi_q \Phi_{|\mathbf{k}&#39;-\mathbf{q}&#39;|}\rangle\langle \Phi_{|\mathbf{k}-\mathbf{q}|} \Phi_{q&#39;} \rangle \\
+&amp; = \frac{2\pi^2}{q^3}\mathscr{P}_\Phi(q) \frac{2\pi^2}{q&#39;^3} \mathscr{P}_\Phi(q&#39;) \times (2\pi)^6\delta^{(3)}(\mathbf{k})\delta^{(3)}(\mathbf{k}&#39;)\\
+&amp;\quad+ \frac{2\pi^2}{q^3}\mathscr{P}_\Phi(q) \frac{2\pi^2}{|\mathbf{k}-\mathbf{q}|^3} \mathscr{P}_\Phi(|\mathbf{k}-\mathbf{q}|) \times (2\pi)^6\delta^{(3)}(\mathbf{q}+\mathbf{q}&#39;)\delta^{(3)}(\mathbf{k}+\mathbf{k}&#39;-\mathbf{q}-\mathbf{q}&#39;)\\
+&amp;\quad+\frac{2\pi^2}{q^3}\mathscr{P}_\Phi(q) \frac{2\pi^2}{|\mathbf{k}-\mathbf{q}|^3} \mathscr{P}_\Phi(|\mathbf{k}-\mathbf{q}|) \times (2\pi)^6\delta^{(3)}(\mathbf{q}+\mathbf{k}&#39;-\mathbf{q}&#39;)\delta^{(3)}(\mathbf{k}+\mathbf{q}-\mathbf{q}&#39;)~.
+\end{aligned}
+$$&lt;p&gt;用Dirac符号内的动量积分，最终在动量球坐标中，标量诱导引力波的功率谱为&lt;/p&gt;
+$$
+\overline{\mathcal{P}}_{h}=8 \int_{0}^{\infty} d v \int_{|1 - v|}^{1 + v} d u\left(\frac{4 v^{2}-\left(1 - u^{2}+v^{2}\right)^{2}}{4 u v}\right)^{2} \overline{I^{2}(\tau, k, v, u)} \mathcal{P}_{\Phi}(k u) \mathcal{P}_{\Phi}(k v)
+$$&lt;p&gt;其中&lt;/p&gt;
+$$
+v = \frac{q}{k},\quad u = \frac{|\mathbf{k}-\mathbf{q}|}{k}~.
+$$&lt;p&gt;此外，$\overline{\mathcal{P}}_{h}$中对于时间的依赖性全部在传递函数(transfer function)中:&lt;/p&gt;
+$$
+I(\tau,k,u,v) = \int^\tau_{\tau_i}\mathrm{d}\bar{\tau} G(\tau,\bar{\tau})f(\bar{\tau},k,u,v)~.
+$$&lt;p&gt;计算出了功率谱，自然就能得到引力波的能谱。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>论文笔记-strong_coupling</title>
         <link>https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/</link>
         <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>

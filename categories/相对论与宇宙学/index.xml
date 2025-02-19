@@ -1676,7 +1676,7 @@ $$&lt;h2 id=&#34;数值求解测地线方程&#34;&gt;数值求解测地线方程
 &lt;/h2&gt;&lt;p&gt;在广义相对论的框架下，考虑物质与引力的耦合，忽略宇宙学常数，可以给出如下作用量:&lt;/p&gt;
 $$
    S = \int \mathrm{d}^4x \sqrt{-g} \left( \frac{M_{\text{P}}^2}{2}R+\mathscr{L}_m \right) ~,
-   $$&lt;p&gt;其中$g_{\mu\nu}$为对应的时空度规，这里取号差为$(-,+,+,+)$，$M_\text{P}^2 = 1/8\pi G$为普朗克质量，$R = g_{\mu\nu}R^{\mu\nu}$为里奇标量，$R_{\mu\nu} = R_{&lt;del&gt;\mu\lambda\nu}^{\lambda}$为里奇张量，$R_{&lt;/del&gt;\mu\lambda\nu}^{\sigma}$为黎曼张量，$\mathscr{L}_m$为拉氏量，其能动张量定义为&lt;/p&gt;
+   $$&lt;p&gt;其中$g_{\mu\nu}$为对应的时空度规，这里取号差为$(-,+,+,+)$，$M_\text{P}^2 = 1/8\pi G$为普朗克质量，$R = g_{\mu\nu}R^{\mu\nu}$为里奇标量，$R_{\mu\nu} = R_{ ~ \mu\lambda\nu}^{\lambda}$为里奇张量，$R_{~ \mu\lambda\nu}^{\sigma}$为黎曼张量，$\mathscr{L}_m$为拉氏量，其能动张量定义为&lt;/p&gt;
 $$
    T_{\mu\nu}^{(m)} = -\frac{2}{\sqrt{-g}}\frac{\delta }{\delta g^{\mu\nu}} (\sqrt{-g} \mathscr{L}_m) =-2\frac{\partial \mathscr{L}_m}{\partial g^{\mu\nu}} +g_{\mu\nu} \mathscr{L}_m ~.
    $$&lt;p&gt;这里$\frac{1}{\sqrt{-g}}\frac{\delta }{\delta g^{\mu\nu}} \sqrt{-g} = -\frac{1}{2}g_{\mu\nu}$ . 对度规场作变分，引力部分有&lt;/p&gt;
@@ -2060,7 +2060,7 @@ $$
 &lt;li&gt;
 &lt;h3 id=&#34;riemann张量与ricci张量&#34;&gt;Riemann张量与Ricci张量
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Riemann张量的定义：$ R^\sigma_{~ \lambda\mu\nu} = [\nabla_\mu,\nabla_\nu] (\Gamma_{\lambda\nu}^\sigma - \Gamma_{\lambda\mu}^\sigma),=\partial_\mu \Gamma^\sigma_{\lambda\nu} + \Gamma^\alpha_{\lambda\nu}\Gamma^\sigma_{\mu\alpha} - (\mu \leftrightarrow  \nu)  $.&lt;/li&gt;
+&lt;li&gt;Riemann张量的定义：$ R^\sigma_{~ \lambda\mu\nu} = [\nabla_\mu,\nabla_\nu] (\Gamma_{\lambda\nu}^\sigma - \Gamma_{\lambda\mu}^\sigma) =\partial_\mu \Gamma^\sigma_{\lambda\nu} + \Gamma^\alpha_{\lambda\nu}\Gamma^\sigma_{\mu\alpha} - (\mu \leftrightarrow  \nu)  $.&lt;/li&gt;
 &lt;li&gt;前两个指标反对称： $ R_{\rho\sigma\mu\nu} = - R_{\sigma\rho\mu\nu} $.&lt;/li&gt;
 &lt;li&gt;交换前后2组指标对称： $ R_{\rho\sigma\mu\nu} = R_{\mu\nu\rho\sigma} $.&lt;/li&gt;
 &lt;li&gt;Bianchi Identity Ⅰ： $ R_{\rho[\sigma\mu\nu]} = R_{\rho\sigma\mu\nu} + R_{\rho\mu\nu\sigma} + R_{\rho\nu\sigma\mu} = 0  $.&lt;/li&gt;
