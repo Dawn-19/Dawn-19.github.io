@@ -248,13 +248,15 @@ $$
 &lt;li&gt;
 &lt;p&gt;参数式：&lt;/p&gt;
 $$
-       \left\{\begin{matrix}
+        \left\{
+       \begin{matrix}
        x= x_0 + lt ~,
        \\
        y = y_0 + mt ~,
         \\
        z = z_0 + nt ~,
-       \end{matrix}\right.
+       \end{matrix}
+       \right.
        $$&lt;p&gt;这里有三个方程，但是参数$t$引人了额外的自由度（总共四个变量），所以本质上还是 三个方程$\Rightarrow  $ 三个约束 $\Rightarrow  $ 一个自由度。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
