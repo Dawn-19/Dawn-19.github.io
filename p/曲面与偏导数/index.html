@@ -613,18 +613,17 @@ $$
 </li>
 <li>
 <p>参数函数表达式：</p>
-<p>$$
-\left{\begin{matrix}
-x = x(u,v)
-\
-y =  y(u,v)
-\
-z = z(u,v)</p>
-<p>\end{matrix}\right.
-~,
-(u,v)\in D_{uv}\subset\mathbb{R}^2
-$$</p>
-</li>
+$$
+       \left\{\begin{matrix}
+       x = x(u,v)
+        \\
+       y =  y(u,v)
+        \\
+       z = z(u,v)
+       \end{matrix}\right.
+       ~,
+       (u,v)\in D_{uv}\subset\mathbb{R}^2
+       $$</li>
 </ul>
 </li>
 <li>
@@ -812,7 +811,7 @@ $$
   $$<p>得到这个关系只需要把曲面方程$F(x,y,z(x,y))=0$两边同时对$x$求导</p>
 $$
     F_x'+F_z'\frac{\partial z}{\partial x}=0 \Rightarrow \frac{\partial z}{\partial x}=-\frac{F_x'}{F_z'}.
-  $$<p>对于$\partial z /\partial y$同理。这里注意$F_z’$总是在分母上，以及<strong>别忘记了负号</strong>，如果你感觉不好理解，可以这样看：</p>
+  $$<p>对于$\partial z /\partial y$同理。这里注意$F_z^{\prime }$总是在分母上，以及<strong>别忘记了负号</strong>，如果你感觉不好理解，可以这样看：</p>
 $$
     \frac{\partial z}{\partial x} \sim \frac{\partial F/\partial x}{\partial F/\partial z}\quad \Rightarrow \frac{\partial z}{\partial x}=-\frac{F_x'}{F_z'}.
   $$<p>左边把$\partial F$约掉，只需要看$\partial x$永远在分母上。（这是个非常不严谨的方法，如果你觉得这个方法很啰嗦，直接记住或者能在考场上推导正确得到这个关系都没问题）。</p>
@@ -826,7 +825,7 @@ $$
 <ul>
 <li>
 <p>对于曲面 $f(x,y,z)=0$ 任意一点，都有  $\nabla f \parallel \mathbf{n}$，其中 $\mathbf{n}$ 为曲面上该点的法向量。</p>
-<p>设曲面$\Sigma: f(x,y,z) = 0$，曲面上过任意一点 $M$ 的曲线可以取为$f[x(t),y(t),z(t)]=0 $，那么曲线上 $M$ 点的切向量（也是曲面 $\Sigma$ 的切向量）$\boldsymbol{\tau} = (x&rsquo;(t),y&rsquo;(t),z&rsquo;(t))$，则有</p>
+<p>设曲面$\Sigma: f(x,y,z) = 0$，曲面上过任意一点 $M$ 的曲线可以取为$f[x(t),y(t),z(t)]=0 $，那么曲线上 $M$ 点的切向量（也是曲面 $\Sigma$ 的切向量）$\boldsymbol{\tau} = (x^{\prime }(t),y^{\prime }(t),z^{\prime }(t))$，则有</p>
 $$
     \begin{aligned}
     \nabla f\cdot \boldsymbol{\tau} &= \partial_x f\cdot x'(t) + \partial_y f\cdot y'(t) +\partial_z f\cdot z'(t) \\
@@ -854,12 +853,12 @@ $$
 $$
   f_x'(x_0,y_0)=0,\quad f_y'(x_0,y_0)=0.
   $$<ul>
-<li>若$M_0(x_0,y_0)$使得$f_x&rsquo;(x_0,y_0)=0,f_y&rsquo;(x_0,y_0)=0$，那么$M_0$是$f(x,y)$的驻点。</li>
+<li>若$M_0(x_0,y_0)$使得$f_x^{\prime }(x_0,y_0)=0,f_y^{\prime }(x_0,y_0)=0$，那么$M_0$是$f(x,y)$的驻点。</li>
 </ul>
 <p><strong>极值点一定是驻点，驻点不一定是极值点。</strong></p>
 <ul>
 <li>
-<p>取极值的充要条件，设$f_{xx}&rsquo;&rsquo;=A,f_{xy}&rsquo;&rsquo;=B,f_{yy}&rsquo;&rsquo;=C$，那么有：</p>
+<p>取极值的充要条件，设$f_{xx}^{\prime \prime}=A,f_{xy}^{\prime \prime}=B,f_{yy}^{\prime \prime}=C$，那么有：</p>
 <ol>
 <li>
 <p>$AC-B^2&gt;0$ ，则有$A&gt;0$时为极小值，$A&lt;0$时为极大值。</p>
@@ -884,6 +883,7 @@ $$
 <p>设拉格朗日函数：$F(x,y,\lambda) = f(x,y)+\lambda \varphi(x,y)$.</p>
 </li>
 <li>
+<p>对拉格朗日函数求偏导数，得到三个方程：</p>
 $$
      \frac{\partial F}{\partial x} = 0~,\quad \frac{\partial F}{\partial y} = 0~,\quad \frac{\partial F}{\partial \lambda} = 0~.
      $$</li>
