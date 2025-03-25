@@ -141,6 +141,152 @@
 &lt;/div&gt;</description>
         </item>
         <item>
+        <title>2501.14681-Mukhanov-Sasaki方程的力学类比</title>
+        <link>https://Dawn-19.github.io/p/2501.14681-mukhanov-sasaki%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%B1%BB%E6%AF%94/</link>
+        <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/2501.14681-mukhanov-sasaki%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%B1%BB%E6%AF%94/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/2501.14681-mukhanov-sasaki%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%B1%BB%E6%AF%94/Initial_D.png" alt="Featured image of post 2501.14681-Mukhanov-Sasaki方程的力学类比" /&gt;&lt;h2 id=&#34;sec22-力学类比&#34;&gt;Sec2.2 力学类比
+&lt;/h2&gt;&lt;p&gt;广义上来说只要 $u_k ^{\prime \prime} + (k^2-\frac{z ^{\prime \prime}}{z})u_k =0 $ 中的 $ \frac{z ^{\prime \prime}}{z}$ 发生较为剧烈变化就能够在某些$k$处的功率谱振荡。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简要推导：&lt;/p&gt;
+&lt;p&gt;对于Mukhanov-Sasaki方程，设$u_k = r_k e^{i\theta_k}, r_k,\theta_k$都含共形时间$\tau$，则有&lt;/p&gt;
+$$
+  \begin{aligned}
+  &amp;\text{Real:} ~ r_k ^{\prime \prime} + (k^2-\frac{z ^{\prime \prime}}{z}-\theta_k&#39;^2)r_k = 0 ~ ,\\
+  &amp;\text{Imaginary:}~ 2r_k&#39;\theta_k&#39;+r_k&#39;\theta_k ^{\prime \prime}= 0 ~ \Rightarrow ~ r_k^2\theta_k&#39; = L
+  \end{aligned}
+  $$&lt;p&gt;虚部方程类似于旋转系统中的角动量守恒，对于Bunch-Davies vacuum，$u_k \sim \frac{1}{\sqrt{2k}}e^{-ik\tau}$，那么&lt;/p&gt;
+$$
+  r_k = \frac{1}{\sqrt{2k}},\quad \theta_k&#39; = -k,\quad L = -\frac{1}{2}~.
+  $$&lt;p&gt;那么初始由Bunch-Davies vacuum 演化的扰动模始终满足&lt;/p&gt;
+$$
+  \theta_k&#39; = - \frac{1}{2r_k^2}~.
+  $$&lt;p&gt;取$V_k = \frac{1}{2}(k^2 - \frac{z ^{\prime \prime}}{z})r_k^2 + \frac{1}{8r_k^2} $，那么$r_k$的演化方程可以写为&lt;/p&gt;
+$$
+  r_k&#39;&#39; + V_{r_k}&#39;(r_k) = 0
+  $$&lt;p&gt;由于$V_k(r_k)$中$z ^{\prime \prime}/z$显含时间，那么可以认为这个（等价的）旋转系统的能量不守恒，且在$r_k \to 0$时势能发散，这表明功率谱永不消逝(角动量始终存在).&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;当扰动模处于 Sub-Horizon时， $k^2$ 主导演化， $z ^{\prime \prime}/z$ 是次要的影响，那么当&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$z ^{\prime \prime}/z $缓慢变化时，$ r_k $ 绝热地趋向于$V(r_k)$的极小值点 $r_k^{min} $演化，没有明显的振荡。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$z ^{\prime \prime}/z$剧烈变化时，方程可以改为$r_k ^{\prime \prime} + 4k^2(r-\frac{1}{\sqrt{2k}}) = 0$，$r_k$会在$\frac{1}{2k}$附近振荡，也就是&lt;/p&gt;
+$$
+       r_k -\frac{1}{\sqrt{2k}} \propto \sin(2k(\tau-\tau_0)+\varphi_0)
+       $$&lt;p&gt;这里初始相位随着$k$线性增长，也就是在功率谱上有振荡的表现，周期为$-\pi/2\tau_0$.&lt;/p&gt;
+&lt;p&gt;新方程的推导：&lt;/p&gt;
+$$
+       \begin{aligned}
+       r_k&#39;&#39; + V_{r_k}&#39;(r_k) &amp;= 0 \Rightarrow r_k&#39;&#39; + V_{r_k r_k}&#39;&#39;(\frac{1}{\sqrt{2k}})(r_k-\frac{1}{\sqrt{2k}})= 0 ~,\\
+        V_{r_k r_k}&#39;&#39;(\frac{1}{\sqrt{2k}}) &amp;= (k^2 - \frac{z&#39;&#39;}{z}) + \frac{3}{4}r_k^{-4} \\
+       &amp;\simeq 4k^2\\
+       \Rightarrow r_k&#39;&#39; + &amp; 4k^2(r_k - \frac{1}{\sqrt{2k}}) = 0
+       \end{aligned}
+       $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当扰动模退出视界，也就是$k\tau \simeq -1$时，$z ^{\prime \prime}/z$在势能$V_k$中取主导作用，这会导致&lt;/p&gt;
+$$
+     r_k&#39;&#39; - \frac{z&#39;&#39;}{z}r_k = 0,\quad \frac{r_k&#39;&#39;}{r_k} = \frac{z&#39;&#39;}{z}~.
+     $$&lt;p&gt;扰动模$\gamma \propto r_k/z \sim Const$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;格林函数&#34;&gt;格林函数
+&lt;/h2&gt;&lt;p&gt;对于微分方程：&lt;/p&gt;
+$$
+\hat{L} u(\tau) = f(\tau)~,
+$$&lt;p&gt;其中 $\hat{L}$ 是微分算子，$u(\tau)$ 是待解函数，$f(\tau)$ 是已知的任意函数，设格林函数$G(\tau, \tau&amp;rsquo;)$满足&lt;/p&gt;
+$$
+\hat{L}G(\tau,\tau&#39;) = \delta(\tau-\tau&#39;)~,
+$$&lt;p&gt;那么有&lt;/p&gt;
+$$
+\begin{aligned}
+&amp;\int \hat{L}G(\tau,\tau&#39;)f(\tau&#39;)\mathrm{d}\tau&#39; = \int \delta(\tau-\tau&#39;)f(\tau&#39;)\mathrm{d}\tau&#39; = f(\tau)~, \\
+&amp; \Rightarrow \hat{L} \int G(\tau,\tau&#39;)f(\tau&#39;)\mathrm{d}\tau&#39; = f(\tau)~,\\
+&amp; \Rightarrow u(\tau) = \int G(\tau,\tau&#39;)f(\tau&#39;)\mathrm{d}\tau&#39;~.
+\end{aligned}
+$$&lt;p&gt;对于Mukhanov-Sasaki 方程，扰动模式 $k$ 在经历 Transition 后退出视界，在 Transition 阶段时仍在视界内，故$ k^2 $起主导作用，这时把 $z ^{\prime \prime}/z $ 当作小量处理：&lt;/p&gt;
+$$
+u_k&#39;&#39;+k^2 u_k = \frac{z&#39;&#39;}{z}u_k~.
+$$&lt;p&gt;方程的其次解有&lt;/p&gt;
+$$
+u_{1,\text{sub}}^{(0)} (\tau) = e^{ik\tau}~, \quad u_{2,\text{sub}}^{(0)} (\tau) = e^{-ik\tau}~.
+$$&lt;p&gt;用格林函数给出方程的特解&lt;/p&gt;
+$$
+u_s(\tau) = -\frac{1}{2ki}\int_{\tau_\text{I}}^\tau \mathrm{d}\tau&#39; ~ G_{\text{sub}}(\tau,\tau&#39;)u_k(\tau&#39;)\frac{z&#39;&#39;}{z}(\tau&#39;)~.
+$$&lt;p&gt;由格林函数需要满足&lt;/p&gt;
+$$
+G&#39;&#39;(\tau,\tau&#39;)+k^2G(\tau,\tau&#39;) = \delta(\tau-\tau&#39;)~,
+$$&lt;p&gt;可以解出&lt;/p&gt;
+$$
+G_{\text{sub}}(\tau,\tau&#39;) = \theta(\tau-\tau&#39;) 2i \frac{\sin\left( k(\tau-\tau&#39;)\right) }{k}~.
+$$&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;解的验证，根据二阶微分方程的参数变异法，对于一般的非齐次二阶微分方程&lt;/p&gt;
+$$
+  y&#39;&#39; + p(x)y&#39; + Q(x) y = R(x)~,
+  $$&lt;p&gt;有通解&lt;/p&gt;
+$$
+  y_p(x) = u_1(x)y_1(x)+ u_2(x)y_2(x)~.
+  $$&lt;p&gt;其中$y_1(x), y_2(x) $ 是二阶微分方程$y ^{\prime \prime}+p(x)y^\prime+Q(x)y = 0$ 的齐次解，$u_1, u_2$的形式如下&lt;/p&gt;
+$$
+  u_1(x) = - \int\frac{y_2}{W_{y_1 y_2}}R(x)\mathrm{d}x ~,\quad u_2(x) =  \int\frac{y_1}{W_{y_1 y_2}}R(x)\mathrm{d}x~,
+  $$&lt;p&gt;这里$W_{y_1 y_2} = y_1 y_2^\prime -y_2 y_1^\prime $ .&lt;/p&gt;
+&lt;p&gt;对于格林函数满足 $G ^{\prime \prime}(\tau,\tau&amp;rsquo;)+k^2G(\tau,\tau^\prime) = \delta(\tau-\tau^\prime)$，其有齐次解&lt;/p&gt;
+$$
+  u_{1,\text{sub}}^{(0)} (\tau) = e^{ik\tau}~, \quad u_{2,\text{sub}}^{(0)} (\tau) = e^{-ik\tau}~.
+  $$&lt;p&gt;且 $W_{12} = -2ik$ ，那么对于 $G_{\text{sub}}(\tau,\tau^\prime) = G(\tau,\tau^\prime)/W_{12}$ 有&lt;/p&gt;
+$$
+  \begin{aligned}
+  G_{\text{sub}}(\tau,\tau&#39;)&amp;=-e^{ik\tau}\int e^{-ik\tau} \delta(\tau-\tau&#39;)\mathrm{d}\tau + e^{-ik\tau}\int e^{ik\tau} \delta(\tau-\tau&#39;)\mathrm{d}\tau\\
+  &amp; = -e^{ik\tau} e^{-ik\tau&#39;}\theta(\tau-\tau&#39;) + e^{-ik\tau} e^{ik\tau&#39;}\theta(\tau-\tau&#39;)\\
+  &amp;=\theta(\tau-\tau&#39;) \left(e^{ik(\tau&#39;-\tau)}-e^{-ik(\tau&#39;-\tau)} \right)\\
+  &amp; = \theta(\tau-\tau&#39;)2i\sin(\tau&#39;-\tau)~.
+  \end{aligned}
+  $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参数变异法&#34;&gt;参数变异法
+&lt;/h2&gt;&lt;p&gt;​    对于一般的非齐次二阶微分方程  $y ^{\prime \prime} + p(x)y^\prime + Q(x) y = R(x)$的通解$y_p$ , 其导数为：&lt;/p&gt;
+$$
+    \begin{aligned}
+    y_p&#39; &amp;= u_1&#39; y_1 + u_1 y_1&#39; + u_2&#39; y_2 + u_2 y_2&#39;~, \\
+    y_p&#39;&#39; &amp; = u_1&#39;&#39; y_1 + 2 u_1&#39; y_1&#39; + u_1 y_1&#39;&#39; + u_2&#39;&#39; y_2 + 2 u_2&#39; y_2&#39; + u_2 y_2&#39;&#39;~,
+    \end{aligned}
+$$&lt;p&gt;​    令 $ u_1^\prime y_1 + u_2^\prime y_2 = 0$，由于 $y_1,y_2$ 本身是非齐次解，那么把 $y_p$ 代入到微分方程中,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;$y_p ^{\prime \prime}$中的$y_1 ^{\prime \prime}, y_2 ^{\prime \prime}$项会被消去，同时对$ u_1^\prime y_1 + u_2^\prime y_2 = 0$求导可得$u_1 ^{\prime \prime}y_1 + u_1^\prime y_1^\prime + u_2 ^{\prime \prime}y_2 + u_2^\prime y_2^\prime = 0$，最终只留下$u_1&amp;rsquo; y_1^\prime +u_2^\prime  y_2^\prime $.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$y_p^\prime $ 由于 $ u_1^\prime  y_1 + u_2^\prime  y_2 = 0$ 同时 $y_1^\prime , y_2^\prime $ 被消去则没有留下来的项，&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$y_p $ 项中没有能够留下来的，&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最终剩下 $ u_1^\prime  y_1^\prime  +u_2^\prime  y_2^\prime  = R(x)$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;​    需要求解的方程变为&lt;/p&gt;
+$$
+    u_1&#39; y_1 + u_2&#39; y_2 = 0 ~, \quad u_1&#39; y_1&#39; + u_2&#39; y_2&#39; = R(x) ~.
+$$&lt;p&gt;​    由此代入&lt;/p&gt;
+$$
+    u_1(x) = - \int\frac{y_2}{W_{y_1 y_2}}R(x)\mathrm{d}x ~,\quad u_2(x) =  \int\frac{y_1}{W_{y_1 y_2}}R(x)\mathrm{d}x~,
+$$$$
+y_p(x) = u_1(x)y_1(x)+ u_2(x)y_2(x)~.
+$$</description>
+        </item>
+        <item>
         <title>大学物理——力学</title>
         <link>https://Dawn-19.github.io/p/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%8A%9B%E5%AD%A6/</link>
         <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
@@ -3131,7 +3277,7 @@ $$
      g^{\mu\nu} + g^{\mu\nu}\delta R_{\mu\nu} \right) \right]\\
      &amp; =  \frac{M_{\text{P}}^2}{2} \int \mathrm{d}^4 x\sqrt{-g}\left[  \left( -\frac{1}{2}g_{\mu\nu}R+ R_{\mu\nu} \right)\delta g^{\mu\nu} + \nabla_{\nu} \left( g^{\mu\nu}\delta\Gamma_{\lambda\mu}^{\nu}-g^{\mu\nu}\delta\Gamma_{\lambda\mu}^\lambda  \right)\right]\\
      \end{split}
-   $$&lt;p&gt;其中$\delta g = -g g_{\mu\nu}\delta g^{\mu\nu}$，协变导数全微分积分也是边界项，结果为0. 记$G_{\mu\nu} = R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R$ 为爱因斯坦张量，对物质场作变分可得&lt;/p&gt;
+   $$&lt;p&gt;其中$\delta g = -g g_{\mu\nu}\delta g^{\mu\nu}$，协变导数全微分积分也是边界项，结果为0（这里似乎有争议，但先暂且这么认为吧）. 记$G_{\mu\nu} = R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R$ 为爱因斯坦张量，对物质场作变分可得&lt;/p&gt;
 $$
    \begin{split}
        \delta \int \mathrm{d}^4 x \sqrt{-g}\mathscr{L}_m &amp;= \int \mathrm{d}^4 x \left( \sqrt{-g}\delta \mathscr{L}_m + \mathscr{L}_m\delta\sqrt{-g} \right)\\
