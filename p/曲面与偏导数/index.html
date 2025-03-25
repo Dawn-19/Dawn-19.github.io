@@ -341,23 +341,26 @@ l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#向量代数">向量代数</a>
+    <li><a href="#向量代数与空间解析几何">向量代数与空间解析几何</a>
       <ol>
-        <li>
+        <li><a href="#向量代数">向量代数</a>
           <ol>
             <li><a href="#向量既有大小又有方向的量">向量：既有大小又有方向的量。</a></li>
             <li><a href="#平面直线及其方程">平面、直线及其方程</a></li>
           </ol>
         </li>
+        <li><a href="#曲面与空间曲线">曲面与空间曲线</a></li>
       </ol>
     </li>
-    <li><a href="#曲面与空间曲线">曲面与空间曲线</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#多元函数的极限与连续微分">多元函数的极限与连续，微分</a></li>
-    <li><a href="#复合函数的偏导数与全微分">复合函数的偏导数与全微分</a></li>
-    <li><a href="#极值与最值">极值与最值</a></li>
+    <li><a href="#多元函数微分学">多元函数微分学</a>
+      <ol>
+        <li><a href="#多元函数的极限与连续微分">多元函数的极限与连续，微分</a></li>
+        <li><a href="#复合函数的偏导数与全微分">复合函数的偏导数与全微分</a></li>
+        <li><a href="#方向导数">方向导数</a></li>
+        <li><a href="#极值与最值">极值与最值</a></li>
+      </ol>
+    </li>
+    <li><a href="#参考资料">参考资料：</a></li>
   </ol>
 </nav>
         </div>
@@ -439,68 +442,64 @@ l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
     <section class="article-content">
     
     
-    <h1 id="向量代数与空间解析几何">向量代数与空间解析几何
-</h1><h2 id="向量代数">向量代数
-</h2><ul>
-<li>
-<h4 id="向量既有大小又有方向的量">向量：既有大小又有方向的量。
+    <h2 id="向量代数与空间解析几何">向量代数与空间解析几何
+</h2><h3 id="向量代数">向量代数
+</h3><h4 id="向量既有大小又有方向的量">向量：既有大小又有方向的量。
 </h4><p>在$\mathbb{R}^3$中向量通常表示为：</p>
 $$
-  \begin{split}
-  \boldsymbol{a} &= a_1 \boldsymbol{e}_x +  a_2 \boldsymbol{e}_y + a_3 \boldsymbol{e}_z=(a_1,a_2,a_3) ~. \\
-  \boldsymbol{b} &= b_1 \boldsymbol{e}_x +  b_2 \boldsymbol{e}_y + b_3 \boldsymbol{e}_z
-  =(b_1,b_2,b_3) ~. \\
-  \boldsymbol{c} &= c_1 \boldsymbol{e}_x +  c_2 \boldsymbol{e}_y + c_3 \boldsymbol{e}_z
-  =(c_1,c_2,c_3) ~.
-  \end{split}
-  $$<p>向量的点乘，结果是一个数：</p>
+\begin{split}
+\boldsymbol{a} &= a_1 \boldsymbol{e}_x +  a_2 \boldsymbol{e}_y + a_3 \boldsymbol{e}_z=(a_1,a_2,a_3) ~. \\
+\boldsymbol{b} &= b_1 \boldsymbol{e}_x +  b_2 \boldsymbol{e}_y + b_3 \boldsymbol{e}_z
+=(b_1,b_2,b_3) ~. \\
+\boldsymbol{c} &= c_1 \boldsymbol{e}_x +  c_2 \boldsymbol{e}_y + c_3 \boldsymbol{e}_z
+=(c_1,c_2,c_3) ~.
+\end{split}
+$$<p>向量的点乘，结果是一个数：</p>
 $$
-  \boldsymbol{a}\cdot\boldsymbol{b} = a_1 b_1 +a_2 b_2 + a_3 b_3 ~.
-  $$<p>
+\boldsymbol{a}\cdot\boldsymbol{b} = a_1 b_1 +a_2 b_2 + a_3 b_3 ~.
+$$<p>
 向量的叉乘，结果是一个向量：</p>
 $$
-  \boldsymbol{a} \times \boldsymbol{b} = \begin{vmatrix}
-   \boldsymbol{e}_x  &   \boldsymbol{e}_y &  \boldsymbol{e}_z \\
-   a_1 & a_2 & a_3 \\
-   b_1 & b_2 & b_3
-  \end{vmatrix}
-   = (a_2 b_3-a_3 b_2)\boldsymbol{e}_x + (a_3 b_1-a_1 b_3)\boldsymbol{e}_y + (a_1 b_2-a_2 b_1)\boldsymbol{e}_z ~.
-  $$<p>两个向量叉乘后得到新的向量的模长：</p>
+\boldsymbol{a} \times \boldsymbol{b} = \begin{vmatrix}
+ \boldsymbol{e}_x  &   \boldsymbol{e}_y &  \boldsymbol{e}_z \\
+ a_1 & a_2 & a_3 \\
+ b_1 & b_2 & b_3
+\end{vmatrix}
+ = (a_2 b_3-a_3 b_2)\boldsymbol{e}_x + (a_3 b_1-a_1 b_3)\boldsymbol{e}_y + (a_1 b_2-a_2 b_1)\boldsymbol{e}_z ~.
+$$<p>两个向量叉乘后得到新的向量的模长：</p>
 $$
-  |\mathbf{c}| = |\mathbf{a}\times \mathbf{b} | = |\mathbf{a}|\cdot|\mathbf{b}|\cos\left(\langle\mathbf{a},\mathbf{b}\rangle \right)
-  $$<p>矢量的叉乘不满足交换律，但具有反对称性：</p>
+|\mathbf{c}| = |\mathbf{a}\times \mathbf{b} | = |\mathbf{a}|\cdot|\mathbf{b}|\sin\left(\langle\mathbf{a},\mathbf{b}\rangle \right)
+$$<p>矢量的叉乘不满足交换律，但具有反对称性：</p>
 $$
-  \mathbf{A}\times \mathbf{B} = -\mathbf{B} \times \mathbf{A}
-  $$<p>向量的混合积，结果是一个数：</p>
+\mathbf{A}\times \mathbf{B} = -\mathbf{B} \times \mathbf{A}
+$$<p>向量的混合积，结果是一个数：</p>
 $$
-  (\boldsymbol{a}\times \boldsymbol{b} )\cdot \boldsymbol{c} =
-  \begin{vmatrix}
-   a_1 & a_2 & a_3 \\
-   b_1 & b_2 & b_3 \\
-   c_1 & c_2 & c_3 
-  \end{vmatrix}
-  :=[\boldsymbol{a},\boldsymbol{b},\boldsymbol{c} ]~.
-  $$<p>混合积中向量位置交换偶数次符号不变（轮换对称性）：</p>
+(\boldsymbol{a}\times \boldsymbol{b} )\cdot \boldsymbol{c} =
+\begin{vmatrix}
+ a_1 & a_2 & a_3 \\
+ b_1 & b_2 & b_3 \\
+ c_1 & c_2 & c_3 
+\end{vmatrix}
+:=[\boldsymbol{a},\boldsymbol{b},\boldsymbol{c} ]~.
+$$<p>混合积中向量位置交换偶数次符号不变（轮换对称性）：</p>
 $$
-  [\boldsymbol{a},\boldsymbol{b},\boldsymbol{c} ] = [\boldsymbol{b},\boldsymbol{c},\boldsymbol{a} ] =[\boldsymbol{c},\boldsymbol{a},\boldsymbol{b} ]~.
-  $$<p>混合积中向量位置交换奇数次符号反号：</p>
+[\boldsymbol{a},\boldsymbol{b},\boldsymbol{c} ] = [\boldsymbol{b},\boldsymbol{c},\boldsymbol{a} ] =[\boldsymbol{c},\boldsymbol{a},\boldsymbol{b} ]~.
+$$<p>混合积中向量位置交换奇数次符号反号：</p>
 $$
-  [\boldsymbol{a},\boldsymbol{b},\boldsymbol{c} ] = -[\boldsymbol{b},\boldsymbol{a},\boldsymbol{c} ] = -[\boldsymbol{a},\boldsymbol{c},\boldsymbol{b} ] = -[\boldsymbol{c},\boldsymbol{b},\boldsymbol{a} ]~.
-  $$<p>混合积的绝对值其几何意义就是$\boldsymbol{a},\boldsymbol{b},\boldsymbol{c}$构成的平行六面体的体积 ，其中 $\boldsymbol{a} \times \boldsymbol{b} $的模长与底面平行四边形面积相同。</p>
+[\boldsymbol{a},\boldsymbol{b},\boldsymbol{c} ] = -[\boldsymbol{b},\boldsymbol{a},\boldsymbol{c} ] = -[\boldsymbol{a},\boldsymbol{c},\boldsymbol{b} ] = -[\boldsymbol{c},\boldsymbol{b},\boldsymbol{a} ]~.
+$$<p>混合积的绝对值其几何意义就是$\boldsymbol{a},\boldsymbol{b},\boldsymbol{c}$构成的平行六面体的体积 ，其中 $\boldsymbol{a} \times \boldsymbol{b} $的模长与底面平行四边形面积相同。</p>
 <img src="image-20250308194658638.png" alt="image-20250308194658638" style="zoom:33%;" />
-</li>
-<li>
 <h4 id="平面直线及其方程">平面、直线及其方程
 </h4><p>三维空间中，$\boldsymbol{e}_x, \boldsymbol{e}_y, \boldsymbol{e}_z$为三个正交的单位矢量（坐标轴）$\Leftrightarrow $ 三个自由度。</p>
 <p>一个点：$(x,y,z)$都确定了，三个约束$\Rightarrow  $ 零个自由度。</p>
 <p>一条(直)线：由两个独立的方程确定，两个约束$\Rightarrow  $ 一个自由度。</p>
 $$
-  \left\{\begin{matrix}
-  A_1 x + B_1 y + C_1 z + D_1 = 0 ~,
-  \\
-  A_2 x + B_2 y + C_2 z + D_2 = 0 ~.
-  \end{matrix}\right.
-  $$<p>一个(平)面：一个独立的方程$F(x,y,z) = 0$ 确定，一个约束$\Rightarrow  $ 两个自由度。</p>
+\left\{\begin{matrix}
+A_1 x + B_1 y + C_1 z + D_1 = 0 ~,
+\\
+A_2 x + B_2 y + C_2 z + D_2 = 0 ~.
+\end{matrix}\right.
+$$<p>一个(平)面：一个独立的方程$F(x,y,z) = 0$ 确定，一个约束$\Rightarrow  $ 两个自由度。</p>
 <ol>
 <li>
 <p>平面方程</p>
@@ -508,21 +507,21 @@ $$
 <li>
 <p>一般式：</p>
 $$
-       A x + B y + C z + D = 0~,
-       $$<p>其法向量为$\boldsymbol{n} = (A,B,C)$，要求$A^2+B^2+C^2 \ne 0$，即$A,B,C$不都为0。</p>
+     A x + B y + C z + D = 0~,
+     $$<p>其法向量为$\boldsymbol{n} = (A,B,C)$，要求$A^2+B^2+C^2 \ne 0$，即$A,B,C$不都为0。</p>
 </li>
 <li>
 <p>点法式：</p>
 $$
-        A(x-x_0) + B(y-y_0)+ C(z-z_0) = 0~,
-        $$<p>它与一般是本质没有任何区别，其中一般式的$D = -Ax_0 -B y_0 - C z_0$，不过点法式的几何意义更明显，它代表过点$M(x_0,y_0,z_0)$的点且法向量为$\boldsymbol{n} = (A,B,C)$的平面，如图所示。</p>
+      A(x-x_0) + B(y-y_0)+ C(z-z_0) = 0~,
+      $$<p>它与一般是本质没有任何区别，其中一般式的$D = -Ax_0 -B y_0 - C z_0$，不过点法式的几何意义更明显，它代表过点$M(x_0,y_0,z_0)$的点且法向量为$\boldsymbol{n} = (A,B,C)$的平面，如图所示。</p>
 <img src="image-20250301215555306.png" alt="image-20250301215555306" style="zoom: 33%;" />
 </li>
 <li>
 <p>截距式：</p>
 $$
-        \frac{x}{a} + \frac{y}{b} + \frac{z}{c} = 1~,
-        $$<p>它代表过三点$(a,0,0), (0,b,0), (0,0,c)$的平面方程，$a,b,c$分别为平面在三个坐标轴的截距，如图所示，其法向量为$\boldsymbol{n} = (1/a,1/b,1/c)$.</p>
+      \frac{x}{a} + \frac{y}{b} + \frac{z}{c} = 1~,
+      $$<p>它代表过三点$(a,0,0), (0,b,0), (0,0,c)$的平面方程，$a,b,c$分别为平面在三个坐标轴的截距，如图所示，其法向量为$\boldsymbol{n} = (1/a,1/b,1/c)$.</p>
 </li>
 </ul>
 <img src="image-20250301215832695.png" alt="image-20250301215832695" style="zoom:30%;" />
@@ -533,33 +532,33 @@ $$
 <li>
 <p>一般式：</p>
 $$
-       \left\{\begin{matrix}
-       A_1 x + B_1 y + C_1 z + D_1 = 0 ~,
-       \\
-       A_2 x + B_2 y + C_2 z + D_2 = 0 ~.
-       \end{matrix}\right.
-       $$<p>其几何意义就是两平面的交线，其中$\boldsymbol{n}_1 = (A_1,B_1,C_1), \boldsymbol{n}_2 = (A_2,B_2,C_2)$：</p>
+     \left\{\begin{matrix}
+     A_1 x + B_1 y + C_1 z + D_1 = 0 ~,
+     \\
+     A_2 x + B_2 y + C_2 z + D_2 = 0 ~.
+     \end{matrix}\right.
+     $$<p>其几何意义就是两平面的交线，其中$\boldsymbol{n}_1 = (A_1,B_1,C_1), \boldsymbol{n}_2 = (A_2,B_2,C_2)$：</p>
 <img src="image-20250302164414247.png" alt="image-20250302164414247" style="zoom:40%;" />
 </li>
 <li>
 <p>对称式：</p>
 $$
-       \frac{x-x_0}{l} = \frac{y-y_0}{m} = \frac{z-z_0}{n}~,(l^2+m^2+n^2\ne 0) ~,
-       $$<p>直线过点$M(x_0,y_0,z_0 )$，其中$\boldsymbol{\tau} = (l,m,n)$为方向向量，注意这里虽然有3个方程，但只有两个是独立的。</p>
+     \frac{x-x_0}{l} = \frac{y-y_0}{m} = \frac{z-z_0}{n}~,(l^2+m^2+n^2\ne 0) ~,
+     $$<p>直线过点$M(x_0,y_0,z_0 )$，其中$\boldsymbol{\tau} = (l,m,n)$为方向向量，注意这里虽然有3个方程，但只有两个是独立的。</p>
 </li>
 <li>
 <p>参数式：</p>
 $$
-        \left\{
-       \begin{matrix}
-       x= x_0 + lt ~,
-       \\
-       y = y_0 + mt ~,
-        \\
-       z = z_0 + nt ~,
-       \end{matrix}
-       \right.
-       $$<p>这里有三个方程，但是参数$t$引人了额外的自由度（总共四个变量），所以本质上还是 三个方程$\Rightarrow  $ 三个约束 $\Rightarrow  $ 一个自由度。</p>
+      \left\{
+     \begin{matrix}
+     x= x_0 + lt ~,
+     \\
+     y = y_0 + mt ~,
+      \\
+     z = z_0 + nt ~,
+     \end{matrix}
+     \right.
+     $$<p>这里有三个方程，但是参数$t$引人了额外的自由度（总共四个变量），所以本质上还是 三个方程$\Rightarrow  $ 三个约束 $\Rightarrow  $ 一个自由度。</p>
 </li>
 </ul>
 </li>
@@ -567,24 +566,24 @@ $$
 <p>平面，直线之间的关系</p>
 <p>记平面$\Sigma_1, \Sigma_2$为：</p>
 $$
-       \left\{\begin{matrix}
-       \Sigma_1: A_1 x+ B_1 y + C_1 z + D = 0,\boldsymbol{n}_1 = (A_1, B_1, C_1) ~,
-       \\
-       \Sigma_2: A_2 x+ B_2 y + C_2 z + D = 0,\boldsymbol{n}_2 = (A_2, B_2, C_2) ~.
-       \end{matrix}\right.
-       $$<p>记直线$L_1, L_2$为：</p>
+     \left\{\begin{matrix}
+     \Sigma_1: A_1 x+ B_1 y + C_1 z + D = 0,\boldsymbol{n}_1 = (A_1, B_1, C_1) ~,
+     \\
+     \Sigma_2: A_2 x+ B_2 y + C_2 z + D = 0,\boldsymbol{n}_2 = (A_2, B_2, C_2) ~.
+     \end{matrix}\right.
+     $$<p>记直线$L_1, L_2$为：</p>
 $$
-       \left\{\begin{matrix}
-       L_1 : \frac{x-x_1}{l_1} = \frac{y-y_1}{m_1} = \frac{z-z_1}{n_1}~,\boldsymbol{\tau}_1 = (l_1,m_1,n_1)~,
-       \\
-       L_1 : \frac{x-x_2}{l_2} = \frac{y-y_2}{m_2} = \frac{z-z_2}{n_2}~,\boldsymbol{\tau}_2 = (l_2,m_2,n_2)~.
-       \end{matrix}\right.
-       $$<ul>
+     \left\{\begin{matrix}
+     L_1 : \frac{x-x_1}{l_1} = \frac{y-y_1}{m_1} = \frac{z-z_1}{n_1}~,\boldsymbol{\tau}_1 = (l_1,m_1,n_1)~,
+     \\
+     L_1 : \frac{x-x_2}{l_2} = \frac{y-y_2}{m_2} = \frac{z-z_2}{n_2}~,\boldsymbol{\tau}_2 = (l_2,m_2,n_2)~.
+     \end{matrix}\right.
+     $$<ul>
 <li>$ \Sigma_1 \parallel  L_1: \boldsymbol{n}_1 \perp \boldsymbol{\tau}_1 \Rightarrow  \boldsymbol{n}_1 \cdot  \boldsymbol{\tau}_1  =0, A_1 l_1 +B_1 m_1 + C_1 n_1 = 0 $.</li>
-<li>$ \Sigma_1 \perp  L_1: \boldsymbol{n}_1 \parallel \boldsymbol{\tau}_1 \Rightarrow  \boldsymbol{n}_1 = \lambda \boldsymbol{\tau}_1 , A_1/ l_1 +B_1/ m_1 + C_1 /n_1 = \lambda $.</li>
-<li>$ L_1\parallel  L_2: \boldsymbol{\tau}_1 \parallel \boldsymbol{\tau}_2 \Rightarrow  \boldsymbol{\tau}_1 =\lambda  \boldsymbol{\tau}_2  =0, l_1/ l_2 +m_1/ m_2 + n_1/ n_2 = \lambda $.</li>
+<li>$ \Sigma_1 \perp  L_1: \boldsymbol{n}_1 \parallel \boldsymbol{\tau}_1 \Rightarrow  \boldsymbol{n}_1 = \lambda \boldsymbol{\tau}_1 , A_1/ l_1 =B_1/ m_1 = C_1 /n_1 = \lambda $.</li>
+<li>$ L_1\parallel  L_2: \boldsymbol{\tau}_1 \parallel \boldsymbol{\tau}_2 \Rightarrow  \boldsymbol{\tau}_1 =\lambda  \boldsymbol{\tau}_2  =0, l_1/ l_2 =m_1/ m_2 = n_1/ n_2 = \lambda $.</li>
 <li>$ L_1 \perp  L_2: \boldsymbol{\tau}_1 \perp \boldsymbol{\tau}_2 \Rightarrow  \boldsymbol{\tau}_1 \cdot  \boldsymbol{\tau}_2  =0, l_1 l_2 +m_1 m_2 + n_1 n_2 = 0 $.</li>
-<li>$ \Sigma_1 \parallel  \Sigma_2: \boldsymbol{n}_1 \parallel \boldsymbol{n}_2 \Rightarrow  \boldsymbol{n}_1 =\lambda  \boldsymbol{n}_2  =0, A_1 /A_2 +B_1 /B_2 + C_1 /C_2 = \lambda $.</li>
+<li>$ \Sigma_1 \parallel  \Sigma_2: \boldsymbol{n}_1 \parallel \boldsymbol{n}_2 \Rightarrow  \boldsymbol{n}_1 =\lambda  \boldsymbol{n}_2  =0, A_1 /A_2 =B_1 /B_2 = C_1 /C_2 = \lambda $.</li>
 <li>$ \Sigma_1 \perp  \Sigma_2: \boldsymbol{n}_1 \perp \boldsymbol{n}_2 \Rightarrow  \boldsymbol{n}_1 \cdot  \boldsymbol{n}_2  =0, A_1 A_2 +B_1 B_2 + C_1 C_2 = 0 $.</li>
 </ul>
 </li>
@@ -592,16 +591,16 @@ $$
 <p>点到平面的距离</p>
 <p>对于点$M(x_m,y_m,z_m)$到平面$\Sigma: Ax+By+Cz+D=0$的距离为：</p>
 $$
-     d = \frac{|Ax_m + By_m +Cz_m +D| }{\sqrt{A^2+B^2+C^2}} ~.
-     $$<p>其中平面$\Sigma_1$的法矢量为$\boldsymbol{n} = (A,B,C)$，单位法矢量为$\hat{n} = (\frac{A}{|\boldsymbol{n}| },\frac{B}{|\boldsymbol{n}| },\frac{C}{|\boldsymbol{n}| })$，那么距离$d = |\mathbf{PM} \cdot \hat{n} | = |\mathbf{PM} \cdot \boldsymbol{n} |/|\boldsymbol{n}|$，其中</p>
+   d = \frac{|Ax_m + By_m +Cz_m +D| }{\sqrt{A^2+B^2+C^2}} ~.
+   $$<p>其中平面$\Sigma_1$的法矢量为$\boldsymbol{n} = (A,B,C)$，单位法矢量为$\hat{n} = (\frac{A}{|\boldsymbol{n}| },\frac{B}{|\boldsymbol{n}| },\frac{C}{|\boldsymbol{n}| })$，那么距离$d = |\mathbf{PM} \cdot \hat{n} | = |\mathbf{PM} \cdot \boldsymbol{n} |/|\boldsymbol{n}|$，其中</p>
 $$
-     \mathbf{AM} \cdot \boldsymbol{n} = A(x_m-x_0) + B(y_m-y_0)+ C(z_m-z_0) =Ax_m + By_m +Cz_m +D
-     $$<p>对于$P(x_0,y_0,z_0)$为平面$\Sigma_1$上任意一点，始终有$D =  -Ax_0 -B y_0 - C z_0$.</p>
+   \mathbf{AM} \cdot \boldsymbol{n} = A(x_m-x_0) + B(y_m-y_0)+ C(z_m-z_0) =Ax_m + By_m +Cz_m +D=0~.
+   $$<p>对于$P(x_0,y_0,z_0)$为平面$\Sigma_1$上任意一点，始终有$D =  -Ax_0 -B y_0 - C z_0$.</p>
 <img src="image-20250302162757203.png" alt="image-20250302162757203" style="zoom:20%;" />
 </li>
 </ol>
-<h2 id="曲面与空间曲线">曲面与空间曲线
-</h2><ol>
+<h3 id="曲面与空间曲线">曲面与空间曲线
+</h3><ol>
 <li>
 <p>曲面方程</p>
 <ul>
@@ -614,16 +613,16 @@ $$
 <li>
 <p>参数函数表达式：</p>
 $$
-       \left\{\begin{matrix}
-       x = x(u,v)
-        \\
-       y =  y(u,v)
-        \\
-       z = z(u,v)
-       \end{matrix}\right.
-       ~,
-       (u,v)\in D_{uv}\subset\mathbb{R}^2
-       $$</li>
+     \left\{\begin{matrix}
+     x = x(u,v)
+      \\
+     y =  y(u,v)
+      \\
+     z = z(u,v)
+     \end{matrix}\right.
+     ~,
+     (u,v)\in D_{uv}\subset\mathbb{R}^2
+     $$</li>
 </ul>
 </li>
 <li>
@@ -632,25 +631,25 @@ $$
 <li>
 <p>参数表达式：</p>
 $$
-       \left\{\begin{matrix}
-       x = x(t)
-        \\
-       y =  y(t)
-        \\
-       z = z(t)
-       \end{matrix}\right.
-       ~,
-       t\in D\subset\mathbb{R}
-       $$</li>
+     \left\{\begin{matrix}
+     x = x(t)
+      \\
+     y =  y(t)
+      \\
+     z = z(t)
+     \end{matrix}\right.
+     ~,
+     t\in D\subset\mathbb{R}
+     $$</li>
 <li>
 <p>空间曲线作为两个曲面的交线：</p>
 $$
-       \left\{\begin{matrix}
-       F(x,y,z)=0 ~,
-        \\
-       G(x,y,z)=0 ~.
-       \end{matrix}\right.
-       $$</li>
+     \left\{\begin{matrix}
+     F(x,y,z)=0 ~,
+      \\
+     G(x,y,z)=0 ~.
+     \end{matrix}\right.
+     $$</li>
 </ul>
 </li>
 <li>
@@ -660,12 +659,12 @@ $$
 <p>旋转面：一条平面曲线绕平面上一条直线旋转。</p>
 <p>设$ L$ 是$ yOz$ 平面上一条曲线，其方程是:</p>
 $$
-       \left\{\begin{matrix}
-       f(y,z)=0 ~,
-        \\
-       x=0 ~.
-       \end{matrix}\right.
-       $$</li>
+     \left\{\begin{matrix}
+     f(y,z)=0 ~,
+      \\
+     x=0 ~.
+     \end{matrix}\right.
+     $$</li>
 </ul>
 <p>则有:绕谁转，谁不变，另外一个的平方变平方和.</p>
 <p>$L$绕$y$轴旋转所得旋转面方程为$f(y,\pm\sqrt{x^2+z^2})=0$;</p>
@@ -675,21 +674,19 @@ $$
 <p>柱面：平行于定直线并沿定曲线$\Gamma$移动的直线$L$所形成的轨迹。</p>
 <p>设准线$\Gamma $:</p>
 $$
-       \left\{\begin{matrix}
-       f(x,y)=0 ~,
-        \\
-       z=0 ~.
-       \end{matrix}\right.
-       $$<p>母线平行于$z$轴的柱面方程为$f(x,y)=0$.</p>
+     \left\{\begin{matrix}
+     f(x,y)=0 ~,
+      \\
+     z=0 ~.
+     \end{matrix}\right.
+     $$<p>母线平行于$z$轴的柱面方程为$f(x,y)=0$.</p>
 </li>
 </ul>
 </li>
 </ol>
-</li>
-</ul>
-<h1 id="多元函数微分学">多元函数微分学
-</h1><h2 id="多元函数的极限与连续微分">多元函数的极限与连续，微分
-</h2><ul>
+<h2 id="多元函数微分学">多元函数微分学
+</h2><h3 id="多元函数的极限与连续微分">多元函数的极限与连续，微分
+</h3><ul>
 <li>
 <p>二元函数，$z = f(x,y)$，定义域$(x,y)\in D \subset \mathbb{R}^2$，二元函数可以看作一个曲面，其往$xOy$平面的投影就是定义域。</p>
 <p>类似的，三元函数，$u = f(x,y，z)$，定义域$(x,y,z)\in D \subset \mathbb{R}^3$.</p>
@@ -754,8 +751,8 @@ $$
 <p>​                                  <img src="image-20250304171009321.png" alt="image-20250304171009321" style="zoom: 33%;" /></p>
 </li>
 </ul>
-<h2 id="复合函数的偏导数与全微分">复合函数的偏导数与全微分
-</h2><ul>
+<h3 id="复合函数的偏导数与全微分">复合函数的偏导数与全微分
+</h3><ul>
 <li>
 <p>多元函数与多元函数复合的偏导数计算：对于$u=u(x,y),v=v(x,y)，z = f\left[u(x,y),v(x,y)\right] $，有</p>
 $$
@@ -787,7 +784,7 @@ $$
 <li>
 <p>高阶偏导数：</p>
 $$
- \begin{matrix}
+\begin{matrix}
   \frac{\partial z}{\partial x} = f_x'(x,y)
   &
   \frac{\partial z}{\partial y} = f_y'(x,y)
@@ -796,9 +793,9 @@ $$
   &
   \frac{\partial^2 z}{\partial y^2} = f_{yy}''(x,y)
    \\
-  \frac{\partial^2 z}{\partial y \partial x} =\frac{\partial}{\partial y}\left(\frac{\partial z}{\partial x}  \right) = f_{yx}''(x,y)
+  \frac{\partial^2 z}{\partial y \partial x} =\frac{\partial}{\partial y}\left(\frac{\partial z}{\partial x}  \right) = f_{xy}''(x,y)
   &
-  \frac{\partial^2 z}{\partial y \partial x} =\frac{\partial}{\partial y}\left(\frac{\partial z}{\partial x}  \right) = f_{yx}''(x,y)
+  \frac{\partial^2 z}{\partial x \partial y} =\frac{\partial}{\partial x}\left(\frac{\partial z}{\partial y}  \right) = f_{yx}''(x,y)
   \end{matrix}
   $$<ul>
 <li>若函数$z = f(x,y) $的两个混合偏导数$\frac{\partial^2 z}{\partial x \partial y}, \frac{\partial^2 z}{\partial y \partial x} $ 在点$(x_0,y_0 ) $都连续，那么在点$(x_0,y_0)$两个混合偏导数相等.</li>
@@ -816,35 +813,35 @@ $$
     \frac{\partial z}{\partial x} \sim \frac{\partial F/\partial x}{\partial F/\partial z}\quad \Rightarrow \frac{\partial z}{\partial x}=-\frac{F_x'}{F_z'}.
   $$<p>左边把$\partial F$约掉，只需要看$\partial x$永远在分母上。（这是个非常不严谨的方法，如果你觉得这个方法很啰嗦，直接记住或者能在考场上推导正确得到这个关系都没问题）。</p>
 </li>
-<li>
-<p>方向导数</p>
-<p>定义符号$\nabla \equiv (\partial_x,\partial_y,\partial_z) = \mathbf{e}_x\partial_x +\mathbf{e}_y\partial_y +\mathbf{e}_z\partial_z$ 是一个矢量，其中$\partial_x = \frac{\partial}{\partial x}, \partial_y = \frac{\partial}{\partial y},\partial_z = \frac{\partial}{\partial z}$，对于一个标量函数$f(x,y,z)$，其梯度为：</p>
+</ul>
+<h3 id="方向导数">方向导数
+</h3><p>定义符号$\nabla \equiv (\partial_x,\partial_y,\partial_z) = \mathbf{e}_x\partial_x +\mathbf{e}_y\partial_y +\mathbf{e}_z\partial_z$ 是一个矢量，其中$\partial_x = \frac{\partial}{\partial x}, \partial_y = \frac{\partial}{\partial y},\partial_z = \frac{\partial}{\partial z}$，对于一个标量函数$f(x,y,z)$，其梯度为：</p>
 $$
-  \nabla f(x,y,z) = (\partial_x f,\partial_y f,\partial_z f)=(\partial_x f)\mathbf{e}_x+(\partial_y f)\mathbf{e}_y +(\partial_z f)\mathbf{e}_z
-  $$<p>这是一个矢量函数。</p>
+\nabla f(x,y,z) = (\partial_x f,\partial_y f,\partial_z f)=(\partial_x f)\mathbf{e}_x+(\partial_y f)\mathbf{e}_y +(\partial_z f)\mathbf{e}_z
+$$<p>这是一个矢量函数。</p>
 <ul>
 <li>
 <p>对于曲面 $f(x,y,z)=0$ 任意一点，都有  $\nabla f \parallel \mathbf{n}$，其中 $\mathbf{n}$ 为曲面上该点的法向量。</p>
 <p>设曲面$\Sigma: f(x,y,z) = 0$，曲面上过任意一点 $M$ 的曲线可以取为$f[x(t),y(t),z(t)]=0 $，那么曲线上 $M$ 点的切向量（也是曲面 $\Sigma$ 的切向量）$\boldsymbol{\tau} = (x^{\prime }(t),y^{\prime }(t),z^{\prime }(t))$，则有</p>
 $$
-    \begin{aligned}
-    \nabla f\cdot \boldsymbol{\tau} &= \partial_x f\cdot x'(t) + \partial_y f\cdot y'(t) +\partial_z f\cdot z'(t) \\
-    & = \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial t}+ \frac{\partial f}{\partial z}\frac{\partial z}{\partial t}\\
-    & = \frac{\mathrm{d}f}{\mathrm{d}t} =0 .
-    \end{aligned}
-    $$<p>故$\nabla f$ 是曲面 $f(x,y,z)=0$ 的法向量。</p>
+  \begin{aligned}
+  \nabla f\cdot \boldsymbol{\tau} &= \partial_x f\cdot x'(t) + \partial_y f\cdot y'(t) +\partial_z f\cdot z'(t) \\
+  & = \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial t}+ \frac{\partial f}{\partial z}\frac{\partial z}{\partial t}\\
+  & = \frac{\mathrm{d}f}{\mathrm{d}t} =0 .
+  \end{aligned}
+  $$<p>故$\nabla f$ 是曲面 $f(x,y,z)=0$ 的法向量。</p>
 </li>
 <li>
 <p>对于二元函数也类似：</p>
 </li>
 </ul>
 $$
-  \mathbf{grad} f(x,y) = \nabla f(x,y)=(\partial_x f, \partial_y f) = (\partial_x f)\mathbf{e}_x+(\partial_y f)\mathbf{e}_y~.
-  $$<p><strong>方向导数</strong>可以视为梯度与该方向的单位矢量作点乘，也就是梯度在该方向上的投影：</p>
+\mathbf{grad} f(x,y) = \nabla f(x,y)=(\partial_x f, \partial_y f) = (\partial_x f)\mathbf{e}_x+(\partial_y f)\mathbf{e}_y~.
+$$<p><strong>方向导数</strong>可以视为梯度与该方向的单位矢量作点乘，也就是梯度在该方向上的投影：</p>
 $$
-  \frac{\partial f}{\partial \hat{n}} = \nabla f\cdot \hat{n}~.
-  $$<h2 id="极值与最值">极值与最值
-</h2></li>
+\frac{\partial f}{\partial \hat{n}} = \nabla f\cdot \hat{n}~.
+$$<h3 id="极值与最值">极值与最值
+</h3><ul>
 <li>
 <p>无条件极值</p>
 <ul>
@@ -893,6 +890,10 @@ $$
 </ol>
 </li>
 </ul>
+<h2 id="参考资料">参考资料：
+</h2><blockquote>
+<p>【1】李永乐，王式安，刘喜波等。考研数学复习全书・基础篇 [M]. 北京：中国农业出版社，2024.</p>
+<p>【2】王书彬。高等数学（下册）[M]. 北京：高等教育出版社，2020.</p></blockquote>
 
 </section>
 
