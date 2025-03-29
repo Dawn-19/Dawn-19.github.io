@@ -349,7 +349,7 @@ $$
    &amp; = M\dot{\boldsymbol{r}}_c-M\boldsymbol{v}_c \\
    &amp; = 0
    \end{aligned}
-   $$&lt;p&gt;其中 $\boldsymbol{v}_i&amp;rsquo; = \boldsymbol{v}_i-\boldsymbol{v}_c $ 是第$i$ 个质点相对于质心的速度.&lt;/p&gt;
+   $$&lt;p&gt;其中 $\boldsymbol{v}_i^\prime = \boldsymbol{v}_i-\boldsymbol{v}_c $ 是第$i$ 个质点相对于质心的速度.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;另一种推导方式，由于&lt;/p&gt;
@@ -367,7 +367,7 @@ $$
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;柯尼希定理：质点系总动能等于质心动能加上相对质心的总动能，即$E_k =E_k&amp;rsquo;+E_{kc} $,其中$E_k&amp;rsquo;$ 是相对质心的总动能，$E_{kc}$是质心动能。&lt;/p&gt;
+&lt;p&gt;柯尼希定理：质点系总动能等于质心动能加上相对质心的总动能，即$E_k =E_k^\prime+E_{kc} $,其中$E_k^\prime$ 是相对质心的总动能，$E_{kc}$是质心动能。&lt;/p&gt;
 $$
    \begin{split}
    E_k &amp;= \sum_{i} \frac{1}{2} \Delta m_i\boldsymbol{v}_i^2 = \sum_i \frac{1}{2} \Delta m_i(\boldsymbol{v}_i&#39;+\boldsymbol{v}_c)^2 \\

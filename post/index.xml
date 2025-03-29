@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Dawn-19</copyright>
-        <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 29 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>记录我的第一篇blog</title>
         <link>https://Dawn-19.github.io/p/%E8%AE%B0%E5%BD%95%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/</link>
         <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
@@ -141,12 +141,262 @@
 &lt;/div&gt;</description>
         </item>
         <item>
+        <title>重积分</title>
+        <link>https://Dawn-19.github.io/p/%E9%87%8D%E7%A7%AF%E5%88%86/</link>
+        <pubDate>Sat, 29 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E9%87%8D%E7%A7%AF%E5%88%86/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E9%87%8D%E7%A7%AF%E5%88%86/image.png" alt="Featured image of post 重积分" /&gt;&lt;h1 id=&#34;多重积分&#34;&gt;多重积分
+&lt;/h1&gt;&lt;h2 id=&#34;二重积分&#34;&gt;二重积分
+&lt;/h2&gt;&lt;h3 id=&#34;二重积分的定义及几何意义&#34;&gt;二重积分的定义及几何意义
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;设 $z = f(x, y)$ 是平面上有界闭区域 $D$ 上的有界函数&lt;/p&gt;
+$$
+\iint\limits_D f(x, y) \, \mathrm{d}\sigma \xrightarrow{\Delta} \lim\limits_{D \to 0} \sum\limits_{k=1}^n f(\xi_k, \eta_k) \Delta \sigma_k
+$$&lt;p&gt;其中 $D$ 为 $n$ 个小区域直径的最大值，$\Delta \sigma_k$ 为第 $k$ 个小区域的面积。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;几何意义&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;若函数 $f(x, y)$ 在区域 $D$ 上连续且非负，则二重积分 $\iint\limits_D f(x, y) , \mathrm{d}\sigma$ 在几何上表示以区域 $D$ 为底，曲面 $z = f(x, y)$ 为顶，侧面是以 $D$ 的边界为准线，母线平行于 $z$ 轴的柱面的曲顶柱体的体积；若 $f(x, y) \leq 0$，二重积分的值为负值，其绝对值等于上述曲顶柱体的体积。&lt;/p&gt;
+&lt;h3 id=&#34;二重积分的性质&#34;&gt;二重积分的性质
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;(1) 线性性质&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;对任意的常数 $\alpha, \beta$，有&lt;/p&gt;
+$$
+\iint\limits_{D} [\alpha f(x, y) + \beta g(x, y)] \mathrm{d}\sigma = \alpha \iint\limits_{D} f(x, y) \mathrm{d}\sigma + \beta \iint\limits_{D} g(x, y) \mathrm{d}\sigma
+$$&lt;p&gt;&lt;strong&gt;(2) 区域可加性&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;若将 $D$ 分割成两个不相交的区域 $D_1$ 与 $D_2$，则有&lt;/p&gt;
+$$
+\iint\limits_{D} f(x, y) \mathrm{d}\sigma = \iint\limits_{D_1} f(x, y) \mathrm{d}\sigma + \iint\limits_{D_2} f(x, y) \mathrm{d}\sigma
+$$&lt;p&gt;&lt;strong&gt;(3) 单位函数积分&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;如果在 $D$ 上，$f(x, y) = 1$，则&lt;/p&gt;
+$$
+\iint\limits_{D} \mathrm{d}\sigma = |D|
+$$&lt;p&gt;其中 $|D|$ 表示 $D$ 的面积。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(4) 比较定理&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;如果在 $D$ 上，$f(x, y) \leq g(x, y)$，则&lt;/p&gt;
+$$
+\iint\limits_D f(x, y) \,\mathrm{d}\sigma \leq \iint\limits_D g(x, y) \, \mathrm{d}\sigma
+$$&lt;p&gt;&lt;strong&gt;(5) 估值定理&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;设 $M, m$ 分别为连续函数 $f(x, y)$ 在闭区域 $D$ 上的最大值和最小值，$S$ 表示区域 $D$ 的面积，则&lt;/p&gt;
+$$
+mS \leq \iint\limits_D f(x, y) \, \mathrm{d}\sigma \leq MS
+$$&lt;p&gt;&lt;strong&gt;(6) 中值定理&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;设函数 $f(x, y)$ 在闭区域 $D$ 上连续，$S$ 为 $D$ 的面积，则在 $D$ 上至少存在一点 $(\xi, \eta)$，使&lt;/p&gt;
+$$
+\iint\limits_D f(x, y) \, \mathrm{d}\sigma = f(\xi, \eta) S
+$$&lt;h3 id=&#34;直角坐标系下二重积分的计算&#34;&gt;直角坐标系下二重积分的计算
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;(1) X-型区域积分法&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;当积分区域$D$为$X$-型平面区域，即  $D = { (x, y) | \varphi_1(x) \leq y \leq \varphi_2(x), a \leq x \leq b }$  时，二重积分可化为先对 $y$ 后对 $x$ 的二次积分：&lt;/p&gt;
+$$
+\iint\limits_D f(x, y) \mathrm{d}x\mathrm{d}y = \int_a^b \mathrm{d}x \int_{\varphi_1(x)}^{\varphi_2(x)} f(x, y) \mathrm{d}y
+$$&lt;img src=&#34;image-20250326221428741.png&#34; alt=&#34;image-20250326221428741&#34; style=&#34;zoom: 25%;&#34; /&gt;
+&lt;p&gt;&lt;strong&gt;(2) Y-型区域积分法&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;当积分区域 $D$ 为$Y$-型平面区域，即  $D = { (x, y) | \psi_1(y) \leq x \leq \psi_2(y), c \leq y \leq d }$  时，二重积分可化为先对 $x$ 后对 $y$ 的二次积分：&lt;/p&gt;
+$$
+\iint\limits_D f(x, y) \mathrm{d}x\mathrm{d}y = \int_c^d \mathrm{d}y \int_{\psi_1(y)}^{\psi_2(y)} f(x, y) \mathrm{d}x
+$$&lt;img src=&#34;image-20250326221802566.png&#34; alt=&#34;image-20250326221802566&#34; style=&#34;zoom:25%;&#34; /&gt;
+&lt;h3 id=&#34;二重积分的变量代换&#34;&gt;二重积分的变量代换
+&lt;/h3&gt;&lt;h4 id=&#34;极坐标变换&#34;&gt;极坐标变换
+&lt;/h4&gt;&lt;p&gt;在极坐标变换 $x = r \cos \theta$, $y = r \sin \theta$ 下，二重积分的表达式为：&lt;/p&gt;
+$$
+\iint\limits_D f(x,y) \mathrm{d}x\mathrm{d}y = \iint\limits_D f(r \cos \theta, r \sin \theta) r \mathrm{d}r \mathrm{d}\theta
+$$&lt;p&gt;其中面积元素的关系为：&lt;/p&gt;
+$$
+\mathrm{d}x\mathrm{d}y = r \mathrm{d}r \mathrm{d}\theta
+$$&lt;img src=&#34;image-20250326222925672.png&#34; alt=&#34;image-20250326222925672&#34; style=&#34;zoom: 25%;&#34; /&gt;
+&lt;h4 id=&#34;一般变量代换&#34;&gt;一般变量代换
+&lt;/h4&gt;&lt;p&gt;设变换 $T: x = x(u,v), y = y(u,v)$ 将 $uOv$ 平面上的区域 $D _{uv}$ ——对应地映射到 $xOy$ 平面上的区域 $D _{xy}$，且 $x(u,v), y(u,v)$ 在 $D _{uv}$ 上有连续的偏导数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;雅可比行列式&lt;/strong&gt;定义为：&lt;/p&gt;
+$$
+J(u,v) = 
+\begin{vmatrix}
+x_u &amp; x_v \\
+y_u &amp; y_v
+\end{vmatrix}
+= \frac{\partial (x,y)}{\partial (u,v)}
+$$&lt;p&gt;若 $\frac{\partial (x,y)}{\partial (u,v)} \neq 0$，则逆变换 $T^{-1}$ 的雅可比行列式满足：&lt;/p&gt;
+$$
+\frac{\partial (u,v)}{\partial (x,y)} = 
+\begin{vmatrix}
+u_x &amp; u_y \\
+v_x &amp; v_y
+\end{vmatrix} 
+= \frac{1}{\frac{\partial (x,y)}{\partial (u,v)}}
+$$&lt;p&gt;其中$u_x\equiv \partial u/\partial x$，对于下标 $y$ 也类似。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;积分换元公式&lt;/strong&gt;：
+若 $f(x,y)$ 在 $D _{xy}$ 上连续，且 $J(u,v) \neq 0$，则：&lt;/p&gt;
+$$
+\iint\limits_{D_{xy}} f(x,y) \mathrm{d}x\mathrm{d}y = \iint\limits_{D_{uv}} f[x(u,v), y(u,v)] |J(u,v)| \mathrm{d}u \mathrm{d}v
+$$&lt;p&gt;其中 $|J(u,v)|$ 表示面积元素的变化比率：&lt;/p&gt;
+$$
+\mathrm{d}x \mathrm{d}y = |J(u,v)| \mathrm{d}u \mathrm{d}v
+$$&lt;h3 id=&#34;利用对称性和奇偶性计算&#34;&gt;利用对称性和奇偶性计算
+&lt;/h3&gt;&lt;h4 id=&#34;关于y轴对称的情形&#34;&gt;关于$y$轴对称的情形
+&lt;/h4&gt;&lt;p&gt;若积分域$D$关于$y$轴对称，且被积函数$f(x,y)$关于$x$有奇偶性，则：&lt;/p&gt;
+$$
+\iint\limits_{D} f(x,y) \mathrm{d}\sigma = 
+\begin{cases}
+2 \iint_{D_1} f(x,y) \mathrm{d}\sigma, &amp; \text{当 } f(-x,y) = f(x,y) \text{（偶函数）} \\
+0, &amp; \text{当 } f(-x,y) = -f(x,y) \text{（奇函数）}
+\end{cases}
+$$&lt;p&gt;其中$D_1$为$D$在$y$轴右侧的部分。&lt;/p&gt;
+&lt;h4 id=&#34;关于x轴对称的情形&#34;&gt;关于$x$轴对称的情形
+&lt;/h4&gt;&lt;p&gt;若积分域$D$关于$x$轴对称，且被积函数$f(x,y)$关于$y$有奇偶性，则：&lt;/p&gt;
+$$
+\iint\limits_{D} f(x,y) \mathrm{d}\sigma = 
+\begin{cases}
+2 \iint\limits_{D_1} f(x,y) \mathrm{d}\sigma, &amp; \text{当 } f(x,-y) = f(x,y) \text{（偶函数）} \\
+0, &amp; \text{当 } f(x,-y) = -f(x,y) \text{（奇函数）}
+\end{cases}
+$$&lt;p&gt;其中$D_1$为$D$在$x$轴上方的部分。&lt;/p&gt;
+&lt;h4 id=&#34;关于直线yx对称&#34;&gt;关于直线$y=x$对称
+&lt;/h4&gt;&lt;p&gt;若积分域$D$关于直线$y=x$对称（即交换$x$和$y$后区域不变），如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;圆域$x^2 + y^2 \leq R^2$&lt;/li&gt;
+&lt;li&gt;正方形域$0 \leq x \leq 1, 0 \leq y \leq 1$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;则有：&lt;/p&gt;
+$$
+\iint\limits_{D} f(x,y) \mathrm{d}\sigma = \iint\limits_{D} f(y,x) \mathrm{d}\sigma
+$$&lt;p&gt;&lt;strong&gt;应用技巧&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;当被积函数$f(x,y)$关于某个变量为奇函数时，如果积分区域有对称性可立即得到积分值为0。&lt;/li&gt;
+&lt;li&gt;对于偶函数情形，可将积分区域减半计算后再乘以2。&lt;/li&gt;
+&lt;li&gt;变量对称性常可用于简化或验证积分结果。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;三重积分的计算&#34;&gt;三重积分的计算
+&lt;/h2&gt;&lt;h3 id=&#34;直角坐标系下的三重积分计算&#34;&gt;直角坐标系下的三重积分计算
+&lt;/h3&gt;&lt;h4 id=&#34;先一后二法投影法&#34;&gt;先一后二法（投影法）
+&lt;/h4&gt;&lt;p&gt;以向$xOy$坐标面投影为例，积分区域$\Omega$表示为：&lt;/p&gt;
+$$
+\Omega = \{(x,y,z) | z_1(x,y) \leq z \leq z_2(x,y), (x,y) \in D_{xy}\}
+$$&lt;p&gt;其中$D_{xy}$是$\Omega$在$xOy$坐标面上的投影。若$D_{xy}$还可表示为：&lt;/p&gt;
+$$
+a \leq x \leq b, \quad y_1(x) \leq y \leq y_2(x)
+$$&lt;p&gt;则三重积分可化为三次积分：&lt;/p&gt;
+$$
+\iiint_{\Omega} f(x,y,z) \mathrm{d}V = \iint_{D_{xy}} \mathrm{d}x\mathrm{d}y \int_{z_1(x,y)}^{z_2(x,y)} f(x,y,z) \mathrm{d}z = \int_a^b \mathrm{d}x \int_{y_1(x)}^{y_2(x)} \mathrm{d}y \int_{z_1(x,y)}^{z_2(x,y)} f(x,y,z) \mathrm{d}z
+$$&lt;p&gt;称为先对$z$、再对$y$、最后对$x$的积分次序。其他积分次序类似可得。&lt;/p&gt;
+&lt;h4 id=&#34;先二后一法截面法切片法&#34;&gt;先二后一法（截面法/切片法）
+&lt;/h4&gt;&lt;p&gt;积分区域$\Omega$表示为：&lt;/p&gt;
+$$
+\Omega = \{(x,y,z) | (x,y) \in D_z, c_1 \leq z \leq c_2\}
+$$&lt;p&gt;其中$D_z$是平面$z=z$（常数）与$\Omega$的截面在$xOy$坐标面上的投影，则三重积分为：&lt;/p&gt;
+$$
+\iiint_{\Omega} f(x,y,z) \mathrm{d}V = \int_{c_1}^{c_2} \mathrm{d}z \iint_{D_z} f(x,y,z) \mathrm{d}x\mathrm{d}y
+$$&lt;p&gt;&lt;strong&gt;注&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;投影法适用于&amp;quot;顶部&amp;quot;和&amp;quot;底部&amp;quot;曲面明确的区域。&lt;/li&gt;
+&lt;li&gt;截面法适用于沿某一坐标轴（如$z$轴）截面形状容易描述的区域。&lt;/li&gt;
+&lt;li&gt;计算时可根据被积函数和积分区域的特点选择更简便的积分次序。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;三重积分的变量代换&#34;&gt;三重积分的变量代换
+&lt;/h3&gt;&lt;h4 id=&#34;柱坐标变换&#34;&gt;柱坐标变换
+&lt;/h4&gt;&lt;p&gt;在柱坐标变换下：&lt;/p&gt;
+$$
+\begin{cases}
+x = r \cos \theta \\
+y = r \sin \theta \\
+z = z
+\end{cases}
+$$&lt;p&gt;三重积分表达式为：&lt;/p&gt;
+$$
+\iiint_{\Omega} f(x,y,z) \mathrm{d}x \mathrm{d}y \mathrm{d}z = \iiint_{\Omega&#39;} f(r \cos \theta, r \sin \theta, z) r \mathrm{d}z \mathrm{d}r \mathrm{d}\theta
+$$&lt;p&gt;体积元素关系：&lt;/p&gt;
+$$
+\mathrm{d}x \mathrm{d}y \mathrm{d}z = r \mathrm{d}z \mathrm{d}r \mathrm{d}\theta
+$$&lt;p&gt;&lt;strong&gt;适用情形&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;积分区域关于$z$轴对称；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;截面为圆形或环形区域。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;球坐标变换&#34;&gt;球坐标变换
+&lt;/h4&gt;&lt;img src=&#34;image-20250329151656474.png&#34; alt=&#34;image-20250329151656474&#34; style=&#34;zoom: 25%;&#34; /&gt;
+&lt;p&gt;在球坐标变换下：&lt;/p&gt;
+$$
+\begin{cases}
+x = r \sin \varphi \cos \theta \\
+y = r \sin \varphi \sin \theta \\
+z = r \cos \varphi
+\end{cases}
+$$&lt;p&gt;三重积分表达式为：&lt;/p&gt;
+$$
+\iiint_{\Omega} f(x,y,z) \mathrm{d}x \mathrm{d}y \mathrm{d}z = \iiint_{\Omega&#39;} f(r \sin \varphi \cos \theta, r \sin \varphi \sin \theta, r \cos \varphi) r^2 \sin \varphi \mathrm{d}r \mathrm{d}\varphi \mathrm{d}\theta
+$$&lt;p&gt;体积元素关系：&lt;/p&gt;
+$$
+\mathrm{d}x \mathrm{d}y \mathrm{d}z = r^2 \sin \varphi \mathrm{d}r \mathrm{d}\varphi \mathrm{d}\theta
+$$&lt;p&gt;&lt;strong&gt;适用情形&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;积分区域为球体或球壳；&lt;/li&gt;
+&lt;li&gt;被积函数含有$x^2+y^2+z^2$项；&lt;/li&gt;
+&lt;li&gt;问题具有球对称性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;柱坐标适合处理轴对称问题；&lt;/li&gt;
+&lt;li&gt;球坐标适合处理球对称问题；&lt;/li&gt;
+&lt;li&gt;变量代换可简化积分计算，但需注意：
+&lt;ul&gt;
+&lt;li&gt;正确确定新积分限；&lt;/li&gt;
+&lt;li&gt;不要遗漏雅可比行列式（$r$或$r^2\sin\varphi$）；&lt;/li&gt;
+&lt;li&gt;保持体积元素的正确定向。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;度规与体面积微元&#34;&gt;度规与体(面)积微元
+&lt;/h2&gt;&lt;p&gt;对于不同坐标系下的体积元，可以通过勾股定理记忆（$+\to \times$，再开根号）。&lt;/p&gt;
+&lt;h3 id=&#34;二维&#34;&gt;二维
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;直角坐标系：&lt;/p&gt;
+$$
+   (\mathrm{d}l)^2 = (\mathrm{d}x)^2+(\mathrm{d}y)^2
+   $$&lt;p&gt;面积微元：$\mathrm{d}\sigma = \mathrm{d}x \mathrm{d}y$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;极坐标系：&lt;/p&gt;
+$$
+   (\mathrm{d}l)^2 = (\mathrm{d}r)^2+r^2(\mathrm{d}\theta)^2~.
+   $$&lt;p&gt;面积微元：$\mathrm{d}\sigma = r\mathrm{d}r \mathrm{d}\theta$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;三维&#34;&gt;三维
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;直角坐标系：&lt;/p&gt;
+$$
+   (\mathrm{d}l)^2 = (\mathrm{d}x)^2+(\mathrm{d}y)^2+(\mathrm{d}z)^2~.
+   $$&lt;p&gt;体积元$\mathrm{d}V = \mathrm{d}x \mathrm{d}y \mathrm{d}z $.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;柱坐标系：&lt;/p&gt;
+$$
+   (\mathrm{d}l)^2 = (\mathrm{d}r)^2+r^2(\mathrm{d}\theta)^2+(\mathrm{d}z)^2~.
+   $$&lt;p&gt;体积元$\mathrm{d}V = r\mathrm{d}r \mathrm{d}\theta \mathrm{d}z $.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;球坐标系：&lt;/p&gt;
+$$
+   (\mathrm{d}l)^2 = (\mathrm{d}r)^2+r^2(\mathrm{d}\theta)^2+r^2\sin^2\varphi(\mathrm{d}\varphi)^2~.
+   $$&lt;p&gt;体积元$\mathrm{d}V = r^2\sin\varphi \mathrm{d}r \mathrm{d}\theta \mathrm{d}\varphi $.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料：
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;【1】李永乐，王式安，刘喜波等。考研数学复习全书・基础篇 [M]. 北京：中国农业出版社，2024.&lt;/p&gt;
+&lt;p&gt;【2】王书彬。高等数学（下册）[M]. 北京：高等教育出版社，2020.&lt;/p&gt;
+&lt;p&gt;【3】张天德，窦慧，崔玉泉，王玮。全国大学生数学竞赛辅导指南(第2版)[M]. 北京：清华大学出版社，2017.&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>2501.14681-Mukhanov-Sasaki方程的力学类比</title>
         <link>https://Dawn-19.github.io/p/2501.14681-mukhanov-sasaki%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%B1%BB%E6%AF%94/</link>
         <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://Dawn-19.github.io/p/2501.14681-mukhanov-sasaki%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%B1%BB%E6%AF%94/</guid>
-        <description>&lt;img src="https://Dawn-19.github.io/p/2501.14681-mukhanov-sasaki%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%B1%BB%E6%AF%94/Initial_D.png" alt="Featured image of post 2501.14681-Mukhanov-Sasaki方程的力学类比" /&gt;&lt;h2 id=&#34;sec22-力学类比&#34;&gt;Sec2.2 力学类比
+        <description>&lt;img src="https://Dawn-19.github.io/p/2501.14681-mukhanov-sasaki%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%B1%BB%E6%AF%94/IMAGE.png" alt="Featured image of post 2501.14681-Mukhanov-Sasaki方程的力学类比" /&gt;&lt;h2 id=&#34;sec22-力学类比&#34;&gt;Sec2.2 力学类比
 &lt;/h2&gt;&lt;p&gt;广义上来说只要 $u_k ^{\prime \prime} + (k^2-\frac{z ^{\prime \prime}}{z})u_k =0 $ 中的 $ \frac{z ^{\prime \prime}}{z}$ 发生较为剧烈变化就能够在某些$k$处的功率谱振荡。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -204,7 +454,7 @@ $$
 &lt;/h2&gt;&lt;p&gt;对于微分方程：&lt;/p&gt;
 $$
 \hat{L} u(\tau) = f(\tau)~,
-$$&lt;p&gt;其中 $\hat{L}$ 是微分算子，$u(\tau)$ 是待解函数，$f(\tau)$ 是已知的任意函数，设格林函数$G(\tau, \tau&amp;rsquo;)$满足&lt;/p&gt;
+$$&lt;p&gt;其中 $\hat{L}$ 是微分算子，$u(\tau)$ 是待解函数，$f(\tau)$ 是已知的任意函数，设格林函数$G(\tau, \tau^\prime)$满足&lt;/p&gt;
 $$
 \hat{L}G(\tau,\tau&#39;) = \delta(\tau-\tau&#39;)~,
 $$&lt;p&gt;那么有&lt;/p&gt;
@@ -234,14 +484,14 @@ $$&lt;ul&gt;
 &lt;p&gt;解的验证，根据二阶微分方程的参数变异法，对于一般的非齐次二阶微分方程&lt;/p&gt;
 $$
   y&#39;&#39; + p(x)y&#39; + Q(x) y = R(x)~,
-  $$&lt;p&gt;有通解&lt;/p&gt;
+  $$&lt;p&gt;有通解（请看参数变异法）&lt;/p&gt;
 $$
   y_p(x) = u_1(x)y_1(x)+ u_2(x)y_2(x)~.
   $$&lt;p&gt;其中$y_1(x), y_2(x) $ 是二阶微分方程$y ^{\prime \prime}+p(x)y^\prime+Q(x)y = 0$ 的齐次解，$u_1, u_2$的形式如下&lt;/p&gt;
 $$
   u_1(x) = - \int\frac{y_2}{W_{y_1 y_2}}R(x)\mathrm{d}x ~,\quad u_2(x) =  \int\frac{y_1}{W_{y_1 y_2}}R(x)\mathrm{d}x~,
   $$&lt;p&gt;这里$W_{y_1 y_2} = y_1 y_2^\prime -y_2 y_1^\prime $ .&lt;/p&gt;
-&lt;p&gt;对于格林函数满足 $G ^{\prime \prime}(\tau,\tau&amp;rsquo;)+k^2G(\tau,\tau^\prime) = \delta(\tau-\tau^\prime)$，其有齐次解&lt;/p&gt;
+&lt;p&gt;对于格林函数满足 $G ^{\prime \prime}(\tau,\tau^\prime)+k^2G(\tau,\tau^\prime) = \delta(\tau-\tau^\prime)$，其有齐次解&lt;/p&gt;
 $$
   u_{1,\text{sub}}^{(0)} (\tau) = e^{ik\tau}~, \quad u_{2,\text{sub}}^{(0)} (\tau) = e^{-ik\tau}~.
   $$&lt;p&gt;且 $W_{12} = -2ik$ ，那么对于 $G_{\text{sub}}(\tau,\tau^\prime) = G(\tau,\tau^\prime)/W_{12}$ 有&lt;/p&gt;
@@ -261,10 +511,10 @@ $$
     y_p&#39; &amp;= u_1&#39; y_1 + u_1 y_1&#39; + u_2&#39; y_2 + u_2 y_2&#39;~, \\
     y_p&#39;&#39; &amp; = u_1&#39;&#39; y_1 + 2 u_1&#39; y_1&#39; + u_1 y_1&#39;&#39; + u_2&#39;&#39; y_2 + 2 u_2&#39; y_2&#39; + u_2 y_2&#39;&#39;~,
     \end{aligned}
-$$&lt;p&gt;​    令 $ u_1^\prime y_1 + u_2^\prime y_2 = 0$，由于 $y_1,y_2$ 本身是非齐次解，那么把 $y_p$ 代入到微分方程中,&lt;/p&gt;
+$$&lt;p&gt;​    令 $ u_1^\prime y_1 + u_2^\prime y_2 = 0$，由于 $y_1,y_2$ 本身是齐次解，那么把 $y_p$ 代入到微分方程中,&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;$y_p ^{\prime \prime}$中的$y_1 ^{\prime \prime}, y_2 ^{\prime \prime}$项会被消去，同时对$ u_1^\prime y_1 + u_2^\prime y_2 = 0$求导可得$u_1 ^{\prime \prime}y_1 + u_1^\prime y_1^\prime + u_2 ^{\prime \prime}y_2 + u_2^\prime y_2^\prime = 0$，最终只留下$u_1&amp;rsquo; y_1^\prime +u_2^\prime  y_2^\prime $.&lt;/p&gt;
+&lt;p&gt;$y_p ^{\prime \prime}$中的$y_1 ^{\prime \prime}, y_2 ^{\prime \prime}$项会被消去，同时对$ u_1^\prime y_1 + u_2^\prime y_2 = 0$求导可得$u_1 ^{\prime \prime}y_1 + u_1^\prime y_1^\prime + u_2 ^{\prime \prime}y_2 + u_2^\prime y_2^\prime = 0$，最终只留下$u_1^\prime y_1^\prime +u_2^\prime  y_2^\prime $.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;$y_p^\prime $ 由于 $ u_1^\prime  y_1 + u_2^\prime  y_2 = 0$ 同时 $y_1^\prime , y_2^\prime $ 被消去则没有留下来的项，&lt;/p&gt;
@@ -628,7 +878,7 @@ $$
    &amp; = M\dot{\boldsymbol{r}}_c-M\boldsymbol{v}_c \\
    &amp; = 0
    \end{aligned}
-   $$&lt;p&gt;其中 $\boldsymbol{v}_i&amp;rsquo; = \boldsymbol{v}_i-\boldsymbol{v}_c $ 是第$i$ 个质点相对于质心的速度.&lt;/p&gt;
+   $$&lt;p&gt;其中 $\boldsymbol{v}_i^\prime = \boldsymbol{v}_i-\boldsymbol{v}_c $ 是第$i$ 个质点相对于质心的速度.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;另一种推导方式，由于&lt;/p&gt;
@@ -646,7 +896,7 @@ $$
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;柯尼希定理：质点系总动能等于质心动能加上相对质心的总动能，即$E_k =E_k&amp;rsquo;+E_{kc} $,其中$E_k&amp;rsquo;$ 是相对质心的总动能，$E_{kc}$是质心动能。&lt;/p&gt;
+&lt;p&gt;柯尼希定理：质点系总动能等于质心动能加上相对质心的总动能，即$E_k =E_k^\prime+E_{kc} $,其中$E_k^\prime$ 是相对质心的总动能，$E_{kc}$是质心动能。&lt;/p&gt;
 $$
    \begin{split}
    E_k &amp;= \sum_{i} \frac{1}{2} \Delta m_i\boldsymbol{v}_i^2 = \sum_i \frac{1}{2} \Delta m_i(\boldsymbol{v}_i&#39;+\boldsymbol{v}_c)^2 \\
@@ -1462,7 +1712,7 @@ $$
         <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
         
         <guid>https://Dawn-19.github.io/p/%E6%A0%87%E9%87%8F%E8%AF%B1%E5%AF%BC%E5%BC%95%E5%8A%9B%E6%B3%A2/</guid>
-        <description>&lt;h1 id=&#34;标量诱导引力波&#34;&gt;标量诱导引力波
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E6%A0%87%E9%87%8F%E8%AF%B1%E5%AF%BC%E5%BC%95%E5%8A%9B%E6%B3%A2/wallhaven-9m7kwd.png" alt="Featured image of post 标量诱导引力波" /&gt;&lt;h1 id=&#34;标量诱导引力波&#34;&gt;标量诱导引力波
 &lt;/h1&gt;&lt;p&gt;一般的诱导引力波产生于Inflation结束和BBN之间，在原初扰动重新进入视界的时刻。诱导引力波有很多种，但目前认为标量诱导引力波是其最主要的部分。&lt;/p&gt;
 &lt;h2 id=&#34;引力波能谱&#34;&gt;引力波能谱
 &lt;/h2&gt;&lt;p&gt;对于引力波，我们观测的是它的能谱，它是一个无量纲量：&lt;/p&gt;
@@ -1569,7 +1819,7 @@ $$
 $$&lt;p&gt;其中$G(\tau,\tau_a),a=1,2$是格林函数，形式为&lt;/p&gt;
 $$
 G(\tau,\tau&#39;) = \frac{1}{W(h_1,h_2,\tau&#39;)}\left(h_1(\tau)h_2(\tau&#39;)-h_1(\tau&#39;)h_2(\tau)\right)~,
-$$&lt;p&gt;这里$h_1,h_2$是方程$h_{\mathbf{k},\lambda}&amp;rsquo;&amp;rsquo; + 2\mathcal{H}h_{\mathbf{k},\lambda}&amp;rsquo; + k^2 h_{\mathbf{k},\lambda} =0$的两个齐次解，$W(h_1,h_2,\tau) = h_1&amp;rsquo;(\tau)h_2(\tau)-h_1(\tau)h_2&amp;rsquo;(\tau)$。标量场作为波源可以进一步展开：&lt;/p&gt;
+$$&lt;p&gt;这里$h_1,h_2$是方程$h_{\mathbf{k},\lambda}^{\prime\prime} + 2\mathcal{H}h_{\mathbf{k},\lambda}^\prime + k^2 h_{\mathbf{k},\lambda} =0$的两个齐次解，$W(h_1,h_2,\tau) = h_1^\prime (\tau)h_2(\tau)-h_1(\tau)h_2^\prime (\tau)$。标量场作为波源可以进一步展开：&lt;/p&gt;
 $$
 \begin{aligned}
 \langle S_{\lambda}(k, \tau_1) S_{\lambda}(k&#39;, \tau_2) \rangle  &amp;= 4^2\int\frac{\mathrm{d}^3 q}{(2\pi)^3}\frac{\mathrm{d}^3 q&#39;}{(2\pi)^3} e^{ij}_{\lambda} (k)e^{ij}_{\lambda}(k&#39;)q_i q_j \\
@@ -2860,7 +3110,7 @@ $$
 -\text{F}&#39;&#39;(r)+\text{F}&#39;(r) \text{G}&#39;(r)-\text{F}&#39;(r)^2+\frac{2 \text{G}&#39;(r)}{r}=0,\\
 e^{-2 \text{G}(r)} \left(r \left(\text{G}&#39;(r)-\text{F}&#39;(r)\right)-1\right)+1=0
 \end{array}
-$$&lt;p&gt;待求解的只有$F(r)$和$G(r)$，只需要两个方程，把第一式与第二式相加后，得到的方程$\frac{F&amp;rsquo;(r)+G&amp;rsquo;(r)}{r}=0$可知$G(r) = -F(r)$，那么只需解出$F(r)$，利用DSolve求解&lt;/p&gt;
+$$&lt;p&gt;待求解的只有$F(r)$和$G(r)$，只需要两个方程，把第一式与第二式相加后，得到的方程$\frac{F^\prime(r)+G^\prime(r)}{r}=0$可知$G(r) = -F(r)$，那么只需解出$F(r)$，利用DSolve求解&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -3303,7 +3553,7 @@ $$
    $$&lt;p&gt;消去边界项，得到Klein-Gorden方程&lt;/p&gt;
 $$
    \Box \phi = V&#39;(\phi) \Leftrightarrow  \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} g^{\mu\nu} \partial_\nu \phi) = V&#39;(\phi)
-   $$&lt;p&gt;其中$V&amp;rsquo;(\phi) = \mathrm{d}V/\mathrm{d}\phi$，注意在广义相对论中有关系$\nabla_\mu\nabla^\mu \phi = \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} g^{\mu\nu} \partial_\nu \phi)$，&lt;a class=&#34;link&#34; href=&#34;https://dawn-19.github.io/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+   $$&lt;p&gt;其中$V^\prime (\phi) = \mathrm{d}V/\mathrm{d}\phi$，注意在广义相对论中有关系$\nabla_\mu\nabla^\mu \phi = \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} g^{\mu\nu} \partial_\nu \phi)$，&lt;a class=&#34;link&#34; href=&#34;https://dawn-19.github.io/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;可见&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;此外，用能动量守恒能得到相同的结果，暴胀场的能动张量为：&lt;/p&gt;
 $$
@@ -3836,7 +4086,7 @@ $$&lt;p&gt;对于增加深度维度，以及多个卷积核的运算过程和一
         <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
         
         <guid>https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/</guid>
-        <description>&lt;h1 id=&#34;the-strong-coupling-problem&#34;&gt;The strong coupling problem
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/wallhaven-k7jmg6.jpg" alt="Featured image of post 论文笔记-strong_coupling" /&gt;&lt;h1 id=&#34;the-strong-coupling-problem&#34;&gt;The strong coupling problem
 &lt;/h1&gt;&lt;p&gt;Genesis asymptotics: $t \to -\infty $, Universe$ \to $ flat spacetime, energy density $\rho = 0$.&lt;/p&gt;
 &lt;p&gt;During Genesis: a NECV stage, energy density grow, $E_{class}\propto (-t)^{-1}$.&lt;/p&gt;
 &lt;p&gt;Later stage, radiated dominated or genesis complements the inflationary scenario.&lt;/p&gt;

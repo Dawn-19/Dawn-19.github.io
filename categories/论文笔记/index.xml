@@ -13,7 +13,7 @@
         <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://Dawn-19.github.io/p/2501.14681-mukhanov-sasaki%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%B1%BB%E6%AF%94/</guid>
-        <description>&lt;img src="https://Dawn-19.github.io/p/2501.14681-mukhanov-sasaki%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%B1%BB%E6%AF%94/Initial_D.png" alt="Featured image of post 2501.14681-Mukhanov-Sasaki方程的力学类比" /&gt;&lt;h2 id=&#34;sec22-力学类比&#34;&gt;Sec2.2 力学类比
+        <description>&lt;img src="https://Dawn-19.github.io/p/2501.14681-mukhanov-sasaki%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%B1%BB%E6%AF%94/IMAGE.png" alt="Featured image of post 2501.14681-Mukhanov-Sasaki方程的力学类比" /&gt;&lt;h2 id=&#34;sec22-力学类比&#34;&gt;Sec2.2 力学类比
 &lt;/h2&gt;&lt;p&gt;广义上来说只要 $u_k ^{\prime \prime} + (k^2-\frac{z ^{\prime \prime}}{z})u_k =0 $ 中的 $ \frac{z ^{\prime \prime}}{z}$ 发生较为剧烈变化就能够在某些$k$处的功率谱振荡。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -71,7 +71,7 @@ $$
 &lt;/h2&gt;&lt;p&gt;对于微分方程：&lt;/p&gt;
 $$
 \hat{L} u(\tau) = f(\tau)~,
-$$&lt;p&gt;其中 $\hat{L}$ 是微分算子，$u(\tau)$ 是待解函数，$f(\tau)$ 是已知的任意函数，设格林函数$G(\tau, \tau&amp;rsquo;)$满足&lt;/p&gt;
+$$&lt;p&gt;其中 $\hat{L}$ 是微分算子，$u(\tau)$ 是待解函数，$f(\tau)$ 是已知的任意函数，设格林函数$G(\tau, \tau^\prime)$满足&lt;/p&gt;
 $$
 \hat{L}G(\tau,\tau&#39;) = \delta(\tau-\tau&#39;)~,
 $$&lt;p&gt;那么有&lt;/p&gt;
@@ -101,14 +101,14 @@ $$&lt;ul&gt;
 &lt;p&gt;解的验证，根据二阶微分方程的参数变异法，对于一般的非齐次二阶微分方程&lt;/p&gt;
 $$
   y&#39;&#39; + p(x)y&#39; + Q(x) y = R(x)~,
-  $$&lt;p&gt;有通解&lt;/p&gt;
+  $$&lt;p&gt;有通解（请看参数变异法）&lt;/p&gt;
 $$
   y_p(x) = u_1(x)y_1(x)+ u_2(x)y_2(x)~.
   $$&lt;p&gt;其中$y_1(x), y_2(x) $ 是二阶微分方程$y ^{\prime \prime}+p(x)y^\prime+Q(x)y = 0$ 的齐次解，$u_1, u_2$的形式如下&lt;/p&gt;
 $$
   u_1(x) = - \int\frac{y_2}{W_{y_1 y_2}}R(x)\mathrm{d}x ~,\quad u_2(x) =  \int\frac{y_1}{W_{y_1 y_2}}R(x)\mathrm{d}x~,
   $$&lt;p&gt;这里$W_{y_1 y_2} = y_1 y_2^\prime -y_2 y_1^\prime $ .&lt;/p&gt;
-&lt;p&gt;对于格林函数满足 $G ^{\prime \prime}(\tau,\tau&amp;rsquo;)+k^2G(\tau,\tau^\prime) = \delta(\tau-\tau^\prime)$，其有齐次解&lt;/p&gt;
+&lt;p&gt;对于格林函数满足 $G ^{\prime \prime}(\tau,\tau^\prime)+k^2G(\tau,\tau^\prime) = \delta(\tau-\tau^\prime)$，其有齐次解&lt;/p&gt;
 $$
   u_{1,\text{sub}}^{(0)} (\tau) = e^{ik\tau}~, \quad u_{2,\text{sub}}^{(0)} (\tau) = e^{-ik\tau}~.
   $$&lt;p&gt;且 $W_{12} = -2ik$ ，那么对于 $G_{\text{sub}}(\tau,\tau^\prime) = G(\tau,\tau^\prime)/W_{12}$ 有&lt;/p&gt;
@@ -128,10 +128,10 @@ $$
     y_p&#39; &amp;= u_1&#39; y_1 + u_1 y_1&#39; + u_2&#39; y_2 + u_2 y_2&#39;~, \\
     y_p&#39;&#39; &amp; = u_1&#39;&#39; y_1 + 2 u_1&#39; y_1&#39; + u_1 y_1&#39;&#39; + u_2&#39;&#39; y_2 + 2 u_2&#39; y_2&#39; + u_2 y_2&#39;&#39;~,
     \end{aligned}
-$$&lt;p&gt;​    令 $ u_1^\prime y_1 + u_2^\prime y_2 = 0$，由于 $y_1,y_2$ 本身是非齐次解，那么把 $y_p$ 代入到微分方程中,&lt;/p&gt;
+$$&lt;p&gt;​    令 $ u_1^\prime y_1 + u_2^\prime y_2 = 0$，由于 $y_1,y_2$ 本身是齐次解，那么把 $y_p$ 代入到微分方程中,&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;$y_p ^{\prime \prime}$中的$y_1 ^{\prime \prime}, y_2 ^{\prime \prime}$项会被消去，同时对$ u_1^\prime y_1 + u_2^\prime y_2 = 0$求导可得$u_1 ^{\prime \prime}y_1 + u_1^\prime y_1^\prime + u_2 ^{\prime \prime}y_2 + u_2^\prime y_2^\prime = 0$，最终只留下$u_1&amp;rsquo; y_1^\prime +u_2^\prime  y_2^\prime $.&lt;/p&gt;
+&lt;p&gt;$y_p ^{\prime \prime}$中的$y_1 ^{\prime \prime}, y_2 ^{\prime \prime}$项会被消去，同时对$ u_1^\prime y_1 + u_2^\prime y_2 = 0$求导可得$u_1 ^{\prime \prime}y_1 + u_1^\prime y_1^\prime + u_2 ^{\prime \prime}y_2 + u_2^\prime y_2^\prime = 0$，最终只留下$u_1^\prime y_1^\prime +u_2^\prime  y_2^\prime $.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;$y_p^\prime $ 由于 $ u_1^\prime  y_1 + u_2^\prime  y_2 = 0$ 同时 $y_1^\prime , y_2^\prime $ 被消去则没有留下来的项，&lt;/p&gt;
@@ -159,7 +159,7 @@ $$</description>
         <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
         
         <guid>https://Dawn-19.github.io/p/%E6%A0%87%E9%87%8F%E8%AF%B1%E5%AF%BC%E5%BC%95%E5%8A%9B%E6%B3%A2/</guid>
-        <description>&lt;h1 id=&#34;标量诱导引力波&#34;&gt;标量诱导引力波
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E6%A0%87%E9%87%8F%E8%AF%B1%E5%AF%BC%E5%BC%95%E5%8A%9B%E6%B3%A2/wallhaven-9m7kwd.png" alt="Featured image of post 标量诱导引力波" /&gt;&lt;h1 id=&#34;标量诱导引力波&#34;&gt;标量诱导引力波
 &lt;/h1&gt;&lt;p&gt;一般的诱导引力波产生于Inflation结束和BBN之间，在原初扰动重新进入视界的时刻。诱导引力波有很多种，但目前认为标量诱导引力波是其最主要的部分。&lt;/p&gt;
 &lt;h2 id=&#34;引力波能谱&#34;&gt;引力波能谱
 &lt;/h2&gt;&lt;p&gt;对于引力波，我们观测的是它的能谱，它是一个无量纲量：&lt;/p&gt;
@@ -266,7 +266,7 @@ $$
 $$&lt;p&gt;其中$G(\tau,\tau_a),a=1,2$是格林函数，形式为&lt;/p&gt;
 $$
 G(\tau,\tau&#39;) = \frac{1}{W(h_1,h_2,\tau&#39;)}\left(h_1(\tau)h_2(\tau&#39;)-h_1(\tau&#39;)h_2(\tau)\right)~,
-$$&lt;p&gt;这里$h_1,h_2$是方程$h_{\mathbf{k},\lambda}&amp;rsquo;&amp;rsquo; + 2\mathcal{H}h_{\mathbf{k},\lambda}&amp;rsquo; + k^2 h_{\mathbf{k},\lambda} =0$的两个齐次解，$W(h_1,h_2,\tau) = h_1&amp;rsquo;(\tau)h_2(\tau)-h_1(\tau)h_2&amp;rsquo;(\tau)$。标量场作为波源可以进一步展开：&lt;/p&gt;
+$$&lt;p&gt;这里$h_1,h_2$是方程$h_{\mathbf{k},\lambda}^{\prime\prime} + 2\mathcal{H}h_{\mathbf{k},\lambda}^\prime + k^2 h_{\mathbf{k},\lambda} =0$的两个齐次解，$W(h_1,h_2,\tau) = h_1^\prime (\tau)h_2(\tau)-h_1(\tau)h_2^\prime (\tau)$。标量场作为波源可以进一步展开：&lt;/p&gt;
 $$
 \begin{aligned}
 \langle S_{\lambda}(k, \tau_1) S_{\lambda}(k&#39;, \tau_2) \rangle  &amp;= 4^2\int\frac{\mathrm{d}^3 q}{(2\pi)^3}\frac{\mathrm{d}^3 q&#39;}{(2\pi)^3} e^{ij}_{\lambda} (k)e^{ij}_{\lambda}(k&#39;)q_i q_j \\
@@ -299,7 +299,7 @@ $$&lt;p&gt;计算出了功率谱，自然就能得到引力波的能谱。&lt;/p
         <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
         
         <guid>https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/</guid>
-        <description>&lt;h1 id=&#34;the-strong-coupling-problem&#34;&gt;The strong coupling problem
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/wallhaven-k7jmg6.jpg" alt="Featured image of post 论文笔记-strong_coupling" /&gt;&lt;h1 id=&#34;the-strong-coupling-problem&#34;&gt;The strong coupling problem
 &lt;/h1&gt;&lt;p&gt;Genesis asymptotics: $t \to -\infty $, Universe$ \to $ flat spacetime, energy density $\rho = 0$.&lt;/p&gt;
 &lt;p&gt;During Genesis: a NECV stage, energy density grow, $E_{class}\propto (-t)^{-1}$.&lt;/p&gt;
 &lt;p&gt;Later stage, radiated dominated or genesis complements the inflationary scenario.&lt;/p&gt;
