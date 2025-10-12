@@ -1282,7 +1282,9 @@ $$&lt;p&gt;待求解的只有$F(r)$和$G(r)$，只需要两个方程，把第一
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DSolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Derivative&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;$$
+&lt;/div&gt;&lt;p&gt;可得
+&lt;/p&gt;
+$$
 \left\{\left\{F(r)\to \log \left(-\sqrt{1+\frac{e^{2 c_1}}{r}}\right)\right\},\left\{F(r)\to \frac{1}{2} \log \left(1+\frac{e^{2 c_1}}{r}\right)\right\}\right\}
 $$&lt;p&gt;
 第一个解显然不物理，根据弱场条件需要回到牛顿引力可以得到$e^{2c_1} = 2 G M =R_s $，这样就得到了最终的施瓦西解：&lt;/p&gt;
@@ -1322,7 +1324,9 @@ g_{\mu \nu }=\left(
 \end{array}
 \right)
 $$&lt;h2 id=&#34;施瓦西度规的测地线方程&#34;&gt;施瓦西度规的测地线方程
-&lt;/h2&gt;$$
+&lt;/h2&gt;&lt;p&gt;广义相对论中，测地线就是指自由粒子在弯曲时空中的运动，“自由”指的是其固有加速度为0，具体的形式为
+&lt;/p&gt;
+$$
 \frac{\mathrm{d}^2 x^\mu}{\mathrm{d}\lambda^2} + \Gamma^{\mu}_{\alpha\beta} \frac{\mathrm{d}x^\alpha}{\mathrm{d}\lambda} \frac{\mathrm{d}x^\beta}{\mathrm{d}\lambda}=0 ~,
 $$&lt;p&gt;
 其中$\lambda$是仿射参量，在类时测地线一般就是固有时$\tau$，对于零测地线，由于其任意两点的间隔都为0，所以需要取另外的放射参量。在这里，我们计算施瓦西度规下的测地线方程，为了减少可能出现的一些报错，我们新建一个文件，把计算好的度规直接定义好&lt;/p&gt;
@@ -1409,7 +1413,9 @@ $$&lt;p&gt;
  \Gamma ^3{}_{3,2} &amp; \cot (\theta  ) \\
 \end{array}
 \right)
-$$$$
+$$&lt;p&gt;接下来定义四速度，那么测地线方程可以写为
+&lt;/p&gt;
+$$
 \frac{\mathrm{d}u^\mu}{\mathrm{d}\lambda} + \Gamma^\mu_{\alpha\beta} \
 u^\alpha u^\beta = 0
 $$&lt;p&gt;

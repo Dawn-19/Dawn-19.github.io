@@ -149,7 +149,10 @@ $$
 $$&lt;p&gt;​    由此代入&lt;/p&gt;
 $$
     u_1(x) = - \int\frac{y_2}{W_{y_1 y_2}}R(x)\mathrm{d}x ~,\quad u_2(x) =  \int\frac{y_1}{W_{y_1 y_2}}R(x)\mathrm{d}x~,
-$$$$
+$$&lt;p&gt;​    发现两个方程都满足。所以最终通解为
+​ &lt;br&gt;
+&lt;/p&gt;
+$$
 y_p(x) = u_1(x)y_1(x)+ u_2(x)y_2(x)~.
 $$</description>
         </item>

@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="群论知识要点。">
+<title>群论——群的基本概念</title>
+
+<link rel='canonical' href='https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/'>
+
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="群论——群的基本概念">
+<meta property='og:description' content="群论知识要点。">
+<meta property='og:url' content='https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/'>
+<meta property='og:site_name' content='Dawn-19'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-10-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-10-12T00:00:00&#43;00:00'/><meta property='og:image' content='https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/firstpage.png' />
+<meta name="twitter:title" content="群论——群的基本概念">
+<meta name="twitter:description" content="群论知识要点。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/firstpage.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "light");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/photo_hu_7c5c3f8b98e0c7a4.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Dawn-19</a></h1>
+            <h2 class="site-description">深刻的思想总是朴素的。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://arxiv.org/'
+                        target="_blank"
+                        title="arXiv"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="792.000000pt" height="792.000000pt" viewBox="0 0 792.000000 792.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.14, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(0.000000,792.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M1285 7906 c-90 -30 -153 -77 -199 -151 -74 -117 -73 -216 1 -337 13
+-21 23 -42 23 -48 0 -5 4 -10 8 -10 4 0 16 -15 27 -32 10 -18 28 -42 38 -53
+10 -11 31 -36 45 -55 15 -19 29 -37 32 -40 6 -6 149 -177 167 -200 11 -14 153
+-186 212 -257 14 -17 40 -48 56 -69 17 -20 35 -42 40 -48 6 -6 23 -27 38 -46
+58 -72 103 -124 120 -142 9 -10 14 -18 10 -18 -5 0 -3 -4 3 -8 6 -4 58 -63
+114 -132 56 -69 106 -127 109 -130 4 -3 20 -23 37 -45 16 -22 34 -44 40 -50 6
+-5 42 -48 80 -95 38 -47 73 -88 79 -92 5 -4 7 -8 3 -8 -4 0 8 -16 27 -35 19
+-19 35 -37 35 -40 0 -4 24 -34 55 -69 6 -6 30 -36 55 -66 25 -30 49 -60 55
+-66 5 -6 24 -28 40 -48 17 -21 42 -52 56 -70 49 -58 424 -512 459 -556 19 -24
+49 -59 67 -79 17 -20 29 -38 27 -41 -3 -2 -8 1 -13 8 -5 8 -33 -12 -89 -65
+-46 -43 -123 -116 -173 -163 -172 -161 -186 -175 -233 -239 -78 -107 -135
+-257 -134 -351 0 -19 -1 -39 -3 -45 -6 -21 13 -122 33 -180 46 -130 90 -183
+378 -455 78 -74 164 -155 190 -180 l48 -46 -41 -50 c-23 -27 -48 -56 -55 -64
+-7 -8 -58 -71 -113 -140 -56 -69 -118 -145 -139 -170 -21 -25 -49 -58 -61 -75
+-13 -16 -37 -46 -53 -66 -17 -20 -41 -49 -53 -65 -12 -16 -34 -42 -48 -59 -15
+-16 -39 -45 -53 -64 -15 -19 -41 -51 -57 -70 -32 -38 -82 -99 -160 -196 -51
+-64 -98 -121 -158 -194 -20 -25 -41 -51 -46 -57 -63 -80 -193 -237 -214 -260
+-15 -16 -27 -32 -27 -35 0 -3 -10 -17 -22 -31 -47 -50 -127 -153 -127 -162 0
+-5 -3 -12 -9 -15 -22 -14 -62 -143 -66 -208 -13 -287 347 -473 559 -288 26 23
+153 140 259 240 45 41 244 226 281 259 17 15 57 53 90 84 33 31 112 104 174
+162 62 58 137 128 166 155 29 28 93 86 141 130 49 44 114 105 146 135 31 30
+79 75 106 100 26 25 97 90 156 145 60 55 119 110 132 123 13 12 27 22 33 22 5
+0 34 -24 64 -52 30 -29 97 -93 148 -142 52 -48 166 -157 254 -241 186 -178
+232 -222 419 -399 76 -72 174 -165 217 -206 179 -172 573 -546 809 -770 30
+-29 125 -119 210 -200 85 -81 184 -175 220 -209 92 -87 155 -116 250 -116 60
+0 85 5 124 25 86 44 141 107 170 197 36 110 11 179 -124 343 -25 30 -51 61
+-58 68 -7 8 -25 30 -40 50 -15 20 -34 44 -42 53 -8 9 -24 27 -35 40 -75 91
+-120 145 -124 149 -4 3 -24 28 -46 55 -22 28 -45 56 -52 63 -7 7 -29 34 -50
+60 -21 26 -42 52 -48 58 -5 6 -26 30 -45 54 -19 24 -40 48 -45 54 -6 6 -30 36
+-55 66 -25 30 -47 57 -50 60 -3 3 -22 26 -43 52 -21 26 -43 53 -50 60 -7 7
+-44 51 -82 98 -38 47 -74 90 -80 96 -5 6 -23 28 -40 49 -16 20 -35 42 -40 49
+-10 10 -260 311 -354 425 -20 24 -48 58 -63 75 -14 17 -155 186 -312 374
+l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
+340 46 74 85 168 92 226 3 19 5 34 6 34 1 0 3 29 4 65 2 67 -14 163 -35 215
+-7 17 -13 36 -15 44 -4 21 -75 133 -109 170 -48 53 -326 324 -496 483 -21 20
+-39 39 -39 43 0 5 134 171 150 185 3 3 25 30 50 60 25 30 52 61 60 70 8 8 33
+38 55 65 22 28 45 55 51 60 6 6 33 37 60 70 27 33 61 74 75 90 15 17 44 51 65
+76 82 96 129 152 139 163 6 6 32 38 59 71 28 33 60 71 72 85 13 14 42 48 64
+75 23 28 54 64 69 80 14 17 47 55 71 85 25 30 59 71 77 90 17 19 42 48 55 65
+13 16 30 37 38 46 8 8 24 26 35 40 11 13 57 68 103 122 110 130 139 171 172
+240 61 127 14 242 -145 349 -104 70 -192 79 -284 27 -47 -26 -135 -96 -201
+-159 -9 -8 -51 -46 -94 -85 -43 -38 -88 -79 -100 -90 -146 -134 -204 -186
+-222 -202 -12 -10 -63 -56 -115 -103 -51 -47 -103 -94 -115 -105 -118 -106
+-272 -246 -325 -295 -15 -14 -55 -50 -89 -80 -34 -30 -74 -66 -89 -80 -38 -35
+-134 -123 -225 -205 -43 -38 -101 -91 -129 -117 -29 -27 -55 -48 -59 -48 -6 0
+-70 60 -288 270 -43 41 -156 149 -250 240 -95 91 -215 206 -266 255 -52 50
+-94 90 -94 89 0 0 -50 47 -110 106 -61 58 -176 169 -257 246 -80 76 -176 168
+-213 204 -37 36 -119 114 -181 174 -63 60 -199 190 -303 290 -104 99 -210 201
+-236 226 -26 25 -97 93 -158 153 -62 59 -119 107 -127 107 -8 0 -15 5 -15 10
+0 6 -6 10 -12 10 -7 0 -24 6 -38 13 -34 17 -136 19 -185 3z m2014 -3200 c-2
+-2 -13 8 -23 22 l-19 27 24 -22 c12 -12 21 -24 18 -27z"/>
+</g>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/Dawn-19'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.overleaf.com/project'
+                        target="_blank"
+                        title="overleaf"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <path d="M9.817 8.036c-4.541 2.709-7.401 7.532-7.593 12.813 0.005 4.14 2.303 7.943 5.973 9.869 3.667 1.927 8.1 1.656 11.516-0.692 3.412-2.349 5.24-6.401 4.745-10.516-0.489-4.115-3.224-7.615-7.095-9.095-1.26-0.509-2.604-0.765-3.957-0.749-2.417 1.631-4.355 3.869-5.615 6.495 1.609-1.921 4.088-2.885 6.572-2.557 2.491 0.328 4.631 1.901 5.688 4.177 1.057 2.271 0.875 4.927-0.473 7.041-1.355 2.109-3.693 3.38-6.199 3.375-2.151 0-4.192-0.937-5.588-2.572-1.808-2.016-2.589-4.756-2.115-7.423 1.432-8.557 11.687-13.489 19.281-15.4-3.516 1.692-6.901 3.64-10.125 5.833 9.177 3.541 10.651-4.183 14.943-7.641-4.271-1.672-19.937-2.287-19.959 7.047z"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E7%AE%80%E4%BB%8B/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>简介</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#群的基本概念">群的基本概念</a>
+      <ol>
+        <li><a href="#群及其乘法表">群及其乘法表</a>
+          <ol>
+            <li><a href="#同构">同构</a></li>
+            <li><a href="#有限群乘法表">有限群乘法表</a></li>
+          </ol>
+        </li>
+        <li><a href="#群的各种子集">群的各种子集</a></li>
+        <li><a href="#d_n群">$D_N$群</a></li>
+        <li><a href="#群的同态关系">群的同态关系</a>
+          <ol>
+            <li><a href="#群的直接乘积">群的直接乘积</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+                <img src="/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/firstpage_hu_8c47ed227311d7cd.png"
+                        srcset="/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/firstpage_hu_8c47ed227311d7cd.png 800w, /p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/firstpage_hu_b04f59ebde389218.png 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post 群论——群的基本概念" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%BE%A4%E8%AE%BA/" >
+                群论
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">群论——群的基本概念</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            群论知识要点。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 12, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="群论">群论
+</h1><h2 id="群的基本概念">群的基本概念
+</h2><h3 id="群及其乘法表">群及其乘法表
+</h3><ul>
+<li>
+<p>群的定义</p>
+<ul>
+<li>封闭性</li>
+<li>结合律</li>
+<li>左恒元</li>
+<li>左逆元</li>
+</ul>
+</li>
+<li>
+<p>循环群及其生成元</p>
+<ul>
+<li>$C_n = {E,R,R^2,\cdots,R^{n-1}}$，其中$R^n=E$</li>
+</ul>
+</li>
+<li>
+<p>有限群的生成元和秩</p>
+<ul>
+<li>元素的周期：$\forall R \in G,R^n =E$，集合${E,R^1,R^2,\cdots,R^{n-1}}$为元素的周期 .</li>
+<li>有限群的生成元：有限群的群元素可以由最小数目个群元素的乘积生成 ， 这些最小数目个群元素 .</li>
+<li>有限群的秩：有限群生成元的个数 .</li>
+</ul>
+</li>
+<li>
+<p>有限群重排定理</p>
+<ul>
+<li>
+<p>复元素：有限群部分元素的集合看作一个整体 ${R_1,R_2,\cdots,R_m}$.</p>
+</li>
+<li>
+<p>有限群重排定理：$\forall T\in G={E,R,S,\dots}$，则$TG = GT=G^{-1}=G$，</p>
+<p>其中
+</p>
+$$
+    TG=\{TE,TR,TS,\cdots\}~,\quad G^{-1} = \{E,R^{-1},S^{-1},\cdots\}~.
+    $$</li>
+</ul>
+</li>
+</ul>
+<h4 id="同构">同构
+</h4><ul>
+<li>
+<p>同构：$G\approx G&rsquo;$，</p>
+<ul>
+<li>指群$G$与$G^\prime$所有元素都按某种规则存在一一对应关系，它们的群乘积也按同一规则一一对应；</li>
+<li>两个群之间存在保持元素乘积不变的一一对应满映射；</li>
+<li>$\forall g_1,g_2 \in G$ 存在对应的 $ g_1^\prime,g_2^\prime \in G^\prime,g_1\leftrightarrow g_1^\prime,g_2\leftrightarrow  g_2^\prime,\Rightarrow g_1 g_2 \leftrightarrow  g_1^\prime g_2^\prime$ .</li>
+<li>
+<img src="image-20251011155701925.png" alt="image-20251011155701925" style="zoom:33%;" />
+</li>
+<li>传递性：若$G\approx G^\prime,G^\prime\approx G^{\prime\prime};\Rightarrow G\approx G^{\prime\prime} $.</li>
+</ul>
+</li>
+</ul>
+<h4 id="有限群乘法表">有限群乘法表
+</h4><ul>
+<li>对于$RS = T$，$R$为列（左乘元素），$S$为行（右乘元素），$T$为$R$行$S$列对应的元素，如图
+<ul>
+<li><img src="/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20251011160042547.png"
+	width="1354"
+	height="487"
+	srcset="/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20251011160042547_hu_77c2011573754bf9.png 480w, /p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20251011160042547_hu_2386d108d27be11b.png 1024w"
+	loading="lazy"
+	
+		alt="image-20251011160042547"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="278"
+		data-flex-basis="667px"
+	
+></li>
+</ul>
+</li>
+</ul>
+<h3 id="群的各种子集">群的各种子集
+</h3><ul>
+<li>
+<p>子群：$H\subseteq G$仍然满足群的定义，则$H$为群$G$的子群；</p>
+<ul>
+<li>判断是否为子群验证封闭性即可 .</li>
+</ul>
+</li>
+<li>
+<p>陪集</p>
+<ul>
+<li>
+<p>左陪集：$\forall R_j \in G $且$R_j \notin H$，群$G$的左陪集为$R_j H$;</p>
+</li>
+<li>
+<p>右陪集：$\forall R_j \in G $且$R_j \notin H$，群$G$的左陪集为$HR_j$;</p>
+</li>
+<li>
+<p>两个有公共元素的左陪集必然全相同;</p>
+</li>
+<li>
+<p>子群$H$的阶为$h$，则有限群$G$一定可以分解为子群$H$和若干个左陪集$R_j H$的并集，且子集间没有公共元素，每个自己包含$h$个不同元素：
+</p>
+$$
+    G=H\cup R_2 H\cup R_3H\cup\cdots\cup R_d H~.
+    $$</li>
+</ul>
+</li>
+<li>
+<p><strong>拉格朗日定理</strong>：$g = nh$，其中$g$为群$G$的阶数，$n$为子群$H$的指数.</p>
+<ul>
+<li>阶数为素数的群没有非平庸子群，除恒元外所有元素的阶都是该素数，该群是循环群.</li>
+</ul>
+</li>
+<li>
+<p>共轭元素与类</p>
+<ul>
+<li>
+<p>对于$\forall S \in G,R^\prime = SRS^{-1}$与$R$为互相<strong>共轭</strong>的元素 .</p>
+<ul>
+<li>对于$\forall S,T\in G$有<br>
+$$
+      R^\prime = SRS^{-1},R^{\prime\prime} = TRT^{-1} = TS^{-1}R^\prime ST^{-1} = (TS^{-1})R^\prime (TS^{-1})^{-1}
+      $$</li>
+</ul>
+</li>
+<li>
+<p><strong>类</strong>：所有相互共轭的元素构成的集合，$n_\alpha$为$C_\alpha$中所包含的元素数目</p>
+<ul>
+<li>
+<p>$C_\alpha = {R_k |R_k = SR_jS^{-1},\forall S\in G}$ .</p>
+</li>
+<li>
+<p>$\forall S,T\in G$，则$ST$与$TS$共轭，$ST =STSS^{-1}=S(TS)S^{-1}$ .</p>
+</li>
+<li>
+<p>两个类没有公共元素；</p>
+</li>
+<li>
+<p>除恒元以外，类不是子群；</p>
+</li>
+<li>
+<p>对于$R_k = SR_jS^{-1}\in C_\alpha$，</p>
+<ol>
+<li>
+<p>$\forall S\in G$，$R_j$遍历$C_\alpha$时不会重复，即$SC_\alpha S^{-1}=C_\alpha$；</p>
+</li>
+<li>
+<p>$\forall R_j \in C_\alpha$，$S$遍历$G$会有重复，每个元素$R_k$重复次数为$g/n_\alpha$，其中$g$为群$G$的阶.</p>
+</li>
+<li>
+<p>群$G$（可以证明）存在一个子群$H = {E,T_1,T_2,\cdots,T_h}$其每个元素都与$R_j$对易$T_iR_j = R_jT_i$，其同样具有性质$T_i^{-1}R_j=R_jT_i^{-1}$，那么$R_k$的重复次数就是子群$H$的阶$h$.</p>
+<p>由于$T_iR_jT_i^{-1}, R_k=(ST_i)R_j(ST_i)^{-1}, R_k^\prime=(S^\prime T_i)R_j(S^\prime T_i)^{-1}$，有$R_j \ne R_k\ne R_k^\prime$ ，那么对于$H$及其每个左陪集$SH$都对应类$C_\alpha$的一个元素，那么$C_\alpha$元素个数$n_\alpha = g/h$，即重复次数为$h=g/n_\alpha$ .</p>
+</li>
+</ol>
+</li>
+<li>
+<p>相逆类：$C_\alpha^{-1} = {R_k^{-1} |R_k^{-1} = SR_j^{-1}S^{-1},\forall S\in G} \ne C_\alpha$，$C_\alpha$与$C_\alpha^{-1}$元素个数相同 .</p>
+</li>
+<li>
+<p>自逆类：$C_\alpha^{-1} = C_\alpha$ .</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>系统对称变换群的共轭类</p>
+<ul>
+<li>
+<p>对称变换指绕通过空间一固定点的轴的转动变换；</p>
+</li>
+<li>
+<p>设$n$方向是系统的$N$次固有转动轴，$R$是绕$n$方向的固有转动轴转动$2\pi /N$角的变换，元素$S$是将$n$方向转到$m$方向，则$SRS^{-1}$是绕$m$方向转动$2\pi /N$角的变换，如果难以理解，请看下图</p>
+</li>
+<li>
+<img src="Screenshot_20251012_111408_com_jideos_jnotes_Note.jpg" alt="Screenshot_20251012_111408_com_jideos_jnotes_Note" style="zoom:30%;" />
+</li>
+<li>
+<p>等价轴：两个同次轴的正方向可以通过对称群中的元素联系起来；</p>
+</li>
+<li>
+<p>同次轴：两个转动轴有相同的转动阶次；</p>
+</li>
+<li>
+<p>等价轴一定是同次轴 ， 同次轴不一定等价 。</p>
+</li>
+<li>
+<p>双向轴/非极性轴：一个轴的正反两个方向可以通过对称群中元素联系起来；</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>​</p>
+<ul>
+<li>
+<p>不变子群和商群</p>
+<ul>
+<li>
+<p><strong>不变子群/正规子群</strong>：$R_j H = H R_j$，子群的所有左陪集和对应的右陪集都相等；</p>
+</li>
+<li>
+<p>Abel群的所有子群都是不变子群；</p>
+</li>
+<li>
+<p>子群的指数$n=g/h=2$的子群一定是不变子群（只有一个陪集）；</p>
+</li>
+<li>
+<p>不变子群由若干个类组成$H = R_j H R_j^{-1}$ .</p>
+</li>
+<li>
+<p><strong>商群</strong>：$G/H$，不变子群及其陪集作为复元素的集合，满足群的四个条件构成的群，阶数为子群的指数$n=g/h$ .</p>
+</li>
+<li>
+<p>寻找不变子群的步骤</p>
+<ol>
+<li>找到所有的共轭类：确定元素阶数，阶数相同的元素是否共轭；</li>
+<li>把若个类并起来看是否构成一个子群（恒元，阶数，元素周期，封闭性），若是子群则为不变子群.</li>
+<li>注意：若群$H$为群$G$不变子群，群$H_e$为$H$的不变子群，但$H_e$<strong>不一定</strong>是$G$的不变子群.</li>
+</ol>
+</li>
+</ul>
+<h3 id="d_n群">$D_N$群
+</h3></li>
+<li>
+<p>$D_N$ 群：正$N$边形对称变换群</p>
+<ul>
+<li>
+<p>$1$个$N$次轴，$N$个$2$次轴；</p>
+<ul>
+<li>$N = 2n+1$：顶点和对边中点的连线为二次轴；</li>
+<li>$N = 2n\quad$：两相对顶点和两相对中点的连线为二次轴 .</li>
+<li><img src="image-20251011161029484.png" alt="image-20251011161029484" style="zoom:83%;" /><img src="image-20251011161045282.png" alt="image-20251011161045282" style="zoom:80%;" /></li>
+</ul>
+</li>
+<li>
+<p>绕$N$次轴转动的对称变换的集合：
+</p>
+$$
+    C_N\approx\{E,T,T^2,\cdots , T^{N-1} \}~,\quad T^N =E~.
+    $$</li>
+<li>
+<p>绕$N$个二次轴转动的对称变换的集合：
+</p>
+$$
+    \{S_0,S_1,\cdots,S_{N-1} \}\ni S_j~,\quad 0\le j\le N-1~.
+    $$</li>
+<li>
+<p>$D_N$ 群的乘法规则</p>
+</li>
+</ul>
+$$
+    \begin{aligned}
+    T^N &= S_j^2 = E~, &\qquad T^m S_j &= S_{j+m}~,
+    \\
+    T^m &= S_{j+m}S_j = S_j S_{j-m}~, &\qquad S_j T^m &= S_{j-m}~,
+    \\
+    S_j^{-1}&T^mS_j = S_j T^m S_j = T^{-m}~.
+    \end{aligned}
+  $$<ul>
+<li><img src="/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Screenshot_20251011_163654_com_jideos_jnotes_Note.jpg"
+	width="1543"
+	height="719"
+	srcset="/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Screenshot_20251011_163654_com_jideos_jnotes_Note_hu_79326c6834013adc.jpg 480w, /p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Screenshot_20251011_163654_com_jideos_jnotes_Note_hu_3338f4e30c05b1ab.jpg 1024w"
+	loading="lazy"
+	
+		alt="Screenshot_20251011_163654_com_jideos_jnotes_Note"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="214"
+		data-flex-basis="515px"
+	
+></li>
+<li><img src="/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Screenshot_20251011_164354_com_jideos_jnotes_Note.jpg"
+	width="1437"
+	height="476"
+	srcset="/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Screenshot_20251011_164354_com_jideos_jnotes_Note_hu_f7203f0aded9b97f.jpg 480w, /p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Screenshot_20251011_164354_com_jideos_jnotes_Note_hu_118816bf40c9b717.jpg 1024w"
+	loading="lazy"
+	
+		alt="Screenshot_20251011_164354_com_jideos_jnotes_Note"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="301"
+		data-flex-basis="724px"
+	
+></li>
+</ul>
+</li>
+<li>
+<p>$D_N$ 群的类</p>
+<ul>
+<li>
+<p>$D_3$群的类</p>
+<ul>
+<li>
+<p>$D_3$群包含 $1$ 个三次轴和 $3$ 个二次轴;</p>
+</li>
+<li>
+<p>绕二次轴的转动使三次轴是双向轴$F=ADA^{-1}$;</p>
+</li>
+<li>
+<p>绕次轴的转动时$3$个二次轴等价$C = DAD^{-1}$ ;</p>
+</li>
+<li>
+<p>三个自逆类${E},{D,F},{A,B,C}$ .</p>
+</li>
+</ul>
+</li>
+<li>
+<p>$D_4$群的类</p>
+<ul>
+<li>
+<p>$D_4$群包含 $1$ 个四次轴和 $4$ 个二次轴;</p>
+</li>
+<li>
+<p>绕二次轴的转动使四次轴是双向轴$T^3 = S_0 T S_0^{-1}$；</p>
+</li>
+<li>
+<p>$S_0,S_2$为等价轴，$S_1,S_3$为等价轴；</p>
+</li>
+<li>
+<p>五个自逆类${E},{T,T^3},{T^2},{S_0,S_2},{S_1,S_3}$ .</p>
+</li>
+</ul>
+</li>
+<li>
+<p>$N=2n$</p>
+<ul>
+<li>
+<p>$1$ 个$N$次轴，$N$ 个二次轴；</p>
+</li>
+<li>
+<p>绕二次轴的转动是双向轴，其中${T^m,T^{-m}},(1\le m \le n-1)$构成一类，${T^n}$构成一类；</p>
+</li>
+<li>
+<p>绕$N$个$2$次轴的转动，${S_0,S_2,\cdots,S_{2n-2}}$和${S_1,S_3,\cdots,S_{2n-1}}$分布互相等价，分别构成一类；</p>
+</li>
+<li>
+<p>一共$1+n-1+1+2=n+3$个自逆类（恒元，加上以上$n+2$个类）.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>$N=2N+1$</p>
+<ul>
+<li>
+<p>一个$N$次轴，$N$个$2$次轴；</p>
+</li>
+<li>
+<p>$N$次轴是双向轴，${T^m,T^{-m}},(1\le m\le n)$构成一类；</p>
+</li>
+<li>
+<p>$N$个二次轴互相等价，绕二次轴转动的元素构成一类${S_0,S_1,\cdots,S_{2n}}$；</p>
+</li>
+<li>
+<p>一共$n+2$个自逆类（包括恒元）.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>$D_N$ 群的不变子群</p>
+<ul>
+<li>
+<p>$N=2n$</p>
+<ul>
+<li>
+<p>$n+3$个自逆类
+</p>
+$$
+      \{E\}~,\quad \{T^m,T^{-m}\}(1\le m \le n-1)~,\quad \{T^n\}~,\quad\{S_0,\cdots,S_{2n-2}\}~,\quad \{S_1,\cdots,S_{2n-1}\}~,
+      $$</li>
+<li>
+<p>非平庸不变子群
+</p>
+$$
+      \begin{aligned}
+      &\{E,T^n\},\{E,T,T^2,\cdots,T^{2n-1}\}\text{及其不变子群如}\{E,T^2,T^4,\cdots,T^{2n-2}\}~,...
+      \\
+      &\{E,T^2,T^4,\cdots,T^{2n-2},S_0,S_2,\cdots,S_{2n-2}\}~,
+      \\
+      &\{E,T^2,T^4,\cdots,T^{2n-2},S_1,S_3,\cdots,S_{2n-1}\}~.
+      \end{aligned}
+      $$</li>
+</ul>
+</li>
+<li>
+<p>$N=2n+1$</p>
+<ul>
+<li>
+<p>$n+2$个自逆类
+</p>
+$$
+      \{E\}~,\quad \{T^m,T^{-m}\}(1\le m \le n)~,\quad \{S_0,S_1\cdots,S_{2n}\}~,
+      $$</li>
+<li>
+<p>非平庸不变子群
+</p>
+$$
+      \{E,T,T^2,\cdots,T^{2n}\}\text{及其不变子群.}
+      $$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="群的同态关系">群的同态关系
+</h3><ul>
+<li>
+<p>同态：$G^\prime \sim G$，群$G^\prime$与群$G$存在一多对应的关系；</p>
+<ul>
+<li>
+<img src="image-20251012150811204.png" alt="image-20251012150811204" style="zoom: 33%;" />
+</li>
+<li>
+<p><strong>同态核定理</strong>：对于$G^\prime\sim G$，$G^\prime$恒元$E^\prime\leftrightarrow H\subset G$，子群$H$为群$G$的不变子群，满足$G^\prime \approx G/H$ .</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="群的直接乘积">群的直接乘积
+</h4><ul>
+<li>直积群/直乘群：$G = H_1 \otimes H_2$，
+<ul>
+<li>其中子群$H_1,H_2$满足
+<ol>
+<li>除恒元外无公共元素：$H_1 \cap H_2 =E$ ;</li>
+<li>对易： $\forall R \in H_1,S\in H_2,[R,S] = 0$；</li>
+<li>群$G$是所有$R_i S_j$构成的集合 .</li>
+</ol>
+</li>
+<li>阶：$g=h_1\times h_2$ .</li>
+<li>直积群类的个数等于两子群类的个数的乘积
+<ul>
+<li>$R^\prime S^\prime = (R_i R R_i^{-1})(S_j S S_j^{-1}) = (R_i S_j)RS (R_i S_j)^{-1} $ .</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="Dawn-19/Dawn-19.github.io"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Dawn-19
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

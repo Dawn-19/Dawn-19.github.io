@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>群论 on Dawn-19</title>
+        <link>https://Dawn-19.github.io/categories/%E7%BE%A4%E8%AE%BA/</link>
+        <description>Recent content in 群论 on Dawn-19</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Dawn-19</copyright>
+        <lastBuildDate>Sun, 12 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E7%BE%A4%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>群论——群的基本概念</title>
+        <link>https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+        <pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/firstpage.png" alt="Featured image of post 群论——群的基本概念" /&gt;&lt;h1 id=&#34;群论&#34;&gt;群论
+&lt;/h1&gt;&lt;h2 id=&#34;群的基本概念&#34;&gt;群的基本概念
+&lt;/h2&gt;&lt;h3 id=&#34;群及其乘法表&#34;&gt;群及其乘法表
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;群的定义&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;封闭性&lt;/li&gt;
+&lt;li&gt;结合律&lt;/li&gt;
+&lt;li&gt;左恒元&lt;/li&gt;
+&lt;li&gt;左逆元&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;循环群及其生成元&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$C_n = {E,R,R^2,\cdots,R^{n-1}}$，其中$R^n=E$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有限群的生成元和秩&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元素的周期：$\forall R \in G,R^n =E$，集合${E,R^1,R^2,\cdots,R^{n-1}}$为元素的周期 .&lt;/li&gt;
+&lt;li&gt;有限群的生成元：有限群的群元素可以由最小数目个群元素的乘积生成 ， 这些最小数目个群元素 .&lt;/li&gt;
+&lt;li&gt;有限群的秩：有限群生成元的个数 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有限群重排定理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;复元素：有限群部分元素的集合看作一个整体 ${R_1,R_2,\cdots,R_m}$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有限群重排定理：$\forall T\in G={E,R,S,\dots}$，则$TG = GT=G^{-1}=G$，&lt;/p&gt;
+&lt;p&gt;其中
+&lt;/p&gt;
+$$
+    TG=\{TE,TR,TS,\cdots\}~,\quad G^{-1} = \{E,R^{-1},S^{-1},\cdots\}~.
+    $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;同构&#34;&gt;同构
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;同构：$G\approx G&amp;rsquo;$，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;指群$G$与$G^\prime$所有元素都按某种规则存在一一对应关系，它们的群乘积也按同一规则一一对应；&lt;/li&gt;
+&lt;li&gt;两个群之间存在保持元素乘积不变的一一对应满映射；&lt;/li&gt;
+&lt;li&gt;$\forall g_1,g_2 \in G$ 存在对应的 $ g_1^\prime,g_2^\prime \in G^\prime,g_1\leftrightarrow g_1^\prime,g_2\leftrightarrow  g_2^\prime,\Rightarrow g_1 g_2 \leftrightarrow  g_1^\prime g_2^\prime$ .&lt;/li&gt;
+&lt;li&gt;
+&lt;img src=&#34;image-20251011155701925.png&#34; alt=&#34;image-20251011155701925&#34; style=&#34;zoom:33%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;传递性：若$G\approx G^\prime,G^\prime\approx G^{\prime\prime};\Rightarrow G\approx G^{\prime\prime} $.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;有限群乘法表&#34;&gt;有限群乘法表
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;对于$RS = T$，$R$为列（左乘元素），$S$为行（右乘元素），$T$为$R$行$S$列对应的元素，如图
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20251011160042547.png&#34;
+	width=&#34;1354&#34;
+	height=&#34;487&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20251011160042547_hu_77c2011573754bf9.png 480w, https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/image-20251011160042547_hu_2386d108d27be11b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20251011160042547&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;278&#34;
+		data-flex-basis=&#34;667px&#34;
+	
+&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;群的各种子集&#34;&gt;群的各种子集
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;子群：$H\subseteq G$仍然满足群的定义，则$H$为群$G$的子群；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;判断是否为子群验证封闭性即可 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;陪集&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;左陪集：$\forall R_j \in G $且$R_j \notin H$，群$G$的左陪集为$R_j H$;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;右陪集：$\forall R_j \in G $且$R_j \notin H$，群$G$的左陪集为$HR_j$;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两个有公共元素的左陪集必然全相同;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;子群$H$的阶为$h$，则有限群$G$一定可以分解为子群$H$和若干个左陪集$R_j H$的并集，且子集间没有公共元素，每个自己包含$h$个不同元素：
+&lt;/p&gt;
+$$
+    G=H\cup R_2 H\cup R_3H\cup\cdots\cup R_d H~.
+    $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;拉格朗日定理&lt;/strong&gt;：$g = nh$，其中$g$为群$G$的阶数，$n$为子群$H$的指数.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;阶数为素数的群没有非平庸子群，除恒元外所有元素的阶都是该素数，该群是循环群.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;共轭元素与类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对于$\forall S \in G,R^\prime = SRS^{-1}$与$R$为互相&lt;strong&gt;共轭&lt;/strong&gt;的元素 .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于$\forall S,T\in G$有&lt;br&gt;
+$$
+      R^\prime = SRS^{-1},R^{\prime\prime} = TRT^{-1} = TS^{-1}R^\prime ST^{-1} = (TS^{-1})R^\prime (TS^{-1})^{-1}
+      $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;类&lt;/strong&gt;：所有相互共轭的元素构成的集合，$n_\alpha$为$C_\alpha$中所包含的元素数目&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$C_\alpha = {R_k |R_k = SR_jS^{-1},\forall S\in G}$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\forall S,T\in G$，则$ST$与$TS$共轭，$ST =STSS^{-1}=S(TS)S^{-1}$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两个类没有公共元素；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;除恒元以外，类不是子群；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于$R_k = SR_jS^{-1}\in C_\alpha$，&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;$\forall S\in G$，$R_j$遍历$C_\alpha$时不会重复，即$SC_\alpha S^{-1}=C_\alpha$；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\forall R_j \in C_\alpha$，$S$遍历$G$会有重复，每个元素$R_k$重复次数为$g/n_\alpha$，其中$g$为群$G$的阶.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;群$G$（可以证明）存在一个子群$H = {E,T_1,T_2,\cdots,T_h}$其每个元素都与$R_j$对易$T_iR_j = R_jT_i$，其同样具有性质$T_i^{-1}R_j=R_jT_i^{-1}$，那么$R_k$的重复次数就是子群$H$的阶$h$.&lt;/p&gt;
+&lt;p&gt;由于$T_iR_jT_i^{-1}, R_k=(ST_i)R_j(ST_i)^{-1}, R_k^\prime=(S^\prime T_i)R_j(S^\prime T_i)^{-1}$，有$R_j \ne R_k\ne R_k^\prime$ ，那么对于$H$及其每个左陪集$SH$都对应类$C_\alpha$的一个元素，那么$C_\alpha$元素个数$n_\alpha = g/h$，即重复次数为$h=g/n_\alpha$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;相逆类：$C_\alpha^{-1} = {R_k^{-1} |R_k^{-1} = SR_j^{-1}S^{-1},\forall S\in G} \ne C_\alpha$，$C_\alpha$与$C_\alpha^{-1}$元素个数相同 .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自逆类：$C_\alpha^{-1} = C_\alpha$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系统对称变换群的共轭类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对称变换指绕通过空间一固定点的轴的转动变换；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设$n$方向是系统的$N$次固有转动轴，$R$是绕$n$方向的固有转动轴转动$2\pi /N$角的变换，元素$S$是将$n$方向转到$m$方向，则$SRS^{-1}$是绕$m$方向转动$2\pi /N$角的变换，如果难以理解，请看下图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;img src=&#34;Screenshot_20251012_111408_com_jideos_jnotes_Note.jpg&#34; alt=&#34;Screenshot_20251012_111408_com_jideos_jnotes_Note&#34; style=&#34;zoom:30%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;等价轴：两个同次轴的正方向可以通过对称群中的元素联系起来；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同次轴：两个转动轴有相同的转动阶次；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;等价轴一定是同次轴 ， 同次轴不一定等价 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;双向轴/非极性轴：一个轴的正反两个方向可以通过对称群中元素联系起来；&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;不变子群和商群&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;不变子群/正规子群&lt;/strong&gt;：$R_j H = H R_j$，子群的所有左陪集和对应的右陪集都相等；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Abel群的所有子群都是不变子群；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;子群的指数$n=g/h=2$的子群一定是不变子群（只有一个陪集）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不变子群由若干个类组成$H = R_j H R_j^{-1}$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;商群&lt;/strong&gt;：$G/H$，不变子群及其陪集作为复元素的集合，满足群的四个条件构成的群，阶数为子群的指数$n=g/h$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;寻找不变子群的步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;找到所有的共轭类：确定元素阶数，阶数相同的元素是否共轭；&lt;/li&gt;
+&lt;li&gt;把若个类并起来看是否构成一个子群（恒元，阶数，元素周期，封闭性），若是子群则为不变子群.&lt;/li&gt;
+&lt;li&gt;注意：若群$H$为群$G$不变子群，群$H_e$为$H$的不变子群，但$H_e$&lt;strong&gt;不一定&lt;/strong&gt;是$G$的不变子群.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;d_n群&#34;&gt;$D_N$群
+&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$D_N$ 群：正$N$边形对称变换群&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$1$个$N$次轴，$N$个$2$次轴；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$N = 2n+1$：顶点和对边中点的连线为二次轴；&lt;/li&gt;
+&lt;li&gt;$N = 2n\quad$：两相对顶点和两相对中点的连线为二次轴 .&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;image-20251011161029484.png&#34; alt=&#34;image-20251011161029484&#34; style=&#34;zoom:83%;&#34; /&gt;&lt;img src=&#34;image-20251011161045282.png&#34; alt=&#34;image-20251011161045282&#34; style=&#34;zoom:80%;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绕$N$次轴转动的对称变换的集合：
+&lt;/p&gt;
+$$
+    C_N\approx\{E,T,T^2,\cdots , T^{N-1} \}~,\quad T^N =E~.
+    $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绕$N$个二次轴转动的对称变换的集合：
+&lt;/p&gt;
+$$
+    \{S_0,S_1,\cdots,S_{N-1} \}\ni S_j~,\quad 0\le j\le N-1~.
+    $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$D_N$ 群的乘法规则&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+$$
+    \begin{aligned}
+    T^N &amp;= S_j^2 = E~, &amp;\qquad T^m S_j &amp;= S_{j+m}~,
+    \\
+    T^m &amp;= S_{j+m}S_j = S_j S_{j-m}~, &amp;\qquad S_j T^m &amp;= S_{j-m}~,
+    \\
+    S_j^{-1}&amp;T^mS_j = S_j T^m S_j = T^{-m}~.
+    \end{aligned}
+  $$&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Screenshot_20251011_163654_com_jideos_jnotes_Note.jpg&#34;
+	width=&#34;1543&#34;
+	height=&#34;719&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Screenshot_20251011_163654_com_jideos_jnotes_Note_hu_79326c6834013adc.jpg 480w, https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Screenshot_20251011_163654_com_jideos_jnotes_Note_hu_3338f4e30c05b1ab.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot_20251011_163654_com_jideos_jnotes_Note&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;214&#34;
+		data-flex-basis=&#34;515px&#34;
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Screenshot_20251011_164354_com_jideos_jnotes_Note.jpg&#34;
+	width=&#34;1437&#34;
+	height=&#34;476&#34;
+	srcset=&#34;https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Screenshot_20251011_164354_com_jideos_jnotes_Note_hu_f7203f0aded9b97f.jpg 480w, https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/Screenshot_20251011_164354_com_jideos_jnotes_Note_hu_118816bf40c9b717.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot_20251011_164354_com_jideos_jnotes_Note&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;301&#34;
+		data-flex-basis=&#34;724px&#34;
+	
+&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$D_N$ 群的类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$D_3$群的类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$D_3$群包含 $1$ 个三次轴和 $3$ 个二次轴;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绕二次轴的转动使三次轴是双向轴$F=ADA^{-1}$;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绕次轴的转动时$3$个二次轴等价$C = DAD^{-1}$ ;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;三个自逆类${E},{D,F},{A,B,C}$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$D_4$群的类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$D_4$群包含 $1$ 个四次轴和 $4$ 个二次轴;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绕二次轴的转动使四次轴是双向轴$T^3 = S_0 T S_0^{-1}$；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_0,S_2$为等价轴，$S_1,S_3$为等价轴；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;五个自逆类${E},{T,T^3},{T^2},{S_0,S_2},{S_1,S_3}$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$N=2n$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$1$ 个$N$次轴，$N$ 个二次轴；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绕二次轴的转动是双向轴，其中${T^m,T^{-m}},(1\le m \le n-1)$构成一类，${T^n}$构成一类；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绕$N$个$2$次轴的转动，${S_0,S_2,\cdots,S_{2n-2}}$和${S_1,S_3,\cdots,S_{2n-1}}$分布互相等价，分别构成一类；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一共$1+n-1+1+2=n+3$个自逆类（恒元，加上以上$n+2$个类）.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$N=2N+1$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一个$N$次轴，$N$个$2$次轴；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$N$次轴是双向轴，${T^m,T^{-m}},(1\le m\le n)$构成一类；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$N$个二次轴互相等价，绕二次轴转动的元素构成一类${S_0,S_1,\cdots,S_{2n}}$；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一共$n+2$个自逆类（包括恒元）.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$D_N$ 群的不变子群&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$N=2n$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$n+3$个自逆类
+&lt;/p&gt;
+$$
+      \{E\}~,\quad \{T^m,T^{-m}\}(1\le m \le n-1)~,\quad \{T^n\}~,\quad\{S_0,\cdots,S_{2n-2}\}~,\quad \{S_1,\cdots,S_{2n-1}\}~,
+      $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;非平庸不变子群
+&lt;/p&gt;
+$$
+      \begin{aligned}
+      &amp;\{E,T^n\},\{E,T,T^2,\cdots,T^{2n-1}\}\text{及其不变子群如}\{E,T^2,T^4,\cdots,T^{2n-2}\}~,...
+      \\
+      &amp;\{E,T^2,T^4,\cdots,T^{2n-2},S_0,S_2,\cdots,S_{2n-2}\}~,
+      \\
+      &amp;\{E,T^2,T^4,\cdots,T^{2n-2},S_1,S_3,\cdots,S_{2n-1}\}~.
+      \end{aligned}
+      $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$N=2n+1$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$n+2$个自逆类
+&lt;/p&gt;
+$$
+      \{E\}~,\quad \{T^m,T^{-m}\}(1\le m \le n)~,\quad \{S_0,S_1\cdots,S_{2n}\}~,
+      $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;非平庸不变子群
+&lt;/p&gt;
+$$
+      \{E,T,T^2,\cdots,T^{2n}\}\text{及其不变子群.}
+      $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;群的同态关系&#34;&gt;群的同态关系
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;同态：$G^\prime \sim G$，群$G^\prime$与群$G$存在一多对应的关系；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;image-20251012150811204.png&#34; alt=&#34;image-20251012150811204&#34; style=&#34;zoom: 33%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;同态核定理&lt;/strong&gt;：对于$G^\prime\sim G$，$G^\prime$恒元$E^\prime\leftrightarrow H\subset G$，子群$H$为群$G$的不变子群，满足$G^\prime \approx G/H$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;群的直接乘积&#34;&gt;群的直接乘积
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;直积群/直乘群：$G = H_1 \otimes H_2$，
+&lt;ul&gt;
+&lt;li&gt;其中子群$H_1,H_2$满足
+&lt;ol&gt;
+&lt;li&gt;除恒元外无公共元素：$H_1 \cap H_2 =E$ ;&lt;/li&gt;
+&lt;li&gt;对易： $\forall R \in H_1,S\in H_2,[R,S] = 0$；&lt;/li&gt;
+&lt;li&gt;群$G$是所有$R_i S_j$构成的集合 .&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;阶：$g=h_1\times h_2$ .&lt;/li&gt;
+&lt;li&gt;直积群类的个数等于两子群类的个数的乘积
+&lt;ul&gt;
+&lt;li&gt;$R^\prime S^\prime = (R_i R R_i^{-1})(S_j S S_j^{-1}) = (R_i S_j)RS (R_i S_j)^{-1} $ .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

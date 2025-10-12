@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://Dawn-19.github.io/p/%E6%96%BD%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84schwarzchild-metric/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="施瓦西度规(Schwarzchild Metric)">
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="施瓦西度规(Schwarzchild Metric)">
 <meta property='og:description' content="使用mathematica的xAct, xCoba计算求解施瓦西过程中的联络，黎曼张量，Ricci张量等，解出施瓦西度规，同时数值求解施瓦西度规的测地线方程，给出最内层稳定圆周轨道，光线偏折等图像。">
 <meta property='og:url' content='https://Dawn-19.github.io/p/%E6%96%BD%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84schwarzchild-metric/'>
 <meta property='og:site_name' content='Dawn-19'>
@@ -747,7 +747,9 @@ $$<p>待求解的只有$F(r)$和$G(r)$，只需要两个方程，把第一式与
 </span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="n">DSolve</span><span class="p">[{</span><span class="n">E</span><span class="o">^</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="n">F</span><span class="p">[</span><span class="n">r</span><span class="p">])</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">r</span><span class="w">  </span><span class="n">Derivative</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">F</span><span class="p">][</span><span class="n">r</span><span class="p">])</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="n">F</span><span class="p">[</span><span class="n">r</span><span class="p">],</span><span class="w"> </span><span class="n">r</span><span class="p">]</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div>$$
+</div><p>可得
+</p>
+$$
 \left\{\left\{F(r)\to \log \left(-\sqrt{1+\frac{e^{2 c_1}}{r}}\right)\right\},\left\{F(r)\to \frac{1}{2} \log \left(1+\frac{e^{2 c_1}}{r}\right)\right\}\right\}
 $$<p>
 第一个解显然不物理，根据弱场条件需要回到牛顿引力可以得到$e^{2c_1} = 2 G M =R_s $，这样就得到了最终的施瓦西解：</p>
@@ -787,7 +789,9 @@ g_{\mu \nu }=\left(
 \end{array}
 \right)
 $$<h2 id="施瓦西度规的测地线方程">施瓦西度规的测地线方程
-</h2>$$
+</h2><p>广义相对论中，测地线就是指自由粒子在弯曲时空中的运动，“自由”指的是其固有加速度为0，具体的形式为
+</p>
+$$
 \frac{\mathrm{d}^2 x^\mu}{\mathrm{d}\lambda^2} + \Gamma^{\mu}_{\alpha\beta} \frac{\mathrm{d}x^\alpha}{\mathrm{d}\lambda} \frac{\mathrm{d}x^\beta}{\mathrm{d}\lambda}=0 ~,
 $$<p>
 其中$\lambda$是仿射参量，在类时测地线一般就是固有时$\tau$，对于零测地线，由于其任意两点的间隔都为0，所以需要取另外的放射参量。在这里，我们计算施瓦西度规下的测地线方程，为了减少可能出现的一些报错，我们新建一个文件，把计算好的度规直接定义好</p>
@@ -874,7 +878,9 @@ $$<p>
  \Gamma ^3{}_{3,2} & \cot (\theta  ) \\
 \end{array}
 \right)
-$$$$
+$$<p>接下来定义四速度，那么测地线方程可以写为
+</p>
+$$
 \frac{\mathrm{d}u^\mu}{\mathrm{d}\lambda} + \Gamma^\mu_{\alpha\beta} \
 u^\alpha u^\beta = 0
 $$<p>

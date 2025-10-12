@@ -75,7 +75,9 @@ $$
 $$&lt;p&gt;一般$x$为$N-1$个输入数据，$\omega$为卷积核，其长度为$M$，卷积的过程与连续的情况类似，这里$\omega$仍然是移动的，卷积的计算公式为&lt;/p&gt;
 $$
 s[n] = \sum_{m=\max(0,n-N)}^{\min(n,M)} x[m]\cdot\omega[n-m] ,\quad n=0.1,...,M+N-2
-$$$$
+$$&lt;p&gt;上式看似繁琐，不过可以举个简单的例子就会发现其并不复杂，对于$N=4, M=3 $的情况而言，有
+&lt;/p&gt;
+$$
 \begin{split}
 s_0 &amp;= \omega_0 x_0\\
 s_1 &amp;= \omega_0 x_1 + \omega_1 x_0 \\

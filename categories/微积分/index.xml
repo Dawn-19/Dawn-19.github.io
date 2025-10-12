@@ -246,7 +246,7 @@ $$
 &lt;li&gt;
 &lt;p&gt;球坐标系：&lt;/p&gt;
 $$
-   (\mathrm{d}l)^2 = (\mathrm{d}r)^2+r^2(\mathrm{d}\theta)^2+r^2\sin^2\varphi(\mathrm{d}\varphi)^2~.
+   (\mathrm{d}l)^2 = (\mathrm{d}r)^2+r^2(\mathrm{d}\varphi)^2+r^2\sin^2\varphi(\mathrm{d}\theta)^2~.
    $$&lt;p&gt;体积元$\mathrm{d}V = r^2\sin\varphi \mathrm{d}r \mathrm{d}\theta \mathrm{d}\varphi $.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;

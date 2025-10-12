@@ -361,7 +361,10 @@ $$
      &amp; = M \boldsymbol{r}_c - M \boldsymbol{r}_c\\
      &amp; = 0~.
      \end{aligned}
-     $$$$
+     $$&lt;p&gt;
+那么对于$\sum_i\Delta m_i \boldsymbol{r}_i&amp;rsquo;=0$ 两边进行求导可得：
+&lt;/p&gt;
+$$
      \frac{\mathrm{d}}{\mathrm{d}t}\sum_i \Delta m_i \boldsymbol{r}_i&#39; =\sum_i \Delta m_i \dot{\boldsymbol{r}}_i&#39; = \sum_i \Delta m_i \boldsymbol{v}_i&#39; = 0~.
      $$&lt;/li&gt;
 &lt;/ul&gt;
