@@ -48,8 +48,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;有限群重排定理：$\forall T\in G={E,R,S,\dots}$，则$TG = GT=G^{-1}=G$，&lt;/p&gt;
-&lt;p&gt;其中
-&lt;/p&gt;
+&lt;p&gt;其中&lt;/p&gt;
 $$
     TG=\{TE,TR,TS,\cdots\}~,\quad G^{-1} = \{E,R^{-1},S^{-1},\cdots\}~.
     $$&lt;/li&gt;
@@ -113,8 +112,7 @@ $$
 &lt;p&gt;两个有公共元素的左陪集必然全相同;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;子群$H$的阶为$h$，则有限群$G$一定可以分解为子群$H$和若干个左陪集$R_j H$的并集，且子集间没有公共元素，每个自己包含$h$个不同元素：
-&lt;/p&gt;
+&lt;p&gt;子群$H$的阶为$h$，则有限群$G$一定可以分解为子群$H$和若干个左陪集$R_j H$的并集，且子集间没有公共元素，每个自己包含$h$个不同元素：&lt;/p&gt;
 $$
     G=H\cup R_2 H\cup R_3H\cup\cdots\cup R_d H~.
     $$&lt;/li&gt;
@@ -132,7 +130,8 @@ $$
 &lt;li&gt;
 &lt;p&gt;对于$\forall S \in G,R^\prime = SRS^{-1}$与$R$为互相&lt;strong&gt;共轭&lt;/strong&gt;的元素 .&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;对于$\forall S,T\in G$有&lt;br&gt;
+&lt;li&gt;
+&lt;p&gt;对于$\forall S,T\in G$有&lt;/p&gt;
 $$
       R^\prime = SRS^{-1},R^{\prime\prime} = TRT^{-1} = TS^{-1}R^\prime ST^{-1} = (TS^{-1})R^\prime (TS^{-1})^{-1}
       $$&lt;/li&gt;
@@ -248,14 +247,12 @@ $$
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;绕$N$次轴转动的对称变换的集合：
-&lt;/p&gt;
+&lt;p&gt;绕$N$次轴转动的对称变换的集合：&lt;/p&gt;
 $$
     C_N\approx\{E,T,T^2,\cdots , T^{N-1} \}~,\quad T^N =E~.
     $$&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;绕$N$个二次轴转动的对称变换的集合：
-&lt;/p&gt;
+&lt;p&gt;绕$N$个二次轴转动的对称变换的集合：&lt;/p&gt;
 $$
     \{S_0,S_1,\cdots,S_{N-1} \}\ni S_j~,\quad 0\le j\le N-1~.
     $$&lt;/li&gt;
@@ -382,14 +379,12 @@ $$
 &lt;p&gt;$N=2n$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;$n+3$个自逆类
-&lt;/p&gt;
+&lt;p&gt;$n+3$个自逆类&lt;/p&gt;
 $$
       \{E\}~,\quad \{T^m,T^{-m}\}(1\le m \le n-1)~,\quad \{T^n\}~,\quad\{S_0,\cdots,S_{2n-2}\}~,\quad \{S_1,\cdots,S_{2n-1}\}~,
       $$&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;非平庸不变子群
-&lt;/p&gt;
+&lt;p&gt;非平庸不变子群&lt;/p&gt;
 $$
       \begin{aligned}
       &amp;\{E,T^n\},\{E,T,T^2,\cdots,T^{2n-1}\}\text{及其不变子群如}\{E,T^2,T^4,\cdots,T^{2n-2}\}~,...
@@ -405,14 +400,12 @@ $$
 &lt;p&gt;$N=2n+1$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;$n+2$个自逆类
-&lt;/p&gt;
+&lt;p&gt;$n+2$个自逆类&lt;/p&gt;
 $$
       \{E\}~,\quad \{T^m,T^{-m}\}(1\le m \le n)~,\quad \{S_0,S_1\cdots,S_{2n}\}~,
       $$&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;非平庸不变子群
-&lt;/p&gt;
+&lt;p&gt;非平庸不变子群&lt;/p&gt;
 $$
       \{E,T,T^2,\cdots,T^{2n}\}\text{及其不变子群.}
       $$&lt;/li&gt;
