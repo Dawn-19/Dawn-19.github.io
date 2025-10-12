@@ -63,14 +63,16 @@ To use this feature, add `links` section to frontmatter.
 &lt;img src=&#34;bike.jpg&#34; width=&#34;300&#34; height=&#34;200&#34; alt=&#34;自行车图片&#34;&gt;
 &lt;h1 id=&#34;科研经历&#34;&gt;科研经历
 &lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;2024.7-目前&lt;/em&gt; $~$ 原初扰动相关课题&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;2024.6—7&lt;/em&gt;    $~$ SJTU, THU, ITP等夏令营&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;2023.6 — 2024.8&lt;/em&gt;  $~$国科大科创计划，早期宇宙QCD相变&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;2022.4 — 2023.4&lt;/em&gt; $~$ 半导体材料&lt;/li&gt;
+&lt;li&gt;$2025.9-$目前，UCAS上课&lt;/li&gt;
+&lt;li&gt;2024.7—2025.9  原初扰动，inflation相关课题&lt;/li&gt;
+&lt;li&gt;2024.7    SJTU, THU, ITP夏令营&lt;/li&gt;
+&lt;li&gt;2023.6 — 2024.8 国科大科创计划，早期宇宙QCD相变&lt;/li&gt;
+&lt;li&gt;2022.4 — 2023.4 半导体材料&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;GW_spectrum2.png&#34; width=&#34;300&#34; height=&#34;200&#34; alt=&#34;引力波&#34;&gt;  $~~$ &lt;img src=&#34;PTA.png&#34; width=&#34;280&#34; height=&#34;200&#34; alt=&#34;引力波&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;教育背景&#34;&gt;教育背景
 &lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;2025——目前：ITP&lt;/li&gt;
 &lt;li&gt;2021——2025：郑州大学物理学院&lt;/li&gt;
 &lt;/ul&gt;
 </description>

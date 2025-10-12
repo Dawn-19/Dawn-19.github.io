@@ -7,7 +7,1178 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Dawn-19</copyright>
-        <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 12 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>电磁学</title>
+        <link>https://Dawn-19.github.io/p/%E7%94%B5%E7%A3%81%E5%AD%A6/</link>
+        <pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E7%94%B5%E7%A3%81%E5%AD%A6/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E7%94%B5%E7%A3%81%E5%AD%A6/firstpage.png" alt="Featured image of post 电磁学" /&gt;&lt;h1 id=&#34;电磁学&#34;&gt;电磁学
+&lt;/h1&gt;&lt;h2 id=&#34;静电学&#34;&gt;静电学
+&lt;/h2&gt;&lt;h3 id=&#34;静电场&#34;&gt;静电场
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;库伦定律&lt;/p&gt;
+&lt;p&gt;真空中点电荷$1$对点电荷$2$的作用力为：
+&lt;/p&gt;
+$$
+   \vec{F}_{12} = \frac{1}{4\pi\varepsilon_0} \frac{q_1q_2}{r^2}\hat{r}_{12}~.
+   $$&lt;p&gt;
+点电荷的场强：
+&lt;/p&gt;
+$$
+   \vec{E} = \frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\vec{e}_r~.
+   $$&lt;p&gt;
+电场强度满足&lt;strong&gt;叠加原理&lt;/strong&gt;
+&lt;/p&gt;
+$$
+   \vec{E}_{\text{总}} = \sum_i \vec{E}_i~,
+   $$&lt;p&gt;
+设$\rho$为带电体的电荷密度，则$\mathrm{d}q = \rho \mathrm{d}V$，该带电体产生的场强为
+&lt;/p&gt;
+$$
+   \vec{E} = \iiint_V \frac{1}{4\pi\varepsilon_0} \frac{\rho}{r^2}\vec{e}_r\mathrm{d}V~. 
+   $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;电场线&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;始于正电荷/无穷远，终于负电荷/无穷远；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;沿电场线切线方向为场强方向，疏密代表场强大小；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静电学中电场线永不闭合，永不相交。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;高斯定理&lt;/p&gt;
+&lt;p&gt;电通量：表示穿过曲面$S$的电场线数目，定义为
+&lt;/p&gt;
+$$
+   \mathrm{d}\Phi = \vec{E}\cdot \mathrm{d}\vec{S}, \Phi= \iint_S \vec{E}\cdot \mathrm{d}\vec{S}~.
+   $$&lt;p&gt;
+立体角：$\mathrm{d}\Omega = \frac{\hat{r}\cdot \mathrm{d}\vec{S}}{r^2}, \Omega = \iint\frac{\hat{r}\cdot \mathrm{d}\vec{S}}{r^2} =\iint\frac{\cos \theta \mathrm{d}S}{r^2} $，对于封闭曲面
+&lt;/p&gt;
+$$
+   \Omega = \oiint_S \frac{\cos \theta \mathrm{d}S}{r^2} = 4 \pi~.
+   $$&lt;p&gt;
+&lt;img src=&#34;image-20250517163234669.png&#34; alt=&#34;image-20250517163234669&#34; style=&#34;zoom:33%;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;对于封闭曲面的电通量：
+&lt;/p&gt;
+$$
+   \oiint_S \vec{E}\cdot\mathrm{d}\vec{S}  = \frac{q}{4\pi\varepsilon_0}\oiint_S \frac{\cos \theta \mathrm{d}S}{r^2} = q/\varepsilon_0~.
+   $$&lt;p&gt;
+&lt;strong&gt;高斯定理&lt;/strong&gt;：
+&lt;/p&gt;
+$$
+   \oiint_S \vec{E}\cdot\mathrm{d}\vec{S} = q/\varepsilon_0 = \frac{1}{\varepsilon_0}\sum_i q_i~,
+   $$&lt;p&gt;
+高斯定理微分形式*：
+&lt;/p&gt;
+$$
+   \begin{aligned}
+   \oiint_S \vec{E}\cdot\mathrm{d}\vec{S}&amp;=\iiint_V \nabla\cdot\vec{E}\mathrm{d}V = \frac{1}{\varepsilon_0}\iiint_V \rho \mathrm{d}V
+   \\
+   &amp;\Rightarrow \nabla\cdot \vec{E} = \rho/\varepsilon_0~.
+   \end{aligned}
+   $$&lt;p&gt;
+注意点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;库伦定律只适用于静电场，高斯定理不仅适用于静电场，对于变化的电磁场也适用；&lt;/li&gt;
+&lt;li&gt;$\Phi = 0$不能说明没有电场；&lt;/li&gt;
+&lt;li&gt;高斯定理一定要对&lt;strong&gt;封闭曲面&lt;/strong&gt;积分；&lt;/li&gt;
+&lt;li&gt;高斯定理中 $q$ 仅为封闭曲面内部的电荷。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;真空中典型场强分布&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;点电荷：
+&lt;/p&gt;
+$$
+     E\cdot 4\pi r^2 = q/\varepsilon_0 \Rightarrow \vec{E} = \frac{1}{4\pi\varepsilon_0}\frac{1}{r^2}\vec{e}_r~.
+     $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;半径为$R$的均匀带电&lt;strong&gt;球壳&lt;/strong&gt;：
+&lt;/p&gt;
+$$
+     E = \left\{\begin{matrix}
+     \frac{1}{4\pi\varepsilon _0} \frac{q}{r^2}, &amp;r&gt;R 
+     \\
+     0, &amp;r&lt;R
+     \end{matrix}\right.
+     \quad\quad
+     \text{(方向沿径向，$R$处不连续.)}
+     $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;半径为$R$的均匀带电&lt;strong&gt;球体&lt;/strong&gt;：
+&lt;/p&gt;
+$$
+     E = \left\{\begin{matrix}
+     \frac{1}{4\pi\varepsilon _0} \frac{q}{r^2}, &amp;r&gt;R 
+     \\
+     \frac{1}{4\pi\varepsilon _0}\frac{qr}{R^3}, &amp;r&lt;R
+     \end{matrix}\right.
+     \quad\quad
+     \text{(方向沿径向，$R$处连续.)}
+     $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;无穷大&lt;/strong&gt;电荷面密度为$\sigma$&lt;strong&gt;平板&lt;/strong&gt;：
+&lt;/p&gt;
+$$
+     E = \sigma/2\varepsilon_0~.
+     $$&lt;p&gt;
+&lt;img src=&#34;image-20250716222238235.png&#34; alt=&#34;image-20250716222238235&#34; style=&#34;zoom:20%;&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无穷长电荷线密度为$\lambda$的圆柱：
+&lt;/p&gt;
+$$
+     E = \frac{\lambda}{2\pi \varepsilon_0 r}~.
+     $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静电场是保守场，无旋场&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;静电力的保守性：$\oint q\vec{E}\cdot \mathrm{d}\vec{l} = 0$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静电场的环路定理：$\oint \vec{E}\cdot \mathrm{d}\vec{l} = 0 \Rightarrow \nabla \times \vec{E} = 0 $，可见静电场是无旋场。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电势&lt;/p&gt;
+&lt;p&gt;设$r_0$处为电势零点，则$r$处的电势为
+&lt;/p&gt;
+$$
+   \varphi(r) = -\int_{r_0}^{r} \vec{E}\cdot\mathrm{d}\vec{l}~.
+   $$&lt;p&gt;
+对于保守场：$\vec{E} = -\nabla \varphi$ 对应于保守力 $\vec{F} = -\nabla V(r)$ .&lt;/p&gt;
+&lt;p&gt;电势差：$U_{ab} = \varphi_a-\varphi_b = \int_a^b \vec{E}\cdot\mathrm{d}\vec{l}$ .&lt;/p&gt;
+&lt;p&gt;电势叠加原理：$\varphi_{\text{总}}=\sum_i \varphi_i$，由于电势是标量，不需要考虑方向，代数求和即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;真空中几种典型电势&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;点电荷：&lt;/li&gt;
+&lt;/ul&gt;
+\[
+\varphi(r) = \frac{1}{4\pi \varepsilon_0}\frac{q}{r}~.
+\]&lt;ul&gt;
+&lt;li&gt;匀强电场：&lt;/li&gt;
+&lt;/ul&gt;
+\[
+U_{ab} = -Ed_{ab}~.
+\]&lt;ul&gt;
+&lt;li&gt;均匀带电&lt;strong&gt;球壳&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+\[
+\varphi(r) =
+\left\{\begin{aligned}
+\frac{1}{4\pi\varepsilon _0} \frac{q}{r}, &amp; r&gt;R \\
+\frac{1}{4\pi\varepsilon _0} \frac{q}{R}, &amp; r&lt;R
+\end{aligned}\right.
+\quad\quad (\text{球壳内部为等势体.})
+\]&lt;ul&gt;
+&lt;li&gt;均匀带电&lt;strong&gt;球体&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+\[
+\varphi(r) =
+\left\{\begin{aligned}
+\dfrac{1}{4\pi\varepsilon _0} \dfrac{q}{r}, &amp; r&gt;R \\
+\dfrac{\rho R^2}{2\varepsilon_0}-\dfrac{\rho r^2}{6\varepsilon_0}, &amp; r&lt;R
+\end{aligned}\right.
+\]&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;电偶极子&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;定义：电偶极子是相距一定距离的两个等量异号的点电荷组成的系统。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电偶极矩：$\vec{p} = q\vec{l}$，其中$q$是一个电荷带电量的绝对值，$\vec{l}$是负电荷指向正电荷的位矢。&lt;/p&gt;
+&lt;img src=&#34;image-20250722112421955.png&#34; alt=&#34;image-20250722112421955&#34; style=&#34;zoom: 33%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;作用在电偶极子的力矩
+&lt;/p&gt;
+$$
+     \vec{M}_e = \vec{p}\times\vec{E}~,
+     $$&lt;p&gt;
+能量为
+&lt;/p&gt;
+$$
+     E_e = -\vec{p}\cdot \vec{E}~,
+     $$&lt;p&gt;
+这说明只有电偶极子方向与电场方向相同时是稳定的平衡状态；而在电偶极子与电场方向相反时，虽然力矩为零，但是为不稳定平衡状态。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;能量处于极值为平衡状态；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;能量处于极小值为稳定平衡状态；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;能量处于极大值为不稳定平衡状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于$r\gg l$，电偶极子的电势：
+&lt;/p&gt;
+$$
+     \begin{aligned}
+     \varphi &amp; = \frac{q}{4\pi\varepsilon_0}\frac{1}{r_+}-\frac{q}{4\pi\varepsilon_0}\frac{1}{r_-}\\
+     &amp; = \frac{q}{4\pi\varepsilon_0}\frac{r_--r_+}{r_- r_+}
+     \\
+     &amp; = \frac{ql}{4\pi\varepsilon_0}\frac{1}{r^2}\\
+     &amp; = \frac{p\cos\theta}{4\pi\varepsilon_0 r^2}~.
+     \end{aligned}
+     $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$x$轴上的电场$(x\gg l)$
+&lt;/p&gt;
+$$
+     \begin{aligned}
+     E_x &amp;= - \nabla \varphi = -\frac{\partial}{\partial x}\frac{p}{4\pi\varepsilon_0 x^2}= \frac{\vec{p}}{2\pi\varepsilon_0 x^3}~.
+     \\
+     E_x &amp;=\frac{q}{4\pi\varepsilon_0}\frac{1}{(x-l/2)^2}\vec{e}_x- \frac{q}{4\pi\varepsilon_0}\frac{1}{(x+l/2)^2}\vec{e}_x 
+     \\
+     &amp;\quad \quad= \frac{q}{4\pi\varepsilon_0}\frac{2xl}{(x-l/2)^2(x+l/2)^2}\vec{e}_x 
+     =  \frac{\vec{p}}{2\pi\varepsilon_0 x^3}~.
+     \end{aligned}
+     $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$y$轴上的电场$(y\gg l)$
+&lt;/p&gt;
+$$
+     E_y = -2\sin \alpha \cdot \frac{1}{4\pi \varepsilon_0}\frac{q}{y^2}\hat{l} = - \frac{l}{y}\frac{1}{4\pi \varepsilon_0}\frac{q}{y^2}\hat{l}=-\frac{\vec{p}}{4\pi \varepsilon_0}\frac{1}{y^3}~.
+     $$&lt;p&gt;
+&lt;img src=&#34;image-20250722112446288.png&#34; alt=&#34;image-20250722112446288&#34; style=&#34;zoom:33%;&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;静电平衡&lt;/strong&gt;：导体内部没有电荷作定向运动.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;导体内部电场为零;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;导体表面（包括内表面与外表面）$\vec{E}$方向与导体表明垂直；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;导体表面某点处的场强大小与该处电荷面密度成正比：$E = \sigma/\varepsilon_0$ .(与无穷大板不同的是，这里导体内部无电场)；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;导体内部无净电荷，&lt;strong&gt;净电荷只分布在导体表面&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;净电荷：某物带有净电荷，指该物体所带电荷的代数和不为零。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静电屏蔽：对于静电平衡的导体，空腔内的电场线终止于内表面，外界的电场线终止于外表面，二者的变化不会互相影响(静电场中电场线不能闭合)。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;空腔导体（无论是否接地）不受外电场的影响；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接地空腔导体的外部空间不受内电场的影响。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;金属（导体）与电介质的区别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;金属（导体）：只含有自由电子；&lt;/li&gt;
+&lt;li&gt;电介质：几乎不存在自由电子，放入电场中会出现极化电荷/束缚电荷。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电介质&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无极分子的位移极化：正负电荷被扯开；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;image-20251012185032851.png&#34; alt=&#34;image-20251012185032851&#34; style=&#34;zoom: 50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;有机分子的转向极化：宏观上会一定程度地出现取向；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;image-20251012185356341.png&#34; alt=&#34;image-20251012185356341&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;电介质中的场强由于极化电荷导致附加电场的出现，使得总电场发生变化（一般变小，附加电场总是与原电场方向相反）：
+&lt;/p&gt;
+$$
+      \vec{E} = \vec{E}_0+\vec{E}&#39; = \vec{E}_0/\varepsilon_r~.
+      $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;电介质中场强的高斯定理&lt;/strong&gt;：
+&lt;/p&gt;
+$$
+      \oiint_S \vec{E}\cdot \mathrm{d}\vec{S} = \frac{Q_0}{\varepsilon_0\varepsilon_r}~,
+      $$&lt;p&gt;
+其中$Q_0$为自由电荷。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;极化强度：反映电介质内部极化程度的物理量；实验表明，对于各向同性的电介质，极化强度与总电场强度成正比:
+&lt;/p&gt;
+$$
+      \vec{P} = \chi_e \varepsilon_0 \vec{E} = (\varepsilon_r-1)\varepsilon_0\vec{E}~,
+      $$&lt;p&gt;
+其中$\chi_e = \varepsilon_r-1$为电极化率。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;附加电场与极化强度成正比：
+&lt;/p&gt;
+$$
+      \vec{E}&#39; = -\vec{P}/\varepsilon_0~.
+      $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;电位移强度&lt;/strong&gt;：
+&lt;/p&gt;
+$$
+      \vec{D} = \varepsilon_0\vec{E}+\vec{P} = \varepsilon_0\varepsilon_r \vec{E}~.
+      $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;电位移强度的高斯定理&lt;/strong&gt;：
+&lt;/p&gt;
+$$
+      \oiint_S \vec{D}\cdot\mathrm{d}\vec{S} = Q_0~.
+      $$&lt;p&gt;
+这里不再出现真空介电常数$\varepsilon_0$与相对介电常数$\varepsilon_r$，且$Q_0$仅仅指自由电荷.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逻辑关系如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;电介质表面在有外电场的情况下会出现极化电荷：$Q_{\text{总}}=Q_0 + Q_{\text{极化}}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们可以（马后炮的角度）知道极化电荷为：
+&lt;/p&gt;
+$$
+        {Q_0+Q_{\text{极}}\over \varepsilon_0 } = {Q_0 \over \varepsilon_0\varepsilon_r} \Rightarrow Q_{\text{极}} = Q_0\left({1\over \varepsilon_r}-1 \right)~,
+        $$&lt;p&gt;
+这里$Q_0$是自由电荷，$Q_{\text{极}}$电性与$Q_0$相反。&lt;/p&gt;
+&lt;p&gt;这个关系是通过电介质中的高斯定理得到的，本质上$\varepsilon= \varepsilon_0\varepsilon_r$的出现就是极化电荷的修正效应。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;极化电荷会改变电场，$\vec{E} = \vec{E}_0 + \vec{E}&amp;rsquo;$，这样有
+&lt;/p&gt;
+$$
+        \oint_S \vec{E}\cdot d\vec{S} = {Q_0\over \varepsilon_0\varepsilon_r}={Q_0 +Q_{\text{极}}\over \varepsilon_0}, \quad \oint_S \vec{E}_0\cdot d\vec{S} ={Q_0\over \varepsilon_0} ~.
+        $$&lt;p&gt;
+这里也可以定义出电介质$\vec{D} = \varepsilon \vec{E} =\varepsilon_0 \vec{E}_0$，其高斯定理为
+&lt;/p&gt;
+$$
+        \oint_S \vec{D}\cdot d\vec{S} = Q_0~.
+        $$&lt;p&gt;
+极化电场为：
+&lt;/p&gt;
+$$
+        \vec{E}&#39;  = \vec{E}-\vec{E}_0 = - (\varepsilon_r-1)\vec{E}~,
+        $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;极化电荷强度是由极化电荷电偶极子定义的，由于电偶极子方向的定义（负电荷指向正电荷），其与极化电场方向相反，大小成正比：
+&lt;/p&gt;
+$$
+        \vec{P} = -\varepsilon_0 \vec{E}&#39; = \varepsilon_0 (\varepsilon_r-1)\vec{E} = \varepsilon_0\chi_e \vec{E}~,
+        $$&lt;p&gt;
+其中$\chi_e = \varepsilon_r -1$ . 记住极化强度与电位移是同量纲的$[\vec{P}]=[\vec{D}]$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\vec{D},\vec{E},\vec{P}$ 的关系可以根据$\vec{E}=\vec{E}_0+\vec{E}&amp;rsquo;$同时乘上$\varepsilon_0$得到：
+&lt;/p&gt;
+$$
+        \varepsilon_0\vec{E} = \vec{D}-\vec{P}~\Rightarrow \vec{D} = \varepsilon_0\vec{E}+\vec{P}~.
+        $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;真空中孤立导体的电容&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;孤立导体的电容：衡量孤立导体容纳电荷的能力。&lt;/p&gt;
+&lt;img src=&#34;image-20250517122859683.png&#34; alt=&#34;image-20250517122859683&#34; style=&#34;zoom:40%;&#34; /&gt;
+&lt;p&gt;电源电压为$U$，如果把电源撤去，导体电势为$\varphi = U$，设带正电荷为$Q$，则：
+&lt;/p&gt;
+$$
+      \varphi=U = -\int_{\infty}^{R} \frac{Q}{4\pi\varepsilon_0r^2}\mathrm{d}r = \frac{Q}{4\pi\varepsilon_0 R}\Rightarrow Q\propto \varphi ~.
+      $$&lt;p&gt;
+可见导体带电多少与电势成正比，则定义&lt;strong&gt;孤立导体的电容&lt;/strong&gt;：
+&lt;/p&gt;
+$$
+      C = \frac{Q}{\varphi}~.
+      $$&lt;p&gt;
+孤立导体的电容与其形状、零势能点有关，与其带电量无关，电容单位为法拉$F$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电容器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;平行板电容器&lt;/p&gt;
+&lt;img src=&#34;image-20250517135901803.png&#34; alt=&#34;image-20250517135901803&#34; style=&#34;zoom:30%;&#34; /&gt;
+&lt;p&gt;与孤立导体电容类似，平行板电容器的电容指衡量一定电压下电容器贮存电荷的能力：
+&lt;/p&gt;
+$$
+      C = Q/U~.
+      $$&lt;p&gt;
+在理想情况下，由于电容器之间的电场是匀强电场 $E = U/d$，且由高斯定理可得
+&lt;/p&gt;
+$$
+      E = \frac{\sigma}{\varepsilon_0\varepsilon_r} = \frac{Q}{\varepsilon_0\varepsilon_rS}=\frac{U}{d}\Rightarrow C=\frac{Q}{U} = \frac{\varepsilon_0\varepsilon_r S}{d}~.
+      $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;圆柱形电容器：单位长度电荷密度为$\lambda$，高$L$，内径为$a$，外径为$b$，电容为
+&lt;/p&gt;
+$$
+      C=\frac{Q}{U}=\frac{\lambda L}{\int_a^b\frac{\lambda}{2\pi\varepsilon}r\mathrm{d}r}=\frac{2\pi\varepsilon L }{\ln {b\over a}}~.
+      $$&lt;p&gt;
+&lt;img src=&#34;image-20250517163448316.png&#34; alt=&#34;image-20250517163448316&#34; style=&#34;zoom:43%;&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电容器的串并联&lt;/p&gt;
+&lt;img src=&#34;image-20250517141300342.png&#34; alt=&#34;image-20250517141300342&#34; style=&#34;zoom:35%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;并联：
+&lt;/p&gt;
+$$
+      C=\frac{Q_1+Q_2+...+Q_n}{U}=C_1+C_2+...+C_n~.
+      $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;串联：
+&lt;/p&gt;
+$$
+      \frac{1}{C} = \frac{U_1+U_2+...+U_n}{Q}=\frac{1}{C_1}+\frac{1}{C_2}+...+\frac{1}{C_n}~.
+      $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静电场的能量与能量密度&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;- 电容器的电能： 由$\mathrm{d}W=U\mathrm{d}q=\frac{q}{C}\mathrm{d}q$，且$E=\int\mathrm{d}W$，可得
+  $$
+  W_e=\frac{1}{2}\frac{Q^2}{C}=\frac{1}{2}CU^2~.
+  $$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;单位体积电场电场所拥有的能量：
+&lt;/p&gt;
+$$
+  w_e = \frac{1}{2}\vec{D}\cdot\vec{E}=\frac{1}{2}\varepsilon E^2~.
+  $$&lt;p&gt;
+由平行板电容器产生的匀强电场$E =Q/\varepsilon S$，电容$C=\varepsilon S/d$ 可得$W_e = \frac{1}{2}\frac{\varepsilon S}{d}(E\cdot d)^2=\frac{1}{2}\varepsilon E^2 \cdot Sd$，故能量密度为$w_e=W_e/V=\frac{1}{2}\varepsilon E^2$ .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;从量纲的角度理解，能量的量纲$[\text{能量}]=[EQL]$，如果把电荷用$\varepsilon_0$ 和电场表示有
+&lt;/p&gt;
+$$
+    [E] = \left[{Q\over \varepsilon_0 L^2 }\right] \Rightarrow  [Q] = [\varepsilon_0 EL^2]~,
+    $$&lt;p&gt;
+那么对于${1\over 2}\varepsilon_0 E^2$而言有：
+&lt;/p&gt;
+$$
+    [E\cdot \varepsilon_0 E] = [E\cdot QL^{-2}]=[E QL\cdot L^{-3}]=[\text{能量}\cdot L^{-3}]~,
+    $$&lt;p&gt;
+可见，$w_e = \frac{1}{2}\varepsilon_0 E^2$ 有着能量密度的量纲，在电介质中 $\varepsilon_0 \to \varepsilon  $.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从另外一个角度来看，对于一束光其随身携带能量，但是并不携带电荷，因此可以认为&lt;strong&gt;电磁场本身具有能量&lt;/strong&gt;，能量并不集中在场源（电荷，光源），对于能量大小由该位置的电磁场大小决定，对于电场的能量，由$E$决定，那么根据量纲其表达式最可能是$w_e = \frac{1}{2}\varepsilon_0 E^2$ .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;静磁学&#34;&gt;静磁学
+&lt;/h2&gt;&lt;p&gt;&amp;ldquo;静&amp;quot;意味着物理量不随时间变化。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安培定律&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;电流元：通有电流的一小段导线，方向为电流的指向（注意电流是标量，没有方向），通常写为$Id\vec{l}$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安培定律：对于电流元$I_1d\vec{l}_1$和$I_2d\vec{l}&lt;em&gt;2$，其距离为$\vec{r}&lt;/em&gt;{12}$，则电流元$I_1d\vec{l}_1$对电流元$I_2d\vec{l}_2$的相互作用力为：
+&lt;/p&gt;
+$$
+     d\vec{F}_{12} = {\mu_0\over 4\pi}{I_2d\vec{l}_2\times(I_1d\vec{l}_1\times \hat{r}_{12})\over r_{12}^2 }
+     $$&lt;p&gt;
+&lt;img src=&#34;image-20250627000140103.png&#34; alt=&#34;image-20250627000140103&#34; style=&#34;zoom:33%;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;虽然两个电流元之间的作用力不满足牛顿第三定律（当$I_1d\vec{l}_1 \perp I_2d\vec{l}&lt;em&gt;2 // \hat{r}&lt;/em&gt;{12}$），但是电流元在现实中不会单独存在，所以这个否定没有实际的物理意义。对于两个闭合回路，其作用力是满足牛顿第三定律的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两根无限长平行直导线，距离为$d$，其中一根长为$L$的导线段所受另外一根（无限长）导线的作用力大小为：
+&lt;/p&gt;
+$$
+     F = {\mu_0I_1I_2L\over 2\pi d}~,
+     $$&lt;p&gt;
+电流同向时两导线相互吸引，反向时两导线互相排斥。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;毕奥—萨伐尔定律&lt;/p&gt;
+&lt;p&gt;对于电流元$Id\vec{l}$产生的磁场：
+&lt;/p&gt;
+$$
+   d\vec{B} = {\mu_0\over 4\pi}{Id\vec{l}\times \vec{e}_r\over r^2}~.
+   $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常见的磁场分布&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;无限长通电直导线：
+&lt;/p&gt;
+$$
+     B = {\mu_0 I\over 2\pi r}~,
+     $$&lt;p&gt;
+其中$I$为电流大小，$r$​为该点位置距离导线的距离，方向沿切向，磁感线呈同心圆状。（右手法则）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无限长直密绕通电螺线管：
+&lt;/p&gt;
+$$
+     B = \mu_0 nI~,
+     $$&lt;p&gt;
+其中$n$为单位长度的匝数，管外没有磁场，管内磁场是均匀的，方向用右手螺旋判断。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;半无限长螺线管在端口处的磁感应强度：$B = {1\over 2}\mu_0 nI$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通电螺线环：
+&lt;/p&gt;
+$$
+     B = {\mu_0 NI\over 2\pi r}~,
+     $$&lt;p&gt;
+其中$r$为管内某点距螺线环圆心的距离，管外没有磁场；当管的内径与外径差别不大时可以认为管内磁场均匀（与无限长直密绕通电螺线管相同），管内磁场为$B=\mu_0 n I$ .&lt;/p&gt;
+&lt;img src=&#34;image-20250729221404613.png&#34; alt=&#34;image-20250729221404613&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;半径为$R$，圆心角为$\theta$的圆弧形电流在圆心处的磁场为：
+&lt;/p&gt;
+$$
+     B = {\mu_0 I \theta\over 4 \pi R}~.
+     $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;磁场的基本性质&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;高斯定理：
+&lt;/p&gt;
+$$
+     \oiint_S \vec{B}\cdot d\vec{S} = 0~,\quad \nabla\cdot \vec{B}=0~.
+     $$&lt;p&gt;
+磁场无源，磁感线闭合，注意这里是闭合曲面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安培环路定理：
+&lt;/p&gt;
+$$
+     \oint_l \vec{B}\cdot d\vec{s} = \mu_0 I~,
+     $$&lt;p&gt;
+磁场有旋，这里是闭合环路，需要根据电流的方向取正负号。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安培力，洛伦兹力与磁力矩&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安培力：对于整个闭合回路所受的安培力为
+&lt;/p&gt;
+$$
+     \vec{F} = \oint Id\vec{l}\times \vec{B}~,
+     $$&lt;p&gt;
+任意闭合线圈在&lt;strong&gt;匀强磁场&lt;/strong&gt;中受力为$0$，对于$A$向$B$的任意形状曲线电流$I$所受合力等于$AB$直导线所受安培力$\vec{F} = I\vec{L}\times \vec{B}$ ，安培力方向可以简记为**$I$指向$B$，大拇指指向洛伦兹力**。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;洛伦兹力：
+&lt;/p&gt;
+$$
+     \vec{F} = q\vec{v}\times \vec{B}~,
+     $$&lt;p&gt;
+注意$q$的正负性，洛伦兹力永远与速度垂直，因此洛伦兹力（整个力）永不做功。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（磁偶极子）磁力矩：
+&lt;/p&gt;
+$$
+     \vec{M}_b = \vec{m}\times \vec{B}~,
+     $$&lt;p&gt;
+其中$\vec{m} = IS\vec{e}_n$为线圈的磁矩，$\vec{e}_n$是线圈平面的法向量。如果线圈为$N$匝，则$\vec{M} = NIS\vec{e}_n\times \vec{B}$ .&lt;/p&gt;
+&lt;p&gt;磁偶极子的能量：
+&lt;/p&gt;
+$$
+     E_b =-\vec{m}\cdot\vec{B}~,
+     $$&lt;p&gt;
+这说明磁偶极子（线圈）与磁场方向相同时为稳定的平衡状态；线圈与磁场方向相反时虽然不受力矩作用，但是这个状态不稳定。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;能量处于极值为平衡状态；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;能量处于极小值为稳定平衡状态；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;能量处于极大值为不稳定平衡状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;磁通量&lt;/p&gt;
+&lt;p&gt;对于非闭合曲面的磁通量：
+&lt;/p&gt;
+$$
+   \Phi = \iint_S \vec{B}\cdot d\vec{S}~,
+   $$&lt;p&gt;
+对于$N$匝线圈，其中每一匝的磁通量都为$\Phi$，则总磁通量为$\Phi_{tot} = N\Phi$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电磁感应基本定律&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;感应电动势：
+&lt;/p&gt;
+$$
+     \mathscr{E} = -{d\Phi_{tot}\over dt} = -N{d\Phi\over dt}~,
+     $$&lt;p&gt;
+楞次定律：表达式中的负号表明感应电动势产生的磁通量总是阻碍原磁通量的变化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;发生电磁感应的条件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;磁场发生变化（感生电动势）.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;面积变化（动生电动势） .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;动生电动势&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;定性分析：线圈切割磁感线运动 $\to$ 回路磁通量对应的面积变化 $\to$ 产生感应电动势 $\to$ 产生感应电流 $\to$ 感应电流产生安培力 $\to$ 原切割磁感线运动受到阻碍 .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于任意导体以任意速度在任意磁场中运动，其动生电动势为
+&lt;/p&gt;
+$$
+     \mathscr{E} = \int_-^+ (\vec{v}\times \vec{B})\cdot d\vec{l}~. 
+     $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于单根导体棒在匀强磁场中平动：
+&lt;/p&gt;
+$$
+     \mathcal{E} = \vec{v}\times \vec{B}\cdot \vec{l}~,
+     $$&lt;p&gt;
+其中$\vec{v}$为导体棒的运动速度，$l$为导体棒的长度，$\vec{B}$为磁感应强度，$\vec{v},\vec{l},\vec{B}$两两垂直，则有$\mathscr{E}=Blv$，指向与$\vec{v}\times\vec{B}$方向一致，电动势的负极就是矢量$\vec{v}\times\vec{B}$的起点，正极就是$\vec{v}\times\vec{B}$的终点 .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安培力为：
+$$
+       \vec{F}=-BIL\hat{v} = -{B^2l^2v\over R}\hat{v} ~,
+       $$
+上式中$\hat{v}$表示速度方向，负号代表安培力的方向与速度方向相反 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;感生电动势&lt;/p&gt;
+&lt;p&gt;若磁场$B$随时间变化，并且垂直穿过闭合回路$S$（不垂直投影到垂直方向即可），当闭合回路$S$不变时，有
+&lt;/p&gt;
+$$
+   \mathscr{E} = -N{d\Phi\over dt}=-NS{\partial B\over \partial t}~.
+   $$&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;变化的磁场激发出涡旋电场，且涡旋电场不是静电场，故涡旋电场的电场线可以闭合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于涡旋电场的分布：
+&lt;/p&gt;
+$$
+     \oint_l\vec{E}\cdot d\vec{l} = -\iint_S {\partial \vec{B}\over \partial t}\cdot d\vec{S}~.
+     $$&lt;p&gt;
+对于半径为$R$的圆形匀强磁场区域有
+&lt;/p&gt;
+$$
+     E = {1\over 2}{\partial B\over \partial t}r~,\quad r\le R~. 
+     $$&lt;p&gt;
+&lt;img src=&#34;image-20250627145632224.png&#34; alt=&#34;image-20250627145632224&#34; style=&#34;zoom:33%;&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电感&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;自感：回路对自身电流变化产生感生电动势的现象，
+&lt;/p&gt;
+$$
+      \mathscr{E} = -L{dI\over dt}~,
+      $$&lt;p&gt;
+其中$L = N\Phi/I$为自感系数 . 自感系数一定是正的，因为自感电动势一定会阻碍电流变化，物理意义为体现回路保持电流状态不变的“惯性”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;互感：两个线圈相应彼此电流变化的现象，线圈$2$响应线圈$1$中电流变化的感生电动势为
+&lt;/p&gt;
+$$
+      \mathscr{E} = -M_{21}{dI_1\over dt}~,
+      $$&lt;p&gt;
+其中$M_{21}$为互感系数，且$M_{21}=M_{12} = \Phi_{21}/I_1=\Phi_{12}/I_2$ . 其中$\Phi_{21}$表示$I_1$激发的磁场穿过线圈$2$的磁通量，$\Phi_{12}$表示$I_2$激发的磁场穿过线圈$1$的磁通量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电感的能量储存在电感的磁场中：
+&lt;/p&gt;
+$$
+      W_B = \int_0^t UI&#39;dt&#39;=\int_0^ILI&#39;dI&#39;={1\over 2}LI^2~. 
+      $$&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;能量密度：$w_b = B^2/2\mu_0$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两个线圈的总磁场能量：$W_B = {1\over2}L_1I_1^2+{1\over2}L_2I_2^2+MI_1I_2$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;磁介质&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;磁场强度$ \vec{H} $：
+&lt;/p&gt;
+$$
+      \vec{H} = \vec{B}/\mu~,
+      $$&lt;p&gt;
+外部施加的磁场，不受磁介质影响.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;磁化强度$ \vec{M} $：
+&lt;/p&gt;
+$$
+      \vec{M} = \chi_M \vec{H}~,
+      $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;单位体积内的磁偶极矩总和，反映物质被磁化的程度.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;磁感应强度$ \vec{B} $：
+&lt;/p&gt;
+$$
+  \vec{B} = \mu_0 (\vec{H}+\vec{M})~,
+  $$&lt;p&gt;
+其中 $\mu_0$ 是真空磁导率。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;磁导率$ \mu $：
+&lt;/p&gt;
+$$
+  \mu = (1+\chi_M)\mu_0 = \mu_r\mu_0~,
+  $$&lt;ul&gt;
+&lt;li&gt;$\chi_m$：磁化率&lt;/li&gt;
+&lt;li&gt;$\mu_r$：相对磁导率&lt;/li&gt;
+&lt;li&gt;在磁介质中，把真空中公式里的$\mu_0\to \mu = \mu_0\mu_r$即可 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;记忆公式的逻辑&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;与电介质不同，在磁介质中一般考虑顺磁性物质，这时$\vec{B}&amp;rsquo;$的方向与$\vec{B}_0$方向相同，即磁场变大了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;磁介质表面会产生磁化电流：$I = I_0+I&amp;rsquo;$  ；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;磁场为原自由电流$I_0$产生的磁场$B_0$与磁化电流$I&amp;rsquo;$产生的磁场$B&amp;rsquo;$之和：$\vec{B}=\vec{B}_0+\vec{B}&amp;rsquo;$  ;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;磁场的安培环路定理
+&lt;/p&gt;
+$$
+    \oint_L \vec{B}\cdot d\vec{l} = \mu_0(I+I&#39;)=\mu I_0~,\quad \oint_L \vec{B}_0\cdot d\vec{l} = \mu_0 I_0~.
+    $$&lt;p&gt;
+由上2式可定义磁场强度$\vec{H} = {\vec{B}\over \mu} = {\vec{B}_0\over \mu_0}$，其安培环路定理为：
+&lt;/p&gt;
+$$
+    \oint_L \vec{H}\cdot d\vec{l} = I_0~.
+    $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据$\vec{B}_0 = \mu_0 \vec{B}/\mu = \vec{B}/\mu_r$可得$\vec{B}&amp;rsquo; = \vec{B}(1-{1\over \mu_r})$ ;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;记住磁化强度$\vec{M} = \vec{B}&amp;rsquo;/\mu_0$，磁偶极子的方向与磁场方向相同，不需要加负号，那么有
+&lt;/p&gt;
+$$
+    \vec{M} = {\vec{B}\over \mu_0}-\vec{H} = \vec{H}(\mu_r-1)=\chi_M\vec{H}~.
+    $$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\vec{B},\vec{H},\vec{M}$之间的关系可由$\vec{B}=\vec{B}_0+\vec{B}^\prime$同时除以$\mu_0$得到：
+&lt;/p&gt;
+$$
+    {\vec{B}\over \mu_0} = \vec{H}+\vec{M}~\Rightarrow \vec{H} = {\vec{B}\over \mu_0}  - \vec{M}~.
+    $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Maxwell方程组&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电场有源，电场的源是电荷；&lt;/li&gt;
+&lt;li&gt;变化的磁场会产生电场；&lt;/li&gt;
+&lt;li&gt;磁场没有源，至今未发现磁单极子；&lt;/li&gt;
+&lt;li&gt;修正的安培环路定理，其中（全）电流分为传导电流$I$与位移电流。&lt;/li&gt;
+&lt;/ul&gt;
+$$
+    \left\{\begin{split}
+        \oint_S \vec{E}\cdot \mathrm{d}\vec{S}&amp;=\int_V \frac{\rho}{\varepsilon_0} \mathrm{d}V,\quad \oint_S \vec{D}\cdot d\vec{S} = Q \\
+       \oint_L \vec{E}\cdot\mathrm{d}\vec{l}&amp;=-\int_S \frac{\partial \vec{B}}{\partial t}\cdot \mathrm{d}\vec{S}~,  \\
+       \oint_S \vec{B}\cdot\mathrm{d} \vec{S}&amp;=0 ~, \\
+       \oint_L \vec{B}\cdot \mathrm{d}\vec{l}&amp;=\mu_0 I +\mu_0\varepsilon_0\int_S \frac{\partial \vec{E}}{\partial t}\cdot \mathrm{d}\vec{S}~,\quad \oint_L\vec{H}\cdot d\vec{l} = I+\int_S {\partial \vec{D}\over \partial t}\cdot d\vec{S}  
+        \end{split}\right.
+    $$&lt;p&gt;位移电流指的是随时间变化的电场产生的效应，即
+&lt;/p&gt;
+$$
+    \varepsilon_0\int_s \frac{\partial \vec{E}}{\partial t}\cdot \mathrm{d}\vec{S}=\int_s \frac{\partial \vec{D}}{\partial t}\cdot \mathrm{d}\vec{S}~,
+    $$&lt;p&gt;
+方向是电场随时间变化的方向，即与$\vec{E}(t+\Delta t,\vec{r})-\vec{E}(t,\vec{r})$方向相同。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;恒定电流条件：
+$$
+      {dQ\over dt} = I = \oint_S \vec{j}\cdot d\vec{S}
+      $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;电磁学公式总表&#34;&gt;电磁学公式总表
+&lt;/h1&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;类别&lt;/th&gt;
+          &lt;th&gt;公式名称&lt;/th&gt;
+          &lt;th&gt;表达式与说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;矢量微积分公式&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;矢量微分算子&lt;/td&gt;
+          &lt;td&gt;$\nabla = (\frac{\partial}{\partial_x},\frac{\partial}{\partial_y},\frac{\partial}{\partial_z})$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;梯度&lt;/td&gt;
+          &lt;td&gt;$ \nabla f $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;散度&lt;/td&gt;
+          &lt;td&gt;$ \nabla \cdot \vec{A} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;旋度&lt;/td&gt;
+          &lt;td&gt;$ \nabla \times \vec{A} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;散度定理（高斯）&lt;/td&gt;
+          &lt;td&gt;$ \oint_{S} \vec{A} \cdot d\vec{S} = \int_V (\nabla \cdot \vec{A}) dV $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;斯托克斯公式&lt;/td&gt;
+          &lt;td&gt;$ \oint_{L} \vec{A} \cdot d\vec{l} = \int_S (\nabla \times \vec{A}) \cdot d\vec{S} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;静电力与电场&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;库仑定律&lt;/td&gt;
+          &lt;td&gt;$ \vec{F} = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r^2} \hat{r},\quad   $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;点电荷电场&lt;/td&gt;
+          &lt;td&gt;$ \vec{E} = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q}{r^2} \hat{r} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;电场叠加原理&lt;/td&gt;
+          &lt;td&gt;$ \vec{E}_{\text{总}} = \sum \vec{E}_i $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;高斯定理&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;电通量&lt;/td&gt;
+          &lt;td&gt;$ \Phi_E = \int \vec{E} \cdot d\vec{A} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;（有电介质$\varepsilon_0\to \varepsilon =\varepsilon_r\varepsilon_0$）&lt;/td&gt;
+          &lt;td&gt;高斯定理（积分）&lt;/td&gt;
+          &lt;td&gt;$ \oint \vec{E} \cdot d\vec{A} = \dfrac{Q_{\text{in}}}{\varepsilon_0} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;高斯定理（微分）&lt;/td&gt;
+          &lt;td&gt;$ \nabla \cdot \vec{E} = \dfrac{\rho}{\varepsilon_0} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;电势与能量&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;电势定义&lt;/td&gt;
+          &lt;td&gt;$ \varphi(r) = - \int_{r_0}^r \vec{E} \cdot d\vec{l} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;电势差&lt;/td&gt;
+          &lt;td&gt;$ U_{ab} = \varphi_a-\varphi_b = \int_a^b \vec{E}\cdot\mathrm{d}\vec{l} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;电场与电势关系&lt;/td&gt;
+          &lt;td&gt;$ \vec{E} = -\nabla \varphi $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;点电荷电势&lt;/td&gt;
+          &lt;td&gt;$ \varphi = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q}{r} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;电偶极子&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;偶极矩&lt;/td&gt;
+          &lt;td&gt;$ \vec{p} = q \vec{l} $（$\vec{l}$为负电荷指向正电荷的方向）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;电势（远场）&lt;/td&gt;
+          &lt;td&gt;$ \varphi = \dfrac{1}{4\pi \varepsilon_0} \dfrac{\vec{p} \cdot \hat{r}}{r^2} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;电场（轴上）&lt;/td&gt;
+          &lt;td&gt;$ \vec{E} = \dfrac{1}{4\pi \varepsilon_0} \dfrac{2p}{r^3} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;力矩&lt;/td&gt;
+          &lt;td&gt;$\vec{M}_e=\vec{p}\times\vec{E}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;能量&lt;/td&gt;
+          &lt;td&gt;$E_e = - \vec{p}\cdot \vec{E}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;电容与能量&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;孤立导体电容&lt;/td&gt;
+          &lt;td&gt;$ C = \dfrac{Q}{\varphi} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;（有电介质$\varepsilon_0\to \varepsilon =\varepsilon_r\varepsilon_0$）&lt;/td&gt;
+          &lt;td&gt;平行板电容&lt;/td&gt;
+          &lt;td&gt;$ C = \dfrac{\varepsilon_0 S}{d} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;圆柱电容&lt;/td&gt;
+          &lt;td&gt;$ C = \dfrac{2\pi \varepsilon_0 h}{\ln(b/a)} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;电容储能&lt;/td&gt;
+          &lt;td&gt;$ W_E = \dfrac{1}{2} C U^2 $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;能量密度&lt;/td&gt;
+          &lt;td&gt;$ w_e = \dfrac{1}{2} \varepsilon_0 E^2 $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;电介质与电位移&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;极化强度&lt;/td&gt;
+          &lt;td&gt;$ \vec{P} = \varepsilon_0 \chi_e \vec{E} $（$\vec{E}$是最后的总电场强度）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;电位移矢量&lt;/td&gt;
+          &lt;td&gt;$ \vec{D} = \varepsilon_0 \vec{E} + \vec{P} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;电位移高斯定理&lt;/td&gt;
+          &lt;td&gt;$ \oiint \vec{D} \cdot d\vec{S} = Q_{\text{自由}} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;磁场&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;比奥萨法尔定律&lt;/td&gt;
+          &lt;td&gt;$d\vec{B} = \dfrac{\mu_0}{4\pi} \cdot \dfrac{I d\vec{l} \times \hat{r}}{r^2}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;（有磁介质$\mu_0\to \mu=\mu_r\mu_0$）&lt;/td&gt;
+          &lt;td&gt;安培环路定理&lt;/td&gt;
+          &lt;td&gt;$ \oint \vec{B} \cdot d\vec{l} = \mu_0 I $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;磁感线闭合&lt;/td&gt;
+          &lt;td&gt;$\oint \vec{B} \cdot d\vec{S} = 0$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;洛伦兹力&lt;/td&gt;
+          &lt;td&gt;$\vec{F} = q \vec{v} \times \vec{B}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;安培力&lt;/td&gt;
+          &lt;td&gt;$\vec{F} = \int_L Id\vec{l}\times\vec{B}  $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;磁力矩（磁偶极子）&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;磁矩&lt;/td&gt;
+          &lt;td&gt;$\vec{m} = IS\vec{e}_n$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;磁力矩&lt;/td&gt;
+          &lt;td&gt;$\vec{M}_b = \vec{m}\times \vec{B}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;能量&lt;/td&gt;
+          &lt;td&gt;$E_b = -\vec{m}\cdot \vec{B}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;感应电动势&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;感应电动势&lt;/td&gt;
+          &lt;td&gt;$\mathscr{E} = -N\dfrac{d\Phi_B}{dt}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;磁通量&lt;/td&gt;
+          &lt;td&gt;$\Phi_B = \int \vec{B} \cdot d\vec{A}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;导体棒动生电动势&lt;/td&gt;
+          &lt;td&gt;$\mathscr{E} = B l v$（$B, l, v$ 两两垂直）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;自感电动势&lt;/td&gt;
+          &lt;td&gt;$\mathscr{E} = -L \dfrac{dI}{dt}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;互感电动势&lt;/td&gt;
+          &lt;td&gt;$\mathscr{E}=-M_{21}{d I_1\over dt}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;电感储能&lt;/td&gt;
+          &lt;td&gt;$W_B = \dfrac{1}{2} L I^2$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;（有磁介质$\mu_0\to \mu=\mu_r\mu_0$）&lt;/td&gt;
+          &lt;td&gt;磁场能量密度&lt;/td&gt;
+          &lt;td&gt;$w_b = \dfrac{1}{2\mu_0} B^2$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;磁介质&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;磁感应强度&lt;/td&gt;
+          &lt;td&gt;$\vec{B} = \mu_0 (\vec{H} + \vec{M})$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;磁导率关系&lt;/td&gt;
+          &lt;td&gt;$\mu = \mu_0 (1 + \chi_m) = \mu_0 \mu_r$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;磁场强度&lt;/td&gt;
+          &lt;td&gt;$\vec{H} = \dfrac{1}{\mu} \vec{B}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;磁化强度&lt;/td&gt;
+          &lt;td&gt;$\vec{M} = \chi_m \vec{H}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;安培环路定理&lt;/td&gt;
+          &lt;td&gt;$\oint_L \vec{H}\cdot d\vec{l} = I$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Maxwell方程组&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;高斯定理&lt;/td&gt;
+          &lt;td&gt;$\oint_S \vec{E}\cdot d\vec{S} = Q/\varepsilon_0$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;$\oint_S \vec{D}\cdot d\vec{S} = Q$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;变化的磁场会产生感应电场&lt;/td&gt;
+          &lt;td&gt;$\oint_L \vec{E}\cdot d\vec{l}=-\int_S {\partial \vec{B}\over \partial t}\cdot d\vec{S}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;磁场无源&lt;/td&gt;
+          &lt;td&gt;$\oint_S \vec{B}\cdot d\vec{S}=0$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;安培环路定理&lt;/td&gt;
+          &lt;td&gt;$\oint_L\vec{B}\cdot d\vec{l} = \mu_0 I+\mu_0\varepsilon_0 \int_S {\partial \vec{E}\over \partial t}\cdot d\vec{S} $&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;$\oint_L\vec{H}\cdot d\vec{l} = I+\int_S {\partial \vec{D}\over \partial t}\cdot d\vec{S} $&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;有几个公式有bug，有空改一下。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        </item>
+        <item>
         <title>大学物理——力学</title>
         <link>https://Dawn-19.github.io/p/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%8A%9B%E5%AD%A6/</link>
         <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
