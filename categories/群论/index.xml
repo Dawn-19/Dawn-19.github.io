@@ -7,7 +7,130 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Dawn-19</copyright>
-        <lastBuildDate>Sun, 12 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E7%BE%A4%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 26 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E7%BE%A4%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>群论——点群简介</title>
+        <link>https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%82%B9%E7%BE%A4%E7%AE%80%E4%BB%8B/</link>
+        <pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%82%B9%E7%BE%A4%E7%AE%80%E4%BB%8B/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%82%B9%E7%BE%A4%E7%AE%80%E4%BB%8B/firstpage.png" alt="Featured image of post 群论——点群简介" /&gt;&lt;h1 id=&#34;点群简介&#34;&gt;点群简介
+&lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;由于这部分知识在本人的研究方向应用较少，加之时间有限，所以只是非常粗略地整理了一下。此外，本文的图片都是豆包AI生成，内容主要参考黄飞老师的PPT。&lt;/p&gt;
+&lt;h2 id=&#34;正多面体的固有对称变换群&#34;&gt;正多面体的固有对称变换群
+&lt;/h2&gt;&lt;h3 id=&#34;正多面体&#34;&gt;正多面体
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;定义：各个面都是全等的正多边形且各个多面角都相同的多面体 .
+&lt;ul&gt;
+&lt;li&gt;可以证明&lt;strong&gt;只存在正四、六、八、十二、二十面体&lt;/strong&gt; .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;正 $N$ 面体的侧面是 $N$ 个全等的正多边形 .&lt;/li&gt;
+&lt;li&gt;对偶正多面体
+&lt;ul&gt;
+&lt;li&gt;正四面体 $\leftrightarrow$ 正四面体，自对偶;&lt;/li&gt;
+&lt;li&gt;正六面体 $\leftrightarrow$ 正八面体；&lt;/li&gt;
+&lt;li&gt;正十二面体 $\leftrightarrow$ 正二十面体.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;t-群&#34;&gt;$T$ 群
+&lt;/h3&gt;&lt;img src=&#34;Pastedimage20251022193610.png&#34; alt=&#34;Pastedimage20251022193610&#34; style=&#34;zoom:15%;&#34; /&gt;
+&lt;p&gt;正四面体为自对偶正多面体，其对称变换群为 $T$ 群 .&lt;/p&gt;
+&lt;p&gt;如图所示，正四面体对称变换 $\to$ 正六面体对称变换（正六面体对称变换不一定是正四面体对称变换）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$T_{x}^2, T_{y}^2, T_{z}^2$表示绕 $x,y,z$ 轴转动$\pi$;&lt;/li&gt;
+&lt;li&gt;$R_j,; j=1,2,3,4$，分别表示$A_{1},B_{2},A_{3},B_{4}$为正方向的体对角线转动 $2\pi /3$ .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$T$ 群的性质&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;12阶：$3+8+1$ ，其中 $1$ 为恒元；&lt;/li&gt;
+&lt;li&gt;$3$ 个二次轴 $(T_{i})$，$OX,OZ,OY$ ;&lt;/li&gt;
+&lt;li&gt;$4$ 个三次轴 $(R_{j})$， 正方体体对角线，三次轴不是双向轴.&lt;/li&gt;
+&lt;li&gt;群的秩为 $2$ ，生成元可以为 ${T_{x}^2,R_{1}}$；&lt;/li&gt;
+&lt;li&gt;子群：
+$$
+\begin{align}
+&amp;\{E,T_{i}^2\}~,\quad \{E,R_{j}, R_{j}^2\}~,
+\\
+&amp;\{E,T_{x}^2,T_{y}^2,T_{z}^2\}\; \to \text{不变子群} ~.
+\end{align}
+$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;o-群&#34;&gt;$O$ 群
+&lt;/h3&gt;&lt;img src=&#34;Pastedimage20251022195829.png&#34; alt=&#34;Pastedimage20251022195829&#34; style=&#34;zoom:15%;&#34; /&gt;
+&lt;p&gt;立方体与正八面体互为对偶正多面体，它们有相同的对换变换群$O$ 群 .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$T_{x}, T_{y}, T_{z}$表示绕 $x,y,z$ 轴转动$\pi / 2$ ;&lt;/li&gt;
+&lt;li&gt;$R_j,; j=1,2,3,4$，分别表示$A_{1},B_{2},A_{3},B_{4}$为正方向的体对角线转动 $2\pi /3$ ;&lt;/li&gt;
+&lt;li&gt;$S_{k},; k=1,\dots,6$，分别表示绕 $6$ 对立方体相对楞中点的连线（二次轴）转动 $\pi$，比如 $S_{1}$可以表示绕 $A_{3}B_{1}$中点与$A_{1}B_{3}$中点连线转动 $\pi$ .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$O$群的性质&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$24$ 阶：$3\times {3}+4 \times 2 + 6 +1$，其中 $1$ 为恒元；&lt;/li&gt;
+&lt;li&gt;$3 \times 3$：$3$ 个双向四次轴 $T_{i}$ ；&lt;/li&gt;
+&lt;li&gt;$4 \times 2$：$4$ 个双向二次轴 $S_{j}$ ；&lt;/li&gt;
+&lt;li&gt;$6 \times 1$：$6$ 个二次轴；&lt;/li&gt;
+&lt;li&gt;秩为 $2$ ，生成元可以为 ${R_{x},R_{1}}$ .&lt;/li&gt;
+&lt;li&gt;子群&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{align}
+&amp;\{E, T_i^2\} \quad (i = x, y, z) \\
+&amp;\{E, S_k\} \quad (k = 1\sim 6) \\
+&amp;\{E, R_j, R_j^2\} \quad (j = 1\sim 4) \\
+&amp;\{E, T_i, T_i^2, T_i^3\} \quad (i = x, y, z) \\
+&amp;\{E, T_x^2, T_y^2, T_z^2\} \quad (\text{不变子群，} O/V_4 \approx D_3) \\
+&amp;\{E, T_x^2, S_3, S_4\} \\
+&amp;\{E, T_y^2, S_5, S_6\} \\
+&amp;\{E, T_z^2, S_1, S_2\} \\
+&amp;\{E, T_x^2, T_y^2, T_z^2, S_1, S_2, T_z, T_z^3\} \\
+&amp;\{E, T_x^2, T_y^2, T_z^2, S_3, S_4, T_x, T_x^3\} \\
+&amp;\{E, T_x^2, T_y^2, T_z^2, S_5, S_6, T_y, T_y^3\} \\
+&amp;\{E, T_x^2, T_y^2, T_z^2, R_1, R_1^2, R_2, R_2^2, R_3, R_3^2, R_4, R_4^2\} \quad (\text{不变子群，} O/T \approx C_2)
+\end{align}
+$$&lt;ul&gt;
+&lt;li&gt;类&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{align}
+&amp;\{E\}~,\quad \{S_{k}|k \in \{1,2,\dots,6\} \}~,
+\\
+&amp;\{R_{j},R_{j}^2| j \in \{1,2,3,4\} \}~,  
+\\
+&amp;\{ T_{i},T_{i}^3| i \in \{x,y,z\} \}~,\quad \{ T_{i}^2| i \in \{x,y,z\} \}~.
+\end{align}
+$$&lt;h3 id=&#34;y-群&#34;&gt;$Y$ 群
+&lt;/h3&gt;&lt;img src=&#34;Pastedimage20251022202511.png&#34; alt=&#34;Pastedimage20251022202511&#34; style=&#34;zoom:15%;&#34; /&gt;
+&lt;p&gt;正二十面体和正十二面体互为对偶多面体，有相同的固有对称变换群 $Y$ 群 .&lt;/p&gt;
+&lt;p&gt;$Y$ 群的性质&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$60$ 阶，$6\times 4 + 10 \times 2 + 15 +1$；&lt;/li&gt;
+&lt;li&gt;$6 \times 4$： $6$ 个五次轴，正二十面体的$6$个相对顶点连线；&lt;/li&gt;
+&lt;li&gt;$10 \times 2$：$10$ 个三次轴，两个相对侧面中心的连线$A_{0}\to B_{3}\to B_{5},A_{1}\to B_{4}\to A_{2}$ ；&lt;/li&gt;
+&lt;li&gt;$15\times 1$：正二十面体相对棱中点的连线$A_{0}\to B_{4}$；&lt;/li&gt;
+&lt;li&gt;类（会分析即可）：恒元自成一类，绕 $6$ 个五次轴正、逆转$\frac{2\pi}{5}$是一类，正、逆转$\frac{4\pi}{5}$是一类（顶点可以互换，且自逆类）；绕 $10$ 个三次轴的 $20$ 个元素是一类；绕 $15$ 个二次轴转动的 $15$ 个元素是一类 .&lt;/li&gt;
+&lt;li&gt;无非平庸不变子群 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;固有点群&#34;&gt;固有点群
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;点群：保持一个点（所有对称轴的交点）位置不变的对称操作构成的群 .&lt;/li&gt;
+&lt;li&gt;固有转动：$3-$dim 空间中的纯转动 （不改变手性）.&lt;/li&gt;
+&lt;li&gt;非固有转动：固有转动 $+$ 空间反演 （改变手性）.&lt;/li&gt;
+&lt;li&gt;固有点群：由固有转动的集合构成的点群，为 $SO(3)$ 的有限子群；
+&lt;ul&gt;
+&lt;li&gt;一共有五种，$C_{n},D_{n},T,O,Y$ .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;非固有点群&lt;/strong&gt;：由固有转动&lt;strong&gt;和&lt;/strong&gt;非固有转动的集合构成的点群，为$O(3)$的子群 .
+&lt;ul&gt;
+&lt;li&gt;$I$ 型非固有点群 : 含空间反演 $I$ ，$G = H \cup I H = H\otimes V_{2}$，其中$H$为（五种）固有点群之一 .&lt;/li&gt;
+&lt;li&gt;$P$ 型非固有点群，不含空间反演 $I$ ，由固有点群 $G$ 指数为 $2$ 的不变子群 $H \cup IAH$ 构成，其中 $AH$ 为不变子群的陪集，即 $A \in G, A\notin H$ .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>群论——群的基本概念</title>
         <link>https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
         <pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>

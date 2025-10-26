@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="关于连续型卷积和离散型卷积的介绍。">
-<title>学习笔记-卷积(convolution)</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="点群知识的整理（非常简洁）">
+<title>群论——点群简介</title>
 
-<link rel='canonical' href='https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/'>
+<link rel='canonical' href='https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%82%B9%E7%BE%A4%E7%AE%80%E4%BB%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="学习笔记-卷积(convolution)">
-<meta property='og:description' content="关于连续型卷积和离散型卷积的介绍。">
-<meta property='og:url' content='https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/'>
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="群论——点群简介">
+<meta property='og:description' content="点群知识的整理（非常简洁）">
+<meta property='og:url' content='https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%82%B9%E7%BE%A4%E7%AE%80%E4%BB%8B/'>
 <meta property='og:site_name' content='Dawn-19'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-11T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-11T00:00:00&#43;00:00'/><meta property='og:image' content='https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/sea.png' />
-<meta name="twitter:title" content="学习笔记-卷积(convolution)">
-<meta name="twitter:description" content="关于连续型卷积和离散型卷积的介绍。"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://Dawn-19.github.io/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/sea.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-10-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-10-26T00:00:00&#43;00:00'/><meta property='og:image' content='https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%82%B9%E7%BE%A4%E7%AE%80%E4%BB%8B/firstpage.png' />
+<meta name="twitter:title" content="群论——点群简介">
+<meta name="twitter:description" content="点群知识的整理（非常简洁）"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://Dawn-19.github.io/p/%E7%BE%A4%E8%AE%BA%E7%82%B9%E7%BE%A4%E7%AE%80%E4%BB%8B/firstpage.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -342,13 +342,15 @@ l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
             <nav id="TableOfContents">
   <ol>
     <li><a href="#前言">前言</a></li>
-    <li><a href="#数学物理方法中的卷积连续型卷积">数学物理方法中的卷积——连续型卷积</a></li>
-    <li><a href="#神经网络中的卷积离散型卷积">神经网络中的卷积——离散型卷积</a>
+    <li><a href="#正多面体的固有对称变换群">正多面体的固有对称变换群</a>
       <ol>
-        <li><a href="#一维离散卷积">一维离散卷积</a></li>
-        <li><a href="#二维离散卷积">二维离散卷积</a></li>
+        <li><a href="#正多面体">正多面体</a></li>
+        <li><a href="#t-群">$T$ 群</a></li>
+        <li><a href="#o-群">$O$ 群</a></li>
+        <li><a href="#y-群">$Y$ 群</a></li>
       </ol>
     </li>
+    <li><a href="#固有点群">固有点群</a></li>
   </ol>
 </nav>
         </div>
@@ -363,13 +365,13 @@ l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/">
-                <img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/sea_hu_b92433cceb484942.png"
-                        srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/sea_hu_b92433cceb484942.png 800w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/sea_hu_f5044a6ce28d69b9.png 1600w"
+            <a href="/p/%E7%BE%A4%E8%AE%BA%E7%82%B9%E7%BE%A4%E7%AE%80%E4%BB%8B/">
+                <img src="/p/%E7%BE%A4%E8%AE%BA%E7%82%B9%E7%BE%A4%E7%AE%80%E4%BB%8B/firstpage_hu_8f0d167fed615e71.png"
+                        srcset="/p/%E7%BE%A4%E8%AE%BA%E7%82%B9%E7%BE%A4%E7%AE%80%E4%BB%8B/firstpage_hu_8f0d167fed615e71.png 800w, /p/%E7%BE%A4%E8%AE%BA%E7%82%B9%E7%BE%A4%E7%AE%80%E4%BB%8B/firstpage_hu_db0c113459adc6e4.png 1600w"
                         width="800" 
-                        height="450" 
+                        height="448" 
                         loading="lazy"
-                        alt="Featured image of post 学习笔记-卷积(convolution)" />
+                        alt="Featured image of post 群论——点群简介" />
                 
             </a>
         </div>
@@ -379,12 +381,8 @@ l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
     
     <header class="article-category">
         
-            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" >
-                学习笔记
-            </a>
-        
-            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" >
-                机器学习
+            <a href="/categories/%E7%BE%A4%E8%AE%BA/" >
+                群论
             </a>
         
     </header>
@@ -392,12 +390,12 @@ l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/">学习笔记-卷积(convolution)</a>
+            <a href="/p/%E7%BE%A4%E8%AE%BA%E7%82%B9%E7%BE%A4%E7%AE%80%E4%BB%8B/">群论——点群简介</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            关于连续型卷积和离散型卷积的介绍。
+            点群知识的整理（非常简洁）
         </h3>
         
     </div>
@@ -418,7 +416,7 @@ l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Feb 11, 2025</time>
+                <time class="article-time--published">Oct 26, 2025</time>
             </div>
         
 
@@ -434,164 +432,121 @@ l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
     <section class="article-content">
     
     
-    <h1 id="卷积convolution">卷积(Convolution)
+    <h1 id="点群简介">点群简介
 </h1><h2 id="前言">前言
-</h2><p>第一次听说“卷积”这个词还是在大一时，在完成Matlab的一道<strong>设计扫雷游戏</strong>的一道课后题，许多同学用所谓的卷积方法，当时的我对此完全不理解，只是自己设计了一套循环来做计算。后来学习了一点卷积神经网络的知识，发现自己用的方法和所谓的卷积其实一回事情。然而，在大二学习数学物理方法后，即使经过繁多的计算训练，当时的我却迟迟无法把课本里的卷积和神经网络中的卷积联系起来，这是一件很遗憾的事情。现在随着AI4S的火热，我也打算重新系统性地学习一遍机器学习的有关知识，故有了这篇note，也弥补了当时的遗憾。</p>
-<h2 id="数学物理方法中的卷积连续型卷积">数学物理方法中的卷积——连续型卷积
-</h2><p>根据wiki百科，卷积是通过两个函数$f$和$g$生成第三个函数的一种数学算子，表征函数$f$与经过翻转和平移的$g$的乘积函数所围成的曲边梯形的面积。简单来说就是对于定义在实数域$\mathbb{R}$的两个可积函数$ f(t) $与$ g(t) $的一种运算：</p>
-$$
-s(t) = (f*g)(t) = f(t)*g(t) = \int_{-\infty}^{\infty} f(\tau)g(t-\tau)\mathrm{d}\tau ,
-$$<p>一般可以认为$ g(t) $是卷积核，它随着自变量移动。下图非常直观地解释了这种运算，如$ f*g $是蓝色的$ f $不移动，红色的$ g $一直在往右边走。</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution.png"
-	width="1280"
-	height="960"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution_hu_f32ff4fb3e9ae629.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution_hu_3d8eb1d8d9a82307.png 1024w"
-	loading="lazy"
-	
-		alt="undefined"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="133"
-		data-flex-basis="320px"
-	
-></p>
-<p>此外，卷积具有如下性质</p>
+</h2><p>由于这部分知识在本人的研究方向应用较少，加之时间有限，所以只是非常粗略地整理了一下。此外，本文的图片都是豆包AI生成，内容主要参考黄飞老师的PPT。</p>
+<h2 id="正多面体的固有对称变换群">正多面体的固有对称变换群
+</h2><h3 id="正多面体">正多面体
+</h3><ul>
+<li>定义：各个面都是全等的正多边形且各个多面角都相同的多面体 .
 <ul>
-<li><strong>linearity:</strong> $(a_1 f(t) + a_2 f(t))*g(t) = a_1 f(t)*g(t)+a_2f(t)*g(t)$.</li>
-<li><strong>time invariance:</strong>  $f(t-T) * g(t-T) = (f*g)(t-2T), f(t) g(t-T) = (f * g)(t-T)$ .</li>
+<li>可以证明<strong>只存在正四、六、八、十二、二十面体</strong> .</li>
 </ul>
-<p>在频域上的联系：对于$ f(t) $和$ g(t) $有傅里叶变换</p>
+</li>
+<li>正 $N$ 面体的侧面是 $N$ 个全等的正多边形 .</li>
+<li>对偶正多面体
+<ul>
+<li>正四面体 $\leftrightarrow$ 正四面体，自对偶;</li>
+<li>正六面体 $\leftrightarrow$ 正八面体；</li>
+<li>正十二面体 $\leftrightarrow$ 正二十面体.</li>
+</ul>
+</li>
+</ul>
+<h3 id="t-群">$T$ 群
+</h3><img src="Pastedimage20251022193610.png" alt="Pastedimage20251022193610" style="zoom:15%;" />
+<p>正四面体为自对偶正多面体，其对称变换群为 $T$ 群 .</p>
+<p>如图所示，正四面体对称变换 $\to$ 正六面体对称变换（正六面体对称变换不一定是正四面体对称变换）</p>
+<ul>
+<li>$T_{x}^2, T_{y}^2, T_{z}^2$表示绕 $x,y,z$ 轴转动$\pi$;</li>
+<li>$R_j,; j=1,2,3,4$，分别表示$A_{1},B_{2},A_{3},B_{4}$为正方向的体对角线转动 $2\pi /3$ .</li>
+</ul>
+<p>$T$ 群的性质</p>
+<ul>
+<li>12阶：$3+8+1$ ，其中 $1$ 为恒元；</li>
+<li>$3$ 个二次轴 $(T_{i})$，$OX,OZ,OY$ ;</li>
+<li>$4$ 个三次轴 $(R_{j})$， 正方体体对角线，三次轴不是双向轴.</li>
+<li>群的秩为 $2$ ，生成元可以为 ${T_{x}^2,R_{1}}$；</li>
+<li>子群：
 $$
-\begin{split}
-F(\omega) = \mathcal{F}\left[f(t)\right] = \int_{-\infty}^\infty f(t)e^{-i\omega t}\mathrm{d}t  ,\\
-G(\omega) = \mathcal{F}\left[g(t)\right] = \int_{-\infty}^\infty g(t)e^{-i\omega t}\mathrm{d}t  ,
-\end{split}
-$$<p>有如下关系</p>
-<ol>
-<li>$\mathcal{F}[f(t)*g(t)] = F(\omega)G(\omega) .$</li>
-<li>$\mathcal{F}[f(t) \cdot g(t)] = F(\omega)*G(\omega) .$</li>
-</ol>
-<p>多变量卷积公式：</p>
-$$
-\begin{aligned}
-f(t_1,t_2,...,t_n)*g(t_1,t_2,...,t_n) &= \iint\cdots\int_{\mathbb{R}^n}f(\tau_1,\tau_2,...,\tau_n)g(t_1-\tau_1,t_2-\tau_2,...,t_n-\tau_n)\mathrm{d}\tau_1\mathrm{d}\tau_2\cdots\mathrm{d}\tau_n\\
-& = \int_{\mathbb{R}^n}\mathrm{d}^n \tau f(\tau)g(t-\tau) .
-\end{aligned}
-$$<h2 id="神经网络中的卷积离散型卷积">神经网络中的卷积——离散型卷积
-</h2><h3 id="一维离散卷积">一维离散卷积
-</h3><p>对于离散数据，如下为两种等价的记号</p>
-$$
-\left\{\begin{matrix}
- x:  x_0,x_1 , ..., x_{N-1}
+\begin{align}
+&\{E,T_{i}^2\}~,\quad \{E,R_{j}, R_{j}^2\}~,
 \\
-\omega:  \omega_0, \omega_1, ..., \omega_{M-1}
-\end{matrix}\right.
-\Leftrightarrow 
-\left\{\begin{matrix}
- x[n]: n= 0,1 , ..., N-1
+&\{E,T_{x}^2,T_{y}^2,T_{z}^2\}\; \to \text{不变子群} ~.
+\end{align}
+$$</li>
+</ul>
+<h3 id="o-群">$O$ 群
+</h3><img src="Pastedimage20251022195829.png" alt="Pastedimage20251022195829" style="zoom:15%;" />
+<p>立方体与正八面体互为对偶正多面体，它们有相同的对换变换群$O$ 群 .</p>
+<ul>
+<li>$T_{x}, T_{y}, T_{z}$表示绕 $x,y,z$ 轴转动$\pi / 2$ ;</li>
+<li>$R_j,; j=1,2,3,4$，分别表示$A_{1},B_{2},A_{3},B_{4}$为正方向的体对角线转动 $2\pi /3$ ;</li>
+<li>$S_{k},; k=1,\dots,6$，分别表示绕 $6$ 对立方体相对楞中点的连线（二次轴）转动 $\pi$，比如 $S_{1}$可以表示绕 $A_{3}B_{1}$中点与$A_{1}B_{3}$中点连线转动 $\pi$ .</li>
+</ul>
+<p>$O$群的性质</p>
+<ul>
+<li>$24$ 阶：$3\times {3}+4 \times 2 + 6 +1$，其中 $1$ 为恒元；</li>
+<li>$3 \times 3$：$3$ 个双向四次轴 $T_{i}$ ；</li>
+<li>$4 \times 2$：$4$ 个双向二次轴 $S_{j}$ ；</li>
+<li>$6 \times 1$：$6$ 个二次轴；</li>
+<li>秩为 $2$ ，生成元可以为 ${R_{x},R_{1}}$ .</li>
+<li>子群</li>
+</ul>
+$$
+\begin{align}
+&\{E, T_i^2\} \quad (i = x, y, z) \\
+&\{E, S_k\} \quad (k = 1\sim 6) \\
+&\{E, R_j, R_j^2\} \quad (j = 1\sim 4) \\
+&\{E, T_i, T_i^2, T_i^3\} \quad (i = x, y, z) \\
+&\{E, T_x^2, T_y^2, T_z^2\} \quad (\text{不变子群，} O/V_4 \approx D_3) \\
+&\{E, T_x^2, S_3, S_4\} \\
+&\{E, T_y^2, S_5, S_6\} \\
+&\{E, T_z^2, S_1, S_2\} \\
+&\{E, T_x^2, T_y^2, T_z^2, S_1, S_2, T_z, T_z^3\} \\
+&\{E, T_x^2, T_y^2, T_z^2, S_3, S_4, T_x, T_x^3\} \\
+&\{E, T_x^2, T_y^2, T_z^2, S_5, S_6, T_y, T_y^3\} \\
+&\{E, T_x^2, T_y^2, T_z^2, R_1, R_1^2, R_2, R_2^2, R_3, R_3^2, R_4, R_4^2\} \quad (\text{不变子群，} O/T \approx C_2)
+\end{align}
+$$<ul>
+<li>类</li>
+</ul>
+$$
+\begin{align}
+&\{E\}~,\quad \{S_{k}|k \in \{1,2,\dots,6\} \}~,
 \\
-\omega[n]: n= 0,1 , ..., M-1
-\end{matrix}\right.  .
-$$<p>一般$x$为$N-1$个输入数据，$\omega$为卷积核，其长度为$M$，卷积的过程与连续的情况类似，这里$\omega$仍然是移动的，卷积的计算公式为</p>
-$$
-s[n] = \sum_{m=\max(0,n-N)}^{\min(n,M)} x[m]\cdot\omega[n-m] ,\quad n=0.1,...,M+N-2
-$$<p>上式看似繁琐，不过可以举个简单的例子就会发现其并不复杂，对于$N=4, M=3 $的情况而言，有
-</p>
-$$
-\begin{split}
-s_0 &= \omega_0 x_0\\
-s_1 &= \omega_0 x_1 + \omega_1 x_0 \\
-s_2 &= \omega_0 x_2 + \omega_1 x_1 + \omega_2 x_0\\
-s_3 &= \omega_0 x_3 + \omega_1 x_2 + \omega_2 x_1 \\
-s_4 &= \omega_1 x_3 + \omega_2 x_2\\
-s_5 &= \omega_2 x_3
-\end{split}
-$$<p>也可以如下图理解</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution2.jpg"
-	width="1650"
-	height="406"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution2_hu_a2454d1258bba4ae.jpg 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution2_hu_a5d3239f60fd3a50.jpg 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="406"
-		data-flex-basis="975px"
-	
-></p>
-<p>此外，还可以将其写作矩阵形式$(N=4, M=3)$:</p>
-$$
-\mathbf{s} = \begin{bmatrix}
-s_0 & s_1 & \cdots & s_k
-\end{bmatrix} = \begin{bmatrix}
-x_0 & x_1 & \cdots & x_k
-\end{bmatrix} \cdot
-\begin{bmatrix}
- \omega_0 &  \omega_1 &  \omega_2 & 0 & 0 & 0 \\
-0 &  \omega_0 &  \omega_1 &  \omega_2 & 0 & 0 \\
-0 & 0 &  \omega_0 &  \omega_1 &  \omega_2 & 0 \\
-0 & 0 & 0 &  \omega_0 &  \omega_1 &  \omega_2   
-\end{bmatrix} = \mathbf{x} \cdot \mathbf{\omega}
-$$<p>对于深度学习，数据有一个深度的维度，值得注意的是输入数据与卷积核的深度必须是相同的，前面的例子深度都是1，下图是一个深度为3的例子，其中$K$代表卷积核，数据变换格式：[样本个数, 深度，样本长度]，即有</p>
-$$
-[x]*[K]\to [y] , \Rightarrow[1,3,3]*[1,3,3]\to [1,1,3] ,
-$$<p>第一个$[1,1,3]$代表输入数据，第二个$[1,3,3]$代表卷积核，第三个$[1,1,3]$代表输出数据。</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution3.jpg"
-	width="935"
-	height="459"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution3_hu_11378160284d2406.jpg 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution3_hu_64d5b2d906e060bd.jpg 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="203"
-		data-flex-basis="488px"
-	
-></p>
-<p>此外，还有<strong>多个卷积核</strong>的情况，实际就是把输入数据与每一个卷积核做卷积，再将卷积的结果在<strong>深度方向</strong>上连接得到一个输出张量，如下图所示</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution4.jpg"
-	width="957"
-	height="587"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution4_hu_6d396b1efee774e7.jpg 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/convolution4_hu_4ddf65e3e1b7e3c6.jpg 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="163"
-		data-flex-basis="391px"
-	
-></p>
-<p>其数据格式变换为：$[1,3,3]*[2,3,2]\to [1,2,3] ,$ 这里由于卷积核2的存在，其结果放在输出数据的深度方向上与卷积核1的结果连接起来。</p>
-<h3 id="二维离散卷积">二维离散卷积
-</h3><p>对于二维的情况，原来的数据格式 [样本个数, 深度，样本长度] 需要变为 [样本个数, 深度，样本长度，样本宽度]，也就是数据个数这一栏需要加一个维度，其过程如下图所示</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/Conv2d_0p_1s_1inCh.gif"
-	width="1246"
-	height="484"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/Conv2d_0p_1s_1inCh_hu_5d09fca31c46d41a.gif 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/Conv2d_0p_1s_1inCh_hu_874ce3fc83db2f2e.gif 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="257"
-		data-flex-basis="617px"
-	
-></p>
-<p>上图的数据格式变换为：</p>
-$$
-[1,1,5,5]*[1,1,3,3]\to [1,1,3,3]
-$$<p>对于增加深度维度，以及多个卷积核的运算过程和一维离散的情况完全相同，这里不再赘述。</p>
-<p>对于开头提到的扫雷游戏的设计其实就是一个二维卷积，把整个扫雷的地图变成矩阵，同时最外圈用0拓展，每一个位置就是矩阵中对应的位置，那么只需要把有雷的位置设置为1，我们称这个矩阵为地图矩阵。通过一个$3\times3$的除了中间位置是0其它全是1的矩阵作为卷积核，那么把地图矩阵和卷积核作卷积即可得到对应的结果，即地图上每个位置周围的雷的个数。</p>
-<p>当然，卷积可不仅仅用在扫雷上如此简单，其在深度学习的图像处理发挥很大的作用，例如在深度学习中，卷积神经网络（CNN）利用卷积操作来提取图像的特征。与扫雷游戏中的简单卷积不同，深度学习中的卷积核通常是可学习的参数，通过训练数据来自动调整，以捕捉图像中的有用特征。这些特征可以用于各种任务，如图像分类、目标检测和图像分割。</p>
-<p><strong>参考：</strong></p>
-<blockquote>
-<p><a class="link" href="https://slides.com/iphysresearch/gwda_coding_4_cnn#/5/3"  target="_blank" rel="noopener"
-    >https://slides.com/iphysresearch/gwda_coding_4_cnn#/5/3</a></p>
-<p><a class="link" href="https://coolgpu.github.io/coolgpu_blog/github/pages/2020/10/04/convolution.html"  target="_blank" rel="noopener"
-    >https://coolgpu.github.io/coolgpu_blog/github/pages/2020/10/04/convolution.html</a></p>
-<p><a class="link" href="https://en.wikipedia.org/wiki/Convolution"  target="_blank" rel="noopener"
-    >https://en.wikipedia.org/wiki/Convolution</a></p>
-</blockquote>
+&\{R_{j},R_{j}^2| j \in \{1,2,3,4\} \}~,  
+\\
+&\{ T_{i},T_{i}^3| i \in \{x,y,z\} \}~,\quad \{ T_{i}^2| i \in \{x,y,z\} \}~.
+\end{align}
+$$<h3 id="y-群">$Y$ 群
+</h3><img src="Pastedimage20251022202511.png" alt="Pastedimage20251022202511" style="zoom:15%;" />
+<p>正二十面体和正十二面体互为对偶多面体，有相同的固有对称变换群 $Y$ 群 .</p>
+<p>$Y$ 群的性质</p>
+<ul>
+<li>$60$ 阶，$6\times 4 + 10 \times 2 + 15 +1$；</li>
+<li>$6 \times 4$： $6$ 个五次轴，正二十面体的$6$个相对顶点连线；</li>
+<li>$10 \times 2$：$10$ 个三次轴，两个相对侧面中心的连线$A_{0}\to B_{3}\to B_{5},A_{1}\to B_{4}\to A_{2}$ ；</li>
+<li>$15\times 1$：正二十面体相对棱中点的连线$A_{0}\to B_{4}$；</li>
+<li>类（会分析即可）：恒元自成一类，绕 $6$ 个五次轴正、逆转$\frac{2\pi}{5}$是一类，正、逆转$\frac{4\pi}{5}$是一类（顶点可以互换，且自逆类）；绕 $10$ 个三次轴的 $20$ 个元素是一类；绕 $15$ 个二次轴转动的 $15$ 个元素是一类 .</li>
+<li>无非平庸不变子群 .</li>
+</ul>
+<h2 id="固有点群">固有点群
+</h2><ul>
+<li>点群：保持一个点（所有对称轴的交点）位置不变的对称操作构成的群 .</li>
+<li>固有转动：$3-$dim 空间中的纯转动 （不改变手性）.</li>
+<li>非固有转动：固有转动 $+$ 空间反演 （改变手性）.</li>
+<li>固有点群：由固有转动的集合构成的点群，为 $SO(3)$ 的有限子群；
+<ul>
+<li>一共有五种，$C_{n},D_{n},T,O,Y$ .</li>
+</ul>
+</li>
+<li><strong>非固有点群</strong>：由固有转动<strong>和</strong>非固有转动的集合构成的点群，为$O(3)$的子群 .
+<ul>
+<li>$I$ 型非固有点群 : 含空间反演 $I$ ，$G = H \cup I H = H\otimes V_{2}$，其中$H$为（五种）固有点群之一 .</li>
+<li>$P$ 型非固有点群，不含空间反演 $I$ ，由固有点群 $G$ 指数为 $2$ 的不变子群 $H \cup IAH$ 构成，其中 $AH$ 为不变子群的陪集，即 $A \in G, A\notin H$ .</li>
+</ul>
+</li>
+</ul>
 
 </section>
 
@@ -654,95 +609,23 @@ $$<p>对于增加深度维度，以及多个卷积核的运算过程和一维离
             
                 
 <article class="has-image">
-    <a href="/p/%E7%94%A8mathematica%E9%AA%8C%E8%AF%81%E5%85%8B%E5%B0%94%E5%BA%A6%E8%A7%84/">
+    <a href="/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
         
         
             <div class="article-image">
-                <img src="/p/%E7%94%A8mathematica%E9%AA%8C%E8%AF%81%E5%85%8B%E5%B0%94%E5%BA%A6%E8%A7%84/774px-Spinning_and_chargend_black_hole_with_accretion_disk.a163a6a7f65d22108cd2067b4e509995_hu_2422880b006d567a.jpg" 
+                <img src="/p/%E7%BE%A4%E8%AE%BA%E7%BE%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/firstpage.c34772a3ccaf98f86bb63152b16f74ea_hu_1ec8d787844619e0.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
-                        alt="Featured image of post 用Mathematica验证克尔度规"
+                        alt="Featured image of post 群论——群的基本概念"
                         
-                        data-hash="md5-oWOmp/ZdIhCM0gZ7TlCZlQ==">
+                        data-hash="md5-w0dyo8yvmPhrtjFSsW906g==">
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">用Mathematica验证克尔度规</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E6%96%BD%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84schwarzchild-metric/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E6%96%BD%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84schwarzchild-metric/wallhaveny86gzx.96436f35145cc4b7362d1b53080115e0_hu_5931a1b6955ebdc0.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 施瓦西度规(Schwarzchild Metric)"
-                        
-                        data-hash="md5-lkNvNRRcxLc2LRtTCAEV4A==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">施瓦西度规(Schwarzchild Metric)</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/variation.21d5e70b37d9d9949a379bcc36820bf2_hu_97c73650a8b88881.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 学习笔记-相对论中的变分"
-                        
-                        data-hash="md5-IdXnCzfZ2ZSaN5vMNoIL8g==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">学习笔记-相对论中的变分</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/metric.415902e5169535907a22e03a16f01804_hu_62f1dc7c5e280c3.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 度规恒等式总结"
-                        
-                        data-hash="md5-QVkC5RaVNZB6IuA6FvAYBA==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">度规恒等式总结</h2>
+            <h2 class="article-title">群论——群的基本概念</h2>
         </div>
     </a>
 </article>
