@@ -7,7 +7,732 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Dawn-19</copyright>
-        <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 10 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GR的数学基础</title>
+        <link>https://Dawn-19.github.io/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</link>
+        <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/picture.png" alt="Featured image of post GR的数学基础" /&gt;&lt;h1 id=&#34;gr的数学基础&#34;&gt;GR的数学基础
+&lt;/h1&gt;&lt;h2 id=&#34;流形与张量场&#34;&gt;流形与张量场
+&lt;/h2&gt;&lt;h3 id=&#34;基本概念&#34;&gt;基本概念
+&lt;/h3&gt;&lt;p&gt;空间：由若干个（实）参数描述的一种点集&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;空间 $+$ 微分结构（可微性） ⇒ &lt;strong&gt;流形 (manifold)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;微分流形&lt;/strong&gt;：每一部分都像 $\mathbb{R}^n+$ 相容性，即流形上的每一片（坐标卡）可以光滑地连接起来，所有的坐标卡覆盖整个流形的集合，称为 $M$ 的地图册（atlas）.&lt;/p&gt;
+$$
+\text{chart: 流形上一片区域映射到一组数（坐标）}, \quad \text{atlas: 所有chart光滑拼合}
+$$&lt;img src=&#34;Screenshot_20251031_111348_com_jideos_jnotes_Note.jpg&#34; alt=&#34;Screenshot_20251031_111348_com_jideos_jnotes_Note&#34; style=&#34;zoom:25%;&#34; /&gt;
+&lt;p&gt;如图所示，对于微分流形 $M$，存在2个坐标卡 ${ x^\prime } , { x }$，对于其重叠区域（红色部分）存在光滑映射 $f: x^\prime \mapsto x$，则为光滑连接，即相容性 .&lt;/p&gt;
+&lt;p&gt;在 $2$ 个坐标系下&lt;/p&gt;
+$$
+ x^\mu= \left\{ x^1, x^2, \dots , x^n \right\},\quad \tilde{x}^\mu= \left\{ \tilde{x}^1 , \tilde{x}^2 ,\dots , \tilde{x} ^n  \right\}
+$$&lt;p&gt;可以给出坐标变换&lt;/p&gt;
+$$
+\mathrm{d}\tilde{x}^\mu= \frac{{\partial \tilde{x}^\mu}}{\partial x^\nu}\mathrm{d}x^\nu~,\quad \frac{{\partial}}{\partial \tilde{x}^\mu}=\frac{{\partial x^\nu}}{\partial \tilde{x}^\mu}\frac{{\partial}}{\partial x^\nu}~.
+$$&lt;h3 id=&#34;标量与张量&#34;&gt;标量与张量&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;满足如下坐标变换即为标量场：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\tilde{F}(\tilde{x})=F(x)~.
+$$&lt;ul&gt;
+&lt;li&gt;逆变矢量场：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\tilde{V}^\mu(\tilde{x})=\frac{{\partial \tilde{x}^\mu}}{\partial x^\nu}V^\nu(x)~.
+$$&lt;ul&gt;
+&lt;li&gt;协变矢量场：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\tilde{V}_{\mu}(\tilde{x})=\frac{{\partial x^\nu}}{\partial \tilde{x}^\mu}V_{\nu}(x)~.
+$$&lt;ul&gt;
+&lt;li&gt;$(p,q)$型张量场：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\tilde{T}^{\mu_{1}\mu_{2}\dots \mu_{p} }_{\quad\quad\quad \nu_{1}\nu_{2}\dots \nu_{q}} = \frac{{\partial \tilde{x}^{\mu_{1}} }}{\partial x^{\alpha_{1}}}\frac{{\partial \tilde{x}^{\mu_{2}} }}{\partial x^{\alpha_{2}}}\dots\frac{{\partial \tilde{x}^{\mu_{p}} }}{\partial x^{\alpha_{p}}}\cdot \frac{{\partial x^{\beta_{1}}}}{\partial \tilde{x}^{\nu_{1}}} \frac{{\partial x^{\beta_{2}}}}{\partial \tilde{x}^{\nu_{2}}}\dots\frac{{\partial x^{\beta_{q}}}}{\partial \tilde{x}^{\nu_{q}}}     T^{\alpha_{1}\alpha_{2}\dots\alpha_{p}}_{\quad\quad\quad \beta_{1}\beta_{2}\dots\beta_{q}}
+$$&lt;ul&gt;
+&lt;li&gt;张量的定义并不要求在所有 $x$ 上满足上述坐标变换，如果只是一个点（一条曲线）满足，那么称其为该一点（曲线）上的张量，，但是张量场必须满足在整个流形上满足上述坐标变换 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;张量的性质&#34;&gt;张量的性质
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;加减：同阶且指标相同的张量相加减仍为张量：$C_{\mu \nu}=A_{\mu \nu}\pm B_{\mu \nu}$ .&lt;/li&gt;
+&lt;li&gt;直乘：不同指标张量相乘结构认为张量，新的张量阶数为原张量阶数之和：$ C^{\mu} _{\ \nu} = A^\mu B _{\nu}$ .&lt;/li&gt;
+&lt;li&gt;缩并：$(p,q)$ 型张量有一上下相同的指标，代表对该指标进行求和，结果为 $(p-1,q-1)$ 型张量，例如，对于 $T^{\mu _{1} \dots \mu _{p}} _{\quad\quad;\nu _{1}\dots \nu _{q}}$ 有 $\mu _{p}=\nu _{q}=\sigma$&lt;/li&gt;
+&lt;/ul&gt;
+$$
+T^{\mu_{1}\dots \mu_{p}}_{\quad\quad\;\nu_{1}\dots \nu_{q}} = \sum_{\sigma}T^{\mu_{1}\dots {\sigma}}_{\quad\quad\;\nu_{1}\dots\sigma}=C^{\mu_{1}\dots \mu_{p-1}}_{\quad\quad\quad\nu_{1}\dots \nu_{q-1}}~,
+$$&lt;p&gt;这对于任意位置 $\mu_{\alpha}=\nu_{\beta}=\sigma$ 仍然成立 .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对称张量：交换 $2$ 个指标仍然相等，以二阶张量为例，即 $T_{\mu \nu}=T_{\nu \mu}$ .&lt;/li&gt;
+&lt;li&gt;反对称张量：交换 $2$ 个指标互为相反，以二阶张量为例，即 $T_{\mu \nu}=-T_{\nu \mu}$ .&lt;/li&gt;
+&lt;li&gt;对称分解：任意二阶张量都可以唯一分解为对称部分 $S^{\mu \nu}$ 和反对称部分 $A^{\mu}$ 之和，即&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{aligned}
+T^{\mu \nu} &amp;= S^{\mu \nu}+A^{\mu \nu}~,
+\\
+S^{\mu \nu} &amp;= \frac{1}{2}\left( T^{\mu \nu}+T^{\nu \mu} \right) \equiv T^{(\mu \nu)}~,
+\\
+A^{\mu \nu} &amp;= \frac{1}{2}\left( T^{\mu \nu}-T^{\nu \mu} \right) \equiv T^{[\mu \nu]}~.
+\end{aligned}
+$$&lt;ul&gt;
+&lt;li&gt;反对称张量指标相同时为零，$A^{\mu \mu}=-A^{\mu \mu}=0$ .&lt;/li&gt;
+&lt;li&gt;反对称张量与对称张量缩并时为零，&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{aligned}
+A^{\mu \nu}S_{\mu \nu}&amp;=-A^{\nu \mu}S_{\nu \mu}=A^{\nu \mu}S_{ \nu \mu}
+\\
+\implies&amp;A^{\mu \nu}S_{\mu \nu}=0~.
+\end{aligned}
+$$&lt;ul&gt;
+&lt;li&gt;$\mathrm{dim};n$ 流形最高阶反对称张量为 $n$ 阶，且该张量只有一个独立分量 $(C_{n}^n=1)$ ， $n-1$ 阶反对称张量有 $C_{n}^{n-1}=n$ 个独立分量 ，$m$ 阶反对称张量有 $C_{n}^{m}$ 个独立分量 .
+比如 $4$ 维流形 $2$ 阶反对称张量为 $4\times 4$ 矩阵，独立分量有 $C_{4}^2=6$ 个：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+A^{01},A^{02},A^{03},A^{12},A^{13},A^{23}~.
+$$&lt;p&gt;$3$ 阶反对称张量独立分量有 $C_{4}^3 = 4$ 个：&lt;/p&gt;
+$$
+A^{012},A^{013},A^{023},A^{123}~.
+$$&lt;p&gt;$4$ 阶反对称张量独立分量有 $C_{4}^4=1$ 个，即 $A^{0123}$ ，任意重复指标都为 $0$ ，指标互换位置都可以通过反对称张量性质得出前面系数是 $+1,\text{or}-1$ .&lt;/p&gt;
+&lt;h2 id=&#34;仿射联络&#34;&gt;仿射联络
+&lt;/h2&gt;&lt;p&gt;在欧几里得空间或平直时空中，矢量的加减使用中学学过的三角形定理或平行四边形法则即可，这也表明矢量的平移是无关路径的，即使矢量定义在某一个点上（比如某个力矢量就定义在该力的作用点上）。然而，在广义相对论的几何语言中，由于需要描述弯曲时空，我们会发现不同路径下平移矢量会得到不同的结果&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;，例如二维球面下，赤道上矢量沿经线移动到北极的平移矢量与沿赤道移动一段距离再沿着经线移动到北极的平移矢量并不相同，如下图所示。&lt;/p&gt;
+&lt;img src=&#34;Screenshot_20251031_153132_com_jideos_jnotes_Note.jpg&#34; alt=&#34;Screenshot_20251031_153132_com_jideos_jnotes_Note&#34; style=&#34;zoom:13%;&#34; /&gt;
+&lt;p&gt;由此，我们必须讨论矢量沿某一曲线平移前后的关系，这就需要引入仿射联络，假设 $P$ 点的矢量 $V^\mu(P)$ 沿无穷小位移 $\mathrm{d}x^\nu$ 移动到 $Q$ 点 $V^\mu(P\to Q)$，那么它们的区别应该正比于 $\mathrm{d}x^\nu$ 和原矢量 $V^\mu(P)$：&lt;/p&gt;
+$$
+V_{\mu}(P\to Q)-V_{\mu}(P) = \Gamma^\lambda_{\mu \nu}V_\lambda(P)\mathrm{d}x^\nu~,
+$$&lt;p&gt;其中系数 $\Gamma^\lambda_{\mu \nu}$就是所谓&lt;strong&gt;仿射联络&lt;/strong&gt; .&lt;/p&gt;
+&lt;p&gt;根据矢量场坐标变换关系可以给出仿射&lt;strong&gt;联络的坐标变换关系&lt;/strong&gt;&lt;/p&gt;
+$$
+\tilde{\Gamma}^\lambda_{\mu \nu}=\frac{{\partial^2 x^\gamma}}{\partial \tilde{x}^\mu \tilde{x}^\nu} \frac{{\partial \tilde{x}^\lambda}}{\partial x^\gamma} + \Gamma^\gamma_{\alpha\beta} \frac{{\partial \tilde{x}^\lambda}}{\partial x^\gamma} \frac{{\partial {x}^\alpha}}{\partial \tilde{x}^\mu} \frac{{\partial {x}^\beta}}{\partial \tilde{x}^\nu}~.
+$$&lt;p&gt;计算过程如下：&lt;/p&gt;
+&lt;p&gt;在坐标变换下&lt;/p&gt;
+$$
+\begin{aligned}
+\tilde{V}_{\mu}(P\to Q) - \tilde{V}_{\mu}(P)&amp;=\tilde{\Gamma}^\lambda_{\mu \nu}V_{\lambda} (P)\mathrm{d}\tilde{x}^\nu
+\\
+V_{\gamma}(P-Q) \frac{{\partial x^\gamma}}{\partial \tilde{x}^\mu}\big|_{Q}-V_{\alpha}(P) \frac{{\partial x^\alpha}}{\partial \tilde{x}^\mu }\big|_P
+&amp;=\tilde{\Gamma}^\lambda_{\mu \nu} \frac{{\partial x^\gamma}}{{\partial \tilde{x}^\lambda}}V_{\gamma}(P) \frac{{\partial \tilde{x}^\nu}}{\partial x^\beta}\mathrm{d}x^\beta
+\\
+V_{\gamma}(P )  \left(\frac{{\partial^2 x^\gamma}}{\partial \tilde{x}^\mu \partial \tilde{x}^\nu}   \right)_{P} \mathrm{d}\tilde{x}^\nu+V_{\alpha}(P\to Q ) \frac{{\partial x^\alpha}}{\partial \tilde{x}^\mu}\bigg|_{P} - V_{\alpha}(P) \frac{{\partial x^\alpha}}{\partial \tilde{x}^\mu }\big|_P &amp;= \frac{{\partial x^\gamma}}{{\partial  \tilde{x}^\lambda}}  \frac{{\partial \tilde{x}^\nu}}{\partial x^\beta}\tilde{\Gamma}^\lambda_{\mu \nu} V_{\gamma}(P) \mathrm{d}x^\beta
+\\
+V_{\gamma}(P)\left[ \left(\frac{{\partial^2 x^\gamma}}{\partial \tilde{x}^\mu \partial \tilde{x}^\nu}   \right)_{P} \left( \frac{{\partial \tilde{x}^\nu}}{\partial x^\beta} \right)  + \Gamma^\gamma_{\alpha\beta}\left( \frac{{\partial x^\alpha}}{\partial \tilde{x}^\mu} \right)   \right]\mathrm{d}x^\beta &amp;=\frac{{\partial x^\gamma}}{{\partial  \tilde{x}^\lambda}}  \frac{{\partial \tilde{x}^\nu}}{\partial x^\beta}\tilde{\Gamma}^\lambda_{\mu \nu} V_{\gamma}(P) \mathrm{d}x^\beta
+\end{aligned}
+$$&lt;p&gt;上式需要对任意的 $V_{\gamma}(P)$ 和 $\mathrm{d}x^\beta$ 成立，那么有&lt;/p&gt;
+$$
+\begin{aligned}
+\left(\frac{{\partial^2 x^\gamma}}{\partial \tilde{x}^\mu \partial \tilde{x}^\nu}   \right)_{P} \left( \frac{{\partial \tilde{x}^\nu}}{\partial x^\beta} \right)  + \Gamma^\gamma_{\alpha\beta}\left( \frac{{\partial x^\alpha}}{\partial \tilde{x}^\mu} \right)
+=\frac{{\partial x^\gamma}}{{\partial  \tilde{x}^\lambda}}  \frac{{\partial \tilde{x}^\nu}}{\partial x^\beta}\tilde{\Gamma}^\lambda_{\mu \nu}
+\\
+\implies \tilde{\Gamma}^\lambda_{\mu \nu}=\frac{{\partial^2 x^\gamma}}{\partial \tilde{x}^\mu \tilde{x}^\nu} \frac{{\partial \tilde{x}^\lambda}}{\partial x^\gamma} + \Gamma^\gamma_{\alpha\beta} \frac{{\partial \tilde{x}^\lambda}}{\partial x^\gamma} \frac{{\partial {x}^\alpha}}{\partial \tilde{x}^\mu} \frac{{\partial {x}^\beta}}{\partial \tilde{x}^\nu}~.
+\end{aligned}
+$$&lt;p&gt;从上式也可以得知，&lt;strong&gt;联络并非张量&lt;/strong&gt; .&lt;/p&gt;
+&lt;p&gt;对于逆变矢量，可以验证其关系为&lt;/p&gt;
+$$
+V^\mu(P\to Q)-V^\mu(P)=-\Gamma^\mu_{\lambda \nu}V^{\lambda}\mathrm{d}x^\nu~.
+$$&lt;hr&gt;
+&lt;p&gt;在 $x^\prime$ 坐标系中，平移公式为：&lt;/p&gt;
+$$
+V&#39;^{\mu&#39;}(P\to Q) = V^{\mu&#39;}(P) - \Gamma^{\mu&#39;}_{\alpha&#39;\beta&#39;}(P) V&#39;^{\alpha&#39;}(P) \mathrm{d}x&#39;^{\beta&#39;}.
+$$&lt;p&gt;利用张量变换律：&lt;/p&gt;
+$$
+V&#39;^{\mu&#39;}(P) = \frac{\partial x^{\mu&#39;}}{\partial x^\mu} V^\mu(P), \quad \mathrm{d}x&#39;^{\beta&#39;} = \frac{\partial x&#39;^{\beta&#39;}}{\partial x^\nu} \mathrm{d}x^\nu.
+$$&lt;p&gt;
+以及&lt;/p&gt;
+$$
+\Gamma^{\mu&#39;}_{\alpha&#39;\beta&#39;} = \frac{\partial x^{\mu&#39;}}{\partial x^\mu} \frac{\partial x^\alpha}{\partial x^{\alpha&#39;}} \frac{\partial x^\beta}{\partial x^{\beta&#39;}} \Gamma^\mu_{\alpha\beta} + \frac{\partial x^{\mu&#39;}}{\partial x^\mu} \frac{\partial^2 x^\mu}{\partial x^{\alpha&#39;} \partial x^{\beta&#39;}}.
+$$&lt;p&gt;带入得&lt;/p&gt;
+$$
+\begin{aligned}
+V&#39;^{\mu&#39;}(P\to Q) &amp;= \frac{\partial x&#39;^{\mu&#39;}}{\partial x^\mu} V^\mu(P) - \left( \frac{\partial x&#39;^{\mu&#39;}}{\partial x^\mu} \frac{\partial x^\alpha}{\partial x&#39;^{\alpha&#39;}} \frac{\partial x^\beta}{\partial x&#39;^{\beta&#39;}} \Gamma^\mu_{\alpha\beta} + \frac{\partial x&#39;^{\mu&#39;}}{\partial x^\mu} \frac{\partial^2 x^\mu}{\partial x&#39;^{\alpha&#39;} \partial x&#39;^{\beta&#39;}} \right) V^{\alpha&#39;}(P) \mathrm{d}x&#39;^{\beta&#39;}
+\\
+&amp; = \frac{\partial x^{\mu&#39;}}{\partial x^\mu} V^\mu(P) - \frac{\partial x&#39;^{\mu&#39;}}{\partial x^\mu} \frac{\partial x^\alpha}{\partial x&#39;^{\alpha&#39;}} \frac{\partial x^\beta}{\partial x&#39;^{\beta&#39;}} \Gamma^\mu_{\alpha\beta} \frac{\partial x&#39;^{\alpha&#39;}}{\partial x^\alpha} V^\alpha(P) \frac{\partial x&#39;^{\beta&#39;}}{\partial x^\nu} \mathrm{d}x^\nu
+\\
+&amp;\quad\quad- \frac{\partial x&#39;^{\mu&#39;}}{\partial x^\mu} \frac{\partial^2 x^\mu}{\partial x&#39;^{\alpha&#39;} \partial x&#39;^{\beta&#39;}} \frac{\partial x&#39;^{\alpha&#39;}}{\partial x^\alpha} V^\alpha(P) \frac{\partial x&#39;^{\beta&#39;}}{\partial x^\nu} \mathrm{d}x^\nu
+\\
+&amp; = \frac{\partial x&#39;^{\mu&#39;}}{\partial x^\mu} V^\mu(P) - \frac{\partial x&#39;^{\mu&#39;}}{\partial x^\mu} \Gamma^\mu_{\alpha\nu} V^\alpha(P) dx^\nu-\frac{\partial x&#39;^{\mu&#39;}}{\partial x^\mu} \frac{\partial}{\partial x^\nu} \left( \frac{\partial x^\mu}{\partial x^\alpha} \right) V^\alpha(P) \mathrm{d}x^\nu~.
+\end{aligned}
+$$&lt;p&gt;由于 $\frac{\partial}{\partial x^\nu} \left( \frac{\partial x^\mu}{\partial x^\alpha} \right)=\partial_{\nu} \delta^\mu_{;\alpha}=0$ ，所以有&lt;/p&gt;
+$$
+V&#39;^{\mu&#39;}(P\to Q) =  \frac{\partial x&#39;^{\mu&#39;}}{\partial x^\mu}\bigg[V^\mu(P) - \Gamma^\mu_{\alpha\nu} V^\alpha(P) dx^\nu\bigg] = {\partial x&#39;^{\mu&#39;}\over \partial x^{\nu}} V^\nu(P\to Q)~.
+$$&lt;hr&gt;
+&lt;h3 id=&#34;零联络定理&#34;&gt;零联络定理
+&lt;/h3&gt;&lt;p&gt;设坐标 $x^\mu$ 下 $P$ 点对称联络 $\Gamma_{\mu \nu}^\lambda(P)$ ，则总能找到坐标变换 $x^\mu \mapsto \tilde{x}^\mu$ 使得 $\tilde{\Gamma}^\lambda_{\mu \nu}=0$ .&lt;/p&gt;
+&lt;p&gt;证明如下&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;设坐标变换&lt;/p&gt;
+$$
+x^\mu - x_{P}^\mu = \tilde{x}^\mu + \frac{1}{2}C_{\alpha\beta}^\mu \tilde{x}^\alpha \tilde{x}^\beta~,\quad C_{\alpha\beta}^\mu = C_{\beta\alpha}^\mu
+$$&lt;p&gt;
+左边在 $P$ 点求导，同时保证在新坐标系下 $P$ 点为原点 $\tilde{x}^\mu_{P }=0$：&lt;/p&gt;
+$$
+\left( \frac{ \partial x^\mu}{\partial \tilde{x}^\nu} \right)_{P} = \delta^\mu_{\;\nu}+ C^\mu_{\alpha \beta}\delta^\beta_{\nu}\tilde{x}^\alpha\big|_{\tilde{x}^\alpha_{P}=0} = \delta^\mu_{\;\nu}  ~,
+$$&lt;p&gt;
+上式逆矩阵也满足 $\left(  \frac{\partial\tilde{x}^\mu}{\partial x^\nu} \right)=\delta^\mu_{;\nu}$，同时，二阶导数为&lt;/p&gt;
+$$
+\left( \frac{\partial^2 x^\mu}{\partial \tilde{x}^\alpha \partial\tilde{x}^\beta } \right)\bigg|_{P} = C^\mu_{\alpha\beta}~,
+$$&lt;p&gt;根据联络坐标变换公式&lt;/p&gt;
+$$
+\begin{aligned}
+\tilde{\Gamma}^\lambda_{\mu \nu}(P)&amp;={\partial^2 x^\alpha\over \partial \tilde{x}^\mu \tilde{x}^\nu}{\partial \tilde{x}^\lambda\over \partial x^\alpha}\bigg|_{P} + \Gamma^\alpha_{\rho\sigma}(P) {\partial \tilde{x}^\lambda\over \partial x^\alpha}{\partial x^\rho\over \partial \tilde{x}^\mu} {\partial x^\sigma\over \partial x^\nu}
+\\
+&amp;=C^\alpha_{\mu \nu}\delta^\lambda_{\;\alpha}+\Gamma^\alpha_{\rho\sigma}\delta^\lambda_{\;\alpha}\delta^\rho_{\;\mu}\delta^\sigma_{\;\nu}
+\\
+&amp;=C^\lambda_{\mu \nu}+\Gamma^\lambda_{\mu \nu}=0
+\\
+&amp; \implies C^\lambda_{\mu \nu}=-\Gamma^\lambda_{\mu \nu}~.
+\end{aligned}
+$$&lt;p&gt;
+综上，则有坐标变换 $x^\mu \mapsto \tilde{x}^\mu-\frac{1}{2}\Gamma^\mu_{\alpha\beta}\tilde{x}^\alpha \tilde{x}^\beta=x^\mu-x^\mu_{P}$，使得在 $\tilde{x}$
+坐标系下 $\tilde{\Gamma}^\lambda_{\mu \nu}=0$ .&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;零联络定理可以有以下性质或推论：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不依赖于度规；&lt;/li&gt;
+&lt;li&gt;即使存在挠率 $T^\lambda_{;\mu \nu}\ne 0$ 也可以使得 $\Gamma^\lambda_{\mu \nu}$ 对称部分为 $0$ ；&lt;/li&gt;
+&lt;li&gt;取 $\Gamma (P)=0$，由 $\nabla_{\mu}g_{\alpha\beta}=\partial_{\mu}g_{\alpha\beta}=0$，可知 $g_{\alpha\beta}=g_{\mu \nu}(P)+g^{(1)}+g^{(2)}+\dots$，由于 $g^{(1)}\propto \partial_{\mu}g_{\alpha\beta}=0$，那么对于一个时空点 $P$ 总（近似）存在局域惯性系  $g_{\alpha\beta}(P)\simeq \eta_{\alpha\beta}$ .
+&lt;strong&gt;这与等效原理相符，即在小范围内，任何引力场都可以被视为局部的惯性参考系。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;协变导数&#34;&gt;协变导数
+&lt;/h3&gt;&lt;p&gt;在欧几里得空间/平直时空中向量场的导数就是 $\lim_{ \delta x \to 0 }\frac{\vec{F}(x+\delta x)-\vec{F}(x)}{\delta x}$，即使存在坐标变换这里的矢量差仍是良好定义的. 然而在流形中，定义协变导数需要利用平行移动来作矢量差，这样才能使得坐标变换后仍然成立. 记相邻两点 $P$ 与 $Q = P + \mathrm{d}x$，那么对于协变矢量场 $V_{\nu}(x)$在 $P$ 点的协变导数为：&lt;/p&gt;
+$$
+\nabla_{\mu}V_{\nu}(P) = \frac{{V_{\nu}(Q)-V_{\nu}(P\to Q) }}{\mathrm{d}x^\nu}=\partial_{\mu}V_{\nu}-\Gamma^\lambda_{\mu \nu}V_{\lambda}~.
+$$&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;协变导数满足莱布尼兹法则 .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于标量：$\nabla_{\mu} f= \partial_{\mu} f$ ，且 $\nabla_{\mu} f$ 为协变矢量 .
+对于挠率 $T^\lambda_{\ \mu \nu}=\Gamma^\lambda_{\mu \nu}-\Gamma^\lambda_{\nu \mu}=0$的情况，$\nabla_{\mu}\nabla_{\nu}f=\nabla_{\nu}\nabla_{\mu}f$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于逆变矢量：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\nabla_{\mu}V^\nu=\partial_{\mu}V^\nu + \Gamma^\nu_{\mu\lambda}V^\lambda~.
+$$&lt;ul&gt;
+&lt;li&gt;$(p,q)$ 型张量：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{aligned}
+\nabla_{\mu}T^{\alpha_{1}\dots\alpha_{p}}_{\quad\quad\; \beta_{1}\dots\beta_{q}} = &amp;\partial_{\mu } T^{\alpha_{1}\dots\alpha_{p}}_{\quad\quad\; \beta_{1}\dots\beta_{q}} +\Gamma^{\alpha_{1}}_{\mu \sigma}T^{\sigma\dots\alpha_{p}}_{\quad\quad\; \beta_{1}\dots\beta_{q}}+\dots+\Gamma^{\alpha_{n}}_{\mu\sigma} T^{\alpha_{1}\dots\sigma}_{\quad\quad\; \beta_{1}\dots\beta_{q}}
+\\
+&amp;\quad-\Gamma^\sigma_{\mu \beta_{1}}T^{\alpha_{1}\dots\alpha_{p}}_{\quad\quad\; \sigma\dots\beta_{q}}-\dots-\Gamma^\sigma_{\mu\beta_{q}}T^{\alpha_{1}\dots\alpha_{p}}_{\quad\quad\; \beta_{1}\dots\sigma}~.
+\end{aligned}
+$$&lt;ul&gt;
+&lt;li&gt;Kroneker 张量 $\delta^\mu_{;\nu}(x)$ 的协变导数为 $0$&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\nabla_{\alpha}\delta^\mu_{\;\nu}=\partial_{\alpha}\delta^\mu_{\;\nu}+\Gamma^\mu_{\alpha \beta}\delta^\beta_{\;\nu}-\Gamma^\beta_{\alpha \nu}\delta^\mu_{\;\beta}=\Gamma^\mu_{\alpha\nu}-\Gamma^\mu_{\alpha \nu}=0~.
+$$&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;记号约定，协变导数 $\nabla_{\mu}A\equiv A_{;\mu}$；普通导数 $\partial_{\mu}A\equiv A_{,\mu}$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;平行移动&lt;/strong&gt;，对于定义在曲线 $\gamma^\mu(\lambda)$ 上的切矢量 $V^\mu= \frac{{\mathrm{d}x^\mu}}{\mathrm{d}\lambda}$，张量 $T^\alpha_{{;\beta}}$  沿着曲线 $\gamma^\mu(\lambda)$ 平行移动定义为&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+$$
+V^\mu \nabla_{\mu } T^\alpha_{\;\beta}  = 0~.
+$$&lt;h2 id=&#34;度规张量&#34;&gt;度规张量
+&lt;/h2&gt;&lt;h3 id=&#34;度规metric&#34;&gt;度规（Metric）
+&lt;/h3&gt;&lt;p&gt;度规，顾名思义就是&lt;strong&gt;长度的规定&lt;/strong&gt;。在流形上引入度规场及其规定的不变距离就构成了（伪）黎曼流形（黎曼空间）。&lt;/p&gt;
+&lt;p&gt;使用&lt;strong&gt;度规张量&lt;/strong&gt; $g_{\mu \nu}$ 定义流形上相邻两点$(\mathrm{d}x^\mu)$之间的距离&lt;/p&gt;
+$$
+\mathrm{d}s^2 = g_{\mu \nu}\mathrm{d}x^\mu \mathrm{d}x^\nu~,
+$$&lt;p&gt;由于距离的规定与$\mu,\nu$ 指标是对称的，那么不妨认为 $g_{\mu \nu}$  就是对称张量 .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;黎曼空间，线元 $\mathrm{d}s^2$ 正定 .&lt;/li&gt;
+&lt;li&gt;伪黎曼空间，线元非正定 .&lt;/li&gt;
+&lt;li&gt;$3~ \mathrm{dim}$ 欧式空间笛卡尔坐标系的度规：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\mathrm{d}s^2  = \mathrm{d}x^2+\mathrm{d}y^2+\mathrm{d}z^2~,\quad \implies g_{ij}=
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}=\delta_{ij}~.
+$$&lt;ul&gt;
+&lt;li&gt;$3~\mathrm{dim}$ 欧式空间球坐标系的度规：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\mathrm{d}s^2 = \mathrm{d}r^2+r^2\left( \mathrm{d}\theta^2+\sin^2\theta\mathrm{d}\phi^2 \right) ~,\implies g_{ij}=
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; r^2 &amp; 0 \\
+0 &amp; 0 &amp; r^2\sin^2\theta~.
+\end{pmatrix}
+$$&lt;ul&gt;
+&lt;li&gt;$4~\mathrm{dim}$ 平直时空度规 $(c=1)$：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\mathrm{d}s^2 = -\mathrm{d}t^2+\mathrm{d}x^2+\mathrm{d}y^2+\mathrm{d}z^2~, \implies g_{\mu \nu}=
+\begin{pmatrix}
+-1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}~.
+$$&lt;ul&gt;
+&lt;li&gt;施瓦西度规：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{aligned}
+\mathrm{d}s^2 &amp;=  -\left(1-\frac{2GM}{ r}\right) \mathrm{d}t^2 + \left(1-\frac{2GM}{ r}\right)^{-1} \mathrm{d}r^2 + r^2 \mathrm{d}\theta^2 + r^2\sin^2\theta \mathrm{d}\phi^2 ~,
+\\
+\implies g_{\mu \nu} &amp;=
+\begin{pmatrix}
+-\left(1-\frac{2GM}{ r}\right) &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \left(1-\frac{2GM}{ r}\right)^{-1} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; r^2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; r^2\sin^2\theta
+\end{pmatrix}~.
+\end{aligned}
+$$&lt;ul&gt;
+&lt;li&gt;FRLW 度规：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{aligned}
+\mathrm{d}s^2 &amp;= - \mathrm{d} t^2 + a^2(t) \left[ \frac{\mathrm{d}r^2}{1-k r^2} + r^2 \mathrm{d}\theta^2 + r^2\sin^2\theta \mathrm{d}\phi^2 \right]
+\\
+\implies g_{\mu \nu}&amp;=
+\begin{pmatrix}
+-1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \frac{1}{1-k r^2} a^2(t) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; r^2  a^2 (t)&amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; r^2 a^2(t)\sin^2\theta
+\end{pmatrix}~.
+\end{aligned}
+$$&lt;h3 id=&#34;张量指标升降&#34;&gt;张量指标升降
+&lt;/h3&gt;&lt;p&gt;在黎曼空间中，使用度规 $g_{\mu \nu}$ 及其逆 $(g^{-1})^{\mu \nu}$ 进行升降指标 .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;度规为非退化矩阵，满足&lt;/li&gt;
+&lt;/ul&gt;
+$$
+(g^{-1})^{\mu \nu}g_{\nu \sigma} = \delta^\mu_{\;\sigma}~,\quad g^{\mu \nu}\equiv (g^{-1})^{\mu \nu} ~.
+$$&lt;ul&gt;
+&lt;li&gt;对任意张量&lt;/li&gt;
+&lt;/ul&gt;
+$$
+T^\mu = g^{\mu \nu}T_{\nu}~,\quad T^{\mu \nu} = g^{\mu\alpha}T_{\alpha}^{\;\nu}~.
+$$&lt;ul&gt;
+&lt;li&gt;矢量长度平方&lt;/li&gt;
+&lt;/ul&gt;
+$$
+g_{\mu \nu}V^\mu V^\nu = V_{\nu} V^\nu~.
+$$&lt;h3 id=&#34;度规相容条件&#34;&gt;度规相容条件
+&lt;/h3&gt;&lt;p&gt;当联络规定的平移操作保持矢量长度不变时，则称联络与度规适配，从另一个角度，即度规场平移不变&lt;/p&gt;
+$$
+g_{\mu \nu}(P\to Q) = g_{\mu \nu}(P) \implies \nabla_{\mu}g_{\alpha\beta} = 0~,
+$$&lt;p&gt;
+其中 $\nabla_{\mu}g_{\alpha\beta} = 0$ 称为&lt;strong&gt;度规相容条件&lt;/strong&gt; .&lt;/p&gt;
+&lt;p&gt;可以证明满足 $\nabla_{\mu} g_{\alpha\beta}$ 的联络唯一存在，其为 Christoffel 联络&lt;/p&gt;
+$$
+\Gamma^\lambda_{\mu \nu} = \frac{1}{2}g^{\lambda \sigma}\left( \partial_{\mu}g_{\sigma \nu}+\partial_{\nu}g_{\mu\sigma}-\partial_{\sigma}g_{\mu \nu}  \right)~.
+$$&lt;hr&gt;
+&lt;p&gt;proof:
+&lt;/p&gt;
+$$
+\begin{aligned}
+\nabla_{\mu}g_{\alpha\beta}&amp;=\partial_{\mu}g_{\alpha\beta}-{\color{orange}\Gamma^\alpha_{\mu \alpha}g_{\lambda \beta}}-{\color{blue} \Gamma^\lambda_{\mu\beta}g_{\alpha\lambda}}=0
+\\
+\nabla_{\alpha}g_{\beta \mu}&amp;=\partial_{\alpha}g_{\beta\mu} - {\color{red} \Gamma^{\lambda}_{\alpha\beta}g_{\lambda\mu}} - {\color{orange} \Gamma^{\lambda}_{\alpha\mu}g_{\beta\lambda}}=0
+\\
+\nabla_{\beta}g_{\mu\alpha}&amp;=\partial_{\beta}g_{\mu\alpha} - {\color{blue} \Gamma^{\lambda}_{\beta\mu}g_{\lambda\alpha}} -
+{\color{red} \Gamma^{\lambda}_{\beta\alpha}g_{\mu\lambda}}=0
+\\
+-\nabla_{\mu}g_{\alpha\beta}+\nabla_{\alpha}g_{\beta \mu}+\nabla_{\beta}g_{\mu\alpha}&amp;=-\partial_{\mu}g_{\alpha\beta}+\partial_{\alpha}g_{\beta\mu}+\partial_{\beta}g_{\mu\alpha}-2{\color{red}\Gamma^\lambda_{\alpha\beta}g_{\lambda \mu}}=0
+\\
+\implies \Gamma^\lambda_{\mu \nu} &amp;= \frac{1}{2}g^{\lambda \sigma}\left( \partial_{\mu}g_{\sigma \nu}+\partial_{\nu}g_{\mu\sigma}-\partial_{\sigma}g_{\mu \nu}  \right)~.
+\end{aligned}
+$$&lt;hr&gt;
+&lt;h2 id=&#34;测地线曲率&#34;&gt;测地线，曲率
+&lt;/h2&gt;&lt;h3 id=&#34;测地线&#34;&gt;测地线
+&lt;/h3&gt;&lt;p&gt;在欧式空间中，直线可以认为任意相邻的 $2$ 点的切矢量都互相平行的曲线，那么其在流形上的推广就是自平行线(流形上最“直”的线) .&lt;/p&gt;
+&lt;p&gt;对于曲线上&lt;strong&gt;任意&lt;/strong&gt;两点 $P,Q$，切矢量的平行条件为&lt;/p&gt;
+$$
+A^\mu(Q) = \left[ 1+f(\lambda)\mathrm{d}\lambda \right]A^\mu(P\to Q)~,
+$$&lt;p&gt;
+其中 $A^\mu= \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda}$，这表明曲线上切矢量&lt;em&gt;只有“长度”变化，没有“方向”的变化&lt;/em&gt;. 在 $P,Q$ 两点无限接近的情况下，根据&lt;/p&gt;
+$$
+A_{\mu} (P\to Q) = \frac{{\mathrm{d}x^\mu}}{\mathrm{d}\lambda}-\Gamma^\mu_{\alpha\beta} \frac{{\mathrm{d}x^\alpha}}{\mathrm{d}\lambda} \frac{{\mathrm{d}x^\beta}}{\mathrm{d}\lambda}\mathrm{d}\lambda~,
+$$&lt;p&gt;切矢量在 $P$ 点作泰勒展开&lt;/p&gt;
+$$
+A^\mu(Q)  = A^\mu (P) + \frac{\mathrm{d}A^\mu(P)}{\mathrm{d}\lambda}\mathrm{d}\lambda = \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda}+ \frac{{\mathrm{d}^2 x^\mu}}{\mathrm{d}\lambda^2}\mathrm{d}\lambda~,
+$$&lt;p&gt;那么有&lt;/p&gt;
+$$
+\begin{aligned}
+\left[ 1+f(\lambda)\mathrm{d}\lambda \right] \cdot \left[ \frac{{\mathrm{d}x^\mu}}{\mathrm{d}\lambda}-\Gamma^\mu_{\alpha\beta} \frac{{\mathrm{d}x^\alpha}}{\mathrm{d}\lambda} \frac{{\mathrm{d}x^\beta}}{\mathrm{d}\lambda}\mathrm{d}\lambda \right] &amp;=\frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda}+ \frac{{\mathrm{d}^2 x^\mu}}{\mathrm{d}\lambda^2}\mathrm{d}\lambda
+\\
+f(\lambda) \frac{{\mathrm{d}x^\mu}}{\mathrm{d}\lambda} &amp;= \frac{\mathrm{d}^2 x^\mu }{\mathrm{d}\lambda^2} + \Gamma^\mu_{\alpha\beta} \frac{\mathrm{d}x^\alpha}{\mathrm{d}\lambda} \frac{{\mathrm{d}x^\beta}}{\mathrm{d}\lambda} ~,
+\end{aligned}
+$$&lt;p&gt;上式即为&lt;strong&gt;测地线&lt;/strong&gt;方程，且只和仿射联络的对称部分有关（反对称部分缩并为 $0$ ）.&lt;/p&gt;
+&lt;h3 id=&#34;仿射参量&#34;&gt;仿射参量
+&lt;/h3&gt;&lt;p&gt;曲线的参数 $\lambda$ 是任意的，如果选取合适的参数 $\lambda(\sigma)$ 满足&lt;/p&gt;
+$$
+\frac{\mathrm{d}^2\sigma}{\mathrm{d}\lambda^2} - f(\lambda) \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda}=0~,
+$$&lt;p&gt;可以化简测地线方程为（证明见后文）&lt;/p&gt;
+$$
+\frac{\mathrm{d}^2 x^\mu}{\mathrm{d}\sigma^2} + \Gamma^\mu_{\alpha\beta} \frac{\mathrm{d}x^\alpha}{\mathrm{d}\sigma} \frac{\mathrm{d}x^\beta}{\mathrm{d}\sigma} = 0~. \tag{*}
+$$&lt;p&gt;这样的 $\sigma$ 称为&lt;strong&gt;曲线的仿射参量&lt;/strong&gt; .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从上式可以看到，取仿射参量 $\sigma$ 为曲线参数化时 $f(\sigma)=0$ 平行条件变为&lt;/li&gt;
+&lt;/ul&gt;
+$$
+A^\mu(Q) = \left[ 1+f(\sigma)\mathrm{d}\sigma \right]A^\mu(P\to Q)~ \implies A^\mu(Q) = A^\mu(P\to Q)~, \quad A^\mu=\frac{\mathrm{d}x^\mu}{\mathrm{d}\sigma}~.
+$$&lt;p&gt;也就是说曲线上切矢量不仅没有“方向”的变化，也没有“长度”的变化.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;仿射参量只对测地线有定义，因为只有测地线的切矢量满足自平行条件 .&lt;/li&gt;
+&lt;li&gt;反射参量依赖于流形上给定的联络，从 $\frac{\mathrm{d}^2\sigma}{\mathrm{d}\lambda}=f(\lambda)\frac{\mathrm{d}\sigma}{\mathrm{d}\lambda},f(\lambda)\propto \Gamma$ 可以看到 .&lt;/li&gt;
+&lt;li&gt;仿射参量并不唯一，对于 $\tilde{\sigma}=a\sigma+b$ 仍为仿射参量，对于 $\tilde{\sigma}$ 这是显然对 $*$ 成立的.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;对 $*$ 的证明
+对于 $\lambda = \lambda(\sigma)$，有&lt;/p&gt;
+$$
+\begin{aligned}
+\frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda} &amp;=\frac{\mathrm{d}x^\mu}{\mathrm{d}\sigma} \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda}~,
+\\
+\frac{\mathrm{d}^2x^\mu}{\mathrm{d}\lambda^2} &amp;= \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda} \frac{\mathrm{d}}{\mathrm{d}\sigma} \left( \frac{\mathrm{d}x^\mu}{\mathrm{d}\sigma} \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda}  \right) = \left( \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda} \right)^2 \frac{\mathrm{d}^2x^\mu}{\mathrm{d}\sigma^2} + \frac{\mathrm{d}x^\mu}{\mathrm{d}\sigma} \frac{\mathrm{d}^2\sigma}{\mathrm{d}\lambda^2}~,
+\\
+\implies&amp; \left( \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda} \right)^2 \frac{\mathrm{d}^2x^\mu}{\mathrm{d}\sigma^2}  + \frac{\mathrm{d}x^\mu}{\mathrm{d}\sigma}  {\color{orange} \frac{\mathrm{d}^2\sigma}{\mathrm{d}\lambda^2}} + \Gamma^\mu_{\alpha\beta} \frac{\mathrm{d}x^\alpha}{\mathrm{d}\sigma} \frac{\mathrm{d}x^\beta}{\mathrm{d}\sigma}  \left( \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda} \right)^2 = {\color{orange} f(\lambda) \left( \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda} \right) }\frac{\mathrm{d}x^\mu}{\mathrm{d}\sigma}
+\end{aligned}
+$$&lt;p&gt;根据 $\frac{\mathrm{d}^2\sigma}{\mathrm{d}\lambda^2} - f(\lambda) \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda}=0$ 可得&lt;/p&gt;
+$$
+\frac{\mathrm{d}^2 x^\mu}{\mathrm{d}\sigma^2} + \Gamma^\mu_{\alpha\beta} \frac{\mathrm{d}x^\alpha}{\mathrm{d}\sigma} \frac{\mathrm{d}x^\beta}{\mathrm{d}\sigma} = 0~.
+$$&lt;hr&gt;
+&lt;h3 id=&#34;时空结构&#34;&gt;时空结构
+&lt;/h3&gt;&lt;p&gt;曲线的分类&lt;/p&gt;
+$$
+\mathrm{d}s^2 = -\mathrm{d}\tau^2=-\mathrm{d}t^2+\mathrm{d}r^2+r^2\mathrm{d}\Omega^2=
+\left\{
+\begin{matrix}
+-1~, &amp;\text{类时(time-like)曲线} \\
+0~, &amp;\text{类光/零 (null)曲线}\\
+1~, &amp;\text{类空(space-like)曲线}
+\end{matrix}
+\right.
+$$&lt;ul&gt;
+&lt;li&gt;对于类时曲线，一般使用固有时 $\tau$ 作为仿射参量，测地线为最长的线 .&lt;/li&gt;
+&lt;li&gt;对于类空曲线，一般使用固有长度 $s$ 作为仿射参量，测地线为最短的线 .&lt;/li&gt;
+&lt;li&gt;测地完备 (geodesically complete)，一个时空流形上所有测地线都可以任意延申 .&lt;/li&gt;
+&lt;li&gt;测地不完备 (geodesically incomplete)，一个时空流形存在测地线无法任意延申（碰到奇点） .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;更物理的角度看测地线的意义，可以使用自由点粒子的作用量进行分析&lt;/p&gt;
+$$
+S = -m \int_{A}^{B}\mathrm{d}\tau = -m \int_{A}^{b} \sqrt{ -g_{\mu \nu} \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda} \frac{\mathrm{d}x^\nu}{\mathrm{d}\lambda} }  \, \mathrm{d}\lambda~,
+$$&lt;p&gt;点粒子的运动曲线称为“世界线”，定义 $V^\mu = \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda}$ 为世界线的切矢，同时描述粒子的世界线是一维的，可以定义标架场 &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+$$
+e(\lambda) \equiv \frac{1}{m} \sqrt{ -g_{\mu \nu}\frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda} \frac{\mathrm{d}x^\nu}{\mathrm{d}\lambda} } = \frac{1}{m} \sqrt{ -g_{\mu \nu}V^\mu V^\nu }= \frac{1}{m} \frac{\mathrm{d}\tau}{\mathrm{d}\lambda} ~.
+$$&lt;p&gt;
+作用量可以重新写为&lt;/p&gt;
+$$
+S = \frac{1}{2} \int_{\lambda_{B}}^{\lambda_{A}}\mathrm{d}\lambda  g_{\mu \nu}V^\mu V^\nu e^{-1}(\lambda)-m^2 e(\lambda)  \, .
+$$&lt;p&gt;对 $x^\mu$ 变分&lt;/p&gt;
+$$
+\begin{aligned}
+\frac{\delta S}{\delta x^\mu} &amp;= \frac{1}{2} \int_{\lambda_{B}}^{\lambda_{A}}  \, \mathrm{d}\lambda \left[ 2e^{-1}(\lambda)g_{\mu \nu} \frac{\mathrm{d \delta x^\mu}}{\mathrm{d}\lambda}V^\nu+e^{-1}(\lambda) \delta g_{\mu \nu}V^\mu V^\nu  \right]
+\\
+&amp;=\frac{1}{2} \int_{\lambda_{B}}^{\lambda_{A}}  \, \mathrm{d}\lambda \left[
+-2\frac{\mathrm{d}}{\mathrm{d}\lambda}\left( e^{-1}(\lambda)g_{\mu\alpha} \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda} \right)\delta x^\alpha+e^{-1}(\lambda)\partial_{\alpha}g_{\mu \nu}V^\mu V^\nu\delta x^\alpha
+\right] =0~,
+\\
+\implies 0&amp;= \partial_{\alpha}g_{\mu \nu} V^\mu V^\nu - 2e(\lambda)\frac{\mathrm{d}}{\mathrm{d}\lambda}\left( e^{-1}(\lambda)g_{\mu\alpha} V^\mu \right)
+\\
+&amp; =  \partial_{\alpha}g_{\mu \nu} V^\mu V^\nu - 2 \partial_{\nu}g_{\mu\alpha}V^\mu V^\nu-2g_{\mu\alpha}\frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda}+2e^{-1}(\lambda) \frac{\mathrm{d}e(\lambda)}{\mathrm{d}\lambda}g_{\mu\alpha} \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda}~,
+\\
+\implies &amp; g_{\mu\alpha} \frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda} + \partial_{\nu}g_{\mu\alpha} V^\mu V^\nu - \frac{1}{2}\partial_{\alpha}g_{\mu \nu} V^\mu V^\nu =  2 e^{-1}(\lambda) \frac{\mathrm{d}e(\lambda)}{\mathrm{d}\lambda}g_{\mu\alpha}V^\mu~.
+\end{aligned}
+$$&lt;p&gt;上式中第二项 $\mu,\nu$ 指标对称&lt;/p&gt;
+$$
+\partial_{\nu}g_{\mu\alpha} V^\mu V^\nu = \frac{1}{2}\left[ \partial_{\nu}g_{\mu\alpha} V^\mu V^\nu + \partial_{\mu}g_{\nu\alpha} V^\nu V^\mu  \right]
+$$&lt;p&gt;那么有&lt;/p&gt;
+$$
+\begin{aligned}
+g_{\mu\alpha} \frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda} + \partial_{\nu}g_{\mu\alpha} V^\mu V^\nu - \frac{1}{2}\partial_{\alpha}g_{\mu \nu} V^\mu V^\nu &amp;= g_{\mu\alpha} \frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda} + \frac{1}{2}\left[ \partial_{\nu}g_{\mu\alpha} V^\mu V^\nu + \partial_{\mu}g_{\nu\alpha}  -\partial_{\alpha}g_{\mu \nu}  \right] V^\nu V^\mu
+\\
+&amp;=g_{\mu\alpha} \frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda} + g_{\mu\alpha}\cdot \frac{1}{2}g^{\mu\beta}\left[ \partial_{\nu}g_{\rho\beta}+\partial_{\rho}g_{\nu\beta}-\partial_{\beta}g_{\nu \rho}  \right] V^\nu V^\rho
+\\
+\implies&amp; \frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda}+\Gamma^\mu_{\nu \rho}V^\nu V^\rho = f(\lambda)V^\mu~,
+\end{aligned}
+$$&lt;p&gt;其中 $f(\lambda) = \left( e^{-1}\frac{\mathrm{d}e}{\mathrm{d}\lambda} \right)$ ，如果令 $f(\lambda) = 0$ ，在类时曲线中可以得到 $\lambda \propto \tau$，那么把固有时 $\tau$ 作为仿射参数是一个自然的选择；如果是类空曲线，则有 $e(\lambda) = \frac{1}{m} \sqrt{ g_{\mu \nu}\frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda} \frac{\mathrm{d}x^\nu}{\mathrm{d}\lambda} }$ 保证根号内为正实数，那么选取 $\lambda=s$ 是一个自然的选择 .&lt;/p&gt;
+&lt;p&gt;定义 $\frac{\mathrm{D}}{\mathrm{d}\lambda}V^\mu \equiv \frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda}+\Gamma^\mu_{\alpha\beta}V^{\alpha}V^\beta$，对于世界线为类时曲线的粒子而言&lt;/p&gt;
+$$
+a^\mu = \frac{\mathrm{D}}{\mathrm{d}\tau}u^\mu = 0~,
+$$&lt;p&gt;说明测定线的物理意义就是粒子不受外力（除引力外的力）时行走的路线 .&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;黎曼曲率张量&#34;&gt;黎曼曲率张量&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;
+&lt;/h3&gt;&lt;p&gt;在弯曲时空，如果一个矢量 $V^\alpha$ 沿无穷小的一个圈，如图所示，先沿 $A^\mu,B^\nu$ 平行移动，再沿 $A^\mu,B^\nu$ 平行移动回原点，会使得平行移动后与移动前有差异 $\delta V^\alpha$，这个差异与 $A^\mu,B^\nu$ 以及矢量 $\hat{V}$ 本身成正比，且应该是坐标无关的，故可以用一个张量衡量这个差异，就是所谓&lt;strong&gt;黎曼曲率张量&lt;/strong&gt;：&lt;/p&gt;
+$$
+\delta V^\alpha = R^\alpha_{\;\beta\mu \nu} V^\beta A^\mu B^\nu~.
+$$&lt;p&gt;从上面不难看出，黎曼曲率张量与 $A^\mu,B^\nu$ 的顺序有关，有&lt;/p&gt;
+$$
+R^\alpha_{\;\beta \nu \mu}=-R^\alpha_{\;\beta \mu \nu}~.
+$$&lt;img src=&#34;Screenshot_20251101_193628_com_jideos_jnotes_Note.jpg&#34; alt=&#34;Screenshot_20251101_193628_com_jideos_jnotes_Note&#34; style=&#34;zoom:20%;&#34; /&gt;
+&lt;p&gt;(这 $2$ 幅图仅仅为了表达曲率而把矢量画得弯曲.)&lt;/p&gt;
+&lt;p&gt;然而，第一个式子的计算略显繁琐，根据平行移动的定义 $A^\mu \nabla_{\mu}V^\alpha=0$ ，那么我们可以用协变导数 $\nabla_{\mu},\nabla_{\nu}$ 来代替 $A^\mu, B^\nu$.  故刻画一个流形的曲率，可以用协变导数的对易子&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+$$
+\begin{aligned}
+[\nabla_{\mu},\nabla_{\nu}]V^\alpha&amp;=R^\alpha_{\;\beta \mu \nu}V^\beta~,
+\\
+\implies R^\alpha_{\;\beta \mu \nu} &amp;= \partial_{\mu}\Gamma^\alpha_{\nu\beta}-\partial_{\nu}\Gamma^\alpha_{\mu\beta}+\Gamma^\alpha_{\mu\sigma}\Gamma^\sigma_{\nu\beta}-\Gamma^\alpha_{\nu\sigma}\Gamma^\sigma_{\mu\beta}
+\end{aligned}
+$$&lt;p&gt;黎曼张量具有以下性质&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$R_{\sigma\lambda \mu \nu}=g_{\sigma \rho}R^\rho_{;\lambda \mu \nu}=-R_{\lambda\sigma \mu \nu}=-R_{\sigma\lambda \nu \mu}=R_{\mu \nu\sigma\lambda}$ . 前后 $2$ 对指标反对称，前后 $2$ 对指标同时调换不变 .&lt;/li&gt;
+&lt;li&gt;Bianchi I : $R_{\sigma\lambda \mu \nu}+R_{\sigma \mu \nu\lambda}+R_{\sigma \nu\lambda \mu}=0$ .&lt;/li&gt;
+&lt;li&gt;独立个数：$20$ .
+对于 $4 ;\mathrm{dim}$ 时空，${\sigma,\lambda} \to C_4^2=6$，${\mu,\nu}\to C^2_{4}=6$，可以这 $2$ 对指标独立分量构成一个 $6\times {6}$ 矩阵，同时由于其对称性，共有 $\frac{6\times7}{2}=21$ 个独立分量，再减去Bianchi I 恒等式的约束，共有 $20$ 个独立分量 .&lt;/li&gt;
+&lt;li&gt;Bianchi II: $R^\rho_{;\lambda \mu \nu;\sigma}+R^\rho_{;\lambda \nu\sigma;\mu}+R^\rho_{;\lambda\sigma \mu;\nu}=0$ .&lt;/li&gt;
+&lt;li&gt;缩并：
+&lt;ol&gt;
+&lt;li&gt;$g^{\rho\lambda}R_{\rho\lambda \mu \nu}=0$ （$\rho,\lambda$反对称）.&lt;/li&gt;
+&lt;li&gt;里奇(Ricci)张量：$R_{\mu \nu}=R^\lambda_{;\mu\lambda \nu}$ .&lt;/li&gt;
+&lt;li&gt;Ricci 标量：$R=g^{\mu \nu}R_{\mu \nu}$ .&lt;/li&gt;
+&lt;li&gt;Einstein 张量：$G_{\mu \nu}=R_{\mu \nu}-\frac{1}{2}g_{\mu \nu}R$ .&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Bianchi II 的证明
+在局部惯性系中，在一点 $P$ 处，Christoffel 联络为零：$\Gamma^\rho_{\mu\nu}(P) = 0$，但它们的导数不为零，黎曼曲率张量为：&lt;/p&gt;
+$$
+R^\rho_{\;\lambda\mu\nu}(P) = \partial_\mu \Gamma^\rho_{\nu\lambda} - \partial_\nu \Gamma^\rho_{\mu\lambda}~,
+$$&lt;p&gt;
+在点 $P$ 处，由于 $\Gamma(P) = 0$，协变导数退化为普通导数：&lt;/p&gt;
+$$
+R^\rho_{\;\lambda\mu\nu;\sigma}(P) = \partial_\sigma R^\rho_{\;\lambda\mu\nu}
+= \partial_\sigma (\partial_\mu \Gamma^\rho_{\nu\lambda} - \partial_\nu \Gamma^\rho_{\mu\lambda})
+$$&lt;p&gt;考虑三项的循环和：&lt;/p&gt;
+$$
+\begin{align*}
+ R^\rho_{\;\lambda\mu\nu;\sigma} + R^\rho_{\;\lambda\nu\sigma;\mu} + R^\rho_{\;\lambda\sigma\mu;\nu} &amp;= \partial_\sigma (\partial_\mu \Gamma^\rho_{\nu\lambda} - \partial_\nu \Gamma^\rho_{\mu\lambda}) + \partial_\mu (\partial_\nu \Gamma^\rho_{\sigma\lambda} - \partial_\sigma \Gamma^\rho_{\nu\lambda})
+ \\
+  &amp;\quad\quad\quad+ \partial_\nu (\partial_\sigma \Gamma^\rho_{\mu\lambda} - \partial_\mu \Gamma^\rho_{\sigma\lambda})~.
+  \\
+  &amp;= {\color{blue} \partial_\sigma\partial_\mu \Gamma^\rho_{\nu\lambda}} - {\color{red}\partial_\sigma\partial_\nu \Gamma^\rho_{\mu\lambda}} +{\color{orange} \partial_\mu\partial_\nu \Gamma^\rho_{\sigma\lambda}} -{\color{blue} \partial_\mu\partial_\sigma \Gamma^\rho_{\nu\lambda}} \\
+&amp;\quad\quad\quad + {\color{red}\partial_\nu\partial_\sigma \Gamma^\rho_{\mu\lambda}} - {\color{orange} \partial_\nu\partial_\mu \Gamma^\rho_{\sigma\lambda}}
+\\
+&amp;=0~.
+\end{align*}
+$$&lt;hr&gt;
+&lt;h2 id=&#34;李导数kiling-矢量场&#34;&gt;李导数，Kiling 矢量场
+&lt;/h2&gt;&lt;h3 id=&#34;微分同胚diffeomorphism-diff映射&#34;&gt;微分同胚（diffeomorphism, diff）映射
+&lt;/h3&gt;&lt;p&gt;对于映射 $f:M\mapsto M^\prime$，$f$ 为双射（单射+满射，一一到上），且 $f$ 与 $f^{-1}$ 均为 $C^\infty$，此时称 $M$ 与 $M^\prime$ （互）为微分同胚的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这个概念和群同构有相似之处，群同构指的是群元素一一对应且匹配乘法规则；流形的微分同胚需要满足流形上每个点一一对应，同时映射关系必须是光滑的。&lt;/li&gt;
+&lt;li&gt;在不考虑其它附加结构（度规，联络等）前提下，互为微分同胚的流形在数学上可以看作同一个流形。&lt;/li&gt;
+&lt;li&gt;微分同胚变换：$f:M\mapsto M$，流形到自身的变换&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt; .&lt;/li&gt;
+&lt;li&gt;主动观点：坐标轴固定，变换作用到流形上的点。（在讨论&lt;strong&gt;李导数&lt;/strong&gt;时主要采用主动观点）&lt;/li&gt;
+&lt;li&gt;被动观点：流形不改变，坐标轴改变。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;Pastedimage20251030200254.png&#34; alt=&#34;Pastedimage20251030200254&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;李导数&#34;&gt;李导数
+&lt;/h3&gt;&lt;p&gt;依赖于矢量场 $\xi^\mu$，张量场 $T$ 在 $P$ 点的李导数可以定义为&lt;/p&gt;
+$$
+\mathcal{L}_{\xi}T(x)\equiv \lim_{ \epsilon \to 0 } \frac{T(Q)-T(P\implies Q)}{\epsilon}
+$$&lt;p&gt;其中 $T(P\implies Q)$ 是 $T(P)$ 在微分同胚变换后的像，从李导数上式定义可以看出 $\mathcal{L}_{\xi}T(x)$ 与 $T(x)$ 为同阶张量。&lt;/p&gt;
+&lt;p&gt;对于无穷小 diff 变换 $P\to Q$：采取&lt;strong&gt;主动观点&lt;/strong&gt;，不进行坐标变换，而是点变换：&lt;/p&gt;
+$$
+\tilde{x}^\mu = x^\mu + \epsilon \xi^\mu(x)~,\quad \epsilon\to {0}~,\quad \xi^\mu(x)\in C^\infty~,
+$$&lt;p&gt;其中 $\epsilon$ 为无穷小参数， $\xi^\mu(x)$ 为给定流形上每个点进行微分同胚变换的方向，为 $C^\infty$矢量场，可以作为 diff 群的生成元。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于标量场 $F(x)$，由于diff变换不改变标量函数值 $F(P\implies Q)=F(P)$ ，故有&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\mathcal{L}_{\xi}F(x) = \lim_{ \epsilon \to 0 } \frac{F(Q)-F(P)}{\epsilon} =\lim_{ \epsilon \to 0 }  \frac{\partial_{\mu}F(x)\epsilon \xi^\mu(x)}{\epsilon}=F_{,\mu}\xi^\mu~.
+$$&lt;p&gt;可以看到其物理意义就是方向导数。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于逆变矢量场 $k^\mu(x)$ ， $k^\mu(P)$ 可以作为某一曲线 $C$ 在 $P$ 点的切矢量&lt;/li&gt;
+&lt;/ul&gt;
+$$
+k^\mu(P) = \left( \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda} \right)_{P}~,
+$$&lt;img src=&#34;Screenshot_20251030_202835_com_jideos_jnotes_Note-1762789839521-1.jpg&#34; alt=&#34;Screenshot_20251030_202835_com_jideos_jnotes_Note&#34; style=&#34;zoom:15%;&#34; /&gt;
+&lt;p&gt;对于曲线 $C$ 上无限接近 $P$ 的 $P&amp;rsquo;$ 点 $x^\mu+\mathrm{d}x^\mu$，其与 $P$ 的diff变换如下&lt;/p&gt;
+$$
+\begin{aligned}
+x^\mu &amp;\implies x^\mu+\epsilon \xi^\mu(x)
+\\
+x^\mu+\mathrm{d}x^\mu &amp;\implies (x^\mu+\mathrm{d}x^\mu) +\epsilon \xi^\mu(x+\mathrm{d}x)
+\\
+\implies \mathrm{d}\tilde{x}^\mu&amp;=\mathrm{d}x^\mu+\epsilon \xi^\mu_{\;,\nu}\mathrm{d}x^\nu
+\end{aligned}
+$$&lt;p&gt;diff 将过 $P$ 点 曲线 $C$ 变为过 $Q$ 点曲线 $D$，那么 $D$ 曲线上 $Q$ 点的切线就是 $k^\mu(P\implies Q)$：&lt;/p&gt;
+$$
+k^\mu(P\implies Q) = \frac{\mathrm{d}\tilde{x}^\mu}{\mathrm{d}\lambda}={\mathrm{d}x^\mu+\epsilon \xi^\mu_{\;,\nu}\mathrm{d}x^\nu\over \mathrm{d}\lambda}\bigg|_{P}=k^\mu(P)+\epsilon \xi^\mu_{{\;,\nu}}k^\nu~,
+$$&lt;p&gt;且 diff 之前 $k^\mu(Q)=k^\mu(P)+k^\mu_{{;,\nu}}\big|_{P} \mathrm{d}x^\nu,; \mathrm{d}x^\nu=\epsilon \xi^\nu$，那么可得&lt;/p&gt;
+$$
+\begin{aligned}
+\mathcal{L}_{\xi}k^\mu(x) &amp;= \lim_{ \epsilon \to 0 } \frac{k^\mu(Q)-k^\mu(P\implies Q) }{\epsilon}
+\\
+&amp;= \lim_{ \epsilon \to 0 } \frac{k^\mu(Q)-k^\mu(P)-\epsilon \xi^\mu_{\;,\nu}k^\nu(P)}{\epsilon}
+\\
+&amp;=k^\mu_{\;,\nu}\xi^\nu-\xi^\mu_{\;,\nu}k^\nu=-\mathcal{L}_{k}\xi^\mu(x)~.
+\end{aligned}
+$$&lt;ul&gt;
+&lt;li&gt;其它形式张量李导数&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{aligned}
+\mathcal{L}_{\xi}k_{\mu}&amp;=k_{\mu,\nu}\xi^\nu+\xi_{\mu,\nu}k^\nu~,
+\\
+\mathcal{L}_{\xi}T_{\mu \nu} &amp;= T_{\mu \nu,\alpha}\xi^\alpha
++T_{\alpha \nu}\xi^\alpha_{\;,\mu}+T_{\mu\alpha}\xi^\alpha_{\;,\nu}~,
+\\
+\mathcal{L}_{\xi}T^\mu_{\;\,\nu}&amp;=T^\mu_{\;\,\nu,\alpha}\xi^\alpha-T^\alpha_{\;\;\nu}\xi^\mu_{\;,\alpha}+T^\mu_{\;\;\alpha}\xi^\alpha_{\;,\nu}~,
+\\
+&amp;\dots
+\\
+&amp;\text{先对张量求导，对矢量场求导上指标为减号，下指标为加号 .}
+\end{aligned}
+$$&lt;ul&gt;
+&lt;li&gt;对张量场求李导数后仍然为张量场，因此可以可以将李导数中的 $\partial\to \nabla$ 而没有影响&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt; .&lt;/li&gt;
+&lt;li&gt;对度规张量场 $g_{\mu \nu}$ 的李导数&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{aligned}
+\mathcal{L}_{\xi}g_{\mu \nu} &amp;= g_{\mu \nu,\alpha}\xi^\alpha+g_{\alpha \nu}\xi^\alpha_{\;,\mu}+g_{\mu\alpha}\xi^\alpha_{\;,\nu}
+\\
+&amp;=\nabla_{\nu}\xi_{\mu}+\nabla_{\mu}\xi_{\nu}~,
+\end{aligned}
+$$&lt;ul&gt;
+&lt;li&gt;李导数必须依赖 $\xi,T$，其中 $\xi$ 指定了微分同胚变换点的变换方向 .&lt;/li&gt;
+&lt;li&gt;李导数的定义不依赖于度规和联络，可以定义在任意流形上 .&lt;/li&gt;
+&lt;li&gt;李导数满足莱布尼兹法则 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;等度规变换和kiling矢量场&#34;&gt;等度规变换和Kiling矢量场
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;等度规变换（等长变换）：即保证矢量长度不变的微分同胚变换，刻画黎曼空间的几何对称性&lt;/li&gt;
+&lt;/ul&gt;
+$$
+g_{\mu \nu}\left( P\implies Q \right) = g_{\mu \nu}(Q)~,
+$$&lt;p&gt;其可以推出&lt;/p&gt;
+$$
+\begin{aligned}
+&amp;g_{\mu \nu}(P\implies Q)A^\mu \left( P\implies Q \right) A^\nu(P\implies Q) = g_{\mu \nu}(Q)A^\mu(Q)A^\nu(Q)~,
+\\
+&amp;\implies\quad g_{\mu \nu}(Q)A^\mu \left( P\implies Q \right) A^\nu(P\implies Q) = g_{\mu \nu}(Q)A^\mu(Q)A^\nu(Q)~,
+\end{aligned}
+$$&lt;p&gt;即 $Q$ 点与 $P$ 点衡量的长度相同 .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kiling 矢量场：在无穷小等度规变换下，有&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\mathcal{L}_{\xi}g_{\mu \nu}=\nabla_{\nu} \xi_{\mu}+\nabla_{\mu}\xi_{\nu}=0~,
+$$&lt;p&gt;此方程即为Kiling方程，满足Kiling方程的矢量场就是Kiling矢量场. 由于 $\mu \nu$ 指标的对称性，其有 $10$ 个独立的方程，然而独立分量只有 $4$ 个，那么说明只有在特定的空间下才有满足Kiling方程的Kiling矢量场&lt;sup id=&#34;fnref:8&#34;&gt;&lt;a href=&#34;#fn:8&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;8&lt;/a&gt;&lt;/sup&gt; .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最大对称空间：对于 $n-\mathrm{dim}$ 时空，它最多拥有 $\frac{n(n+1)}{2}$ 个 Kiling 矢量场 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于 $n-\mathrm{dim}$ 平直时空，有 $n$ 个独立的时空平移，同时选择 $2$ 个坐标轴即可定义该“平面”的转动，故有Kiling矢量场个数最多为：&lt;/p&gt;
+$$
+n+C_{n}^2 = \frac{n(n+1)}{2}~.
+$$&lt;ul&gt;
+&lt;li&gt;稳态时空：满足时间平移不变性的时空，即度规场 $g_{\mu \nu}$ 不显含时间 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于无穷小时间平移变换：$\tilde{x}^0 = x^0+\epsilon$ ，Kiling矢量场为 $\xi^\mu=(1,0,0,0)$，有&lt;/p&gt;
+$$
+\mathcal{L}_{\xi}g_{\mu \nu} = \partial_{0}g_{\mu \nu} = 0~.
+$$&lt;h2 id=&#34;黎曼流形的常用计算&#34;&gt;黎曼流形的常用计算
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;由行列式 $g=g_{\mu \nu} \frac{g}{g_{\mu \nu}}$，其中 $\Delta^{\mu \nu}=\frac{g}{g_{\mu \nu}}$ 为 $g_{\mu \nu}$ 的代数余子式，故&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\frac{\partial g}{\partial g_{\mu \nu}}=g g_{\mu \nu}^{-1}=g g^{\mu \nu}~.
+$$&lt;ul&gt;
+&lt;li&gt;对度规行列式求导：$\partial_{\rho}g=-gg_{\mu \nu}\partial_{\rho}g^{\mu \nu}$ ：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{aligned}
+\partial_{\rho}g &amp;= \frac{\partial g}{\partial g_{\mu \nu}} \frac{\partial g_{\mu \nu} }{\partial x^\rho } = gg^{\mu \nu}\partial_{\rho}g_{\mu \nu}
+\\
+&amp;= g\partial_{\rho} \left( g_{\mu \nu}g^{\mu \nu} \right)  -gg_{\mu \nu}\partial_{\rho}g^{\mu \nu}
+\\
+&amp;= -gg_{\mu \nu}\partial_{\rho}g^{\mu \nu}~.
+\end{aligned}
+$$&lt;ul&gt;
+&lt;li&gt;联络缩并$\Gamma^\mu_{\rho \mu}=\frac{1}{\sqrt{ -g }}\partial_{\rho}\sqrt{ -g }$ ：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{aligned}
+\Gamma^\mu_{\rho \mu} &amp;= \frac{1}{2} g^{\mu\lambda}\left( \partial_{\rho}g_{\mu\lambda} + \partial_{\mu}g_{\rho\lambda}-\partial_{\lambda}g_{\mu \rho}  \right)
+\\
+&amp; = \frac{1}{2} g^{\lambda\mu}\left( \partial_{\rho}g_{\mu\lambda} + \partial_{\lambda}g_{\rho \mu}-\partial_{\mu}g_{\lambda \rho}  \right)
+\\
+&amp; = \frac{1}{2}g^{\mu\lambda}\partial_{\rho}g_{\mu\lambda}
+\\
+&amp; = \frac{1}{2}g^{-1}\partial_{\rho}g = \frac{1}{2} \partial_{\rho} \ln \sqrt{ -g
+}
+\\
+&amp;=\partial_{\rho}\sqrt{ -g }
+\\
+&amp;= \frac{1}{\sqrt{ -g }}\partial_{\rho}\sqrt{ -g }~.
+\end{aligned}
+$$&lt;ul&gt;
+&lt;li&gt;矢量场的散度 $\nabla_{\rho}J^\rho=\frac{1}{\sqrt{ -g }}\partial_{\rho}\left(   \sqrt{ -g } J^\rho \right)$ ：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{aligned}
+\nabla_{\rho}J^\rho &amp;= \partial_{\rho}J^\rho + \Gamma^\rho_{\rho\lambda} J^\lambda
+= \partial_{\rho}J^\rho +  \frac{1}{\sqrt{ -g }}\partial_{\rho} \left(\sqrt{ -g }J^\rho \right)
+\\
+&amp;=\frac{1}{\sqrt{ -g }}\partial_{\rho}\left(   \sqrt{ -g } J^\rho \right)~.
+\end{aligned}
+$$&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;反对称&lt;/strong&gt;张量的散度 $\nabla_{\mu}F^{\mu \nu}=\frac{1}{\sqrt{ -g }}\partial_{\mu}\left( \sqrt{ -g }F^{\mu \nu} \right)$ ：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{aligned}
+\nabla_{\mu}F^{\mu \nu} &amp; = \partial_{\mu} F^{\mu \nu} + \Gamma^{\mu}_{\mu\lambda}F^{\lambda \nu} +\underbrace{  \Gamma^\nu_{\mu\lambda}F^{\mu\lambda} }_{ \text{反对称与对称缩并} =0}
+\\
+&amp; = \partial_{\mu} F^{\mu \nu} + \Gamma^{\mu}_{\mu\lambda}F^{\lambda \nu}
+\\
+&amp; = \frac{1}{\sqrt{ -g }}\partial_{\mu}\left( \sqrt{ -g }F^{\mu \nu} \right)~.
+\end{aligned}
+$$&lt;h3 id=&#34;微分几何小节&#34;&gt;微分几何小节
+&lt;/h3&gt;&lt;img src=&#34;Pastedimage20251030212237.png&#34; alt=&#34;Pastedimage20251030212237&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料：
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;【1】国科大田雨老师的课堂笔记 .&lt;/p&gt;
+&lt;p&gt;【2】Carroll, Sean M. Spacetime and Geometry: An Introduction to General Relativity. Benjamin Cummings, 2003.&lt;/p&gt;
+&lt;p&gt;【3】陈斌. 2018. 《广义相对论》. 北京: 北京大学出版社.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;这里我不想写过多的数学，可以认为满足以下坐标变换就是对应的标量/矢量/张量，虽然严格上只能说它们是矢量/张量的分量 .&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;这里&amp;quot;平移&amp;quot;的定义为矢量始终保持与平移路径曲线的夹角不变，且在无穷小平移下，平移后的矢量与曲线，原矢量共面，可能会有些不严格，但是方便理解 .&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;一般 $P$ 点四维标价场就是在该点切空间的基矢，满足 $g_{\mu \nu}e^\mu_{a} e^\nu_{(b)}=\eta_{ab}$，其中 $a,b$ 为标架指标 .&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;仅考虑&lt;strong&gt;无挠&lt;/strong&gt; $(T^\lambda_{;\mu \nu}=\Gamma^\lambda_{\mu \nu}-\Gamma^\lambda_{\nu \mu}=0)$ 的情况.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34;&gt;
+&lt;p&gt;计算过程略 .&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:6&#34;&gt;
+&lt;p&gt;也许可以不严谨地认为 $2$ 个流形微分同胚就是同一个流形 .&amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:7&#34;&gt;
+&lt;p&gt;在度规与联络适配时 .&amp;#160;&lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:8&#34;&gt;
+&lt;p&gt;超定方程只有特殊情况才有解 .&amp;#160;&lt;a href=&#34;#fnref:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        </item>
+        <item>
         <title>用Mathematica验证克尔度规</title>
         <link>https://Dawn-19.github.io/p/%E7%94%A8mathematica%E9%AA%8C%E8%AF%81%E5%85%8B%E5%B0%94%E5%BA%A6%E8%A7%84/</link>
         <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>

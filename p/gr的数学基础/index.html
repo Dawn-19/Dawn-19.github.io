@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="关于度规的一些恒等式">
+<title>GR的数学基础</title>
+
+<link rel='canonical' href='https://Dawn-19.github.io/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/'>
+
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="GR的数学基础">
+<meta property='og:description' content="关于度规的一些恒等式">
+<meta property='og:url' content='https://Dawn-19.github.io/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/'>
+<meta property='og:site_name' content='Dawn-19'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-11-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-11-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://Dawn-19.github.io/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/picture.png' />
+<meta name="twitter:title" content="GR的数学基础">
+<meta name="twitter:description" content="关于度规的一些恒等式"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://Dawn-19.github.io/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/picture.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "light");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/photo_hu_7c5c3f8b98e0c7a4.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Dawn-19</a></h1>
+            <h2 class="site-description">深刻的思想总是朴素的。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://arxiv.org/'
+                        target="_blank"
+                        title="arXiv"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="792.000000pt" height="792.000000pt" viewBox="0 0 792.000000 792.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.14, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(0.000000,792.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M1285 7906 c-90 -30 -153 -77 -199 -151 -74 -117 -73 -216 1 -337 13
+-21 23 -42 23 -48 0 -5 4 -10 8 -10 4 0 16 -15 27 -32 10 -18 28 -42 38 -53
+10 -11 31 -36 45 -55 15 -19 29 -37 32 -40 6 -6 149 -177 167 -200 11 -14 153
+-186 212 -257 14 -17 40 -48 56 -69 17 -20 35 -42 40 -48 6 -6 23 -27 38 -46
+58 -72 103 -124 120 -142 9 -10 14 -18 10 -18 -5 0 -3 -4 3 -8 6 -4 58 -63
+114 -132 56 -69 106 -127 109 -130 4 -3 20 -23 37 -45 16 -22 34 -44 40 -50 6
+-5 42 -48 80 -95 38 -47 73 -88 79 -92 5 -4 7 -8 3 -8 -4 0 8 -16 27 -35 19
+-19 35 -37 35 -40 0 -4 24 -34 55 -69 6 -6 30 -36 55 -66 25 -30 49 -60 55
+-66 5 -6 24 -28 40 -48 17 -21 42 -52 56 -70 49 -58 424 -512 459 -556 19 -24
+49 -59 67 -79 17 -20 29 -38 27 -41 -3 -2 -8 1 -13 8 -5 8 -33 -12 -89 -65
+-46 -43 -123 -116 -173 -163 -172 -161 -186 -175 -233 -239 -78 -107 -135
+-257 -134 -351 0 -19 -1 -39 -3 -45 -6 -21 13 -122 33 -180 46 -130 90 -183
+378 -455 78 -74 164 -155 190 -180 l48 -46 -41 -50 c-23 -27 -48 -56 -55 -64
+-7 -8 -58 -71 -113 -140 -56 -69 -118 -145 -139 -170 -21 -25 -49 -58 -61 -75
+-13 -16 -37 -46 -53 -66 -17 -20 -41 -49 -53 -65 -12 -16 -34 -42 -48 -59 -15
+-16 -39 -45 -53 -64 -15 -19 -41 -51 -57 -70 -32 -38 -82 -99 -160 -196 -51
+-64 -98 -121 -158 -194 -20 -25 -41 -51 -46 -57 -63 -80 -193 -237 -214 -260
+-15 -16 -27 -32 -27 -35 0 -3 -10 -17 -22 -31 -47 -50 -127 -153 -127 -162 0
+-5 -3 -12 -9 -15 -22 -14 -62 -143 -66 -208 -13 -287 347 -473 559 -288 26 23
+153 140 259 240 45 41 244 226 281 259 17 15 57 53 90 84 33 31 112 104 174
+162 62 58 137 128 166 155 29 28 93 86 141 130 49 44 114 105 146 135 31 30
+79 75 106 100 26 25 97 90 156 145 60 55 119 110 132 123 13 12 27 22 33 22 5
+0 34 -24 64 -52 30 -29 97 -93 148 -142 52 -48 166 -157 254 -241 186 -178
+232 -222 419 -399 76 -72 174 -165 217 -206 179 -172 573 -546 809 -770 30
+-29 125 -119 210 -200 85 -81 184 -175 220 -209 92 -87 155 -116 250 -116 60
+0 85 5 124 25 86 44 141 107 170 197 36 110 11 179 -124 343 -25 30 -51 61
+-58 68 -7 8 -25 30 -40 50 -15 20 -34 44 -42 53 -8 9 -24 27 -35 40 -75 91
+-120 145 -124 149 -4 3 -24 28 -46 55 -22 28 -45 56 -52 63 -7 7 -29 34 -50
+60 -21 26 -42 52 -48 58 -5 6 -26 30 -45 54 -19 24 -40 48 -45 54 -6 6 -30 36
+-55 66 -25 30 -47 57 -50 60 -3 3 -22 26 -43 52 -21 26 -43 53 -50 60 -7 7
+-44 51 -82 98 -38 47 -74 90 -80 96 -5 6 -23 28 -40 49 -16 20 -35 42 -40 49
+-10 10 -260 311 -354 425 -20 24 -48 58 -63 75 -14 17 -155 186 -312 374
+l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
+340 46 74 85 168 92 226 3 19 5 34 6 34 1 0 3 29 4 65 2 67 -14 163 -35 215
+-7 17 -13 36 -15 44 -4 21 -75 133 -109 170 -48 53 -326 324 -496 483 -21 20
+-39 39 -39 43 0 5 134 171 150 185 3 3 25 30 50 60 25 30 52 61 60 70 8 8 33
+38 55 65 22 28 45 55 51 60 6 6 33 37 60 70 27 33 61 74 75 90 15 17 44 51 65
+76 82 96 129 152 139 163 6 6 32 38 59 71 28 33 60 71 72 85 13 14 42 48 64
+75 23 28 54 64 69 80 14 17 47 55 71 85 25 30 59 71 77 90 17 19 42 48 55 65
+13 16 30 37 38 46 8 8 24 26 35 40 11 13 57 68 103 122 110 130 139 171 172
+240 61 127 14 242 -145 349 -104 70 -192 79 -284 27 -47 -26 -135 -96 -201
+-159 -9 -8 -51 -46 -94 -85 -43 -38 -88 -79 -100 -90 -146 -134 -204 -186
+-222 -202 -12 -10 -63 -56 -115 -103 -51 -47 -103 -94 -115 -105 -118 -106
+-272 -246 -325 -295 -15 -14 -55 -50 -89 -80 -34 -30 -74 -66 -89 -80 -38 -35
+-134 -123 -225 -205 -43 -38 -101 -91 -129 -117 -29 -27 -55 -48 -59 -48 -6 0
+-70 60 -288 270 -43 41 -156 149 -250 240 -95 91 -215 206 -266 255 -52 50
+-94 90 -94 89 0 0 -50 47 -110 106 -61 58 -176 169 -257 246 -80 76 -176 168
+-213 204 -37 36 -119 114 -181 174 -63 60 -199 190 -303 290 -104 99 -210 201
+-236 226 -26 25 -97 93 -158 153 -62 59 -119 107 -127 107 -8 0 -15 5 -15 10
+0 6 -6 10 -12 10 -7 0 -24 6 -38 13 -34 17 -136 19 -185 3z m2014 -3200 c-2
+-2 -13 8 -23 22 l-19 27 24 -22 c12 -12 21 -24 18 -27z"/>
+</g>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/Dawn-19'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.overleaf.com/project'
+                        target="_blank"
+                        title="overleaf"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <path d="M9.817 8.036c-4.541 2.709-7.401 7.532-7.593 12.813 0.005 4.14 2.303 7.943 5.973 9.869 3.667 1.927 8.1 1.656 11.516-0.692 3.412-2.349 5.24-6.401 4.745-10.516-0.489-4.115-3.224-7.615-7.095-9.095-1.26-0.509-2.604-0.765-3.957-0.749-2.417 1.631-4.355 3.869-5.615 6.495 1.609-1.921 4.088-2.885 6.572-2.557 2.491 0.328 4.631 1.901 5.688 4.177 1.057 2.271 0.875 4.927-0.473 7.041-1.355 2.109-3.693 3.38-6.199 3.375-2.151 0-4.192-0.937-5.588-2.572-1.808-2.016-2.589-4.756-2.115-7.423 1.432-8.557 11.687-13.489 19.281-15.4-3.516 1.692-6.901 3.64-10.125 5.833 9.177 3.541 10.651-4.183 14.943-7.641-4.271-1.672-19.937-2.287-19.959 7.047z"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E7%AE%80%E4%BB%8B/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>简介</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#流形与张量场">流形与张量场</a>
+      <ol>
+        <li><a href="#基本概念">基本概念</a></li>
+        <li><a href="#标量与张量">标量与张量</a></li>
+        <li><a href="#张量的性质">张量的性质</a></li>
+      </ol>
+    </li>
+    <li><a href="#仿射联络">仿射联络</a>
+      <ol>
+        <li><a href="#零联络定理">零联络定理</a></li>
+        <li><a href="#协变导数">协变导数</a></li>
+      </ol>
+    </li>
+    <li><a href="#度规张量">度规张量</a>
+      <ol>
+        <li><a href="#度规metric">度规（Metric）</a></li>
+        <li><a href="#张量指标升降">张量指标升降</a></li>
+        <li><a href="#度规相容条件">度规相容条件</a></li>
+      </ol>
+    </li>
+    <li><a href="#测地线曲率">测地线，曲率</a>
+      <ol>
+        <li><a href="#测地线">测地线</a></li>
+        <li><a href="#仿射参量">仿射参量</a></li>
+        <li><a href="#时空结构">时空结构</a></li>
+        <li><a href="#黎曼曲率张量">黎曼曲率张量</a></li>
+      </ol>
+    </li>
+    <li><a href="#李导数kiling-矢量场">李导数，Kiling 矢量场</a>
+      <ol>
+        <li><a href="#微分同胚diffeomorphism-diff映射">微分同胚（diffeomorphism, diff）映射</a></li>
+        <li><a href="#李导数">李导数</a></li>
+        <li><a href="#等度规变换和kiling矢量场">等度规变换和Kiling矢量场</a></li>
+      </ol>
+    </li>
+    <li><a href="#黎曼流形的常用计算">黎曼流形的常用计算</a>
+      <ol>
+        <li><a href="#微分几何小节">微分几何小节</a></li>
+      </ol>
+    </li>
+    <li><a href="#参考资料">参考资料：</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+                <img src="/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/picture_hu_f8c12e68a0550476.png"
+                        srcset="/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/picture_hu_f8c12e68a0550476.png 800w, /p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/picture_hu_f0098ed53cb3c97.png 1600w"
+                        width="800" 
+                        height="444" 
+                        loading="lazy"
+                        alt="Featured image of post GR的数学基础" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" >
+                学习笔记
+            </a>
+        
+            <a href="/categories/%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%8E%E5%AE%87%E5%AE%99%E5%AD%A6/" >
+                相对论与宇宙学
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">GR的数学基础</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            关于度规的一些恒等式
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 10, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="gr的数学基础">GR的数学基础
+</h1><h2 id="流形与张量场">流形与张量场
+</h2><h3 id="基本概念">基本概念
+</h3><p>空间：由若干个（实）参数描述的一种点集</p>
+<ul>
+<li>空间 $+$ 微分结构（可微性） ⇒ <strong>流形 (manifold)</strong></li>
+</ul>
+<p><strong>微分流形</strong>：每一部分都像 $\mathbb{R}^n+$ 相容性，即流形上的每一片（坐标卡）可以光滑地连接起来，所有的坐标卡覆盖整个流形的集合，称为 $M$ 的地图册（atlas）.</p>
+$$
+\text{chart: 流形上一片区域映射到一组数（坐标）}, \quad \text{atlas: 所有chart光滑拼合}
+$$<img src="Screenshot_20251031_111348_com_jideos_jnotes_Note.jpg" alt="Screenshot_20251031_111348_com_jideos_jnotes_Note" style="zoom:25%;" />
+<p>如图所示，对于微分流形 $M$，存在2个坐标卡 ${ x^\prime } , { x }$，对于其重叠区域（红色部分）存在光滑映射 $f: x^\prime \mapsto x$，则为光滑连接，即相容性 .</p>
+<p>在 $2$ 个坐标系下</p>
+$$
+ x^\mu= \left\{ x^1, x^2, \dots , x^n \right\},\quad \tilde{x}^\mu= \left\{ \tilde{x}^1 , \tilde{x}^2 ,\dots , \tilde{x} ^n  \right\}
+$$<p>可以给出坐标变换</p>
+$$
+\mathrm{d}\tilde{x}^\mu= \frac{{\partial \tilde{x}^\mu}}{\partial x^\nu}\mathrm{d}x^\nu~,\quad \frac{{\partial}}{\partial \tilde{x}^\mu}=\frac{{\partial x^\nu}}{\partial \tilde{x}^\mu}\frac{{\partial}}{\partial x^\nu}~.
+$$<h3 id="标量与张量">标量与张量<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+</h3><ul>
+<li>满足如下坐标变换即为标量场：</li>
+</ul>
+$$
+\tilde{F}(\tilde{x})=F(x)~.
+$$<ul>
+<li>逆变矢量场：</li>
+</ul>
+$$
+\tilde{V}^\mu(\tilde{x})=\frac{{\partial \tilde{x}^\mu}}{\partial x^\nu}V^\nu(x)~.
+$$<ul>
+<li>协变矢量场：</li>
+</ul>
+$$
+\tilde{V}_{\mu}(\tilde{x})=\frac{{\partial x^\nu}}{\partial \tilde{x}^\mu}V_{\nu}(x)~.
+$$<ul>
+<li>$(p,q)$型张量场：</li>
+</ul>
+$$
+\tilde{T}^{\mu_{1}\mu_{2}\dots \mu_{p} }_{\quad\quad\quad \nu_{1}\nu_{2}\dots \nu_{q}} = \frac{{\partial \tilde{x}^{\mu_{1}} }}{\partial x^{\alpha_{1}}}\frac{{\partial \tilde{x}^{\mu_{2}} }}{\partial x^{\alpha_{2}}}\dots\frac{{\partial \tilde{x}^{\mu_{p}} }}{\partial x^{\alpha_{p}}}\cdot \frac{{\partial x^{\beta_{1}}}}{\partial \tilde{x}^{\nu_{1}}} \frac{{\partial x^{\beta_{2}}}}{\partial \tilde{x}^{\nu_{2}}}\dots\frac{{\partial x^{\beta_{q}}}}{\partial \tilde{x}^{\nu_{q}}}     T^{\alpha_{1}\alpha_{2}\dots\alpha_{p}}_{\quad\quad\quad \beta_{1}\beta_{2}\dots\beta_{q}}
+$$<ul>
+<li>张量的定义并不要求在所有 $x$ 上满足上述坐标变换，如果只是一个点（一条曲线）满足，那么称其为该一点（曲线）上的张量，，但是张量场必须满足在整个流形上满足上述坐标变换 .</li>
+</ul>
+<h3 id="张量的性质">张量的性质
+</h3><ul>
+<li>加减：同阶且指标相同的张量相加减仍为张量：$C_{\mu \nu}=A_{\mu \nu}\pm B_{\mu \nu}$ .</li>
+<li>直乘：不同指标张量相乘结构认为张量，新的张量阶数为原张量阶数之和：$ C^{\mu} _{\ \nu} = A^\mu B _{\nu}$ .</li>
+<li>缩并：$(p,q)$ 型张量有一上下相同的指标，代表对该指标进行求和，结果为 $(p-1,q-1)$ 型张量，例如，对于 $T^{\mu _{1} \dots \mu _{p}} _{\quad\quad;\nu _{1}\dots \nu _{q}}$ 有 $\mu _{p}=\nu _{q}=\sigma$</li>
+</ul>
+$$
+T^{\mu_{1}\dots \mu_{p}}_{\quad\quad\;\nu_{1}\dots \nu_{q}} = \sum_{\sigma}T^{\mu_{1}\dots {\sigma}}_{\quad\quad\;\nu_{1}\dots\sigma}=C^{\mu_{1}\dots \mu_{p-1}}_{\quad\quad\quad\nu_{1}\dots \nu_{q-1}}~,
+$$<p>这对于任意位置 $\mu_{\alpha}=\nu_{\beta}=\sigma$ 仍然成立 .</p>
+<ul>
+<li>对称张量：交换 $2$ 个指标仍然相等，以二阶张量为例，即 $T_{\mu \nu}=T_{\nu \mu}$ .</li>
+<li>反对称张量：交换 $2$ 个指标互为相反，以二阶张量为例，即 $T_{\mu \nu}=-T_{\nu \mu}$ .</li>
+<li>对称分解：任意二阶张量都可以唯一分解为对称部分 $S^{\mu \nu}$ 和反对称部分 $A^{\mu}$ 之和，即</li>
+</ul>
+$$
+\begin{aligned}
+T^{\mu \nu} &= S^{\mu \nu}+A^{\mu \nu}~,
+\\
+S^{\mu \nu} &= \frac{1}{2}\left( T^{\mu \nu}+T^{\nu \mu} \right) \equiv T^{(\mu \nu)}~,
+\\
+A^{\mu \nu} &= \frac{1}{2}\left( T^{\mu \nu}-T^{\nu \mu} \right) \equiv T^{[\mu \nu]}~.
+\end{aligned}
+$$<ul>
+<li>反对称张量指标相同时为零，$A^{\mu \mu}=-A^{\mu \mu}=0$ .</li>
+<li>反对称张量与对称张量缩并时为零，</li>
+</ul>
+$$
+\begin{aligned}
+A^{\mu \nu}S_{\mu \nu}&=-A^{\nu \mu}S_{\nu \mu}=A^{\nu \mu}S_{ \nu \mu}
+\\
+\implies&A^{\mu \nu}S_{\mu \nu}=0~.
+\end{aligned}
+$$<ul>
+<li>$\mathrm{dim};n$ 流形最高阶反对称张量为 $n$ 阶，且该张量只有一个独立分量 $(C_{n}^n=1)$ ， $n-1$ 阶反对称张量有 $C_{n}^{n-1}=n$ 个独立分量 ，$m$ 阶反对称张量有 $C_{n}^{m}$ 个独立分量 .
+比如 $4$ 维流形 $2$ 阶反对称张量为 $4\times 4$ 矩阵，独立分量有 $C_{4}^2=6$ 个：</li>
+</ul>
+$$
+A^{01},A^{02},A^{03},A^{12},A^{13},A^{23}~.
+$$<p>$3$ 阶反对称张量独立分量有 $C_{4}^3 = 4$ 个：</p>
+$$
+A^{012},A^{013},A^{023},A^{123}~.
+$$<p>$4$ 阶反对称张量独立分量有 $C_{4}^4=1$ 个，即 $A^{0123}$ ，任意重复指标都为 $0$ ，指标互换位置都可以通过反对称张量性质得出前面系数是 $+1,\text{or}-1$ .</p>
+<h2 id="仿射联络">仿射联络
+</h2><p>在欧几里得空间或平直时空中，矢量的加减使用中学学过的三角形定理或平行四边形法则即可，这也表明矢量的平移是无关路径的，即使矢量定义在某一个点上（比如某个力矢量就定义在该力的作用点上）。然而，在广义相对论的几何语言中，由于需要描述弯曲时空，我们会发现不同路径下平移矢量会得到不同的结果<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>，例如二维球面下，赤道上矢量沿经线移动到北极的平移矢量与沿赤道移动一段距离再沿着经线移动到北极的平移矢量并不相同，如下图所示。</p>
+<img src="Screenshot_20251031_153132_com_jideos_jnotes_Note.jpg" alt="Screenshot_20251031_153132_com_jideos_jnotes_Note" style="zoom:13%;" />
+<p>由此，我们必须讨论矢量沿某一曲线平移前后的关系，这就需要引入仿射联络，假设 $P$ 点的矢量 $V^\mu(P)$ 沿无穷小位移 $\mathrm{d}x^\nu$ 移动到 $Q$ 点 $V^\mu(P\to Q)$，那么它们的区别应该正比于 $\mathrm{d}x^\nu$ 和原矢量 $V^\mu(P)$：</p>
+$$
+V_{\mu}(P\to Q)-V_{\mu}(P) = \Gamma^\lambda_{\mu \nu}V_\lambda(P)\mathrm{d}x^\nu~,
+$$<p>其中系数 $\Gamma^\lambda_{\mu \nu}$就是所谓<strong>仿射联络</strong> .</p>
+<p>根据矢量场坐标变换关系可以给出仿射<strong>联络的坐标变换关系</strong></p>
+$$
+\tilde{\Gamma}^\lambda_{\mu \nu}=\frac{{\partial^2 x^\gamma}}{\partial \tilde{x}^\mu \tilde{x}^\nu} \frac{{\partial \tilde{x}^\lambda}}{\partial x^\gamma} + \Gamma^\gamma_{\alpha\beta} \frac{{\partial \tilde{x}^\lambda}}{\partial x^\gamma} \frac{{\partial {x}^\alpha}}{\partial \tilde{x}^\mu} \frac{{\partial {x}^\beta}}{\partial \tilde{x}^\nu}~.
+$$<p>计算过程如下：</p>
+<p>在坐标变换下</p>
+$$
+\begin{aligned}
+\tilde{V}_{\mu}(P\to Q) - \tilde{V}_{\mu}(P)&=\tilde{\Gamma}^\lambda_{\mu \nu}V_{\lambda} (P)\mathrm{d}\tilde{x}^\nu
+\\
+V_{\gamma}(P-Q) \frac{{\partial x^\gamma}}{\partial \tilde{x}^\mu}\big|_{Q}-V_{\alpha}(P) \frac{{\partial x^\alpha}}{\partial \tilde{x}^\mu }\big|_P
+&=\tilde{\Gamma}^\lambda_{\mu \nu} \frac{{\partial x^\gamma}}{{\partial \tilde{x}^\lambda}}V_{\gamma}(P) \frac{{\partial \tilde{x}^\nu}}{\partial x^\beta}\mathrm{d}x^\beta
+\\
+V_{\gamma}(P )  \left(\frac{{\partial^2 x^\gamma}}{\partial \tilde{x}^\mu \partial \tilde{x}^\nu}   \right)_{P} \mathrm{d}\tilde{x}^\nu+V_{\alpha}(P\to Q ) \frac{{\partial x^\alpha}}{\partial \tilde{x}^\mu}\bigg|_{P} - V_{\alpha}(P) \frac{{\partial x^\alpha}}{\partial \tilde{x}^\mu }\big|_P &= \frac{{\partial x^\gamma}}{{\partial  \tilde{x}^\lambda}}  \frac{{\partial \tilde{x}^\nu}}{\partial x^\beta}\tilde{\Gamma}^\lambda_{\mu \nu} V_{\gamma}(P) \mathrm{d}x^\beta
+\\
+V_{\gamma}(P)\left[ \left(\frac{{\partial^2 x^\gamma}}{\partial \tilde{x}^\mu \partial \tilde{x}^\nu}   \right)_{P} \left( \frac{{\partial \tilde{x}^\nu}}{\partial x^\beta} \right)  + \Gamma^\gamma_{\alpha\beta}\left( \frac{{\partial x^\alpha}}{\partial \tilde{x}^\mu} \right)   \right]\mathrm{d}x^\beta &=\frac{{\partial x^\gamma}}{{\partial  \tilde{x}^\lambda}}  \frac{{\partial \tilde{x}^\nu}}{\partial x^\beta}\tilde{\Gamma}^\lambda_{\mu \nu} V_{\gamma}(P) \mathrm{d}x^\beta
+\end{aligned}
+$$<p>上式需要对任意的 $V_{\gamma}(P)$ 和 $\mathrm{d}x^\beta$ 成立，那么有</p>
+$$
+\begin{aligned}
+\left(\frac{{\partial^2 x^\gamma}}{\partial \tilde{x}^\mu \partial \tilde{x}^\nu}   \right)_{P} \left( \frac{{\partial \tilde{x}^\nu}}{\partial x^\beta} \right)  + \Gamma^\gamma_{\alpha\beta}\left( \frac{{\partial x^\alpha}}{\partial \tilde{x}^\mu} \right)
+=\frac{{\partial x^\gamma}}{{\partial  \tilde{x}^\lambda}}  \frac{{\partial \tilde{x}^\nu}}{\partial x^\beta}\tilde{\Gamma}^\lambda_{\mu \nu}
+\\
+\implies \tilde{\Gamma}^\lambda_{\mu \nu}=\frac{{\partial^2 x^\gamma}}{\partial \tilde{x}^\mu \tilde{x}^\nu} \frac{{\partial \tilde{x}^\lambda}}{\partial x^\gamma} + \Gamma^\gamma_{\alpha\beta} \frac{{\partial \tilde{x}^\lambda}}{\partial x^\gamma} \frac{{\partial {x}^\alpha}}{\partial \tilde{x}^\mu} \frac{{\partial {x}^\beta}}{\partial \tilde{x}^\nu}~.
+\end{aligned}
+$$<p>从上式也可以得知，<strong>联络并非张量</strong> .</p>
+<p>对于逆变矢量，可以验证其关系为</p>
+$$
+V^\mu(P\to Q)-V^\mu(P)=-\Gamma^\mu_{\lambda \nu}V^{\lambda}\mathrm{d}x^\nu~.
+$$<hr>
+<p>在 $x^\prime$ 坐标系中，平移公式为：</p>
+$$
+V'^{\mu'}(P\to Q) = V^{\mu'}(P) - \Gamma^{\mu'}_{\alpha'\beta'}(P) V'^{\alpha'}(P) \mathrm{d}x'^{\beta'}.
+$$<p>利用张量变换律：</p>
+$$
+V'^{\mu'}(P) = \frac{\partial x^{\mu'}}{\partial x^\mu} V^\mu(P), \quad \mathrm{d}x'^{\beta'} = \frac{\partial x'^{\beta'}}{\partial x^\nu} \mathrm{d}x^\nu.
+$$<p>
+以及</p>
+$$
+\Gamma^{\mu'}_{\alpha'\beta'} = \frac{\partial x^{\mu'}}{\partial x^\mu} \frac{\partial x^\alpha}{\partial x^{\alpha'}} \frac{\partial x^\beta}{\partial x^{\beta'}} \Gamma^\mu_{\alpha\beta} + \frac{\partial x^{\mu'}}{\partial x^\mu} \frac{\partial^2 x^\mu}{\partial x^{\alpha'} \partial x^{\beta'}}.
+$$<p>带入得</p>
+$$
+\begin{aligned}
+V'^{\mu'}(P\to Q) &= \frac{\partial x'^{\mu'}}{\partial x^\mu} V^\mu(P) - \left( \frac{\partial x'^{\mu'}}{\partial x^\mu} \frac{\partial x^\alpha}{\partial x'^{\alpha'}} \frac{\partial x^\beta}{\partial x'^{\beta'}} \Gamma^\mu_{\alpha\beta} + \frac{\partial x'^{\mu'}}{\partial x^\mu} \frac{\partial^2 x^\mu}{\partial x'^{\alpha'} \partial x'^{\beta'}} \right) V^{\alpha'}(P) \mathrm{d}x'^{\beta'}
+\\
+& = \frac{\partial x^{\mu'}}{\partial x^\mu} V^\mu(P) - \frac{\partial x'^{\mu'}}{\partial x^\mu} \frac{\partial x^\alpha}{\partial x'^{\alpha'}} \frac{\partial x^\beta}{\partial x'^{\beta'}} \Gamma^\mu_{\alpha\beta} \frac{\partial x'^{\alpha'}}{\partial x^\alpha} V^\alpha(P) \frac{\partial x'^{\beta'}}{\partial x^\nu} \mathrm{d}x^\nu
+\\
+&\quad\quad- \frac{\partial x'^{\mu'}}{\partial x^\mu} \frac{\partial^2 x^\mu}{\partial x'^{\alpha'} \partial x'^{\beta'}} \frac{\partial x'^{\alpha'}}{\partial x^\alpha} V^\alpha(P) \frac{\partial x'^{\beta'}}{\partial x^\nu} \mathrm{d}x^\nu
+\\
+& = \frac{\partial x'^{\mu'}}{\partial x^\mu} V^\mu(P) - \frac{\partial x'^{\mu'}}{\partial x^\mu} \Gamma^\mu_{\alpha\nu} V^\alpha(P) dx^\nu-\frac{\partial x'^{\mu'}}{\partial x^\mu} \frac{\partial}{\partial x^\nu} \left( \frac{\partial x^\mu}{\partial x^\alpha} \right) V^\alpha(P) \mathrm{d}x^\nu~.
+\end{aligned}
+$$<p>由于 $\frac{\partial}{\partial x^\nu} \left( \frac{\partial x^\mu}{\partial x^\alpha} \right)=\partial_{\nu} \delta^\mu_{;\alpha}=0$ ，所以有</p>
+$$
+V'^{\mu'}(P\to Q) =  \frac{\partial x'^{\mu'}}{\partial x^\mu}\bigg[V^\mu(P) - \Gamma^\mu_{\alpha\nu} V^\alpha(P) dx^\nu\bigg] = {\partial x'^{\mu'}\over \partial x^{\nu}} V^\nu(P\to Q)~.
+$$<hr>
+<h3 id="零联络定理">零联络定理
+</h3><p>设坐标 $x^\mu$ 下 $P$ 点对称联络 $\Gamma_{\mu \nu}^\lambda(P)$ ，则总能找到坐标变换 $x^\mu \mapsto \tilde{x}^\mu$ 使得 $\tilde{\Gamma}^\lambda_{\mu \nu}=0$ .</p>
+<p>证明如下</p>
+<hr>
+<p>设坐标变换</p>
+$$
+x^\mu - x_{P}^\mu = \tilde{x}^\mu + \frac{1}{2}C_{\alpha\beta}^\mu \tilde{x}^\alpha \tilde{x}^\beta~,\quad C_{\alpha\beta}^\mu = C_{\beta\alpha}^\mu
+$$<p>
+左边在 $P$ 点求导，同时保证在新坐标系下 $P$ 点为原点 $\tilde{x}^\mu_{P }=0$：</p>
+$$
+\left( \frac{ \partial x^\mu}{\partial \tilde{x}^\nu} \right)_{P} = \delta^\mu_{\;\nu}+ C^\mu_{\alpha \beta}\delta^\beta_{\nu}\tilde{x}^\alpha\big|_{\tilde{x}^\alpha_{P}=0} = \delta^\mu_{\;\nu}  ~,
+$$<p>
+上式逆矩阵也满足 $\left(  \frac{\partial\tilde{x}^\mu}{\partial x^\nu} \right)=\delta^\mu_{;\nu}$，同时，二阶导数为</p>
+$$
+\left( \frac{\partial^2 x^\mu}{\partial \tilde{x}^\alpha \partial\tilde{x}^\beta } \right)\bigg|_{P} = C^\mu_{\alpha\beta}~,
+$$<p>根据联络坐标变换公式</p>
+$$
+\begin{aligned}
+\tilde{\Gamma}^\lambda_{\mu \nu}(P)&={\partial^2 x^\alpha\over \partial \tilde{x}^\mu \tilde{x}^\nu}{\partial \tilde{x}^\lambda\over \partial x^\alpha}\bigg|_{P} + \Gamma^\alpha_{\rho\sigma}(P) {\partial \tilde{x}^\lambda\over \partial x^\alpha}{\partial x^\rho\over \partial \tilde{x}^\mu} {\partial x^\sigma\over \partial x^\nu}
+\\
+&=C^\alpha_{\mu \nu}\delta^\lambda_{\;\alpha}+\Gamma^\alpha_{\rho\sigma}\delta^\lambda_{\;\alpha}\delta^\rho_{\;\mu}\delta^\sigma_{\;\nu}
+\\
+&=C^\lambda_{\mu \nu}+\Gamma^\lambda_{\mu \nu}=0
+\\
+& \implies C^\lambda_{\mu \nu}=-\Gamma^\lambda_{\mu \nu}~.
+\end{aligned}
+$$<p>
+综上，则有坐标变换 $x^\mu \mapsto \tilde{x}^\mu-\frac{1}{2}\Gamma^\mu_{\alpha\beta}\tilde{x}^\alpha \tilde{x}^\beta=x^\mu-x^\mu_{P}$，使得在 $\tilde{x}$
+坐标系下 $\tilde{\Gamma}^\lambda_{\mu \nu}=0$ .</p>
+<hr>
+<p>零联络定理可以有以下性质或推论：</p>
+<ul>
+<li>不依赖于度规；</li>
+<li>即使存在挠率 $T^\lambda_{;\mu \nu}\ne 0$ 也可以使得 $\Gamma^\lambda_{\mu \nu}$ 对称部分为 $0$ ；</li>
+<li>取 $\Gamma (P)=0$，由 $\nabla_{\mu}g_{\alpha\beta}=\partial_{\mu}g_{\alpha\beta}=0$，可知 $g_{\alpha\beta}=g_{\mu \nu}(P)+g^{(1)}+g^{(2)}+\dots$，由于 $g^{(1)}\propto \partial_{\mu}g_{\alpha\beta}=0$，那么对于一个时空点 $P$ 总（近似）存在局域惯性系  $g_{\alpha\beta}(P)\simeq \eta_{\alpha\beta}$ .
+<strong>这与等效原理相符，即在小范围内，任何引力场都可以被视为局部的惯性参考系。</strong></li>
+</ul>
+<h3 id="协变导数">协变导数
+</h3><p>在欧几里得空间/平直时空中向量场的导数就是 $\lim_{ \delta x \to 0 }\frac{\vec{F}(x+\delta x)-\vec{F}(x)}{\delta x}$，即使存在坐标变换这里的矢量差仍是良好定义的. 然而在流形中，定义协变导数需要利用平行移动来作矢量差，这样才能使得坐标变换后仍然成立. 记相邻两点 $P$ 与 $Q = P + \mathrm{d}x$，那么对于协变矢量场 $V_{\nu}(x)$在 $P$ 点的协变导数为：</p>
+$$
+\nabla_{\mu}V_{\nu}(P) = \frac{{V_{\nu}(Q)-V_{\nu}(P\to Q) }}{\mathrm{d}x^\nu}=\partial_{\mu}V_{\nu}-\Gamma^\lambda_{\mu \nu}V_{\lambda}~.
+$$<ul>
+<li>
+<p>协变导数满足莱布尼兹法则 .</p>
+</li>
+<li>
+<p>对于标量：$\nabla_{\mu} f= \partial_{\mu} f$ ，且 $\nabla_{\mu} f$ 为协变矢量 .
+对于挠率 $T^\lambda_{\ \mu \nu}=\Gamma^\lambda_{\mu \nu}-\Gamma^\lambda_{\nu \mu}=0$的情况，$\nabla_{\mu}\nabla_{\nu}f=\nabla_{\nu}\nabla_{\mu}f$ .</p>
+</li>
+<li>
+<p>对于逆变矢量：</p>
+</li>
+</ul>
+$$
+\nabla_{\mu}V^\nu=\partial_{\mu}V^\nu + \Gamma^\nu_{\mu\lambda}V^\lambda~.
+$$<ul>
+<li>$(p,q)$ 型张量：</li>
+</ul>
+$$
+\begin{aligned}
+\nabla_{\mu}T^{\alpha_{1}\dots\alpha_{p}}_{\quad\quad\; \beta_{1}\dots\beta_{q}} = &\partial_{\mu } T^{\alpha_{1}\dots\alpha_{p}}_{\quad\quad\; \beta_{1}\dots\beta_{q}} +\Gamma^{\alpha_{1}}_{\mu \sigma}T^{\sigma\dots\alpha_{p}}_{\quad\quad\; \beta_{1}\dots\beta_{q}}+\dots+\Gamma^{\alpha_{n}}_{\mu\sigma} T^{\alpha_{1}\dots\sigma}_{\quad\quad\; \beta_{1}\dots\beta_{q}}
+\\
+&\quad-\Gamma^\sigma_{\mu \beta_{1}}T^{\alpha_{1}\dots\alpha_{p}}_{\quad\quad\; \sigma\dots\beta_{q}}-\dots-\Gamma^\sigma_{\mu\beta_{q}}T^{\alpha_{1}\dots\alpha_{p}}_{\quad\quad\; \beta_{1}\dots\sigma}~.
+\end{aligned}
+$$<ul>
+<li>Kroneker 张量 $\delta^\mu_{;\nu}(x)$ 的协变导数为 $0$</li>
+</ul>
+$$
+\nabla_{\alpha}\delta^\mu_{\;\nu}=\partial_{\alpha}\delta^\mu_{\;\nu}+\Gamma^\mu_{\alpha \beta}\delta^\beta_{\;\nu}-\Gamma^\beta_{\alpha \nu}\delta^\mu_{\;\beta}=\Gamma^\mu_{\alpha\nu}-\Gamma^\mu_{\alpha \nu}=0~.
+$$<ul>
+<li>
+<p>记号约定，协变导数 $\nabla_{\mu}A\equiv A_{;\mu}$；普通导数 $\partial_{\mu}A\equiv A_{,\mu}$ .</p>
+</li>
+<li>
+<p><strong>平行移动</strong>，对于定义在曲线 $\gamma^\mu(\lambda)$ 上的切矢量 $V^\mu= \frac{{\mathrm{d}x^\mu}}{\mathrm{d}\lambda}$，张量 $T^\alpha_{{;\beta}}$  沿着曲线 $\gamma^\mu(\lambda)$ 平行移动定义为</p>
+</li>
+</ul>
+$$
+V^\mu \nabla_{\mu } T^\alpha_{\;\beta}  = 0~.
+$$<h2 id="度规张量">度规张量
+</h2><h3 id="度规metric">度规（Metric）
+</h3><p>度规，顾名思义就是<strong>长度的规定</strong>。在流形上引入度规场及其规定的不变距离就构成了（伪）黎曼流形（黎曼空间）。</p>
+<p>使用<strong>度规张量</strong> $g_{\mu \nu}$ 定义流形上相邻两点$(\mathrm{d}x^\mu)$之间的距离</p>
+$$
+\mathrm{d}s^2 = g_{\mu \nu}\mathrm{d}x^\mu \mathrm{d}x^\nu~,
+$$<p>由于距离的规定与$\mu,\nu$ 指标是对称的，那么不妨认为 $g_{\mu \nu}$  就是对称张量 .</p>
+<ul>
+<li>黎曼空间，线元 $\mathrm{d}s^2$ 正定 .</li>
+<li>伪黎曼空间，线元非正定 .</li>
+<li>$3~ \mathrm{dim}$ 欧式空间笛卡尔坐标系的度规：</li>
+</ul>
+$$
+\mathrm{d}s^2  = \mathrm{d}x^2+\mathrm{d}y^2+\mathrm{d}z^2~,\quad \implies g_{ij}=
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}=\delta_{ij}~.
+$$<ul>
+<li>$3~\mathrm{dim}$ 欧式空间球坐标系的度规：</li>
+</ul>
+$$
+\mathrm{d}s^2 = \mathrm{d}r^2+r^2\left( \mathrm{d}\theta^2+\sin^2\theta\mathrm{d}\phi^2 \right) ~,\implies g_{ij}=
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & r^2 & 0 \\
+0 & 0 & r^2\sin^2\theta~.
+\end{pmatrix}
+$$<ul>
+<li>$4~\mathrm{dim}$ 平直时空度规 $(c=1)$：</li>
+</ul>
+$$
+\mathrm{d}s^2 = -\mathrm{d}t^2+\mathrm{d}x^2+\mathrm{d}y^2+\mathrm{d}z^2~, \implies g_{\mu \nu}=
+\begin{pmatrix}
+-1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{pmatrix}~.
+$$<ul>
+<li>施瓦西度规：</li>
+</ul>
+$$
+\begin{aligned}
+\mathrm{d}s^2 &=  -\left(1-\frac{2GM}{ r}\right) \mathrm{d}t^2 + \left(1-\frac{2GM}{ r}\right)^{-1} \mathrm{d}r^2 + r^2 \mathrm{d}\theta^2 + r^2\sin^2\theta \mathrm{d}\phi^2 ~,
+\\
+\implies g_{\mu \nu} &=
+\begin{pmatrix}
+-\left(1-\frac{2GM}{ r}\right) & 0 & 0 & 0 \\
+0 & \left(1-\frac{2GM}{ r}\right)^{-1} & 0 & 0 \\
+0 & 0 & r^2 & 0 \\
+0 & 0 & 0 & r^2\sin^2\theta
+\end{pmatrix}~.
+\end{aligned}
+$$<ul>
+<li>FRLW 度规：</li>
+</ul>
+$$
+\begin{aligned}
+\mathrm{d}s^2 &= - \mathrm{d} t^2 + a^2(t) \left[ \frac{\mathrm{d}r^2}{1-k r^2} + r^2 \mathrm{d}\theta^2 + r^2\sin^2\theta \mathrm{d}\phi^2 \right]
+\\
+\implies g_{\mu \nu}&=
+\begin{pmatrix}
+-1 & 0 & 0 & 0 \\
+0 & \frac{1}{1-k r^2} a^2(t) & 0 & 0 \\
+0 & 0 & r^2  a^2 (t)& 0 \\
+0 & 0 & 0 & r^2 a^2(t)\sin^2\theta
+\end{pmatrix}~.
+\end{aligned}
+$$<h3 id="张量指标升降">张量指标升降
+</h3><p>在黎曼空间中，使用度规 $g_{\mu \nu}$ 及其逆 $(g^{-1})^{\mu \nu}$ 进行升降指标 .</p>
+<ul>
+<li>度规为非退化矩阵，满足</li>
+</ul>
+$$
+(g^{-1})^{\mu \nu}g_{\nu \sigma} = \delta^\mu_{\;\sigma}~,\quad g^{\mu \nu}\equiv (g^{-1})^{\mu \nu} ~.
+$$<ul>
+<li>对任意张量</li>
+</ul>
+$$
+T^\mu = g^{\mu \nu}T_{\nu}~,\quad T^{\mu \nu} = g^{\mu\alpha}T_{\alpha}^{\;\nu}~.
+$$<ul>
+<li>矢量长度平方</li>
+</ul>
+$$
+g_{\mu \nu}V^\mu V^\nu = V_{\nu} V^\nu~.
+$$<h3 id="度规相容条件">度规相容条件
+</h3><p>当联络规定的平移操作保持矢量长度不变时，则称联络与度规适配，从另一个角度，即度规场平移不变</p>
+$$
+g_{\mu \nu}(P\to Q) = g_{\mu \nu}(P) \implies \nabla_{\mu}g_{\alpha\beta} = 0~,
+$$<p>
+其中 $\nabla_{\mu}g_{\alpha\beta} = 0$ 称为<strong>度规相容条件</strong> .</p>
+<p>可以证明满足 $\nabla_{\mu} g_{\alpha\beta}$ 的联络唯一存在，其为 Christoffel 联络</p>
+$$
+\Gamma^\lambda_{\mu \nu} = \frac{1}{2}g^{\lambda \sigma}\left( \partial_{\mu}g_{\sigma \nu}+\partial_{\nu}g_{\mu\sigma}-\partial_{\sigma}g_{\mu \nu}  \right)~.
+$$<hr>
+<p>proof:
+</p>
+$$
+\begin{aligned}
+\nabla_{\mu}g_{\alpha\beta}&=\partial_{\mu}g_{\alpha\beta}-{\color{orange}\Gamma^\alpha_{\mu \alpha}g_{\lambda \beta}}-{\color{blue} \Gamma^\lambda_{\mu\beta}g_{\alpha\lambda}}=0
+\\
+\nabla_{\alpha}g_{\beta \mu}&=\partial_{\alpha}g_{\beta\mu} - {\color{red} \Gamma^{\lambda}_{\alpha\beta}g_{\lambda\mu}} - {\color{orange} \Gamma^{\lambda}_{\alpha\mu}g_{\beta\lambda}}=0
+\\
+\nabla_{\beta}g_{\mu\alpha}&=\partial_{\beta}g_{\mu\alpha} - {\color{blue} \Gamma^{\lambda}_{\beta\mu}g_{\lambda\alpha}} -
+{\color{red} \Gamma^{\lambda}_{\beta\alpha}g_{\mu\lambda}}=0
+\\
+-\nabla_{\mu}g_{\alpha\beta}+\nabla_{\alpha}g_{\beta \mu}+\nabla_{\beta}g_{\mu\alpha}&=-\partial_{\mu}g_{\alpha\beta}+\partial_{\alpha}g_{\beta\mu}+\partial_{\beta}g_{\mu\alpha}-2{\color{red}\Gamma^\lambda_{\alpha\beta}g_{\lambda \mu}}=0
+\\
+\implies \Gamma^\lambda_{\mu \nu} &= \frac{1}{2}g^{\lambda \sigma}\left( \partial_{\mu}g_{\sigma \nu}+\partial_{\nu}g_{\mu\sigma}-\partial_{\sigma}g_{\mu \nu}  \right)~.
+\end{aligned}
+$$<hr>
+<h2 id="测地线曲率">测地线，曲率
+</h2><h3 id="测地线">测地线
+</h3><p>在欧式空间中，直线可以认为任意相邻的 $2$ 点的切矢量都互相平行的曲线，那么其在流形上的推广就是自平行线(流形上最“直”的线) .</p>
+<p>对于曲线上<strong>任意</strong>两点 $P,Q$，切矢量的平行条件为</p>
+$$
+A^\mu(Q) = \left[ 1+f(\lambda)\mathrm{d}\lambda \right]A^\mu(P\to Q)~,
+$$<p>
+其中 $A^\mu= \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda}$，这表明曲线上切矢量<em>只有“长度”变化，没有“方向”的变化</em>. 在 $P,Q$ 两点无限接近的情况下，根据</p>
+$$
+A_{\mu} (P\to Q) = \frac{{\mathrm{d}x^\mu}}{\mathrm{d}\lambda}-\Gamma^\mu_{\alpha\beta} \frac{{\mathrm{d}x^\alpha}}{\mathrm{d}\lambda} \frac{{\mathrm{d}x^\beta}}{\mathrm{d}\lambda}\mathrm{d}\lambda~,
+$$<p>切矢量在 $P$ 点作泰勒展开</p>
+$$
+A^\mu(Q)  = A^\mu (P) + \frac{\mathrm{d}A^\mu(P)}{\mathrm{d}\lambda}\mathrm{d}\lambda = \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda}+ \frac{{\mathrm{d}^2 x^\mu}}{\mathrm{d}\lambda^2}\mathrm{d}\lambda~,
+$$<p>那么有</p>
+$$
+\begin{aligned}
+\left[ 1+f(\lambda)\mathrm{d}\lambda \right] \cdot \left[ \frac{{\mathrm{d}x^\mu}}{\mathrm{d}\lambda}-\Gamma^\mu_{\alpha\beta} \frac{{\mathrm{d}x^\alpha}}{\mathrm{d}\lambda} \frac{{\mathrm{d}x^\beta}}{\mathrm{d}\lambda}\mathrm{d}\lambda \right] &=\frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda}+ \frac{{\mathrm{d}^2 x^\mu}}{\mathrm{d}\lambda^2}\mathrm{d}\lambda
+\\
+f(\lambda) \frac{{\mathrm{d}x^\mu}}{\mathrm{d}\lambda} &= \frac{\mathrm{d}^2 x^\mu }{\mathrm{d}\lambda^2} + \Gamma^\mu_{\alpha\beta} \frac{\mathrm{d}x^\alpha}{\mathrm{d}\lambda} \frac{{\mathrm{d}x^\beta}}{\mathrm{d}\lambda} ~,
+\end{aligned}
+$$<p>上式即为<strong>测地线</strong>方程，且只和仿射联络的对称部分有关（反对称部分缩并为 $0$ ）.</p>
+<h3 id="仿射参量">仿射参量
+</h3><p>曲线的参数 $\lambda$ 是任意的，如果选取合适的参数 $\lambda(\sigma)$ 满足</p>
+$$
+\frac{\mathrm{d}^2\sigma}{\mathrm{d}\lambda^2} - f(\lambda) \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda}=0~,
+$$<p>可以化简测地线方程为（证明见后文）</p>
+$$
+\frac{\mathrm{d}^2 x^\mu}{\mathrm{d}\sigma^2} + \Gamma^\mu_{\alpha\beta} \frac{\mathrm{d}x^\alpha}{\mathrm{d}\sigma} \frac{\mathrm{d}x^\beta}{\mathrm{d}\sigma} = 0~. \tag{*}
+$$<p>这样的 $\sigma$ 称为<strong>曲线的仿射参量</strong> .</p>
+<ul>
+<li>从上式可以看到，取仿射参量 $\sigma$ 为曲线参数化时 $f(\sigma)=0$ 平行条件变为</li>
+</ul>
+$$
+A^\mu(Q) = \left[ 1+f(\sigma)\mathrm{d}\sigma \right]A^\mu(P\to Q)~ \implies A^\mu(Q) = A^\mu(P\to Q)~, \quad A^\mu=\frac{\mathrm{d}x^\mu}{\mathrm{d}\sigma}~.
+$$<p>也就是说曲线上切矢量不仅没有“方向”的变化，也没有“长度”的变化.</p>
+<ul>
+<li>仿射参量只对测地线有定义，因为只有测地线的切矢量满足自平行条件 .</li>
+<li>反射参量依赖于流形上给定的联络，从 $\frac{\mathrm{d}^2\sigma}{\mathrm{d}\lambda}=f(\lambda)\frac{\mathrm{d}\sigma}{\mathrm{d}\lambda},f(\lambda)\propto \Gamma$ 可以看到 .</li>
+<li>仿射参量并不唯一，对于 $\tilde{\sigma}=a\sigma+b$ 仍为仿射参量，对于 $\tilde{\sigma}$ 这是显然对 $*$ 成立的.</li>
+</ul>
+<hr>
+<p>对 $*$ 的证明
+对于 $\lambda = \lambda(\sigma)$，有</p>
+$$
+\begin{aligned}
+\frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda} &=\frac{\mathrm{d}x^\mu}{\mathrm{d}\sigma} \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda}~,
+\\
+\frac{\mathrm{d}^2x^\mu}{\mathrm{d}\lambda^2} &= \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda} \frac{\mathrm{d}}{\mathrm{d}\sigma} \left( \frac{\mathrm{d}x^\mu}{\mathrm{d}\sigma} \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda}  \right) = \left( \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda} \right)^2 \frac{\mathrm{d}^2x^\mu}{\mathrm{d}\sigma^2} + \frac{\mathrm{d}x^\mu}{\mathrm{d}\sigma} \frac{\mathrm{d}^2\sigma}{\mathrm{d}\lambda^2}~,
+\\
+\implies& \left( \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda} \right)^2 \frac{\mathrm{d}^2x^\mu}{\mathrm{d}\sigma^2}  + \frac{\mathrm{d}x^\mu}{\mathrm{d}\sigma}  {\color{orange} \frac{\mathrm{d}^2\sigma}{\mathrm{d}\lambda^2}} + \Gamma^\mu_{\alpha\beta} \frac{\mathrm{d}x^\alpha}{\mathrm{d}\sigma} \frac{\mathrm{d}x^\beta}{\mathrm{d}\sigma}  \left( \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda} \right)^2 = {\color{orange} f(\lambda) \left( \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda} \right) }\frac{\mathrm{d}x^\mu}{\mathrm{d}\sigma}
+\end{aligned}
+$$<p>根据 $\frac{\mathrm{d}^2\sigma}{\mathrm{d}\lambda^2} - f(\lambda) \frac{\mathrm{d}\sigma}{\mathrm{d}\lambda}=0$ 可得</p>
+$$
+\frac{\mathrm{d}^2 x^\mu}{\mathrm{d}\sigma^2} + \Gamma^\mu_{\alpha\beta} \frac{\mathrm{d}x^\alpha}{\mathrm{d}\sigma} \frac{\mathrm{d}x^\beta}{\mathrm{d}\sigma} = 0~.
+$$<hr>
+<h3 id="时空结构">时空结构
+</h3><p>曲线的分类</p>
+$$
+\mathrm{d}s^2 = -\mathrm{d}\tau^2=-\mathrm{d}t^2+\mathrm{d}r^2+r^2\mathrm{d}\Omega^2=
+\left\{
+\begin{matrix}
+-1~, &\text{类时(time-like)曲线} \\
+0~, &\text{类光/零 (null)曲线}\\
+1~, &\text{类空(space-like)曲线}
+\end{matrix}
+\right.
+$$<ul>
+<li>对于类时曲线，一般使用固有时 $\tau$ 作为仿射参量，测地线为最长的线 .</li>
+<li>对于类空曲线，一般使用固有长度 $s$ 作为仿射参量，测地线为最短的线 .</li>
+<li>测地完备 (geodesically complete)，一个时空流形上所有测地线都可以任意延申 .</li>
+<li>测地不完备 (geodesically incomplete)，一个时空流形存在测地线无法任意延申（碰到奇点） .</li>
+</ul>
+<hr>
+<p>更物理的角度看测地线的意义，可以使用自由点粒子的作用量进行分析</p>
+$$
+S = -m \int_{A}^{B}\mathrm{d}\tau = -m \int_{A}^{b} \sqrt{ -g_{\mu \nu} \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda} \frac{\mathrm{d}x^\nu}{\mathrm{d}\lambda} }  \, \mathrm{d}\lambda~,
+$$<p>点粒子的运动曲线称为“世界线”，定义 $V^\mu = \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda}$ 为世界线的切矢，同时描述粒子的世界线是一维的，可以定义标架场 <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+$$
+e(\lambda) \equiv \frac{1}{m} \sqrt{ -g_{\mu \nu}\frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda} \frac{\mathrm{d}x^\nu}{\mathrm{d}\lambda} } = \frac{1}{m} \sqrt{ -g_{\mu \nu}V^\mu V^\nu }= \frac{1}{m} \frac{\mathrm{d}\tau}{\mathrm{d}\lambda} ~.
+$$<p>
+作用量可以重新写为</p>
+$$
+S = \frac{1}{2} \int_{\lambda_{B}}^{\lambda_{A}}\mathrm{d}\lambda  g_{\mu \nu}V^\mu V^\nu e^{-1}(\lambda)-m^2 e(\lambda)  \, .
+$$<p>对 $x^\mu$ 变分</p>
+$$
+\begin{aligned}
+\frac{\delta S}{\delta x^\mu} &= \frac{1}{2} \int_{\lambda_{B}}^{\lambda_{A}}  \, \mathrm{d}\lambda \left[ 2e^{-1}(\lambda)g_{\mu \nu} \frac{\mathrm{d \delta x^\mu}}{\mathrm{d}\lambda}V^\nu+e^{-1}(\lambda) \delta g_{\mu \nu}V^\mu V^\nu  \right]
+\\
+&=\frac{1}{2} \int_{\lambda_{B}}^{\lambda_{A}}  \, \mathrm{d}\lambda \left[
+-2\frac{\mathrm{d}}{\mathrm{d}\lambda}\left( e^{-1}(\lambda)g_{\mu\alpha} \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda} \right)\delta x^\alpha+e^{-1}(\lambda)\partial_{\alpha}g_{\mu \nu}V^\mu V^\nu\delta x^\alpha
+\right] =0~,
+\\
+\implies 0&= \partial_{\alpha}g_{\mu \nu} V^\mu V^\nu - 2e(\lambda)\frac{\mathrm{d}}{\mathrm{d}\lambda}\left( e^{-1}(\lambda)g_{\mu\alpha} V^\mu \right)
+\\
+& =  \partial_{\alpha}g_{\mu \nu} V^\mu V^\nu - 2 \partial_{\nu}g_{\mu\alpha}V^\mu V^\nu-2g_{\mu\alpha}\frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda}+2e^{-1}(\lambda) \frac{\mathrm{d}e(\lambda)}{\mathrm{d}\lambda}g_{\mu\alpha} \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda}~,
+\\
+\implies & g_{\mu\alpha} \frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda} + \partial_{\nu}g_{\mu\alpha} V^\mu V^\nu - \frac{1}{2}\partial_{\alpha}g_{\mu \nu} V^\mu V^\nu =  2 e^{-1}(\lambda) \frac{\mathrm{d}e(\lambda)}{\mathrm{d}\lambda}g_{\mu\alpha}V^\mu~.
+\end{aligned}
+$$<p>上式中第二项 $\mu,\nu$ 指标对称</p>
+$$
+\partial_{\nu}g_{\mu\alpha} V^\mu V^\nu = \frac{1}{2}\left[ \partial_{\nu}g_{\mu\alpha} V^\mu V^\nu + \partial_{\mu}g_{\nu\alpha} V^\nu V^\mu  \right]
+$$<p>那么有</p>
+$$
+\begin{aligned}
+g_{\mu\alpha} \frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda} + \partial_{\nu}g_{\mu\alpha} V^\mu V^\nu - \frac{1}{2}\partial_{\alpha}g_{\mu \nu} V^\mu V^\nu &= g_{\mu\alpha} \frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda} + \frac{1}{2}\left[ \partial_{\nu}g_{\mu\alpha} V^\mu V^\nu + \partial_{\mu}g_{\nu\alpha}  -\partial_{\alpha}g_{\mu \nu}  \right] V^\nu V^\mu
+\\
+&=g_{\mu\alpha} \frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda} + g_{\mu\alpha}\cdot \frac{1}{2}g^{\mu\beta}\left[ \partial_{\nu}g_{\rho\beta}+\partial_{\rho}g_{\nu\beta}-\partial_{\beta}g_{\nu \rho}  \right] V^\nu V^\rho
+\\
+\implies& \frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda}+\Gamma^\mu_{\nu \rho}V^\nu V^\rho = f(\lambda)V^\mu~,
+\end{aligned}
+$$<p>其中 $f(\lambda) = \left( e^{-1}\frac{\mathrm{d}e}{\mathrm{d}\lambda} \right)$ ，如果令 $f(\lambda) = 0$ ，在类时曲线中可以得到 $\lambda \propto \tau$，那么把固有时 $\tau$ 作为仿射参数是一个自然的选择；如果是类空曲线，则有 $e(\lambda) = \frac{1}{m} \sqrt{ g_{\mu \nu}\frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda} \frac{\mathrm{d}x^\nu}{\mathrm{d}\lambda} }$ 保证根号内为正实数，那么选取 $\lambda=s$ 是一个自然的选择 .</p>
+<p>定义 $\frac{\mathrm{D}}{\mathrm{d}\lambda}V^\mu \equiv \frac{\mathrm{d}V^\mu}{\mathrm{d}\lambda}+\Gamma^\mu_{\alpha\beta}V^{\alpha}V^\beta$，对于世界线为类时曲线的粒子而言</p>
+$$
+a^\mu = \frac{\mathrm{D}}{\mathrm{d}\tau}u^\mu = 0~,
+$$<p>说明测定线的物理意义就是粒子不受外力（除引力外的力）时行走的路线 .</p>
+<hr>
+<h3 id="黎曼曲率张量">黎曼曲率张量<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>
+</h3><p>在弯曲时空，如果一个矢量 $V^\alpha$ 沿无穷小的一个圈，如图所示，先沿 $A^\mu,B^\nu$ 平行移动，再沿 $A^\mu,B^\nu$ 平行移动回原点，会使得平行移动后与移动前有差异 $\delta V^\alpha$，这个差异与 $A^\mu,B^\nu$ 以及矢量 $\hat{V}$ 本身成正比，且应该是坐标无关的，故可以用一个张量衡量这个差异，就是所谓<strong>黎曼曲率张量</strong>：</p>
+$$
+\delta V^\alpha = R^\alpha_{\;\beta\mu \nu} V^\beta A^\mu B^\nu~.
+$$<p>从上面不难看出，黎曼曲率张量与 $A^\mu,B^\nu$ 的顺序有关，有</p>
+$$
+R^\alpha_{\;\beta \nu \mu}=-R^\alpha_{\;\beta \mu \nu}~.
+$$<img src="Screenshot_20251101_193628_com_jideos_jnotes_Note.jpg" alt="Screenshot_20251101_193628_com_jideos_jnotes_Note" style="zoom:20%;" />
+<p>(这 $2$ 幅图仅仅为了表达曲率而把矢量画得弯曲.)</p>
+<p>然而，第一个式子的计算略显繁琐，根据平行移动的定义 $A^\mu \nabla_{\mu}V^\alpha=0$ ，那么我们可以用协变导数 $\nabla_{\mu},\nabla_{\nu}$ 来代替 $A^\mu, B^\nu$.  故刻画一个流形的曲率，可以用协变导数的对易子<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
+$$
+\begin{aligned}
+[\nabla_{\mu},\nabla_{\nu}]V^\alpha&=R^\alpha_{\;\beta \mu \nu}V^\beta~,
+\\
+\implies R^\alpha_{\;\beta \mu \nu} &= \partial_{\mu}\Gamma^\alpha_{\nu\beta}-\partial_{\nu}\Gamma^\alpha_{\mu\beta}+\Gamma^\alpha_{\mu\sigma}\Gamma^\sigma_{\nu\beta}-\Gamma^\alpha_{\nu\sigma}\Gamma^\sigma_{\mu\beta}
+\end{aligned}
+$$<p>黎曼张量具有以下性质</p>
+<ul>
+<li>$R_{\sigma\lambda \mu \nu}=g_{\sigma \rho}R^\rho_{;\lambda \mu \nu}=-R_{\lambda\sigma \mu \nu}=-R_{\sigma\lambda \nu \mu}=R_{\mu \nu\sigma\lambda}$ . 前后 $2$ 对指标反对称，前后 $2$ 对指标同时调换不变 .</li>
+<li>Bianchi I : $R_{\sigma\lambda \mu \nu}+R_{\sigma \mu \nu\lambda}+R_{\sigma \nu\lambda \mu}=0$ .</li>
+<li>独立个数：$20$ .
+对于 $4 ;\mathrm{dim}$ 时空，${\sigma,\lambda} \to C_4^2=6$，${\mu,\nu}\to C^2_{4}=6$，可以这 $2$ 对指标独立分量构成一个 $6\times {6}$ 矩阵，同时由于其对称性，共有 $\frac{6\times7}{2}=21$ 个独立分量，再减去Bianchi I 恒等式的约束，共有 $20$ 个独立分量 .</li>
+<li>Bianchi II: $R^\rho_{;\lambda \mu \nu;\sigma}+R^\rho_{;\lambda \nu\sigma;\mu}+R^\rho_{;\lambda\sigma \mu;\nu}=0$ .</li>
+<li>缩并：
+<ol>
+<li>$g^{\rho\lambda}R_{\rho\lambda \mu \nu}=0$ （$\rho,\lambda$反对称）.</li>
+<li>里奇(Ricci)张量：$R_{\mu \nu}=R^\lambda_{;\mu\lambda \nu}$ .</li>
+<li>Ricci 标量：$R=g^{\mu \nu}R_{\mu \nu}$ .</li>
+<li>Einstein 张量：$G_{\mu \nu}=R_{\mu \nu}-\frac{1}{2}g_{\mu \nu}R$ .</li>
+</ol>
+</li>
+</ul>
+<hr>
+<p>Bianchi II 的证明
+在局部惯性系中，在一点 $P$ 处，Christoffel 联络为零：$\Gamma^\rho_{\mu\nu}(P) = 0$，但它们的导数不为零，黎曼曲率张量为：</p>
+$$
+R^\rho_{\;\lambda\mu\nu}(P) = \partial_\mu \Gamma^\rho_{\nu\lambda} - \partial_\nu \Gamma^\rho_{\mu\lambda}~,
+$$<p>
+在点 $P$ 处，由于 $\Gamma(P) = 0$，协变导数退化为普通导数：</p>
+$$
+R^\rho_{\;\lambda\mu\nu;\sigma}(P) = \partial_\sigma R^\rho_{\;\lambda\mu\nu}
+= \partial_\sigma (\partial_\mu \Gamma^\rho_{\nu\lambda} - \partial_\nu \Gamma^\rho_{\mu\lambda})
+$$<p>考虑三项的循环和：</p>
+$$
+\begin{align*}
+ R^\rho_{\;\lambda\mu\nu;\sigma} + R^\rho_{\;\lambda\nu\sigma;\mu} + R^\rho_{\;\lambda\sigma\mu;\nu} &= \partial_\sigma (\partial_\mu \Gamma^\rho_{\nu\lambda} - \partial_\nu \Gamma^\rho_{\mu\lambda}) + \partial_\mu (\partial_\nu \Gamma^\rho_{\sigma\lambda} - \partial_\sigma \Gamma^\rho_{\nu\lambda})
+ \\
+  &\quad\quad\quad+ \partial_\nu (\partial_\sigma \Gamma^\rho_{\mu\lambda} - \partial_\mu \Gamma^\rho_{\sigma\lambda})~.
+  \\
+  &= {\color{blue} \partial_\sigma\partial_\mu \Gamma^\rho_{\nu\lambda}} - {\color{red}\partial_\sigma\partial_\nu \Gamma^\rho_{\mu\lambda}} +{\color{orange} \partial_\mu\partial_\nu \Gamma^\rho_{\sigma\lambda}} -{\color{blue} \partial_\mu\partial_\sigma \Gamma^\rho_{\nu\lambda}} \\
+&\quad\quad\quad + {\color{red}\partial_\nu\partial_\sigma \Gamma^\rho_{\mu\lambda}} - {\color{orange} \partial_\nu\partial_\mu \Gamma^\rho_{\sigma\lambda}}
+\\
+&=0~.
+\end{align*}
+$$<hr>
+<h2 id="李导数kiling-矢量场">李导数，Kiling 矢量场
+</h2><h3 id="微分同胚diffeomorphism-diff映射">微分同胚（diffeomorphism, diff）映射
+</h3><p>对于映射 $f:M\mapsto M^\prime$，$f$ 为双射（单射+满射，一一到上），且 $f$ 与 $f^{-1}$ 均为 $C^\infty$，此时称 $M$ 与 $M^\prime$ （互）为微分同胚的。</p>
+<ul>
+<li>这个概念和群同构有相似之处，群同构指的是群元素一一对应且匹配乘法规则；流形的微分同胚需要满足流形上每个点一一对应，同时映射关系必须是光滑的。</li>
+<li>在不考虑其它附加结构（度规，联络等）前提下，互为微分同胚的流形在数学上可以看作同一个流形。</li>
+<li>微分同胚变换：$f:M\mapsto M$，流形到自身的变换<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> .</li>
+<li>主动观点：坐标轴固定，变换作用到流形上的点。（在讨论<strong>李导数</strong>时主要采用主动观点）</li>
+<li>被动观点：流形不改变，坐标轴改变。</li>
+</ul>
+<img src="Pastedimage20251030200254.png" alt="Pastedimage20251030200254" style="zoom:50%;" />
+<h3 id="李导数">李导数
+</h3><p>依赖于矢量场 $\xi^\mu$，张量场 $T$ 在 $P$ 点的李导数可以定义为</p>
+$$
+\mathcal{L}_{\xi}T(x)\equiv \lim_{ \epsilon \to 0 } \frac{T(Q)-T(P\implies Q)}{\epsilon}
+$$<p>其中 $T(P\implies Q)$ 是 $T(P)$ 在微分同胚变换后的像，从李导数上式定义可以看出 $\mathcal{L}_{\xi}T(x)$ 与 $T(x)$ 为同阶张量。</p>
+<p>对于无穷小 diff 变换 $P\to Q$：采取<strong>主动观点</strong>，不进行坐标变换，而是点变换：</p>
+$$
+\tilde{x}^\mu = x^\mu + \epsilon \xi^\mu(x)~,\quad \epsilon\to {0}~,\quad \xi^\mu(x)\in C^\infty~,
+$$<p>其中 $\epsilon$ 为无穷小参数， $\xi^\mu(x)$ 为给定流形上每个点进行微分同胚变换的方向，为 $C^\infty$矢量场，可以作为 diff 群的生成元。</p>
+<ul>
+<li>对于标量场 $F(x)$，由于diff变换不改变标量函数值 $F(P\implies Q)=F(P)$ ，故有</li>
+</ul>
+$$
+\mathcal{L}_{\xi}F(x) = \lim_{ \epsilon \to 0 } \frac{F(Q)-F(P)}{\epsilon} =\lim_{ \epsilon \to 0 }  \frac{\partial_{\mu}F(x)\epsilon \xi^\mu(x)}{\epsilon}=F_{,\mu}\xi^\mu~.
+$$<p>可以看到其物理意义就是方向导数。</p>
+<ul>
+<li>对于逆变矢量场 $k^\mu(x)$ ， $k^\mu(P)$ 可以作为某一曲线 $C$ 在 $P$ 点的切矢量</li>
+</ul>
+$$
+k^\mu(P) = \left( \frac{\mathrm{d}x^\mu}{\mathrm{d}\lambda} \right)_{P}~,
+$$<img src="Screenshot_20251030_202835_com_jideos_jnotes_Note-1762789839521-1.jpg" alt="Screenshot_20251030_202835_com_jideos_jnotes_Note" style="zoom:15%;" />
+<p>对于曲线 $C$ 上无限接近 $P$ 的 $P&rsquo;$ 点 $x^\mu+\mathrm{d}x^\mu$，其与 $P$ 的diff变换如下</p>
+$$
+\begin{aligned}
+x^\mu &\implies x^\mu+\epsilon \xi^\mu(x)
+\\
+x^\mu+\mathrm{d}x^\mu &\implies (x^\mu+\mathrm{d}x^\mu) +\epsilon \xi^\mu(x+\mathrm{d}x)
+\\
+\implies \mathrm{d}\tilde{x}^\mu&=\mathrm{d}x^\mu+\epsilon \xi^\mu_{\;,\nu}\mathrm{d}x^\nu
+\end{aligned}
+$$<p>diff 将过 $P$ 点 曲线 $C$ 变为过 $Q$ 点曲线 $D$，那么 $D$ 曲线上 $Q$ 点的切线就是 $k^\mu(P\implies Q)$：</p>
+$$
+k^\mu(P\implies Q) = \frac{\mathrm{d}\tilde{x}^\mu}{\mathrm{d}\lambda}={\mathrm{d}x^\mu+\epsilon \xi^\mu_{\;,\nu}\mathrm{d}x^\nu\over \mathrm{d}\lambda}\bigg|_{P}=k^\mu(P)+\epsilon \xi^\mu_{{\;,\nu}}k^\nu~,
+$$<p>且 diff 之前 $k^\mu(Q)=k^\mu(P)+k^\mu_{{;,\nu}}\big|_{P} \mathrm{d}x^\nu,; \mathrm{d}x^\nu=\epsilon \xi^\nu$，那么可得</p>
+$$
+\begin{aligned}
+\mathcal{L}_{\xi}k^\mu(x) &= \lim_{ \epsilon \to 0 } \frac{k^\mu(Q)-k^\mu(P\implies Q) }{\epsilon}
+\\
+&= \lim_{ \epsilon \to 0 } \frac{k^\mu(Q)-k^\mu(P)-\epsilon \xi^\mu_{\;,\nu}k^\nu(P)}{\epsilon}
+\\
+&=k^\mu_{\;,\nu}\xi^\nu-\xi^\mu_{\;,\nu}k^\nu=-\mathcal{L}_{k}\xi^\mu(x)~.
+\end{aligned}
+$$<ul>
+<li>其它形式张量李导数</li>
+</ul>
+$$
+\begin{aligned}
+\mathcal{L}_{\xi}k_{\mu}&=k_{\mu,\nu}\xi^\nu+\xi_{\mu,\nu}k^\nu~,
+\\
+\mathcal{L}_{\xi}T_{\mu \nu} &= T_{\mu \nu,\alpha}\xi^\alpha
++T_{\alpha \nu}\xi^\alpha_{\;,\mu}+T_{\mu\alpha}\xi^\alpha_{\;,\nu}~,
+\\
+\mathcal{L}_{\xi}T^\mu_{\;\,\nu}&=T^\mu_{\;\,\nu,\alpha}\xi^\alpha-T^\alpha_{\;\;\nu}\xi^\mu_{\;,\alpha}+T^\mu_{\;\;\alpha}\xi^\alpha_{\;,\nu}~,
+\\
+&\dots
+\\
+&\text{先对张量求导，对矢量场求导上指标为减号，下指标为加号 .}
+\end{aligned}
+$$<ul>
+<li>对张量场求李导数后仍然为张量场，因此可以可以将李导数中的 $\partial\to \nabla$ 而没有影响<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> .</li>
+<li>对度规张量场 $g_{\mu \nu}$ 的李导数</li>
+</ul>
+$$
+\begin{aligned}
+\mathcal{L}_{\xi}g_{\mu \nu} &= g_{\mu \nu,\alpha}\xi^\alpha+g_{\alpha \nu}\xi^\alpha_{\;,\mu}+g_{\mu\alpha}\xi^\alpha_{\;,\nu}
+\\
+&=\nabla_{\nu}\xi_{\mu}+\nabla_{\mu}\xi_{\nu}~,
+\end{aligned}
+$$<ul>
+<li>李导数必须依赖 $\xi,T$，其中 $\xi$ 指定了微分同胚变换点的变换方向 .</li>
+<li>李导数的定义不依赖于度规和联络，可以定义在任意流形上 .</li>
+<li>李导数满足莱布尼兹法则 .</li>
+</ul>
+<h3 id="等度规变换和kiling矢量场">等度规变换和Kiling矢量场
+</h3><ul>
+<li>等度规变换（等长变换）：即保证矢量长度不变的微分同胚变换，刻画黎曼空间的几何对称性</li>
+</ul>
+$$
+g_{\mu \nu}\left( P\implies Q \right) = g_{\mu \nu}(Q)~,
+$$<p>其可以推出</p>
+$$
+\begin{aligned}
+&g_{\mu \nu}(P\implies Q)A^\mu \left( P\implies Q \right) A^\nu(P\implies Q) = g_{\mu \nu}(Q)A^\mu(Q)A^\nu(Q)~,
+\\
+&\implies\quad g_{\mu \nu}(Q)A^\mu \left( P\implies Q \right) A^\nu(P\implies Q) = g_{\mu \nu}(Q)A^\mu(Q)A^\nu(Q)~,
+\end{aligned}
+$$<p>即 $Q$ 点与 $P$ 点衡量的长度相同 .</p>
+<ul>
+<li>Kiling 矢量场：在无穷小等度规变换下，有</li>
+</ul>
+$$
+\mathcal{L}_{\xi}g_{\mu \nu}=\nabla_{\nu} \xi_{\mu}+\nabla_{\mu}\xi_{\nu}=0~,
+$$<p>此方程即为Kiling方程，满足Kiling方程的矢量场就是Kiling矢量场. 由于 $\mu \nu$ 指标的对称性，其有 $10$ 个独立的方程，然而独立分量只有 $4$ 个，那么说明只有在特定的空间下才有满足Kiling方程的Kiling矢量场<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup> .</p>
+<ul>
+<li>最大对称空间：对于 $n-\mathrm{dim}$ 时空，它最多拥有 $\frac{n(n+1)}{2}$ 个 Kiling 矢量场 .</li>
+</ul>
+<p>对于 $n-\mathrm{dim}$ 平直时空，有 $n$ 个独立的时空平移，同时选择 $2$ 个坐标轴即可定义该“平面”的转动，故有Kiling矢量场个数最多为：</p>
+$$
+n+C_{n}^2 = \frac{n(n+1)}{2}~.
+$$<ul>
+<li>稳态时空：满足时间平移不变性的时空，即度规场 $g_{\mu \nu}$ 不显含时间 .</li>
+</ul>
+<p>对于无穷小时间平移变换：$\tilde{x}^0 = x^0+\epsilon$ ，Kiling矢量场为 $\xi^\mu=(1,0,0,0)$，有</p>
+$$
+\mathcal{L}_{\xi}g_{\mu \nu} = \partial_{0}g_{\mu \nu} = 0~.
+$$<h2 id="黎曼流形的常用计算">黎曼流形的常用计算
+</h2><ul>
+<li>由行列式 $g=g_{\mu \nu} \frac{g}{g_{\mu \nu}}$，其中 $\Delta^{\mu \nu}=\frac{g}{g_{\mu \nu}}$ 为 $g_{\mu \nu}$ 的代数余子式，故</li>
+</ul>
+$$
+\frac{\partial g}{\partial g_{\mu \nu}}=g g_{\mu \nu}^{-1}=g g^{\mu \nu}~.
+$$<ul>
+<li>对度规行列式求导：$\partial_{\rho}g=-gg_{\mu \nu}\partial_{\rho}g^{\mu \nu}$ ：</li>
+</ul>
+$$
+\begin{aligned}
+\partial_{\rho}g &= \frac{\partial g}{\partial g_{\mu \nu}} \frac{\partial g_{\mu \nu} }{\partial x^\rho } = gg^{\mu \nu}\partial_{\rho}g_{\mu \nu}
+\\
+&= g\partial_{\rho} \left( g_{\mu \nu}g^{\mu \nu} \right)  -gg_{\mu \nu}\partial_{\rho}g^{\mu \nu}
+\\
+&= -gg_{\mu \nu}\partial_{\rho}g^{\mu \nu}~.
+\end{aligned}
+$$<ul>
+<li>联络缩并$\Gamma^\mu_{\rho \mu}=\frac{1}{\sqrt{ -g }}\partial_{\rho}\sqrt{ -g }$ ：</li>
+</ul>
+$$
+\begin{aligned}
+\Gamma^\mu_{\rho \mu} &= \frac{1}{2} g^{\mu\lambda}\left( \partial_{\rho}g_{\mu\lambda} + \partial_{\mu}g_{\rho\lambda}-\partial_{\lambda}g_{\mu \rho}  \right)
+\\
+& = \frac{1}{2} g^{\lambda\mu}\left( \partial_{\rho}g_{\mu\lambda} + \partial_{\lambda}g_{\rho \mu}-\partial_{\mu}g_{\lambda \rho}  \right)
+\\
+& = \frac{1}{2}g^{\mu\lambda}\partial_{\rho}g_{\mu\lambda}
+\\
+& = \frac{1}{2}g^{-1}\partial_{\rho}g = \frac{1}{2} \partial_{\rho} \ln \sqrt{ -g
+}
+\\
+&=\partial_{\rho}\sqrt{ -g }
+\\
+&= \frac{1}{\sqrt{ -g }}\partial_{\rho}\sqrt{ -g }~.
+\end{aligned}
+$$<ul>
+<li>矢量场的散度 $\nabla_{\rho}J^\rho=\frac{1}{\sqrt{ -g }}\partial_{\rho}\left(   \sqrt{ -g } J^\rho \right)$ ：</li>
+</ul>
+$$
+\begin{aligned}
+\nabla_{\rho}J^\rho &= \partial_{\rho}J^\rho + \Gamma^\rho_{\rho\lambda} J^\lambda
+= \partial_{\rho}J^\rho +  \frac{1}{\sqrt{ -g }}\partial_{\rho} \left(\sqrt{ -g }J^\rho \right)
+\\
+&=\frac{1}{\sqrt{ -g }}\partial_{\rho}\left(   \sqrt{ -g } J^\rho \right)~.
+\end{aligned}
+$$<ul>
+<li><strong>反对称</strong>张量的散度 $\nabla_{\mu}F^{\mu \nu}=\frac{1}{\sqrt{ -g }}\partial_{\mu}\left( \sqrt{ -g }F^{\mu \nu} \right)$ ：</li>
+</ul>
+$$
+\begin{aligned}
+\nabla_{\mu}F^{\mu \nu} & = \partial_{\mu} F^{\mu \nu} + \Gamma^{\mu}_{\mu\lambda}F^{\lambda \nu} +\underbrace{  \Gamma^\nu_{\mu\lambda}F^{\mu\lambda} }_{ \text{反对称与对称缩并} =0}
+\\
+& = \partial_{\mu} F^{\mu \nu} + \Gamma^{\mu}_{\mu\lambda}F^{\lambda \nu}
+\\
+& = \frac{1}{\sqrt{ -g }}\partial_{\mu}\left( \sqrt{ -g }F^{\mu \nu} \right)~.
+\end{aligned}
+$$<h3 id="微分几何小节">微分几何小节
+</h3><img src="Pastedimage20251030212237.png" alt="Pastedimage20251030212237" style="zoom:50%;" />
+<h2 id="参考资料">参考资料：
+</h2><blockquote>
+<p>【1】国科大田雨老师的课堂笔记 .</p>
+<p>【2】Carroll, Sean M. Spacetime and Geometry: An Introduction to General Relativity. Benjamin Cummings, 2003.</p>
+<p>【3】陈斌. 2018. 《广义相对论》. 北京: 北京大学出版社.</p>
+</blockquote>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>这里我不想写过多的数学，可以认为满足以下坐标变换就是对应的标量/矢量/张量，虽然严格上只能说它们是矢量/张量的分量 .&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>这里&quot;平移&quot;的定义为矢量始终保持与平移路径曲线的夹角不变，且在无穷小平移下，平移后的矢量与曲线，原矢量共面，可能会有些不严格，但是方便理解 .&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>一般 $P$ 点四维标价场就是在该点切空间的基矢，满足 $g_{\mu \nu}e^\mu_{a} e^\nu_{(b)}=\eta_{ab}$，其中 $a,b$ 为标架指标 .&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>仅考虑<strong>无挠</strong> $(T^\lambda_{;\mu \nu}=\Gamma^\lambda_{\mu \nu}-\Gamma^\lambda_{\nu \mu}=0)$ 的情况.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>计算过程略 .&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>也许可以不严谨地认为 $2$ 个流形微分同胚就是同一个流形 .&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>在度规与联络适配时 .&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8">
+<p>超定方程只有特殊情况才有解 .&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%94%A8mathematica%E9%AA%8C%E8%AF%81%E5%85%8B%E5%B0%94%E5%BA%A6%E8%A7%84/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E7%94%A8mathematica%E9%AA%8C%E8%AF%81%E5%85%8B%E5%B0%94%E5%BA%A6%E8%A7%84/774px-Spinning_and_chargend_black_hole_with_accretion_disk.a163a6a7f65d22108cd2067b4e509995_hu_2422880b006d567a.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 用Mathematica验证克尔度规"
+                        
+                        data-hash="md5-oWOmp/ZdIhCM0gZ7TlCZlQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">用Mathematica验证克尔度规</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%96%BD%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84schwarzchild-metric/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E6%96%BD%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84schwarzchild-metric/wallhaveny86gzx.96436f35145cc4b7362d1b53080115e0_hu_5931a1b6955ebdc0.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 施瓦西度规(Schwarzchild Metric)"
+                        
+                        data-hash="md5-lkNvNRRcxLc2LRtTCAEV4A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">施瓦西度规(Schwarzchild Metric)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/variation.21d5e70b37d9d9949a379bcc36820bf2_hu_97c73650a8b88881.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 学习笔记-相对论中的变分"
+                        
+                        data-hash="md5-IdXnCzfZ2ZSaN5vMNoIL8g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">学习笔记-相对论中的变分</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/metric.415902e5169535907a22e03a16f01804_hu_62f1dc7c5e280c3.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 度规恒等式总结"
+                        
+                        data-hash="md5-QVkC5RaVNZB6IuA6FvAYBA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">度规恒等式总结</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/sea.11f97c05285ef66ba92864a6feff49bf_hu_3f3e0fe4130cf989.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 学习笔记-卷积(convolution)"
+                        
+                        data-hash="md5-Efl8BShe9mupKGSm/v9Jvw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">学习笔记-卷积(convolution)</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="Dawn-19/Dawn-19.github.io"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Dawn-19
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
