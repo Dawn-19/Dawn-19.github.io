@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="本文从谐和坐标条件出发，介绍了引力波的规范冗余和物理自由度及其对应的平面波解的形式。此外，还简单介绍了引力波的极化张量、能动张量和辐射功率。">
+<title>引力波与引力辐射</title>
+
+<link rel='canonical' href='https://Dawn-19.github.io/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/'>
+
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="引力波与引力辐射">
+<meta property='og:description' content="本文从谐和坐标条件出发，介绍了引力波的规范冗余和物理自由度及其对应的平面波解的形式。此外，还简单介绍了引力波的极化张量、能动张量和辐射功率。">
+<meta property='og:url' content='https://Dawn-19.github.io/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/'>
+<meta property='og:site_name' content='Dawn-19'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-12-20T00:00:00&#43;00:00'/><meta property='og:image' content='https://Dawn-19.github.io/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/picture.png' />
+<meta name="twitter:title" content="引力波与引力辐射">
+<meta name="twitter:description" content="本文从谐和坐标条件出发，介绍了引力波的规范冗余和物理自由度及其对应的平面波解的形式。此外，还简单介绍了引力波的极化张量、能动张量和辐射功率。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://Dawn-19.github.io/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/picture.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "light");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/photo_hu_7c5c3f8b98e0c7a4.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Dawn-19</a></h1>
+            <h2 class="site-description">深刻的思想总是朴素的。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://arxiv.org/'
+                        target="_blank"
+                        title="arXiv"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="792.000000pt" height="792.000000pt" viewBox="0 0 792.000000 792.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.14, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(0.000000,792.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M1285 7906 c-90 -30 -153 -77 -199 -151 -74 -117 -73 -216 1 -337 13
+-21 23 -42 23 -48 0 -5 4 -10 8 -10 4 0 16 -15 27 -32 10 -18 28 -42 38 -53
+10 -11 31 -36 45 -55 15 -19 29 -37 32 -40 6 -6 149 -177 167 -200 11 -14 153
+-186 212 -257 14 -17 40 -48 56 -69 17 -20 35 -42 40 -48 6 -6 23 -27 38 -46
+58 -72 103 -124 120 -142 9 -10 14 -18 10 -18 -5 0 -3 -4 3 -8 6 -4 58 -63
+114 -132 56 -69 106 -127 109 -130 4 -3 20 -23 37 -45 16 -22 34 -44 40 -50 6
+-5 42 -48 80 -95 38 -47 73 -88 79 -92 5 -4 7 -8 3 -8 -4 0 8 -16 27 -35 19
+-19 35 -37 35 -40 0 -4 24 -34 55 -69 6 -6 30 -36 55 -66 25 -30 49 -60 55
+-66 5 -6 24 -28 40 -48 17 -21 42 -52 56 -70 49 -58 424 -512 459 -556 19 -24
+49 -59 67 -79 17 -20 29 -38 27 -41 -3 -2 -8 1 -13 8 -5 8 -33 -12 -89 -65
+-46 -43 -123 -116 -173 -163 -172 -161 -186 -175 -233 -239 -78 -107 -135
+-257 -134 -351 0 -19 -1 -39 -3 -45 -6 -21 13 -122 33 -180 46 -130 90 -183
+378 -455 78 -74 164 -155 190 -180 l48 -46 -41 -50 c-23 -27 -48 -56 -55 -64
+-7 -8 -58 -71 -113 -140 -56 -69 -118 -145 -139 -170 -21 -25 -49 -58 -61 -75
+-13 -16 -37 -46 -53 -66 -17 -20 -41 -49 -53 -65 -12 -16 -34 -42 -48 -59 -15
+-16 -39 -45 -53 -64 -15 -19 -41 -51 -57 -70 -32 -38 -82 -99 -160 -196 -51
+-64 -98 -121 -158 -194 -20 -25 -41 -51 -46 -57 -63 -80 -193 -237 -214 -260
+-15 -16 -27 -32 -27 -35 0 -3 -10 -17 -22 -31 -47 -50 -127 -153 -127 -162 0
+-5 -3 -12 -9 -15 -22 -14 -62 -143 -66 -208 -13 -287 347 -473 559 -288 26 23
+153 140 259 240 45 41 244 226 281 259 17 15 57 53 90 84 33 31 112 104 174
+162 62 58 137 128 166 155 29 28 93 86 141 130 49 44 114 105 146 135 31 30
+79 75 106 100 26 25 97 90 156 145 60 55 119 110 132 123 13 12 27 22 33 22 5
+0 34 -24 64 -52 30 -29 97 -93 148 -142 52 -48 166 -157 254 -241 186 -178
+232 -222 419 -399 76 -72 174 -165 217 -206 179 -172 573 -546 809 -770 30
+-29 125 -119 210 -200 85 -81 184 -175 220 -209 92 -87 155 -116 250 -116 60
+0 85 5 124 25 86 44 141 107 170 197 36 110 11 179 -124 343 -25 30 -51 61
+-58 68 -7 8 -25 30 -40 50 -15 20 -34 44 -42 53 -8 9 -24 27 -35 40 -75 91
+-120 145 -124 149 -4 3 -24 28 -46 55 -22 28 -45 56 -52 63 -7 7 -29 34 -50
+60 -21 26 -42 52 -48 58 -5 6 -26 30 -45 54 -19 24 -40 48 -45 54 -6 6 -30 36
+-55 66 -25 30 -47 57 -50 60 -3 3 -22 26 -43 52 -21 26 -43 53 -50 60 -7 7
+-44 51 -82 98 -38 47 -74 90 -80 96 -5 6 -23 28 -40 49 -16 20 -35 42 -40 49
+-10 10 -260 311 -354 425 -20 24 -48 58 -63 75 -14 17 -155 186 -312 374
+l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
+340 46 74 85 168 92 226 3 19 5 34 6 34 1 0 3 29 4 65 2 67 -14 163 -35 215
+-7 17 -13 36 -15 44 -4 21 -75 133 -109 170 -48 53 -326 324 -496 483 -21 20
+-39 39 -39 43 0 5 134 171 150 185 3 3 25 30 50 60 25 30 52 61 60 70 8 8 33
+38 55 65 22 28 45 55 51 60 6 6 33 37 60 70 27 33 61 74 75 90 15 17 44 51 65
+76 82 96 129 152 139 163 6 6 32 38 59 71 28 33 60 71 72 85 13 14 42 48 64
+75 23 28 54 64 69 80 14 17 47 55 71 85 25 30 59 71 77 90 17 19 42 48 55 65
+13 16 30 37 38 46 8 8 24 26 35 40 11 13 57 68 103 122 110 130 139 171 172
+240 61 127 14 242 -145 349 -104 70 -192 79 -284 27 -47 -26 -135 -96 -201
+-159 -9 -8 -51 -46 -94 -85 -43 -38 -88 -79 -100 -90 -146 -134 -204 -186
+-222 -202 -12 -10 -63 -56 -115 -103 -51 -47 -103 -94 -115 -105 -118 -106
+-272 -246 -325 -295 -15 -14 -55 -50 -89 -80 -34 -30 -74 -66 -89 -80 -38 -35
+-134 -123 -225 -205 -43 -38 -101 -91 -129 -117 -29 -27 -55 -48 -59 -48 -6 0
+-70 60 -288 270 -43 41 -156 149 -250 240 -95 91 -215 206 -266 255 -52 50
+-94 90 -94 89 0 0 -50 47 -110 106 -61 58 -176 169 -257 246 -80 76 -176 168
+-213 204 -37 36 -119 114 -181 174 -63 60 -199 190 -303 290 -104 99 -210 201
+-236 226 -26 25 -97 93 -158 153 -62 59 -119 107 -127 107 -8 0 -15 5 -15 10
+0 6 -6 10 -12 10 -7 0 -24 6 -38 13 -34 17 -136 19 -185 3z m2014 -3200 c-2
+-2 -13 8 -23 22 l-19 27 24 -22 c12 -12 21 -24 18 -27z"/>
+</g>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/Dawn-19'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.overleaf.com/project'
+                        target="_blank"
+                        title="overleaf"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <path d="M9.817 8.036c-4.541 2.709-7.401 7.532-7.593 12.813 0.005 4.14 2.303 7.943 5.973 9.869 3.667 1.927 8.1 1.656 11.516-0.692 3.412-2.349 5.24-6.401 4.745-10.516-0.489-4.115-3.224-7.615-7.095-9.095-1.26-0.509-2.604-0.765-3.957-0.749-2.417 1.631-4.355 3.869-5.615 6.495 1.609-1.921 4.088-2.885 6.572-2.557 2.491 0.328 4.631 1.901 5.688 4.177 1.057 2.271 0.875 4.927-0.473 7.041-1.355 2.109-3.693 3.38-6.199 3.375-2.151 0-4.192-0.937-5.588-2.572-1.808-2.016-2.589-4.756-2.115-7.423 1.432-8.557 11.687-13.489 19.281-15.4-3.516 1.692-6.901 3.64-10.125 5.833 9.177 3.541 10.651-4.183 14.943-7.641-4.271-1.672-19.937-2.287-19.959 7.047z"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E7%AE%80%E4%BB%8B/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>简介</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#谐和坐标条件">谐和坐标条件</a>
+      <ol>
+        <li><a href="#自由度的讨论">自由度的讨论</a></li>
+      </ol>
+    </li>
+    <li><a href="#引力波平面波解">引力波平面波解</a>
+      <ol>
+        <li><a href="#平面波方程">平面波方程</a></li>
+        <li><a href="#引力波解的形式">引力波解的形式</a></li>
+        <li><a href="#引力波的频域描述极化张量">引力波的频域描述，极化张量</a></li>
+      </ol>
+    </li>
+    <li><a href="#引力波能动张量">引力波能动张量</a></li>
+    <li><a href="#引力波辐射功率">引力波辐射功率</a>
+      <ol>
+        <li><a href="#辐射功率公式推导过程">辐射功率公式推导过程</a></li>
+        <li><a href="#引力波功率的半定量计算">引力波功率的半定量计算</a></li>
+      </ol>
+    </li>
+    <li><a href="#平面引力波对粒子的作用">平面引力波对粒子的作用</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#测地线偏离">测地线偏离</a></li>
+            <li><a href="#平面欧式坐标">平面欧式坐标</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#参考资料">参考资料：</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/">
+                <img src="/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/picture_hu_8dad21490ed0f3b8.png"
+                        srcset="/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/picture_hu_8dad21490ed0f3b8.png 800w, /p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/picture_hu_42fa7a292ef0b291.png 1600w"
+                        width="800" 
+                        height="448" 
+                        loading="lazy"
+                        alt="Featured image of post 引力波与引力辐射" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" >
+                学习笔记
+            </a>
+        
+            <a href="/categories/%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%8E%E5%AE%87%E5%AE%99%E5%AD%A6/" >
+                相对论与宇宙学
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/">引力波与引力辐射</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            本文从谐和坐标条件出发，介绍了引力波的规范冗余和物理自由度及其对应的平面波解的形式。此外，还简单介绍了引力波的极化张量、能动张量和辐射功率。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 20, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="引力波引力辐射">引力波引力辐射
+</h1><h2 id="谐和坐标条件">谐和坐标条件
+</h2><p><strong>谐和坐标条件</strong>（de Donder gauge）为：</p>
+$$
+g^{\mu \nu }\Gamma ^{\rho } _{\mu \nu} = 0\quad  \Longleftrightarrow \quad \Box x^{\mu } = 0~,
+$$<p>这里的 $x^{\mu }$ 应该当作一个标量函数而非矢量 . 注意这不是一个张量的表达式，我们使用这个坐标条件原因在于找到满足这个方程的参考系 $\{ x ^{ \mu }\}$ ，从而方便计算，且不改变我们想要研究的“物理” .</p>
+<p>取无穷小坐标变换：$x^{\mu }\to x^{\prime \mu }=x^{\mu }-\zeta ^{\mu }\ , \zeta\to {0}$ ，对于线性化的度规 $g _{\mu \nu}=\eta _{\mu \nu}+h _{\mu \nu}$ 有</p>
+$$
+\delta _{\zeta} g _{\mu \nu} = \mathcal{L} _{\zeta}g _{\mu \nu} = \nabla  _{\mu}\zeta _{\nu}+\nabla _{\nu}\zeta _{\mu}~,
+$$<p>这里 $\delta _{\zeta}$ 是指 $g _{\mu \nu}$ 的变分依赖于 $\zeta$ ，因此</p>
+$$
+h _{\mu \nu}\to h _{\mu \nu}^{\prime } =h _{\mu \nu}+\mathcal{L} _{\zeta}\eta _{\mu \nu} = h _{\mu \nu}+\partial _{\mu}\zeta _{\nu}+\partial _{\nu}\zeta _{\mu}~,
+$$<p>其中背景为 $\eta _{\mu\nu}$ ，所以 $\nabla\to \partial$ .<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>  类比于电磁场，在 $A^{\mu }\to A _{ \mu}^{\prime }=A _{\mu }+\partial _{\mu}\alpha$ 的规范变换下场强 $F _{\mu \nu }=\partial _{\mu}A _{\nu}-\partial _{\nu}A _{\mu}$ 是不变的 . 在引力场中，由于</p>
+$$
+\begin{aligned}
+R^{\sigma } _{\; \rho \mu \nu} &= \partial _{\mu}\Gamma ^{\sigma } _{\nu \rho} - \partial _{\nu} \Gamma ^{\sigma } _{\mu \rho} + \mathcal{O}(\Gamma\Gamma-\Gamma\Gamma) \\
+& = \frac{1}{2}\eta ^{\sigma\lambda }\left( \partial _{\mu}\partial _{\rho}h _{\nu\lambda}-\partial _{\mu}\partial _{\lambda}h _{\nu \rho}-\partial _{\nu}\partial _{\rho}h _{\mu\lambda}+\partial _{\nu}\partial _{\lambda}h _{\mu \rho} \right)  \\
+R^{\prime\sigma } _{\;\;\rho \mu \nu}&=R^{\sigma } _{\; \rho \mu \nu} +\frac{1}{2}\eta ^{\sigma\lambda }\left[ {\color{orange} (\mu \rho,\nu\lambda) }-(\mu\lambda,\nu \rho)-{\color{orange} (\nu \rho,\mu\lambda) }+(\nu\lambda,\mu \rho)   \right]  \\
+&=R^{\sigma } _{\; \rho \mu \nu} +\frac{1}{2}\eta ^{\sigma\lambda }\underbrace{ \left[ (\mu \rho,\nu\lambda)-(\mu\lambda,\nu \rho)-(\mu \rho,\nu\lambda)+(\mu\lambda,\nu \rho)   \right] } _{ =0 } \\
+&=R^{\sigma } _{\; \rho \mu \nu}~,
+\end{aligned}
+$$<p>这里 $(\mu \rho,\nu\lambda)=\partial _{\mu}\partial _{\rho}\left( \partial _{\nu}\zeta _{\lambda} + \partial _{\lambda}\zeta _{\nu} \right)$ ，其中 $\mu\leftrightarrow \rho,\nu\leftrightarrow\lambda$ 两对指标都是对称的，第三行到第四行只是把后 $2$ 项进行指标重命名 $\mu\leftrightarrow \nu$ . 从上式可以看到坐标变换 $ x^{\prime \mu }=x^{\mu }-\zeta ^{\mu }\ , \zeta\to {0}$ 导致的 $h^{\prime }  _{\mu \nu} = h  _{\mu \nu} + \partial  _{\mu}\zeta  _{\nu} + \partial  _{\nu} \zeta  _{\mu}$  并不影响曲率张量 . 此外，由于度规的线性化 $|h|\ll 1$ ，所以在领头阶升降指标使用 $\eta  _{\mu \nu}$ ，故对于 $R  _{\mu \nu} = R^{\lambda }  _{\ \mu\lambda \nu}$ 和 $R = \eta ^{\mu \nu }R  _{\mu \nu}$ 同样也是不随坐标变换改变的. 因此这样的坐标变换不改变我们看到的“物理” ！</p>
+<p>下面我们来体会谐和坐标条件如何让我们的计算更加简便 . 对于谐和坐标条件 $g^{\mu \nu}\Gamma ^{\lambda } _{\mu \nu}$ 在线性理论中有</p>
+$$
+\begin{aligned}
+g^{\mu \nu }\Gamma ^{\lambda } _{\mu \nu} &\simeq \frac{1}{2} \eta ^{\mu \nu } \eta ^{\lambda \sigma} \left(  \partial _{\mu}h _{\sigma \nu}+\partial _{\nu}h _{\mu\sigma}-\partial _{\sigma}h _{\mu \nu}  \right)  \\
+& = \frac{1}{2}\left( \partial ^{\nu }h^{\lambda } _{\;\nu}+\partial ^{\mu }h _{\mu}^{\;\sigma }-\partial ^{\lambda }h^{\mu } _{\;\mu} \right) \\
+\implies & \partial ^{\mu }h _{\mu \nu}- \frac{1}{2}\partial _{\nu}h = 0~, 
+\end{aligned}
+$$<p>从这个条件也可以看到若对于 $\partial ^{\mu }h _{\mu \nu}-\frac{1}{2}\partial _{\nu}h=f _{\nu}\neq {0}$ 时总可以选取 $\Box \zeta _{\nu}=-f _{\nu}$ 使得</p>
+$$
+\begin{aligned}
+\partial ^{\mu }h _{\mu \nu}^{\prime }-\frac{1}{2}\partial _{\nu}h^{\prime } &= f _{\nu} + \partial ^{\mu }\partial _{\mu}\zeta _{\nu}+\partial ^{\mu }\partial _{\nu}\zeta _{\mu} - \frac{1}{2} \cdot 2\partial _{\nu} \partial ^{\mu }\zeta _{\mu} \\
+&=f _{\nu}+\Box \zeta _{\nu} = 0~,
+\end{aligned} \tag{$\star\star$}
+$$<p>此外，在这样的坐标规范下我们还有</p>
+$$
+\begin{aligned}
+\Box &\equiv \nabla _{\mu}\nabla ^{\mu }=g^{\mu \nu }\left( \partial _{\mu}\partial _{\nu}-\Gamma ^{\rho } _{\mu \nu}\partial _{\rho} \right) = g^{\mu \nu }\partial _{\mu}\partial _{\nu} ~, \\
+\nabla ^{\mu }A _{\mu}&= g^{\mu \nu }\nabla _{\mu}A _{\nu}=g^{\mu \nu }\left( \partial _{\mu}A _{\nu}-\Gamma ^{\rho } _{\mu \nu}A _{\rho} \right) = \partial _{\mu}A^{\mu }~. 
+\end{aligned}
+$$<h3 id="自由度的讨论">自由度的讨论
+</h3><p>根据上一节 $(\star\star)$ 式，我们分析在满足谐和坐标条件 $g^{\mu \nu }\Gamma ^{\rho } _{\mu \nu} = 0$ 坐标系 ${x^{\mu }}$ 下仍有冗余的自由度，即对于 $x\to\tilde{x}=x+\zeta ^{\mu },\ \Box \zeta ^{\mu }=0$ ，在新坐标系下 $\{ \tilde{x}^{\mu } \}$ 仍然有</p>
+$$
+\partial ^{\nu }\bar{h} _{\mu \nu} = 0~,
+$$<p>其中 $\bar{h}  _{\mu \nu}\equiv h  _{\mu \nu}-\frac{1}{2} \eta  _{\mu \nu} h$ 为<strong>逆反张量（trace reverse tensor）</strong> ，因其 trace $\bar{h}=-h$ 而得名 . 也就是说，到这里我们有 $10-4=6$ 个自由度，其中 $10$ 源于 $ h  _{\mu \nu}$ 是对称张量，$4$ 源于谐和坐标条件（四个方程 $\Leftrightarrow$ 四个约束），然而 $\Box \xi ^{\mu }=0$ 表明还有 $4$ 个自由度是非物理的 . 实际上，在这里我们并未引入运动学，即爱因斯坦方程的约束，在下文将看到场方程给出 $h  _{\mu \nu}$ 的平面波方程，这是线性方程，给出四个约束 . 因此，on-shell（考虑运动学） 的 $h  _{\mu \nu}$ 只有 $10-4-4=2$ 个物理自由度，而这 $2$ 个自由度分别表明引力波横向 (transverse) 和 无迹 （traceless） 的特性 .</p>
+<h2 id="引力波平面波解">引力波平面波解
+</h2><h3 id="平面波方程">平面波方程
+</h3><p>在谐和坐标条件下，可以从爱因斯坦方程推导 $\bar{h} _{\mu \nu}$ 满足如下方程：</p>
+$$
+\Box \bar{h} _{\mu \nu} = 0~, \tag{$\star \star\star$}
+$$<p>其中 $\Box\equiv \nabla _{\mu}\nabla ^{\mu }=\partial _{\mu}\partial ^{\mu }$ ，由于在线性近似中由 $\eta _{\mu \nu}$ 升降指标，可以不再区分协变导数 $\nabla _{\mu}$ 与普通导数 $\partial _{\mu}$ .</p>
+<p>下面我们推导 $(\star \star\star)$ ，对于黎曼曲率</p>
+$$
+\begin{aligned}
+R _{\mu\nu} &= \partial _\lambda \Gamma^\lambda _{\mu\nu} - \partial _\nu \Gamma^\lambda _{\mu\lambda} 
+\\
+&= \frac{1}{2} \partial^\sigma \left( \partial _\mu h _{\nu\sigma} + \partial _\nu h _{\mu\sigma} - \partial _\sigma h _{\mu\nu} \right) - \frac{1}{2} \partial _\nu \eta^{\lambda\sigma} \left( \partial _\mu h _{\lambda\sigma} + \partial _\lambda h _{\mu\sigma} - \partial _\sigma h _{\mu\lambda} \right) 
+\\
+&= \frac{1}{2} \left( \partial^\sigma \partial _\mu h _{\nu\sigma} + \partial^\sigma \partial _\nu h _{\mu\sigma} - \square h _{\mu\nu} \right) - \frac{1}{2} \left( \partial _\nu \partial _\mu h + \partial _\nu \partial^\sigma h _{\mu\sigma} - \partial _\nu \partial^\lambda h _{\mu\lambda} \right) 
+\\
+&= -\frac{1}{2} \left( \square h _{\mu \nu} + \partial _\mu \partial _\nu h - \partial _\mu \partial^\sigma h _{\nu\sigma} - \partial _\nu \partial^\sigma h _{\mu\sigma} \right)
+\end{aligned}
+$$<p>根据 $\bar{h}  _{\mu \nu}=h  _{\mu \nu}-\frac{1}{2}\eta  _{\mu \nu}h$ 作代换 $h \to -\bar{h}\ ,\ h  _{\mu \nu}=\bar{h}  _{\mu \nu}-\frac{1}{2}\eta  _{\mu \nu}\bar{h}$ 可得：</p>
+$$
+\begin{aligned}
+R _{\mu \nu} &= \frac{1}{2}\left( -\Box \bar{h} _{\mu \nu}+\frac{1}{2} \eta _{\mu \nu}\Box \bar{h} + \partial _{\mu }\partial _{\nu}\bar{h} + \partial _{\mu}\partial ^{\sigma }\bar{h} _{\nu\sigma}-\frac{1}{2} \eta _{\nu\sigma}\partial _{\mu}\partial ^{\sigma }\bar{h} + \partial _{\nu}\partial ^{\sigma }\bar{h} _{\mu\sigma}-\frac{1}{2} \eta _{\mu\sigma}\partial _{\nu}\partial ^{\sigma }\bar{h}\right) 
+\\
+&= \frac{1}{2} \left(- \Box \bar{h} _{\mu \nu}+\frac{1}{2} \eta _{\mu \nu}\Box \bar{h}+ \underbrace{ \partial _{\mu}\partial ^{\sigma }\bar{h} _{\nu\sigma} + \partial _{\nu}\partial ^{\sigma }\bar{h} _{\mu\sigma} } _{ \partial ^{\sigma }h _{\alpha\sigma} = 0 }\right)  \\
+& = -\frac{1}{2} \Box \bar{h} _{\mu \nu}+\frac{1}{4} \eta _{\mu \nu}\Box \bar{h}~, \\
+R&=\eta ^{\mu \nu }R _{\mu \nu} =-\frac{1}{2} \Box \bar{h} + \Box \bar{h}=\frac{1}{2 }\Box \bar{h}
+\end{aligned}
+$$<p>所以</p>
+$$
+G _{\mu \nu} = R _{\mu \nu}-\frac{1}{2}\eta _{\mu\nu}R = -\frac{1}{2} \Box \bar{h} _{\mu \nu}~,
+$$<p>因此爱因斯坦方程化为</p>
+$$
+\Box \bar{h} _{\mu \nu} = -16 \pi GT _{\mu \nu}~,
+$$<p>在真空的情形下，即 $\Box \bar{h} _{\mu \nu}=0$  .</p>
+<h3 id="引力波解的形式">引力波解的形式
+</h3><p>在横向无迹规范下，引力波解满足</p>
+$$
+h _{\mu \nu}^{TT }=\bar{h} _{\mu \nu}^{TT } =    \left(
+\begin{array}{cccc} 
+0 &0 &0 &0 \\
+0 &h _{+} & h _{\times} & 0 \\
+0 &h _{\times} & -h _{+} & 0 \\
+0 &0 & 0 & 0
+\end{array}\right) _{\mu \nu} \;\mathrm{e}^{\mathrm{i}k _\alpha x^\alpha}~,
+$$<p>其中 $h _{+}$ 为 $+$ 极化分量， $h _{\times}$ 为 $\times$ 极化分量 .</p>
+<p>为得到上式引力波解，不妨设引力波沿 $z$ 轴传播，且 $\bar{h} _{\mu \nu}$ 的形式为</p>
+$$
+\bar{h} _{\mu \nu} = C _{\mu \nu}\mathrm{e}^{ ik^{\alpha }x _{\alpha} }~,\quad k ^{\alpha }=(\omega,0,0,k^{3 })
+$$<p>其中由引力波波动方程 $\Box \bar{h}  _{\mu \nu}=0\ ,\implies \ \frac{k^{3 }}{\omega}=c\ ,\ k^{3 }=\omega$  . 此时根据前文分析 $C  _{\mu \nu}$ 有 $6$ 个独立分量，即</p>
+$$
+C _{\mu \nu} = 
+\begin{pmatrix}
+X & C _{01} & C _{02} & C _{03} \\
+X & C _{11} & X & X \\
+ X& C _{21} & C _{22} & X \\
+X & X & X & X
+\end{pmatrix}
+$$<p>上式中 $X$ 可以通过 $C  _{\mu \nu}=C  _{\nu \mu}$ 或 $C  _{0\mu}=C  _{3\mu}$ 得到，其中 $\partial  _{\mu} \bar{h}  _{\nu \mu} = C  _{ \nu \mu} \partial  _{ \mu} \mathrm{e}^{ -i\omega (t- z) }$ 可知 $C  _{0 \mu} = C  _{3 \mu}$ .</p>
+<p>此时，我们还有 $4$ 个冗余自由度 $x^{\mu } \to x^{\mu }+\zeta ^{\mu }, \ \Box \zeta  _{\mu} = 0$ 并未使用，取 $\zeta ^{\mu } = X^{\mu } \mathrm{e}^{ -i\omega(t-z) }$ ，由该坐标变换下 $\bar{h}  _{\mu \nu}=h  _{\mu \nu} - \frac{1}{2}\eta  _{\mu \nu}h$ 中 $\eta  _{\mu \nu} h$ 不变， 对于 $\nu = 1,2$ 有：</p>
+$$
+h _{0\nu}\to h _{0\nu}-\partial _{0}\zeta _{\nu}-\partial _{\nu}\zeta _{0}~,\quad C _{0\nu}\to C _{0\nu}+ i \omega X _{\nu}~, 
+$$<p>总可以选取适当的 $X _{\nu}\ (\nu=1,2)$ 使得 $C _{0\nu}=0$ . 其次，当 $\nu=3$ 时有</p>
+$$
+h _{03}\to h _{03}-\partial _{0}\zeta _{3}-\partial _{3}\zeta _{0}~,\quad C _{03}\to C _{03}-i\omega X _{0}+i\omega X _{3}~,
+$$<p>选取适当的 $-X _{0}+X _{3}$ 可以使得 $C _{03}=0$ . 最后，由</p>
+$$
+h\to h - 2\eta^{\mu \nu}\partial _{\mu}\zeta _{\nu} ~,\implies \eta ^{\mu \nu }C _{\mu \nu} \to \eta ^{\mu \nu }C _{\mu \nu}-2i\omega X _{0}-2i\omega X _{3}~,
+$$<p>因此选取合适的 $X _{0}+X _{3}$ 可以使得 $C^{\mu } _{\ \ \mu}=0$ .<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>总而言之，由于 $\zeta ^{\mu }=X^{\mu }\mathrm{e}^{ -i\omega(t-z) }$ 中 $X^{\mu }$ 的选取是自由的，我们总可以找到使得 $k^{\mu}C  _{\nu \mu}=0,\ C^{\mu }  _{\ \ \mu}=0$ 的 $X^{\mu }$ ，这也就是所谓的横向无迹条件，满足这样条件的 $h  _{\mu \nu}$ 记为 $h  _{\mu \nu}^{TT }$ ，且</p>
+$$
+h _{\mu \nu}^{TT } = \bar{h} _{\mu \nu}^{TT }~.
+$$<p>设 $C _{11}=h _{+},C _{12}=h _{\times}$ ，则有</p>
+$$
+C _{\mu \nu}^{TT } =    \left(
+\begin{array}{cccc} 
+0 &0 &0 &0 \\
+0 &h _{+} & h _{\times} & 0 \\
+0 &h _{\times} & -h _{+} & 0 \\
+0 &0 & 0 & 0
+\end{array}\right) _{\mu \nu} \;~,
+$$<p>可以看到引力波的物理自由度就是 $h _{+}$ 和 $h _{\times}$ ，对应 $2$ 种极化模式 .</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>引力波</th>
+          <th>电磁波</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>势</td>
+          <td>$h _{\mu\nu}$</td>
+          <td>$A^\mu=( \Phi, \boldsymbol{A})$</td>
+      </tr>
+      <tr>
+          <td>场</td>
+          <td>$R^{\lambda } _{\ \mu\nu\sigma}$</td>
+          <td>$F^{\mu\nu}$</td>
+      </tr>
+      <tr>
+          <td>规范变换</td>
+          <td>$h^{\prime}  _{\mu\nu} = h  _{\mu\nu}-\partial  _\mu \zeta  _\nu - \partial  _\nu \zeta  _\mu$</td>
+          <td>$A&rsquo;^\mu = A^\mu-\partial^\mu f$</td>
+      </tr>
+      <tr>
+          <td>规范条件</td>
+          <td>$h^{0\mu} = 0,\ h^i _{\ i}=0,\  \partial^j h _{ij}=0$</td>
+          <td>$\partial _\mu A^\mu = 0$</td>
+      </tr>
+      <tr>
+          <td>波动方程</td>
+          <td>$\Box h _{\mu\nu}=0$</td>
+          <td>$\Box A^\mu = 0$</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="引力波的频域描述极化张量">引力波的频域描述，极化张量
+</h3><p>恢复 $c$ ，由 $\mathrm{d}^{3 }k=|\vec{k}|^{2 }\mathrm{d}|\vec{k}|\mathrm{d}\Omega=(2\pi / c)^{3 }f^{2 }\mathrm{d}f\mathrm{d}\Omega$ ，在TT规范下引力波的傅里叶展开为</p>
+$$
+h _{ij}^{TT } = \frac{1}{c^{3 }} \int _{0}^{\infty } \mathrm{d}f
+f^{2 } \int \mathrm{d}^{2 }\hat{\boldsymbol{n}}\; \mathcal{A} _{ij}\mathrm{e}^{ -2\pi i f\left( t-\hat{\boldsymbol{n} }\cdot \boldsymbol{x} / c \right)  }+c.c~,
+$$<p>其中</p>
+$$
+\begin{aligned}
+\tilde{h} _{ab}(f,\boldsymbol{x}) &= \frac{f^{2 }}{c^{3 }}\int \mathrm{d}^{2 }\hat{\boldsymbol{n}}\; \mathcal{A} _{ij}(f,\hat{\boldsymbol{n}})\mathrm{e}^{ -2\pi i f\left( t-\hat{\boldsymbol{n} }\cdot \boldsymbol{x} / c \right)  } \\
+&= \frac{f^{2 }}{c^{3 }} A _{ab}(f)\mathrm{e}^{ 2\pi if \hat{\boldsymbol{n}} _{0}\cdot\boldsymbol{x} /c }~,
+\end{aligned}
+$$<p>其中 $\hat{\boldsymbol{n}}  _{0}$ 为引力波传播方向 . 为了公式紧凑，可以将 $\tilde{h}  _{ab}(f, \boldsymbol{x})$ 的定义扩展到负频率，定义</p>
+$$
+\tilde{h} _{ab}(-f, \boldsymbol{x}) = \tilde{h} _{ab}^*(f, \boldsymbol{x})~,
+$$<p>引入负频率约定后，傅里叶积分区间变为对称的 $(-\infty, \infty)$ ，于是时域信号 $h _{ab}(t)$ 可表示为（为简洁略去 $\boldsymbol{x}$ 依赖）</p>
+$$
+ h _{ab}(t) = \int _{-\infty}^{\infty} \mathrm{d}{f}\; \tilde{h} _{ab}(f) \mathrm{e}^{-2\pi i f t}~,
+$$<p>相应的傅里叶逆变换为</p>
+$$
+ \tilde{h} _{ab}(f) = \int _{-\infty}^{\infty} \mathrm{d}{t}\; h _{ab}(t) \mathrm{e}^{2\pi i f t}~.
+$$<p>引入极化张量 $e^{A} _{ij}(\hat{\boldsymbol{n}})$（其中 $A = +, \times$ 标记极化）可方便描述平面波 . 选取与 $\hat{\boldsymbol{n}}$ 垂直且互相垂直的单位矢量 $\hat{\boldsymbol{u}}, \hat{\boldsymbol{v}}$，则极化张量定义为</p>
+$$
+\begin{aligned}
+ e^{+} _{ij}(\hat{\boldsymbol{n}}) &= \hat{u} _i \hat{u} _j - \hat{v} _i \hat{v} _j~,  \\
+ e^{\times} _{ij}(\hat{\boldsymbol{n}}) &= \hat{u} _i \hat{v} _j + \hat{v} _i \hat{u} _j~, 
+\end{aligned}
+$$<p>归一化条件为</p>
+$$
+e^{A} _{ij}(\hat{\boldsymbol{n}}) e^{A', ij}(\hat{\boldsymbol{n}}) = 2 \delta^{AA'}~.
+$$<p>在 $\hat{\boldsymbol{n}} _{0}$ 沿 $\hat{\boldsymbol{z}}$ 方向的坐标系中，可取 $\hat{\boldsymbol{u}} = \hat{\boldsymbol{x}}$, $\hat{\boldsymbol{v}} = \hat{\boldsymbol{y}}$，此时</p>
+$$
+  e^{+} _{ab} = \begin{pmatrix}
+        1 & 0 \\
+        0 & -1
+    \end{pmatrix} _{ab}~, \qquad
+    e^{\times} _{ab} = \begin{pmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{pmatrix} _{ab}~, \quad a,b = 1~,~2~,
+$$<p>其中指标 $a,b$ 张成 $(x,y)$ 平面 . 对于一般的传播方向，可通过极化张量定义振幅 $\tilde{h} _A(f, \hat{\boldsymbol{n}})$：</p>
+$$
+\frac{f^2}{c^3} A _{ij}(f, \hat{\boldsymbol{n}}) = \sum _{A=+,\times} \tilde{h} _A(f, \hat{\boldsymbol{n}}) e^{A} _{ij}(\hat{\boldsymbol{n}})~.
+$$<p>于是平面波展开式可写为</p>
+$$
+h _{ab}(t, \boldsymbol{x}) = \sum _{A=+,\times} \int _{-\infty}^{\infty} \mathrm{d}{f} \int \mathrm{d}^{2}  {\hat{\boldsymbol{n}}} \tilde{h} _A(f, \hat{\boldsymbol{n}}) e^{A} _{ab}(\hat{\boldsymbol{n}}) e^{-2\pi i f (t - \hat{\boldsymbol{n}} \cdot \boldsymbol{x}/c)}~,
+$$<p>其中同样约定 $\tilde{h} _A(-f, \hat{\boldsymbol{n}}) = \tilde{h} _A^*(f, \hat{\boldsymbol{n}})$ .</p>
+<h2 id="引力波能动张量">引力波能动张量
+</h2><p>对于度规分解 $g  _{\mu \nu}=\bar{g}  _{\mu \nu}+h  _{\mu \nu}$，其中背景度规 $\bar{g}  _{\mu \nu}$ 满足真空爱因斯坦方程，$h  _{\mu \nu}$ 为扰动 . 定义引力波能动张量为</p>
+$$
+\begin{aligned}
+t _{\mu \nu}&\equiv-\frac{1}{8 \pi G}\left( G _{\mu \nu}-G _{\mu \nu}^{(1) } \right)= -\frac{1}{8\pi G}G _{\mu \nu}^{(2) }  \\
+&= -\frac{1}{8\pi G}\left( R^{(2) } _{\mu \nu}-\frac{1}{2} R^{(2) } _{\alpha\beta}\bar{g}^{\alpha\beta }\bar{g} _{\mu \nu} \right) ~,
+\end{aligned}
+$$<p>若取 $TT$ 规范，则为</p>
+$$
+t _{\mu \nu}^{TT } = \frac{1}{32 \pi G}\braket{  \left( \partial _{\mu}h _{\rho\sigma}^{TT } \right)\left( \partial _{\nu}h^{\rho\sigma } _{TT} \right)    } ~,\quad  t^{00 }= \frac{1}{32\pi G}\braket{  \dot{h} _{ij}^{TT }h _{ij}^{TT }  } = \frac{1}{16\pi G}\braket{  \dot{h} _{+}^{2 }+\dot{h} _{\times}^{2 }  } ~.
+$$<p>其中对于周期运动源产生的引力波的能动张量定义在一个确定的时空点上是平凡的，而定义在一段足够长时间和一个足够大封闭空间内的均值物理意义才更加明确 .</p>
+<p>下面将对引力波能动张量进行具体分析：</p>
+<p>考虑各阶爱因斯坦张量，对于 $0$ 阶其满足真空场方程，有</p>
+$$
+\begin{aligned}
+G _{\mu \nu}^{(0) }&=R _{\mu \nu}^{(0) }-\frac{1}{2}R^{(0) }\bar{g} _{\mu \nu} = 0~,\quad R^{(0) } _{\mu \nu}=0 \\
+&\implies R^{(0) } = 0~.
+\end{aligned} 
+$$<p>其中的曲率张量和标量都由背景度规 $\bar{g} _{\mu \nu}$ 构成， 其中升降指标由 $\bar{g} _{\mu \nu}$ 进行，且逆变的度规扰动：</p>
+$$
+g _{(1)}^{\mu \nu } = \bar{g}^{\mu \nu }~,\quad g _{(2)}^{\mu \nu } = -g^{\mu \alpha } _{(0)}h _{\alpha \beta}g _{(0)}^{\beta \nu }=-h^{\mu \nu }~,
+$$<p>即对于逆变度规张量展开为 $g^{\mu \nu }=\bar{g}^{\mu \nu }-h^{\mu \nu }+\dots$ ，其中对于矩阵 $M=M _0+N$ 有 $M^{-1 }=M _{0}^{-1 }-M _{0}^{-1 }NM _{0}^{-1 }+\dots$ ，不难发现在 $1$ 阶内满足 $M M^{-1 }=\mathbb{I}$ .</p>
+<p>对于 $1$ 阶，有</p>
+$$
+\begin{aligned}
+G^{(1) } _{\mu \nu} &= R^{(1) } _{\mu \nu}- \frac{1}{2}\left( R^{(1) }\bar{g} _{\mu \nu} + \cancel{R^{(0) }h _{\mu \nu}} \right)= R^{(1) } _{\mu \nu}- \frac{1}{2} R^{(1) }\bar{g} _{\mu \nu} ~, \\
+R^{(1) } &= R^{(1) } _{\mu \nu}\bar{g}^{\mu \nu } - R _{\mu \nu}^{(0) }h^{\mu \nu }=R^{(1) } _{\mu \nu}\bar{g}^{\mu \nu }~.
+\end{aligned}
+$$<p>爱因斯坦方程可写为</p>
+$$
+G _{\mu \nu}=G _{\mu \nu}^{(1) } + \underbrace{ G^{(2) } _{\mu \nu}+\dots } _{ -8 \pi G t _{\mu \nu} } = 8 \pi GT _{\mu \nu} ~,
+$$<p>定义 $t _{\mu \nu}\equiv- \frac{1}{8\pi G}\left( G _{\mu \nu}-G^{(1) } _{\mu \nu} \right)$ 有</p>
+$$
+G^{(1) } _{\mu \nu} = 8\pi G\left( T _{\mu \nu}+t _{\mu \nu} \right) ~,
+$$<p>根据 Bianchi 恒等式</p>
+$$
+\begin{aligned}
+{\nabla}^{\mu }G _{\mu \nu}=0 &\implies \bar{\nabla} ^{\mu }G _{\mu \nu}^{(1) }+\cancel{\Gamma ^{\mu } _{(1)}G _{\mu \nu}^{(0) }}=0 \\
+&\implies  \bar{\nabla}^{\mu }\left( T _{\mu \nu}+t _{\mu \nu} \right)=0 ~.
+\end{aligned}
+$$<p>考虑真空远场情况下 $G _{\mu \nu}^{(1) }=0\implies R^{(1) }=R^{(1) } _{\mu \nu}\bar{g}^{\mu \nu }=0$，对于 $2$ 阶爱因斯坦张量有</p>
+$$
+\begin{aligned}
+G^{(2) } _{\mu \nu} &= R^{(2) } _{\mu \nu}- \frac{1}{2}\left( R^{(2) }\bar{g} _{\mu \nu} + \cancel{R^{(1) } h _{\mu \nu}} \right)= R^{(2) } _{\mu \nu}- \frac{1}{2}R _{\alpha\beta}^{(2) }\bar{g}^{\alpha\beta }\bar{g} _{\mu \nu} ~, \\
+R^{(2) } & = R _{\mu \nu}^{(2) } \bar{g}^{\mu \nu} - \cancel{R _{\mu \nu}^{(1) }h^{\mu \nu } }+ \cancel{R^{(0) } _{\mu \nu}h^{\mu \rho }h^{\nu } _{\;\rho}} = R _{\mu \nu}^{(2) } \bar{g}^{\mu \nu} ~,
+\end{aligned}
+$$<p>因此在远场条件下引力波能动张量为</p>
+$$
+t _{\mu \nu} = \frac{-1}{8\pi G}G _{\mu \nu}^{(2) } = \frac{-1}{8\pi G}\left( R^{(2) } _{\mu \nu}- \frac{1}{2}R _{\alpha\beta}^{(2) }\bar{g}^{\alpha\beta }\bar{g} _{\mu \nu}   \right) ~. \tag{$*$}
+$$<p>其中</p>
+$$
+\begin{aligned}
+R^{(2)} _{\mu\nu} &= \frac{1}{2} \biggl[ \frac{1}{2} \partial _\mu h _{\alpha\beta} \partial _\nu h^{\alpha\beta} + h^{\alpha\beta} \partial _\mu \partial _\nu h _{\alpha\beta} - h^{\alpha\beta} \partial _\nu \partial _\beta h _{\alpha\mu}  \quad- h^{\alpha\beta} \partial _\mu \partial _\beta h _{\alpha\nu}  \\
+&\quad+ h^{\alpha\beta} \partial _\alpha \partial _\beta h _{\mu\nu} + \partial^\beta h _{\;\nu}^\alpha \partial _\beta h _{\alpha\mu}  - \partial^\beta h _{\;\nu}^\alpha \partial _\alpha h _{\beta\mu}-\partial  _{\beta}h^{\alpha\beta }\partial _{\nu}h _{\alpha \mu}  \\
+&\quad + \partial _\beta h^{\alpha\beta} \partial _\alpha h _{\mu\nu} - \partial _\beta h^{\alpha\beta} \partial _\mu h _{\alpha\nu}  - \frac{1}{2} \partial^\alpha h \partial _\alpha h _{\mu\nu} + \frac{1}{2} \partial^\alpha h \partial _\nu h _{\alpha\mu}  \\
+&\quad + \frac{1}{2} \partial^\alpha h \partial _\mu h _{\alpha\nu} \biggr]~,
+\end{aligned}
+$$<p>事实上，对于 $ (*) $ 式在固定时空点上由于背景 $\bar{g} _{\mu \nu}$ 和 扰动 $h _{\mu \nu}$ 很难很好地做出区分，此时引力波的能动张量 $t _{\mu \nu}$ 在现实中的物理意义并不明显 . 从另一个方面来看，$(*)$ 无法保证协变性和规范不变性同时满足 .</p>
+<p>在现实中，当引力波（GWs）的长度尺度 $\lambda$ 与背景的长度尺度 $L _B$ 之间存在明显分离时，对长波长模式进行投影存在一种简单方法：引入尺度 $\bar{l}$ 满足 $\lambda \ll \bar{l} \ll L _B$，并对边长为 $\bar{l}$ 的空间体积做平均 . 如此，波长为 $L _B$ 量级的模式不受影响（因它们在平均体积内基本恒定），而波长为 $\lambda$ 量级的缩减模式振荡极快，平均后为零。类似地，若 $h _{\mu\nu}$ 是准静态背景的高频扰动，可引入时间尺度 $\bar{t}$（远大于引力波周期 $1/f$，且远小于背景典型时间尺度 $1/f _B$），并对 $\bar{t}$（即引力波的若干周期）做时间平均 . 因此，我们在这样取平均的操作后可以充分捕捉到这个区域内的物理信息 .</p>
+<p>引力波的平面形式</p>
+$$
+h _{\mu \nu} = C _{\mu \nu}\mathrm{e}^{ ik _{\mu}x^{\mu } }+C _{\mu \nu}^{* }\mathrm{e}^{ -k _{\mu }x^{\mu } }~,
+$$<p>在谐和坐标条件下</p>
+$$
+\braket{  R _{\mu \nu}^{(2) }  } = - \frac{k _{\mu}k _{\nu}}{2}\left( C^{\rho\sigma }C^{* } _{\rho\sigma}- \frac{1}{2}|C^{\lambda } _{\;\lambda}|^{2 } \right) ~,
+$$<p>对于类光矢量 $k^{\mu }k _{\mu}=0$ ，所以</p>
+$$
+\braket{  t _{\mu \nu}  } =  \frac{k _{\mu}k _{\nu}}{16 \pi G}\left( C^{\rho\sigma }C^{* } _{\rho\sigma}- \frac{1}{2}|C^{\lambda } _{\;\lambda}|^{2 } \right)~ \Leftrightarrow ~ t _{\mu \nu}^{TT } = \frac{1}{32 \pi G}\braket{  \left( \partial _{\mu}h _{\rho\sigma}^{TT } \right)\left( \partial _{\nu}h^{\rho\sigma } _{TT} \right)    }
+$$<p>在给的 TT 规范后有</p>
+$$
+\braket{  t _{\mu \nu}  } = \frac{k _{\mu}k _{\nu}}{8 \pi G} \left( |C _{11}|^{2 }+|C _{12}|^{2 } \right) = \frac{k _{\mu}k _{\nu}}{16\pi G}|C _{ij}C^{ij }|= \frac{k _{\mu}k _{\nu}}{32 \pi G}\braket{  h _{ij}h^{ij }  } 
+$$<p>这里注意 $h _{\mu \nu}\sim C _{\mu \nu}+C _{\mu \nu}^{* }$ 的展开形式，同时由 $\partial _{0}h _{ij}\sim k _{0}h _{ij}$ ，所以有瞬时的能流密度</p>
+$$
+{  t _{00}^{Gtz }  }= \frac{1}{32\pi G}{  \dot{h} _{ij} \dot{h}^{ij }  }  ~.
+$$<h2 id="引力波辐射功率">引力波辐射功率
+</h2><p>在2015年Ligo成功直接探测到引力波之前，引力波只存在间接证据的支持，最具声望的是探测到脉冲双星由于引力波辐射导致的轨道变化。其中引力波的能量损耗表达式为</p>
+$$
+\mathcal{P} = \int \braket{  t _{00}  }\hat{n} _{i}r _{0}^{2 } \mathrm{d}\Omega \mathrm{d}t = \frac{G \omega ^{2 }}{5}\int \braket{ \ddot{\mathcal{Q}} _{ij}(t _{r})^{2 }   }  \mathrm{d}r~,
+$$<p>其中 $\omega$ 为周期运动角频率，  $r _{0}$ 为场点到源点的平均距离，$t _{r}=t-r$为延迟时间，  $\mathcal{Q} _{ij}=\mathcal{I} _{ij}-\frac{1}{3}\mathcal{I}\delta _{ij}$ 为无迹的质量四极矩，$\mathcal{I} _{ij}$ 为质量四极矩</p>
+$$
+\mathcal{I} _{ij} \equiv \int  x _{i}x _{j}\rho(\vec{y}) \mathrm{d}^{3 }\vec{y}~.
+$$<p>如果是一般的非周期运动，则为</p>
+$$
+\mathcal{P} = \frac{G}{5} \int \overset{...}{\mathcal{Q}} _{ij}(t _{r})^{2 } \mathrm{d}t~.
+$$<h3 id="辐射功率公式推导过程">辐射功率公式推导过程
+</h3><p>首先，在不取规范条件的情况下，有迹反张量满足</p>
+$$
+\Box \bar{h} _{\mu \nu} = - 16 \pi GT _{\mu \nu}~,
+$$<p>定义格林函数</p>
+$$
+\Box _{x} G(x^{\sigma }-y^{\sigma }) = \delta ^{(4) }\left( x^{\sigma }-y^{\sigma } \right)  ~,
+$$<p>其中$\vec{x}$为场点，$\vec{y}$ 为源点，上式有解为</p>
+$$
+G(x^{\sigma }-y^{\sigma }) = - \frac{1}{4 \pi |\vec{x} -\vec{y}|} \delta \left[ |\vec{x} -\vec{y}| - \left( x^{0 }-y^{0 } \right)  \right] \theta(x^{0 }-y^{0 })~,
+$$<p>在原场条件 $r _{0}=|\vec{x}-\vec{y}|$ 下迹反引力波为</p>
+$$
+\bar{h} _{\mu \nu}(x) = \frac{4G}{r _{0}} \int T^{ij }( \underbrace{ t-r _{0} } _{ t _{r} },y ) \mathrm{d}^{3 }\vec{y}~.
+$$<p>其中能动张量满足</p>
+$$
+\begin{align*}
+\int T^{ij} \, dV &= \int T^{kj} \delta _{\; k}^i \, \mathrm{d}^{3 }\vec{y} = \int T^{kj} \partial _k y^i \, \mathrm{d}^{3 }\vec{y} \\
+&= -\int y^i \partial _k T^{kj} \, \mathrm{d}^{3 }\vec{y} \quad \to \quad \partial _\mu T^{\mu\nu} = 0 \\
+&= + \int y^i \partial _0 T^{0j} \, \mathrm{d}^{3 }\vec{y} = \partial _0 \int y^i T^{0k} \partial _k y^j \, \mathrm{d}^{3 }\vec{y} \\
+&= \partial _0 \int \frac{1}{2} \partial _k (y^i y^j) T^{0k} \, \mathrm{d}^{3 }\vec{y} \\
+&= \frac{1}{2} \partial _0^2 \int y^i y^j T^{00} \, \mathrm{d}^{3 }\vec{y}\\
+&=\frac{1}{2} \ddot{\mathcal{I}}^{ij }~.
+\end{align*}
+$$<p>从而可知</p>
+$$
+\bar{h} _{ij}(x) = \frac{2G}{r _{0}} \ddot{\mathcal{I}} _{ij}\left( t _{r} \right) ~,
+$$<p>定义投影算符</p>
+$$
+P _{ij}=\delta _{ij}-\hat{n} _{i}\hat{n} _{j}~,\quad \Lambda _{ij,kl}=P _{ik}P _{jl}- \frac{1}{2}P _{kl}P _{ij}~,
+$$<p>它们满足</p>
+$$
+\begin{aligned}
+&P _{ij}=P _{ji}~,\quad \Lambda _{ij,kl}=\Lambda _{kl,ij}~, \\
+&P _{ii} = 0  ~,\quad \hat{n}^{i } P _{ij}=0~, \\
+&P _{ij}P _{jk} =\delta _{ik}+\hat{n} _{i}\hat{n} _{k}=P _{ik} \\
+& P _{ij}P _{ij} = 2~, \\
+& \Lambda _{ij,kl}\Lambda _{kl,mn}=\Lambda _{ij,mn}~,
+\end{aligned}
+$$<p>注意这里 $P _{ii}$ 没有使用爱因斯坦求和，若是 $\delta ^{ij }P _{ij}=2$ . 此外， $\Lambda _{ij,kl}$ 可以展开为</p>
+$$
+\begin{split}
+\Lambda _{ij,kl}(\hat{\mathbf{n}}) &= \delta _{ik}\delta _{jl} - \frac{1}{2}\delta _{ij}\delta _{kl} - \hat{n} _j \hat{n} _l \delta _{ik} - \hat{n} _i \hat{n} _k \delta _{jl} \\
+&\quad\quad + \frac{1}{2}\hat{n} _k \hat{n} _l \delta _{ij} + \frac{1}{2}\hat{n} _i \hat{n} _j \delta _{kl} + \frac{1}{2}\hat{n} _i \hat{n} _j \hat{n} _k \hat{n} _l~.
+\end{split}
+$$<p>我们可以使用投影算符把未取规范 $\bar{h} _{ij}$ 投影到 TT 规范上</p>
+$$
+h _{ij}^{TT } = \Lambda _{ij,kl}\bar{h} _{kl}~,
+$$<p>注意 $h _{ij}^{TT }=\bar{h}^{TT } _{ij}$ . 由此</p>
+$$
+\begin{aligned}
+h _{ij}^{TT }h _{TT}^{ij } &= h _{ij}^{TT }h _{ij}^{TT }=\bar{h} _{kl}\Lambda _{ij,kl}\bar{h} _{mn}\Lambda _{ij,mn} \\
+&= \frac{4G^{2 }}{r _{0}^{2 }}\ddot{I} _{kl}(t _{r})\Lambda _{ij,kl} \ddot{\mathcal{I}} _{mn}(t _{r})\Lambda _{ij,mn} \\
+&= \frac{4G^{2 }}{r _{0}^{2 }} \ddot{\mathcal{I}} _{ij}\ddot{I} _{kl}\Lambda _{ij,kl} \\
+&=\frac{4G^{2 }}{r _{0}^{2 }} \ddot{\mathcal{I}} _{ij}\ddot{I} _{kl} \big(  \delta _{ik}\delta _{jl} - \frac{1}{2}\delta _{ij}\delta _{kl} - \hat{n} _j \hat{n} _l \delta _{ik} - \hat{n} _i \hat{n} _k \delta _{jl} \\
+&\quad\quad\quad\quad\quad\quad\quad + \frac{1}{2}\hat{n} _k \hat{n} _l \delta _{ij} + \frac{1}{2}\hat{n} _i \hat{n} _j \delta _{kl} + \frac{1}{2}\hat{n} _i \hat{n} _j \hat{n} _k \hat{n} _l \big)  \\ 
+&= \frac{4G^{2 }}{r _{0}^{2 }} \bigg( \ddot{\mathcal{I}} _{ij}(t _{r})^{2 } -\frac{1}{2}\ddot{\mathcal{I}}(t _{r})^{2 } - \ddot{\mathcal{I}} _{kj}(t _{r})\ddot{\mathcal{I}} _{kl}(t _{r})\hat{n} _{j}\hat{n} _{l} - \ddot{\mathcal{I}} _{il}(t _{r})\ddot{\mathcal{I}} _{kl}(t _{r})\hat{n} _{i}\hat{n} _{k}  \\
+&\qquad\qquad + \frac{1}{2} \ddot{\mathcal{I}}(t _{r})\ddot{\mathcal{I}} _{kl}(t _{r})\hat{n} _{k}\hat{n} _{l}+ \frac{1}{2} \ddot{\mathcal{I}} _{ij}(t _{r})\ddot{\mathcal{I}}(t _{r})\hat{n} _{i}\hat{n} _{j}  \\
+&\qquad\qquad +  \frac{1}{2} \ddot{\mathcal{I}} _{ij}(t _{r})\ddot{\mathcal{I}} _{kl}(t _{r})\hat{n} _{i}\hat{n} _{j}\hat{n} _{k}\hat{n} _{l} \bigg)
+\end{aligned}
+$$<p>对于天球的积分有：<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+$$
+\begin{aligned}
+&\int \mathrm{d}\Omega = 4 \pi \\
+&\int \hat{n} _{1}\hat{n} _{1} = \frac{1}{3}\int \hat{n} _{i}\hat{n} _{i } = \frac{4\pi}{3} \implies\int \hat{n} _{i}\hat{n} _{j}\mathrm{d}\Omega = \frac{4\pi}{3}\delta _{ij} \\
+& 
+\int \hat{n} _k \hat{n} _l \hat{n} _m \hat{n} _n \, d\Omega = a\bigl( \delta _{kl}\delta _{mn} + \delta _{km}\delta _{ln} + \delta _{kn}\delta _{lm} \bigr) \\
+&\implies \int \hat{n} _k \hat{n} _k \hat{n} _m \hat{n} _n \, d\Omega = (3+1+1)a\delta _{mn} \implies a = \frac{4\pi}{15}
+\end{aligned}
+$$<p>所以有</p>
+$$
+\begin{aligned}
+\int h _{ij}^{TT }h _{ij}^{TT }\mathrm{d}\Omega& = \frac{8\pi G}{r _{0}^{2 }} \left[ 2 \ddot{\mathcal{I}} _{ij}(t _{r})^{2 }-\ddot{\mathcal{I}}(t _{r})^{2 }- \frac{4}{3}\ddot{\mathcal{I}} _{ij}(t _{r})^{2 }+ \frac{2}{3}\ddot{\mathcal{I}}(t _{r})^{2 }+ \frac{1}{15}\ddot{\mathcal{I}}^{2 }+\frac{2}{15}\ddot{\mathcal{I}} _{ij}^{2 } \right]  \\
+&= \frac{8\pi G}{r _{0}^{2 }}\left(    \frac{4}{5}\ddot{\mathcal{I}} _{ij}(t _{r})^{2 } - \frac{4}{15}\ddot{\mathcal{I}}(t _{r})^{2 }\right) \\
+&= \frac{32\pi G^{2 }}{5r _{0}^{2 }} \left( \ddot{\mathcal{I}} _{ij} (t _{r})^{2 } - \frac{1}{3}\ddot{\mathcal{I}}(t _{r})^{2 } \right) \\
+&= \frac{32\pi G^{2 }}{5r _{0}^{2 }} \ddot{\mathcal{Q}} _{ij}(t _{r})~,
+\end{aligned}
+$$<p>因此总辐射功率为</p>
+$$
+\mathcal{P} = \int \braket{  t _{00}  }\hat{n} _{i}r _{0}^{2 } \mathrm{d}\Omega \mathrm{d}t= \frac{\omega ^{2 }r _{0}^{2 }}{32\pi G}\int \braket{  h _{ij}^{TT }h^{ij } _{TT}  }\mathrm{d}\Omega   = \frac{G \omega ^{2 }}{5}\int \braket{ \ddot{\mathcal{Q}} _{ij}(t _{r})^{2 }   }  \mathrm{d}r~.
+$$<h3 id="引力波功率的半定量计算">引力波功率的半定量计算
+</h3><p>对于角频率为 $\omega$ ，间距为 $R$ 的双星系统，其功率 $\mathcal{P}$ 定标为：</p>
+$$
+\mathcal{P} \sim \frac{G}{c^5} \braket{  \overset{...}{Q})^2  }  \sim \frac{G \omega^6 M^2 R^4}{c^5}~,
+$$<p>结合牛顿引力近似 ($\omega^2 R \sim GM/R^2$)，功率最终为：</p>
+$$
+\mathcal{P} \sim \frac{G^4 M^5}{c^5 R^5} ~,
+$$<p>引入史瓦西半径 $R _s = \frac{2GM}{c^2}$ 和普朗克光度 $L _{\text{Planck}} = \frac{c^5}{G} \approx 3.6 \times 10^{52} \text{ J s}^{-1}$，功率 $\mathcal{P}$ 可写为：</p>
+$$
+\mathcal{P} \sim \left(\frac{R _s}{R}\right)^5 L _{\text{Planck}} 
+$$<ul>
+<li>黑洞并合</li>
+</ul>
+<p>当两个黑洞在并合前短暂瞬间，其分离距离 $R$ 接近 $R _s$，则 $\left(R _s/R\right)^5 \approx 1$ ，有</p>
+$$
+\mathcal{P} \approx L _{\text{Planck}} \approx 3.6 \times 10^{52} \text{ J s}^{-1}
+$$<p>此时发射的<strong>引力波能量远超可见宇宙中所有恒星的总光度</strong> ($L _{\text{galaxy}} \approx 10^{-15} L _{\text{Planck}}$) .</p>
+<ul>
+<li>太阳系内天体发射功率（木星-太阳系统）</li>
+</ul>
+<p>在两物体做轨道运动满足 $M _{1}\gg M _{2}$ 时，由 $\mathcal{Q}\sim \left( \frac{m}{M}R \right)^{2 }$ 可知功率中应含 $M _{2}^{2 }$  ，则引力波辐射功率为</p>
+$$
+\mathcal{P} \sim \frac{G^{4 }M _{1}^{3 }M _{2}^{2 }}{R^{5 }}=\left(\frac{R _s}{R}\right)^5 \left( \frac{M _{2}}{M _{1}} \right)^{2 }  L _{\text{Planck}}~,
+$$<p>对于太阳-木星系统：太阳史瓦西半径 $R _s \approx 3 \text{ km}$ ，木星轨道距离 $R \sim 10^9 \text{ km}$ ，木星质量约为 $10^{-3 }M _{\odot}$ ，因此引力波发射功率估算为：</p>
+$$
+\mathcal{P} \sim 10^{-50} L _{\text{Planck}} \approx 10^{-24} L _{\odot}~,
+$$<p>其中太阳光度约为 $L _{\odot}\sim 10^{-26 }\text{J s}^{-1 }$  .</p>
+<ul>
+<li>人类摇晃手臂的功率估算</li>
+</ul>
+<p>人类的手臂在 $\sim \mathrm{kg}$ 量级，臂长在 $1 \mathrm{m}$ 左右，运动频率在 $\sim \mathrm{Hz}$ 的量级，因此假设手臂的四极矩的二阶时间导数 $\ddot{Q} \sim 1 \text{ kg} \text{ m}^2 \text{ s}^{-2}$，频率 $\omega\sim 1 \ \mathrm{s}^{-1 }$ ：</p>
+$$
+\mathcal{P} \sim \frac{G \ddot{Q}^2}{c^5} \approx 10^{-52} \text{ J s}^{-1}~,
+$$<p>
+可见功率几乎为零，无法被探测 . 如果考虑引力波的量子（引力子）能量为 $E = \hbar \omega$ ，对于频率 $\omega \approx 1 \text{ s}^{-1}$ 的引力子：</p>
+$$
+E \approx 10^{-34} \text{ J}~,
+$$<p>那么摇晃手臂产生引力子所需要的平均时间为</p>
+$$
+\braket{  T  }  = \frac{E}{\mathcal{P}} \approx \frac{10^{-34} \text{ J}}{10^{-52} \text{ J s}^{-1}} = 10^{18} \text{ s}~,
+$$<p>其中 $1\ \mathrm{yr}\sim 10^{7 }\ \mathrm{s}$ ，可知对于人类摇晃手臂，平均需要从大爆炸至今的时间才能发出一个引力子 .</p>
+<h2 id="平面引力波对粒子的作用">平面引力波对粒子的作用
+</h2><p>相对于电磁波，引力波由于 $G$ 远远小于 $\alpha=\frac{e^{2 }}{4\pi}$ ，表明大部分物体对于引力是透明的 . 为探测引力波，考虑其对相邻粒子束的物理效应，且这个物理效应该是与坐标无关的 .</p>
+<p>在 TT 规范下对应的坐标系中，在 $xOy$ 平面一圈静止的粒子在 $z$ 方向传来的引力波的影响下在平面欧式坐标系 $(\tilde{x},\tilde{y})$ 中做如下运动，其中</p>
+$$
+\begin{pmatrix}
+\tilde{x} 
+\\
+\tilde{y}
+\end{pmatrix}= 
+\begin{pmatrix}
+1+h _{x x} & h _{xy} 
+\\
+h _{xy} & 1-h _{xx}
+\end{pmatrix}^{1/2 }
+\begin{pmatrix}
+x 
+\\
+y
+\end{pmatrix}~,\quad x^{2 }+y^{2 }=R^{2 }\;.
+$$<p><p class="md__image">
+    <img src="gw_ring_TT.gif" alt="gw_ring_TT"  loading="lazy" />
+</p></p>
+<p><p class="md__image">
+    <img src="gw_ring_TT_LR.gif" alt="gw_ring_TT_LR"  loading="lazy" />
+</p></p>
+<p>注意虽然在这里的讨论中圈粒子的运动状态是坐标相关的，但是它们坐标无关的固有距离仍然满足这样的运动状态 . 事实上，Ligo 引力波探测仪的原理类似于迈克尔逊干涉仪，探测的是由于固有距离的变化导致的光的衍射干涉效应，因此这样的特殊坐标选取并不影响我们讨论的物理 . 此外，这里还将给出坐标无关的测地线偏离的推导方式 .</p>
+<h4 id="测地线偏离">测地线偏离
+</h4><p>在黎曼流形 $M$ 上， 考虑一族附近测地线，可用两个参数曲面参数化 $x^{\mu }(\lambda,s)$ ，其中 $\lambda$ 标记为测地线仿射参数，$s$ 标记为不同测地线，定义</p>
+$$
+U^\mu(\lambda,s)\equiv\frac{\partial x^\mu}{\partial\lambda}
+\quad\text{(切向量)}~,\qquad \xi^\mu(\lambda,s)\equiv\frac{\partial x^\mu}{\partial s}
+\quad\text{(偏离向量)}~,
+$$<p>如下图所示 .</p>
+<p><p class="md__image">
+    <img src="Screenshot_20251206_111928_com_jideos_jnotes_Note.jpg" alt="Screenshot_20251206_111928_com_jideos_jnotes_Note"  loading="lazy" />
+</p></p>
+<p>对于固定的测地线，定义 $\frac{D}{\mathrm{d}\lambda}\equiv U^{\nu }\nabla _{\nu}$ . 考虑两条邻近测地线 $x^{\mu }(\lambda),\ x^{\mu }(\lambda)+\xi ^{\mu }(\lambda)\ ,\xi ^{\mu }\to {0}$ 有</p>
+$$
+\frac{\partial}{\partial\lambda} \frac{\partial x^{\mu }}{\partial s}= \frac{\partial}{\partial s} \frac{\partial x^{\mu }}{\partial\lambda} \implies U^{\nu }\nabla _{\nu}\xi ^{\mu }=\xi ^{\nu }\nabla _{\nu}U^{\mu }~,\tag{$\#$}
+$$<p>这个关系对下面的推导十分重要 . 接下来考虑 $\xi ^{\mu }$ 的运动学，即 $\xi ^{\mu }(\lambda)$ 满足的方程，$\xi ^{\mu }$ 沿 $\lambda$ 的二阶协变导数为</p>
+$$
+\begin{aligned}
+\frac{D^{2 }\xi ^{\mu }}{\mathrm{d}\lambda ^{2 }} &= U^{\nu }\nabla _{\nu}\left( U^{\rho }\nabla _{\rho}\xi ^{\mu } \right)  \\
+& = U^{\nu }\nabla _{\nu}\left( \xi ^{\rho }\nabla _{\rho}U^{\mu } \right) \quad \leftrightarrow  (\#)  \\
+& = U^{\nu }\left( \nabla _{\nu}\xi ^{\rho } \right) \left( \nabla  _{\rho}U^{\mu } \right)   + U^{\nu }\xi ^{\rho }\nabla _{\nu}\nabla _{\rho}U^{\mu } \\
+&=\xi ^{\nu }\left( \nabla _{\nu}U^{\rho } \right) \left( \nabla  _{\rho}U^{\mu } \right) + U^{\nu }\xi ^{\rho }\left( \nabla _{\rho}\nabla _{\nu}U^{\mu }+R^{\mu } _{\;\sigma \nu \rho} U^{\sigma }\right)  \\
+& = \xi ^{\nu }\left( \nabla _{\nu}U^{\rho } \right) \left( \nabla  _{\rho}U^{\mu } \right) + \xi ^{\rho }\left[ \nabla _{\rho}\underbrace{\left(  U^{\nu }\nabla _{\nu}U^{\mu }  \right)} _{ =0 } -\xi ^{\rho }\left( \nabla _{\rho}U^{\nu } \right) \left( \nabla _{\nu}U^{\mu } \right)  \right]    \\
+&\qquad+U^{\nu }\xi ^{\rho }R^{\mu } _{\; \sigma \nu \rho}U^{\sigma } \\
+&=\xi ^{\nu }\left( \nabla _{\nu}U^{\rho } \right) \left( \nabla  _{\rho}U^{\mu } \right) - \xi ^{\rho } \left( \nabla _{\rho}U^{\nu } \right) \left( \nabla _{\nu}U^{\mu } \right) + U^{\nu }\xi ^{\rho }R^{\mu } _{\; \sigma \nu \rho}U^{\sigma } \\
+& =U^{\nu }\xi ^{\rho }R^{\mu } _{\; \sigma \nu \rho}U^{\sigma }~,
+\end{aligned}
+$$<p>所以有测地线偏离方程</p>
+$$
+\frac{D^{2 }\xi ^{\mu }}{\mathrm{d}\lambda ^{2 }} = R^{\mu } _{\;\sigma\nu \rho}U^{\sigma }U^{\nu }\xi ^{\rho }~,
+$$<p>上式表明在广义相对论中，邻近测地线的偏离 $\xi ^{\mu }$ 沿基准测地线的相对加速度由黎曼曲率张量驱动 . 在平直时空 $R^\mu{} _{\ \sigma\nu\rho}=0$ ，相邻测地线以常加速度（在仿射参量下为线性）分离，若初始相对速度为零则保持相对静止——没有潮汐力 . 若 $R^\mu{} _{\ \sigma\nu\rho}\neq 0$ ，则会产生“潮汐”相对加速度，这就是引力场的测度（tidal force）.</p>
+<p>考虑在 TT 坐标系静止的相邻的粒子，其中偏离矢量为 $\xi ^{\mu }$ ，粒子的四速度为 $U^{\mu }=(1,0,0,0)$ ，选取固有时 $\tau$ 作为仿射参量，则根据测地线偏离方程</p>
+$$
+\frac{D^{2 }\xi ^{\mu }}{\mathrm{d}\tau ^{2 }} = R^{\mu } _{\;00 \rho}\xi ^{\rho }~,
+$$<p>其中</p>
+$$
+R^{\mu } _{\; 00 \rho} = \frac{1}{2}\left( \partial _{0}\partial _{0}h _{\; \rho}^{\mu } + \partial _{\rho}\partial ^{\mu }h _{00}-\partial _{\rho}\partial _{0}h^{\mu } _{\;0}-\partial ^{\mu }\partial _{0}h _{\rho 0} \right) = \frac{1}{2}\partial _{0}\partial _{0}h^{\mu } _{\; \rho}~,
+$$<p>那么有</p>
+$$
+ \frac{\partial^{2 }\xi ^{i }}{\partial t^{2 }} = \frac{1}{2}S^{j } \frac{\partial ^{2 }}{\partial t^{2 }}h^{i } _{\;j}~,
+$$<p>对于沿 $z$ 方向传播的引力波，TT 规范下引力波张量在 $x,y$ 平面上的常见表示为</p>
+$$
+h _{ij}^{\mathrm{TT}}(t) =
+\begin{pmatrix}
+h _+(t) & h _\times(t) & 0\\[4pt]
+h _\times(t) & -h _+(t) & 0\\[4pt]
+0 & 0 & 0
+\end{pmatrix}~,
+$$<p>若初始分离 $\boldsymbol{\xi} _0=(\xi _0^x,\xi _0^y)$，则</p>
+$$
+\begin{pmatrix}\xi^x(t)\\[4pt]\xi^y(t) \\
+\end{pmatrix}
+\simeq
+\begin{pmatrix}
+1 + \tfrac{1}{2}h _+(t) & \tfrac{1}{2}h _\times(t) \\[4pt]
+\tfrac{1}{2}h _\times(t) & 1 - \tfrac{1}{2}h _+(t)
+\end{pmatrix}
+\begin{pmatrix}\xi _0^x\\[4pt]\xi _0^y\end{pmatrix}.
+$$<p>取圆环上一个粒子的初始位置 $\xi _0^x = R\cos\theta,\ \xi _0^y = R\sin\theta$，那么有</p>
+<ul>
+<li>$h _{+}\ne {0},\ h _{\times}=0$ 时，有</li>
+</ul>
+$$
+\begin{aligned}
+  \xi^x(t)\simeq R\big(1+\tfrac{1}{2}h _0\sin\omega t\big)\cos\theta~, \\
+  \xi^y(t)\simeq R\big(1-\tfrac{1}{2}h _0\sin\omega t\big)\sin\theta~,
+\end{aligned}
+$$<p>环随时间在 $x$ 与 $y$ 方向以相反相位伸缩，显示交替拉伸与压缩（椭圆变形）.</p>
+<ul>
+<li>$h _{+}=0,\ h _{\times}\ne {0}$ 时，有</li>
+</ul>
+$$
+\begin{aligned}
+  \xi^x(t)\simeq R \left(\cos\theta + \tfrac{1}{2}h _0\sin\omega t\;\sin\theta  \right)  ~,\\
+  \xi^y(t)\simeq R \left( \sin\theta + \tfrac{1}{2}h _0\sin\omega t\;\cos\theta  \right) ~,
+\end{aligned}
+$$<p>环随时间在 $\frac{\pi}{4}$ 与 $\frac{3\pi}{4}$ 方向以相反相位伸缩，导致与 $+$ 极化相似的椭圆但轴方向旋转 $45^\circ$ .</p>
+<p>考虑<strong>圆偏振</strong>，则分离矢量由 $h _+$ 与 $h _\times$ 相位差 $\pm\pi/2$ 的叠加得到</p>
+$$
+h _{L}= \frac{1}{\sqrt{  2}}\left( h _{+}-ih _{\times} \right) ~,\quad h _{R} = \frac{1}{\sqrt{ 2 }}\left( h _{+}+ih _{\times} \right) ~,
+$$<p>
+不妨取</p>
+$$
+h _{+}(t) = h _{0} \cos \left( \omega t \right)~,h _{\times}(t) = \pm h _{0}\sin \left( \omega t \right) ~,
+$$<ul>
+<li>对于  $h _{L}\ne {0},\ h _{R}= 0$ ，有 $h _{\times}=h _{0}\sin \left( \omega t \right)$，这时</li>
+</ul>
+$$
+\begin{aligned}
+  \xi^x(t)&\simeq R\cos\theta \left( 1+ \frac{1}{2}h _{0}\cos \omega t \right)+\frac{1}{2} Rh _{0}\sin \omega t\sin\theta \\
+   &=R\cos\theta+ \frac{h _{0}R}{2}\cos \left( \omega t-\theta \right) ~,\\ \\
+  \xi^y(t)&\simeq R\sin\theta\left( 1- \frac{1}{2}h _{0}\sin \omega t  \right)+\frac{1}{2} Rh _{0}\cos \omega t\cos\theta \\
+&=R\sin\theta+ \frac{h _{0}R}{2}\sin \left( \omega t-\theta \right) ~.
+\end{aligned}
+$$<ul>
+<li>对于  $h _{L}= {0},\ h _{R}\ne 0$ ，有 $h _{\times}=-h _{0}\sin \left( \omega t \right)$，这时</li>
+</ul>
+$$
+\begin{aligned}
+  \xi^x(t)&\simeq R\cos\theta\left( 1+ \frac{1}{2}h _{0}\cos \omega t  \right)-\frac{1}{2} Rh _{0}\sin \omega t\sin\theta  \\
+   &=R\cos\theta+ \frac{h _{0}R}{2}\cos \left( \omega t+\theta \right) ~,\\ \\
+\xi^y(t)&\simeq R\sin\theta\left( 1- \frac{1}{2}h _{0}\cos \omega t  \right)-\frac{1}{2} Rh _{0}\sin \omega t\cos\theta \\
+&=R\sin\theta- \frac{h _{0}R}{2}\sin \left( \omega t+\theta \right)~.
+\end{aligned}
+$$<p>据此可以得到本节开头的动画图像 .</p>
+<h4 id="平面欧式坐标">平面欧式坐标
+</h4><p>时空中自由落体粒子的运动由测地线方程给出：</p>
+$$
+\frac{\mathrm{d}^{2}x^{\mu}}{\mathrm{d}\tau^{2}}+ \Gamma^{\mu} _{\;\rho\sigma}\,
+\frac{\mathrm{d}x^{\rho}}{\mathrm{d}\tau}
+\frac{\mathrm{d}x^{\sigma}}{\mathrm{d}\tau}
+=0~ .
+$$<p>对于一组无相对速度的相邻粒子（本征系），其坐标满足</p>
+$$
+t=\tau,\qquad x^{i}= \text{常数},
+$$<p>即粒子在局域惯性系中初始静止 . 在 TT规范下，考虑沿 $z$ 方向传播的平面引力波，其横向 ($x$-$y$) 平面上的非零扰动分量为</p>
+$$
+h _{ij}(t)=
+\begin{pmatrix}
+h _{xx} & h _{xy} \\
+h _{xy} & -h _{xx}
+\end{pmatrix},
+\qquad i,j = x,y.
+$$<p>两种独立偏振可以写成：</p>
+$$
+h _{+}\equiv h _{0} 
+\begin{pmatrix}
+\cos\omega t & 0 \\
+0 & -\cos\omega t
+\end{pmatrix}~,
+\qquad
+h _{\times}\equiv h _{0} 
+\begin{pmatrix}
+0 & \cos\omega t \\
+\cos\omega t & 0
+\end{pmatrix}~.
+$$<p>假设检验粒子在TT坐标系位于 $xy$ 平面内半径为 $R$ 的圆周上，其初始静止且满足</p>
+$$
+x^{2 }+y^{2 }=R^{2 }~,
+$$<p>引力波到达后，空间距离为</p>
+$$
+\tilde{x}^{2}+\tilde{y}^{2}
+= g _{ij} x^{i}x^{j}
+= (x\; y)
+\begin{pmatrix}
+1+h _{xx} & h _{xy}\\
+h _{yx} & 1+h _{yy}
+\end{pmatrix}
+\begin{pmatrix} x\\ y \end{pmatrix}~,
+$$<p>其中 $\left( \tilde{x},\tilde{y} \right)$ 为欧式平面坐标，且满足坐标变换关系</p>
+$$
+\begin{pmatrix}
+\tilde{x}\\ \tilde{y}
+\end{pmatrix}
+=\left(\begin{array}{cc}
+1+h _{xx} & h _{xy} \\
+h _{xy} & 1-h _{xx}
+\end{array}\right)^{1/2}
+\begin{pmatrix}
+x\\ y
+\end{pmatrix}~.
+$$<p>若 $h _{ij}\ll 1$，展开为一阶近似：</p>
+$$
+\begin{aligned}
+R^{2}
+&= (\tilde{x}\;\tilde{y})
+\left(
+\begin{array}{cc}
+1+h _{xx} & h _{xy}\\
+h _{xy} & 1-h _{xx}
+\end{array}
+\right)^{-1}
+\begin{pmatrix}\tilde{x}\\ \tilde{y}\end{pmatrix} \\ \\
+&\simeq 
+(\tilde{x}^{2}+\tilde{y}^{2})- h _{xx}\tilde{x}^{2}+ h _{yy}\tilde{y}^{2}-2h _{xy}\tilde{x}\tilde{y}~.
+\end{aligned}
+$$<p>对于 $+$ 模式 $h _{xx}=A\cos\omega t$ ，可得椭圆长、短轴分别为</p>
+$$
+\begin{aligned}
+a &\simeq R \left(1+\frac{h _{xx}}{2}\right)
+=R\left(1+\frac{A\cos\omega t}{2}\right)~,\\
+b &\simeq R \left(1-\frac{h _{xx}}{2}\right)
+=R\left(1-\frac{A\cos\omega t}{2}\right)~,
+\end{aligned}
+$$<p>此时椭圆的长短轴方向分别为 $x$ 与 $y$ 轴 . 对于 $\times$ 模式，椭圆的长短轴各自旋转 $\pi/4$（或 $3\pi/4$），长度与 $+$ 模式相同，只是方向不同 .</p>
+<p>若 $h _{+}$ 和 $h _{\times}$ 具有相位差 $\pi/2$，则形成左旋/右旋圆偏振：</p>
+$$
+h _{L,R}=h _{0} 
+\begin{pmatrix}
+\cos\omega t & \pm \sin\omega t\\
+\pm \sin\omega t & -\cos\omega t
+\end{pmatrix}~,
+$$<p>其主轴方向随时间旋转，例如左旋模式，对应半长轴方向为</p>
+$$
+\hat{i}\cos\frac{\omega t}{2}
++\hat{j}\sin\frac{\omega t}{2}~,
+$$<p>这表明引力波使环状粒子的形变在随时间旋转，形成 “旋转椭圆” .</p>
+<h2 id="参考资料">参考资料：
+</h2><blockquote>
+<p>【1】国科大田雨老师的课堂笔记 .</p>
+<p>【2】Carroll, Sean M. Spacetime and Geometry: An Introduction to General Relativity. Benjamin Cummings, 2003.</p>
+<p>【3】陈斌. 2018. 《广义相对论》. 北京: 北京大学出版社.</p>
+<p>【4】David Tong. Lectures on General Relativity <a class="link" href="https://www.damtp.cam.ac.uk/user/tong/gr.html"  target="_blank" rel="noopener"
+    >https://www.damtp.cam.ac.uk/user/tong/gr.html</a></p>
+<p>【5】Google. Gemini: A Generative Artificial Intelligence Model. 2025.</p>
+</blockquote>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>这里可没说 $\zeta$ 是 Killing 矢量场 .&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>严谨的证明可以看陈斌老师的《广义相对论导论》 .&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>这里 $\hat{n} _{i}\hat{n} _{i}$ 是使用了爱因斯坦求和约定的 .&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+        
+        
+            <div class="article-image">
+                <img src="/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/picture.f05c6c608dfd7b93c221f4a1b500b436_hu_39e607f83e2b8054.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post GR的数学基础"
+                        
+                        data-hash="md5-8FxsYI39e5PCIfShtQC0Ng==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GR的数学基础</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%94%A8mathematica%E9%AA%8C%E8%AF%81%E5%85%8B%E5%B0%94%E5%BA%A6%E8%A7%84/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E7%94%A8mathematica%E9%AA%8C%E8%AF%81%E5%85%8B%E5%B0%94%E5%BA%A6%E8%A7%84/774px-Spinning_and_chargend_black_hole_with_accretion_disk.a163a6a7f65d22108cd2067b4e509995_hu_2422880b006d567a.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 用Mathematica验证克尔度规"
+                        
+                        data-hash="md5-oWOmp/ZdIhCM0gZ7TlCZlQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">用Mathematica验证克尔度规</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%96%BD%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84schwarzchild-metric/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E6%96%BD%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84schwarzchild-metric/wallhaveny86gzx.96436f35145cc4b7362d1b53080115e0_hu_5931a1b6955ebdc0.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 施瓦西度规(Schwarzchild Metric)"
+                        
+                        data-hash="md5-lkNvNRRcxLc2LRtTCAEV4A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">施瓦西度规(Schwarzchild Metric)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/variation.21d5e70b37d9d9949a379bcc36820bf2_hu_97c73650a8b88881.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 学习笔记-相对论中的变分"
+                        
+                        data-hash="md5-IdXnCzfZ2ZSaN5vMNoIL8g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">学习笔记-相对论中的变分</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/metric.415902e5169535907a22e03a16f01804_hu_62f1dc7c5e280c3.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 度规恒等式总结"
+                        
+                        data-hash="md5-QVkC5RaVNZB6IuA6FvAYBA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">度规恒等式总结</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="Dawn-19/Dawn-19.github.io"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Dawn-19
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

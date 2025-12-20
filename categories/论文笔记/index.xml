@@ -5,7 +5,7 @@
         <link>https://Dawn-19.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/</link>
         <description>Recent content in 论文笔记 on Dawn-19</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
+        <language>en-us</language>
         <copyright>Dawn-19</copyright>
         <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>2501.14681-Mukhanov-Sasaki方程的力学类比</title>
@@ -334,18 +334,9 @@ $$
 \Theta\propto t^{-2\alpha-\delta-1}
 \end{split}
 $$&lt;p&gt;as $t\to - \infty$, and $\Theta = \Theta (\phi,N,G_3,G_4,G_5, X,H) $ .&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/arXiv-2003-01202-theta.png&#34;
-	width=&#34;963&#34;
-	height=&#34;162&#34;
-	srcset=&#34;https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/arXiv-2003-01202-theta_hu_b62e0d5c6c612cc0.png 480w, https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/arXiv-2003-01202-theta_hu_588622b8d8fe72e7.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;594&#34;
-		data-flex-basis=&#34;1426px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;p class=&#34;md__image&#34;&gt;
+    &lt;img src=&#34;arXiv-2003-01202-theta.png&#34; alt=&#34;arXiv-2003-01202-theta&#34;  loading=&#34;lazy&#34; /&gt;
+&lt;/p&gt;&lt;/p&gt;
 &lt;p&gt;The effective gravitational constant&lt;/p&gt;
 $$
 \begin{split}
@@ -381,18 +372,9 @@ $$
 E_{strong}^{hhh}&amp; \propto (\mathcal{F}_T \cdot (2\mathcal{G}_T)^{-3/2})^\frac{1}{-1}\propto(-t)^{-\alpha}\gg (-t)^{-1}\\
 &amp;\Rightarrow \alpha&lt;1
 \end{split}
-$$&lt;p&gt;&lt;img src=&#34;https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/arXiv-2003-01202.png&#34;
-	width=&#34;1097&#34;
-	height=&#34;758&#34;
-	srcset=&#34;https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/arXiv-2003-01202_hu_6256afc48b89b456.png 480w, https://Dawn-19.github.io/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/arXiv-2003-01202_hu_cf3cb507a9ecb66d.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;144&#34;
-		data-flex-basis=&#34;347px&#34;
-	
-&gt;&lt;/p&gt;
+$$&lt;p&gt;&lt;p class=&#34;md__image&#34;&gt;
+    &lt;img src=&#34;arXiv-2003-01202.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;
+&lt;/p&gt;&lt;/p&gt;
 &lt;p&gt;参考：arXiv:2003.01202&lt;/p&gt;
 </description>
         </item>

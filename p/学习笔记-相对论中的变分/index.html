@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="用变分法推导爱因斯坦场方程，Klein-Gorden方程以及四维真空Maxwell方程，同时给出用Mathematica的xAct，xTras的计算方法。">
 <title>学习笔记-相对论中的变分</title>
@@ -533,18 +533,9 @@ $$
     >在此</a>下载<a class="link" href="https://josmar493.dreamhosters.com/Invar/Riemann.tar.gz"  target="_blank" rel="noopener"
     >Riemann.tar.gz</a>: main database file.(对于<strong>Windows系统</strong>) ，把它解压后放在xAct的Invar文件夹下 否则在计算过程中可能出现如下报错：</p>
 <p>Rlnv: Can&rsquo;t find the Invar database. You can download it from http:/www.xact.es/invar/.</p>
-<p>如图所示<img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/baocuo.png"
-	width="1082"
-	height="329"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/baocuo_hu_df342c28f88ba051.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/baocuo_hu_7f1f4f1262761f96.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="328"
-		data-flex-basis="789px"
-	
-></p>
+<p>如图所示<p class="md__image">
+    <img src="baocuo.png" alt=""  loading="lazy" />
+</p></p>
 <p>接下来我们正式开始计算，首先，引入需要的包</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -555,46 +546,19 @@ $$
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>定义流形和度规</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/manifold.png"
-	width="1126"
-	height="118"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/manifold_hu_3fb330673d7bc677.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/manifold_hu_ab07219928002056.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="954"
-		data-flex-basis="2290px"
-	
-></p>
+<p><p class="md__image">
+    <img src="manifold.png" alt=""  loading="lazy" />
+</p></p>
 <p>接下来就可以进行一些变分运算了，比如对度规$g$的行列式进行变分，VarD中的内容就是变分的量，不带负号的指标是上指标，带负号的指标是下指标</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/metric.png"
-	width="685"
-	height="548"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/metric_hu_244a8de0db5c3f20.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/metric_hu_54b4214654239988.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="125"
-		data-flex-basis="300px"
-	
-></p>
+<p><p class="md__image">
+    <img src="metric.png" alt=""  loading="lazy" />
+</p></p>
 </li>
 </ol>
 <p>对引力场作用量的引力部分变分，加入ScreenDollarIndices防止其指标乱码：</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/gravity_field.png"
-	width="1137"
-	height="701"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/gravity_field_hu_edc7e3c742f63809.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/gravity_field_hu_75a3062fff7153c.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="162"
-		data-flex-basis="389px"
-	
-></p>
+<p><p class="md__image">
+    <img src="gravity_field.png" alt=""  loading="lazy" />
+</p></p>
 <p>在对标量场作用量进行变分之前，需要先定义标量场和它的potential</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -607,122 +571,41 @@ $$
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>与前面类似，可以计算：</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/scalar_field.png"
-	width="899"
-	height="363"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/scalar_field_hu_f4eed1d6da7380ed.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/scalar_field_hu_8e0e6112190315ae.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="247"
-		data-flex-basis="594px"
-	
-></p>
+<p><p class="md__image">
+    <img src="scalar_field.png" alt=""  loading="lazy" />
+</p></p>
 <p>还可以用 VarL 来计算能动张量，VarL的作用为</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/VarL.png"
-	width="620"
-	height="470"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/VarL_hu_6478a55f11e75ee2.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/VarL_hu_f7e45763584fef8e.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="131"
-		data-flex-basis="316px"
-	
-></p>
+<p><p class="md__image">
+    <img src="VarL.PNG" alt=""  loading="lazy" />
+</p></p>
 <p>标量场的能动张量</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/scalar_field2.png"
-	width="1062"
-	height="432"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/scalar_field2_hu_282f84175df5b14.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/scalar_field2_hu_c7c3da3cb68877c5.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="245"
-		data-flex-basis="590px"
-	
-></p>
+<p><p class="md__image">
+    <img src="scalar_field2.png" alt=""  loading="lazy" />
+</p></p>
 <p>定义电磁场，这里$F_{\mu\nu}$是反对称张量</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM1.png"
-	width="912"
-	height="180"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM1_hu_c15ebc9e5b85b19.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM1_hu_dfda3c682875b653.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="506"
-		data-flex-basis="1216px"
-	
-></p>
+<p><p class="md__image">
+    <img src="EM1.png" alt=""  loading="lazy" />
+</p></p>
 <p>给出$F_{\mu \nu}$与$A_\mu$的关系</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM2.png"
-	width="925"
-	height="345"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM2_hu_368a4f68e91ef217.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM2_hu_b8f1f69cb07d9f52.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="268"
-		data-flex-basis="643px"
-	
-></p>
+<p><p class="md__image">
+    <img src="EM2.png" alt=""  loading="lazy" />
+</p></p>
 <p>对作用量变分，暂时不考虑$\sqrt{-g}$</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM3.png"
-	width="664"
-	height="362"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM3_hu_675c5464eaa14ef6.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM3_hu_a45f525a7c2b2501.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="183"
-		data-flex-basis="440px"
-	
-></p>
+<p><p class="md__image">
+    <img src="EM3.png" alt=""  loading="lazy" />
+</p></p>
 <p>得到的是$\nabla_\mu F^{\mu\nu}$的展开式，可以验证一下</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM4.png"
-	width="668"
-	height="255"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM4_hu_dfd592d22c6286c5.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM4_hu_681dcc8cac55c025.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="261"
-		data-flex-basis="628px"
-	
-></p>
+<p><p class="md__image">
+    <img src="EM4.png" alt=""  loading="lazy" />
+</p></p>
 <p>没有问题，那么进行下一步，计算电磁场的能动张量，可以使用VarL：</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM5.png"
-	width="888"
-	height="592"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM5_hu_bd7241e5fd656237.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM5_hu_5cf1c1f4ac94121.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="150"
-		data-flex-basis="360px"
-	
-></p>
+<p><p class="md__image">
+    <img src="EM5.png" alt=""  loading="lazy" />
+</p></p>
 <p>这里的结果全用电矢势展开了，我们可以验证它是否与我们前面计算的结果是否一致：</p>
-<p><img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM6.png"
-	width="894"
-	height="533"
-	srcset="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM6_hu_6fda301ed90e1e8f.png 480w, /p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/EM6_hu_7bfc86091c926828.png 1024w"
-	loading="lazy"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="167"
-		data-flex-basis="402px"
-	
-></p>
+<p><p class="md__image">
+    <img src="EM6.png" alt=""  loading="lazy" />
+</p></p>
 <p>结果完全相同，证明程序的结果是可靠的。</p>
 <blockquote>
 <p>xAct官网： <a class="link" href="https://josmar493.dreamhosters.com/index.html"  target="_blank" rel="noopener"
@@ -804,6 +687,30 @@ $$
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/picture.ab2fe1240e550b000cdb7b4e07051904_hu_5d8d8f73002d695b.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 引力波与引力辐射"
+                        
+                        data-hash="md5-qy/hJA5VCwAM23tOBwUZBA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">引力波与引力辐射</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="has-image">
@@ -896,30 +803,6 @@ $$
 
         <div class="article-details">
             <h2 class="article-title">度规恒等式总结</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/sea.11f97c05285ef66ba92864a6feff49bf_hu_3f3e0fe4130cf989.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 学习笔记-卷积(convolution)"
-                        
-                        data-hash="md5-Efl8BShe9mupKGSm/v9Jvw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">学习笔记-卷积(convolution)</h2>
         </div>
     </a>
 </article>

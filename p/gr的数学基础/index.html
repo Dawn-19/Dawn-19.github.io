@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="如题.">
 <title>GR的数学基础</title>
@@ -369,11 +369,11 @@ l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
         <li><a href="#黎曼曲率张量">黎曼曲率张量</a></li>
       </ol>
     </li>
-    <li><a href="#李导数kiling-矢量场">李导数，Kiling 矢量场</a>
+    <li><a href="#李导数killing-矢量场">李导数，Killing 矢量场</a>
       <ol>
         <li><a href="#微分同胚diffeomorphism-diff映射">微分同胚（diffeomorphism, diff）映射</a></li>
         <li><a href="#李导数">李导数</a></li>
-        <li><a href="#等度规变换和kiling矢量场">等度规变换和Kiling矢量场</a></li>
+        <li><a href="#等度规变换和killing矢量场">等度规变换和Killing矢量场</a></li>
       </ol>
     </li>
     <li><a href="#黎曼流形的常用计算">黎曼流形的常用计算</a>
@@ -832,7 +832,14 @@ $$
 $$<p>可以化简测地线方程为（证明见后文）</p>
 $$
 \frac{\mathrm{d}^2 x^\mu}{\mathrm{d}\sigma^2} + \Gamma^\mu_{\alpha\beta} \frac{\mathrm{d}x^\alpha}{\mathrm{d}\sigma} \frac{\mathrm{d}x^\beta}{\mathrm{d}\sigma} = 0~. \tag{*}
-$$<p>这样的 $\sigma$ 称为<strong>曲线的仿射参量</strong> .</p>
+$$<p>这样的 $\sigma$ 称为<strong>曲线的仿射参量</strong> . 此外，如果取 $\tau$  为仿射参量也可以写为等价形式</p>
+$$
+\begin{aligned}
+{\color{Green} U ^{\nu }\nabla_{\nu} U ^{\mu } } &= U ^{\nu } \partial_{\nu} U^{\mu } +U^{\nu }\Gamma ^{\mu }_{\nu\lambda}U^{\lambda } \\
+& = \frac{\mathrm{d x^{\nu }}}{\mathrm{d}\tau} \frac{\partial}{\partial x^{\nu }} \frac{\mathrm{d}x^{\mu }}{\mathrm{d} \tau} + \Gamma ^{\mu }_{\nu\lambda} \frac{\mathrm{d}x^{\nu }}{\mathrm{d}\tau} \frac{\mathrm{d}x^{\lambda }}{\mathrm{d}\tau} \\
+&{\color{Green} =\frac{\mathrm{d}^2 x^\mu}{\mathrm{d}\tau^2} + \Gamma^\mu_{\nu\lambda} \frac{\mathrm{d}x^\nu}{\mathrm{d}\tau} \frac{\mathrm{d}x^\lambda}{\mathrm{d}\tau} = 0 }~.
+\end{aligned}
+$$<p>其中 $U^{\mu }=\frac{\mathrm{d}x^{\mu }}{\mathrm{d}\tau}$ 为四速度 .</p>
 <ul>
 <li>从上式可以看到，取仿射参量 $\sigma$ 为曲线参数化时 $f(\sigma)=0$ 平行条件变为</li>
 </ul>
@@ -975,7 +982,7 @@ $$
 &=0~.
 \end{align*}
 $$<hr>
-<h2 id="李导数kiling-矢量场">李导数，Kiling 矢量场
+<h2 id="李导数killing-矢量场">李导数，Killing 矢量场
 </h2><h3 id="微分同胚diffeomorphism-diff映射">微分同胚（diffeomorphism, diff）映射
 </h3><p>对于映射 $f:M\mapsto M^\prime$，$f$ 为双射（单射+满射，一一到上），且 $f$ 与 $f^{-1}$ 均为 $C^\infty$，此时称 $M$ 与 $M^\prime$ （互）为微分同胚的。</p>
 <ul>
@@ -1059,7 +1066,7 @@ $$<ul>
 <li>李导数的定义不依赖于度规和联络，可以定义在任意流形上 .</li>
 <li>李导数满足莱布尼兹法则 .</li>
 </ul>
-<h3 id="等度规变换和kiling矢量场">等度规变换和Kiling矢量场
+<h3 id="等度规变换和killing矢量场">等度规变换和Killing矢量场
 </h3><ul>
 <li>等度规变换（等长变换）：即保证矢量长度不变的微分同胚变换，刻画黎曼空间的几何对称性</li>
 </ul>
@@ -1074,23 +1081,38 @@ $$
 \end{aligned}
 $$<p>即 $Q$ 点与 $P$ 点衡量的长度相同 .</p>
 <ul>
-<li>Kiling 矢量场：在无穷小等度规变换下，有</li>
+<li>Killing 矢量场：在无穷小等度规变换下，有</li>
 </ul>
 $$
 \mathcal{L}_{\xi}g_{\mu \nu}=\nabla_{\nu} \xi_{\mu}+\nabla_{\mu}\xi_{\nu}=0~,
-$$<p>此方程即为Kiling方程，满足Kiling方程的矢量场就是Kiling矢量场. 由于 $\mu \nu$ 指标的对称性，其有 $10$ 个独立的方程，然而独立分量只有 $4$ 个，那么说明只有在特定的空间下才有满足Kiling方程的Kiling矢量场<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup> .</p>
+$$<p>此方程即为Killing方程，满足Killing方程的矢量场就是Killing矢量场. 由于 $\mu \nu$ 指标的对称性，其有 $10$ 个独立的方程，然而独立分量只有 $4$ 个，那么说明只有在特定的空间下才有满足Killing方程的Killing矢量场<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup> .</p>
 <ul>
-<li>最大对称空间：对于 $n-\mathrm{dim}$ 时空，它最多拥有 $\frac{n(n+1)}{2}$ 个 Kiling 矢量场 .</li>
+<li>最大对称空间：对于 $n-\mathrm{dim}$ 时空，它最多拥有 $\frac{n(n+1)}{2}$ 个 Killing 矢量场 .</li>
 </ul>
-<p>对于 $n-\mathrm{dim}$ 平直时空，有 $n$ 个独立的时空平移，同时选择 $2$ 个坐标轴即可定义该“平面”的转动，故有Kiling矢量场个数最多为：</p>
+<p>对于 $n-\mathrm{dim}$ 平直时空，有 $n$ 个独立的时空平移，同时选择 $2$ 个坐标轴即可定义该“平面”的转动，故有Killing矢量场个数最多为：</p>
 $$
 n+C_{n}^2 = \frac{n(n+1)}{2}~.
 $$<ul>
 <li>稳态时空：满足时间平移不变性的时空，即度规场 $g_{\mu \nu}$ 不显含时间 .</li>
 </ul>
-<p>对于无穷小时间平移变换：$\tilde{x}^0 = x^0+\epsilon$ ，Kiling矢量场为 $\xi^\mu=(1,0,0,0)$，有</p>
+<p>对于无穷小时间平移变换：$\tilde{x}^0 = x^0+\epsilon$ ，Killing矢量场为 $\xi^\mu=(1,0,0,0)$，有</p>
 $$
 \mathcal{L}_{\xi}g_{\mu \nu} = \partial_{0}g_{\mu \nu} = 0~.
+$$<ul>
+<li>Killing 矢量与四速度缩并为守恒量：</li>
+</ul>
+$$
+\frac{\mathrm{d}}{\mathrm{d}\tau}\left( \xi_{\mu}U^{\mu } \right) = 0~, 
+$$<p>证明如下：</p>
+$$
+\begin{aligned}
+\frac{\mathrm{d}}{\mathrm{d}\tau}\left( \xi_{\mu}U^{\mu } \right) &= \frac{\mathrm{d}x^{\nu } }{ \mathrm{d}\tau } \frac{\partial}{\partial x^{\nu } } \left( \xi_{\mu} U^{\mu } \right) \\
+&= U^{\nu }\nabla_{\nu} \underbrace{ \left( \xi_{\mu}U^{\mu } \right) }_{ \text{scalar} } \\
+&=U^{\nu }U^{\mu }\nabla_{\nu}\xi_{\mu}+\xi_{\mu}\underbrace{ U^{\nu }\nabla_{\nu}U^{\mu }  }_{ \text{测地线方程} } \\
+&=U^{\nu }U^{\mu }\nabla_{\nu}\xi_{\mu} \\
+&= \frac{1}{2}U^{\nu }U^{\mu } \left( \nabla_{\nu}\xi_{\mu} + \nabla_{\mu}\xi_{\nu} \right)  \\
+&=0~.
+\end{aligned}
 $$<h2 id="黎曼流形的常用计算">黎曼流形的常用计算
 </h2><ul>
 <li>由行列式 $g=g_{\mu \nu} \frac{g}{g_{\mu \nu}}$，其中 $\Delta^{\mu \nu}=\frac{g}{g_{\mu \nu}}$ 为 $g_{\mu \nu}$ 的代数余子式，故</li>
@@ -1246,6 +1268,30 @@ $$<h3 id="微分几何小节">微分几何小节
             
                 
 <article class="has-image">
+    <a href="/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/picture.ab2fe1240e550b000cdb7b4e07051904_hu_5d8d8f73002d695b.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 引力波与引力辐射"
+                        
+                        data-hash="md5-qy/hJA5VCwAM23tOBwUZBA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">引力波与引力辐射</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/%E7%94%A8mathematica%E9%AA%8C%E8%AF%81%E5%85%8B%E5%B0%94%E5%BA%A6%E8%A7%84/">
         
         
@@ -1335,30 +1381,6 @@ $$<h3 id="微分几何小节">微分几何小节
 
         <div class="article-details">
             <h2 class="article-title">度规恒等式总结</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%8D%B7%E7%A7%AFconvolution/sea.11f97c05285ef66ba92864a6feff49bf_hu_3f3e0fe4130cf989.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 学习笔记-卷积(convolution)"
-                        
-                        data-hash="md5-Efl8BShe9mupKGSm/v9Jvw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">学习笔记-卷积(convolution)</h2>
         </div>
     </a>
 </article>
