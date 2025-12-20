@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="本文从引力几何化出发，在从弱场极限近似下推导爱因斯坦方程，并以此为基础直接给出其真空球对称解——史瓦西解，再给出史瓦西时空中各种运动学的分析。">
+<title>爱因斯坦引力场方程与实验检验</title>
+
+<link rel='canonical' href='https://Dawn-19.github.io/p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/'>
+
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="爱因斯坦引力场方程与实验检验">
+<meta property='og:description' content="本文从引力几何化出发，在从弱场极限近似下推导爱因斯坦方程，并以此为基础直接给出其真空球对称解——史瓦西解，再给出史瓦西时空中各种运动学的分析。">
+<meta property='og:url' content='https://Dawn-19.github.io/p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/'>
+<meta property='og:site_name' content='Dawn-19'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-12-20T00:00:00&#43;00:00'/><meta property='og:image' content='https://Dawn-19.github.io/p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/picture.png' />
+<meta name="twitter:title" content="爱因斯坦引力场方程与实验检验">
+<meta name="twitter:description" content="本文从引力几何化出发，在从弱场极限近似下推导爱因斯坦方程，并以此为基础直接给出其真空球对称解——史瓦西解，再给出史瓦西时空中各种运动学的分析。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://Dawn-19.github.io/p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/picture.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "light");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/photo_hu_7c5c3f8b98e0c7a4.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Dawn-19</a></h1>
+            <h2 class="site-description">深刻的思想总是朴素的。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://arxiv.org/'
+                        target="_blank"
+                        title="arXiv"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="792.000000pt" height="792.000000pt" viewBox="0 0 792.000000 792.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.14, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(0.000000,792.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M1285 7906 c-90 -30 -153 -77 -199 -151 -74 -117 -73 -216 1 -337 13
+-21 23 -42 23 -48 0 -5 4 -10 8 -10 4 0 16 -15 27 -32 10 -18 28 -42 38 -53
+10 -11 31 -36 45 -55 15 -19 29 -37 32 -40 6 -6 149 -177 167 -200 11 -14 153
+-186 212 -257 14 -17 40 -48 56 -69 17 -20 35 -42 40 -48 6 -6 23 -27 38 -46
+58 -72 103 -124 120 -142 9 -10 14 -18 10 -18 -5 0 -3 -4 3 -8 6 -4 58 -63
+114 -132 56 -69 106 -127 109 -130 4 -3 20 -23 37 -45 16 -22 34 -44 40 -50 6
+-5 42 -48 80 -95 38 -47 73 -88 79 -92 5 -4 7 -8 3 -8 -4 0 8 -16 27 -35 19
+-19 35 -37 35 -40 0 -4 24 -34 55 -69 6 -6 30 -36 55 -66 25 -30 49 -60 55
+-66 5 -6 24 -28 40 -48 17 -21 42 -52 56 -70 49 -58 424 -512 459 -556 19 -24
+49 -59 67 -79 17 -20 29 -38 27 -41 -3 -2 -8 1 -13 8 -5 8 -33 -12 -89 -65
+-46 -43 -123 -116 -173 -163 -172 -161 -186 -175 -233 -239 -78 -107 -135
+-257 -134 -351 0 -19 -1 -39 -3 -45 -6 -21 13 -122 33 -180 46 -130 90 -183
+378 -455 78 -74 164 -155 190 -180 l48 -46 -41 -50 c-23 -27 -48 -56 -55 -64
+-7 -8 -58 -71 -113 -140 -56 -69 -118 -145 -139 -170 -21 -25 -49 -58 -61 -75
+-13 -16 -37 -46 -53 -66 -17 -20 -41 -49 -53 -65 -12 -16 -34 -42 -48 -59 -15
+-16 -39 -45 -53 -64 -15 -19 -41 -51 -57 -70 -32 -38 -82 -99 -160 -196 -51
+-64 -98 -121 -158 -194 -20 -25 -41 -51 -46 -57 -63 -80 -193 -237 -214 -260
+-15 -16 -27 -32 -27 -35 0 -3 -10 -17 -22 -31 -47 -50 -127 -153 -127 -162 0
+-5 -3 -12 -9 -15 -22 -14 -62 -143 -66 -208 -13 -287 347 -473 559 -288 26 23
+153 140 259 240 45 41 244 226 281 259 17 15 57 53 90 84 33 31 112 104 174
+162 62 58 137 128 166 155 29 28 93 86 141 130 49 44 114 105 146 135 31 30
+79 75 106 100 26 25 97 90 156 145 60 55 119 110 132 123 13 12 27 22 33 22 5
+0 34 -24 64 -52 30 -29 97 -93 148 -142 52 -48 166 -157 254 -241 186 -178
+232 -222 419 -399 76 -72 174 -165 217 -206 179 -172 573 -546 809 -770 30
+-29 125 -119 210 -200 85 -81 184 -175 220 -209 92 -87 155 -116 250 -116 60
+0 85 5 124 25 86 44 141 107 170 197 36 110 11 179 -124 343 -25 30 -51 61
+-58 68 -7 8 -25 30 -40 50 -15 20 -34 44 -42 53 -8 9 -24 27 -35 40 -75 91
+-120 145 -124 149 -4 3 -24 28 -46 55 -22 28 -45 56 -52 63 -7 7 -29 34 -50
+60 -21 26 -42 52 -48 58 -5 6 -26 30 -45 54 -19 24 -40 48 -45 54 -6 6 -30 36
+-55 66 -25 30 -47 57 -50 60 -3 3 -22 26 -43 52 -21 26 -43 53 -50 60 -7 7
+-44 51 -82 98 -38 47 -74 90 -80 96 -5 6 -23 28 -40 49 -16 20 -35 42 -40 49
+-10 10 -260 311 -354 425 -20 24 -48 58 -63 75 -14 17 -155 186 -312 374
+l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
+340 46 74 85 168 92 226 3 19 5 34 6 34 1 0 3 29 4 65 2 67 -14 163 -35 215
+-7 17 -13 36 -15 44 -4 21 -75 133 -109 170 -48 53 -326 324 -496 483 -21 20
+-39 39 -39 43 0 5 134 171 150 185 3 3 25 30 50 60 25 30 52 61 60 70 8 8 33
+38 55 65 22 28 45 55 51 60 6 6 33 37 60 70 27 33 61 74 75 90 15 17 44 51 65
+76 82 96 129 152 139 163 6 6 32 38 59 71 28 33 60 71 72 85 13 14 42 48 64
+75 23 28 54 64 69 80 14 17 47 55 71 85 25 30 59 71 77 90 17 19 42 48 55 65
+13 16 30 37 38 46 8 8 24 26 35 40 11 13 57 68 103 122 110 130 139 171 172
+240 61 127 14 242 -145 349 -104 70 -192 79 -284 27 -47 -26 -135 -96 -201
+-159 -9 -8 -51 -46 -94 -85 -43 -38 -88 -79 -100 -90 -146 -134 -204 -186
+-222 -202 -12 -10 -63 -56 -115 -103 -51 -47 -103 -94 -115 -105 -118 -106
+-272 -246 -325 -295 -15 -14 -55 -50 -89 -80 -34 -30 -74 -66 -89 -80 -38 -35
+-134 -123 -225 -205 -43 -38 -101 -91 -129 -117 -29 -27 -55 -48 -59 -48 -6 0
+-70 60 -288 270 -43 41 -156 149 -250 240 -95 91 -215 206 -266 255 -52 50
+-94 90 -94 89 0 0 -50 47 -110 106 -61 58 -176 169 -257 246 -80 76 -176 168
+-213 204 -37 36 -119 114 -181 174 -63 60 -199 190 -303 290 -104 99 -210 201
+-236 226 -26 25 -97 93 -158 153 -62 59 -119 107 -127 107 -8 0 -15 5 -15 10
+0 6 -6 10 -12 10 -7 0 -24 6 -38 13 -34 17 -136 19 -185 3z m2014 -3200 c-2
+-2 -13 8 -23 22 l-19 27 24 -22 c12 -12 21 -24 18 -27z"/>
+</g>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/Dawn-19'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.overleaf.com/project'
+                        target="_blank"
+                        title="overleaf"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <path d="M9.817 8.036c-4.541 2.709-7.401 7.532-7.593 12.813 0.005 4.14 2.303 7.943 5.973 9.869 3.667 1.927 8.1 1.656 11.516-0.692 3.412-2.349 5.24-6.401 4.745-10.516-0.489-4.115-3.224-7.615-7.095-9.095-1.26-0.509-2.604-0.765-3.957-0.749-2.417 1.631-4.355 3.869-5.615 6.495 1.609-1.921 4.088-2.885 6.572-2.557 2.491 0.328 4.631 1.901 5.688 4.177 1.057 2.271 0.875 4.927-0.473 7.041-1.355 2.109-3.693 3.38-6.199 3.375-2.151 0-4.192-0.937-5.588-2.572-1.808-2.016-2.589-4.756-2.115-7.423 1.432-8.557 11.687-13.489 19.281-15.4-3.516 1.692-6.901 3.64-10.125 5.833 9.177 3.541 10.651-4.183 14.943-7.641-4.271-1.672-19.937-2.287-19.959 7.047z"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E7%AE%80%E4%BB%8B/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>简介</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#引力场的几何化与弱场近似">引力场的几何化与弱场近似</a>
+      <ol>
+        <li><a href="#引力几何化">引力几何化</a></li>
+        <li><a href="#弱引力场中的自由粒子">弱引力场中的自由粒子</a></li>
+      </ol>
+    </li>
+    <li><a href="#爱因斯坦方程及其牛顿近似">爱因斯坦方程及其牛顿近似</a>
+      <ol>
+        <li><a href="#宇宙学常数-lambda-的初步讨论">宇宙学常数 $\Lambda$ 的初步讨论</a></li>
+      </ol>
+    </li>
+    <li><a href="#球对称引力场史瓦西度规">球对称引力场——史瓦西度规</a>
+      <ol>
+        <li><a href="#史瓦西解">史瓦西解</a></li>
+        <li><a href="#球壳内部解">球壳内部解</a></li>
+        <li><a href="#史瓦西时空中粒子的运动">史瓦西时空中粒子的运动</a></li>
+      </ol>
+    </li>
+    <li><a href="#史瓦西度规的应用">史瓦西度规的应用</a>
+      <ol>
+        <li><a href="#水星轨道近日点的进动">水星轨道近日点的进动</a></li>
+        <li><a href="#光线引力偏折">光线引力偏折</a></li>
+        <li><a href="#引力红移">引力红移</a></li>
+      </ol>
+    </li>
+    <li><a href="#参考资料">参考资料：</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/">
+                <img src="/p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/picture_hu_ddf3818132cab80d.png"
+                        srcset="/p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/picture_hu_ddf3818132cab80d.png 800w, /p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/picture_hu_764e6eff453a5c80.png 1600w"
+                        width="800" 
+                        height="448" 
+                        loading="lazy"
+                        alt="Featured image of post 爱因斯坦引力场方程与实验检验" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" >
+                学习笔记
+            </a>
+        
+            <a href="/categories/%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%8E%E5%AE%87%E5%AE%99%E5%AD%A6/" >
+                相对论与宇宙学
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/">爱因斯坦引力场方程与实验检验</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            本文从引力几何化出发，在从弱场极限近似下推导爱因斯坦方程，并以此为基础直接给出其真空球对称解——史瓦西解，再给出史瓦西时空中各种运动学的分析。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 20, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="引力场的几何化与弱场近似">引力场的几何化与弱场近似
+</h2><h3 id="引力几何化">引力几何化
+</h3><p>在闵氏时空 ${\tilde{x}^{\mu }}$ 中，自由粒子运动方程为 $\frac{\mathrm{d}^{2 }\tilde{x}^{\mu }}{\mathrm{d}\tau^{2 }}=0$ ，如果引入坐标变换</p>
+$$
+x^{\mu } = x ^{\mu }(\tilde{x})~,\implies \text{运动方程：} \frac{\mathrm{d}^{2 }x^{\mu }}{\mathrm{d} \tau ^{2 }} + \Gamma ^{\mu }_{\alpha\beta} \frac{\mathrm{d} x^{\alpha } }{ \mathrm{d} \tau } \frac{\mathrm{d} x^{\beta } }{\mathrm{d}\tau}=0~,
+$$<p>其中 $\Gamma^{\mu}_{\alpha\beta}\equiv \frac{\partial ^{2 } \tilde{x}^{\nu }}{\partial x^{\alpha }\partial ^{\beta }} \frac{\partial x^{\mu } }{ \partial \tilde{x}^{\nu } }$ ， 多出的 $\Gamma$ 项代表了惯性力的作用，如此，引力场的场强蕴含在时空的几何——联络中，这就是引力几何化 . 此外，无论是惯性力场还是引力场，自由粒子的运动方程都是测地线方程 .</p>
+$$
+\begin{matrix}
+\Gamma_{\mu \nu}^{\lambda } & \longleftrightarrow & E_{G} \\
+\uparrow \partial &  &\uparrow {\partial} \\
+g_{\mu \nu} & \longleftrightarrow & \Phi_{G}
+\end{matrix}
+$$<p>类比</p>
+<ul>
+<li>静电势（标量） $\to$ 电四矢(矢量)   $\to$  Spin 1</li>
+<li>引力势（标量） $\to$ 度规(二阶张量) $\to$ Spin 2</li>
+</ul>
+<h3 id="弱引力场中的自由粒子">弱引力场中的自由粒子
+</h3><p>弱引力场中的自由粒子</p>
+$$
+\frac{\mathrm{d}^{2 }x^{\mu }}{\mathrm{d}\tau ^{2 }} + \Gamma ^{\lambda }_{\mu \nu} \frac{\mathrm{d} x^{\alpha }}{\mathrm{d}\tau} \frac{\mathrm{d} x^{\beta } }{\mathrm{d}\tau} = 0\implies  \frac{\mathrm{d}^{2 }x^{i }}{\mathrm{d}t^{2 }} = \frac{1}{2}\partial_{i}h_{00} ~, \tag{$\star$}
+$$<p>对于如下条件：</p>
+<ul>
+<li>度规展开到一阶扰动： $g_{\mu\nu}=\eta_{\mu \nu}+h_{\mu \nu}~, |h|\ll 1$ .</li>
+<li>稳态的引力场：$\partial_{0}g_{\mu \nu}=\partial_{0}h_{\mu \nu}=0$ .</li>
+<li>空间缓慢变化：$|\partial_{i}g_{\mu \nu}|=|\partial_{i}h_{\mu \nu}|\ll 1$ .</li>
+<li>粒子低速运动：$\big|\frac{\mathrm{d}x^{i }}{\mathrm{d}x^{0 }}\big|=|\vec{v}|\ll 1$ .</li>
+</ul>
+<p>$(\star)$ 若可以回到牛顿方程：</p>
+$$
+\frac{\mathrm{d}^{2 }x^{i }}{\mathrm{d}t^{2 }} = \frac{1}{2}\partial_{i}h_{00}\implies \Phi_{G}=-\frac{1}{2}h_{00}~.
+$$<p>对于球对称质量为 $M$ 的引力源 $\Phi_{G}=- \frac{GM}{r}$ ，则有</p>
+$$
+g_{00} = -1-2 \Phi_{G} - \left( 1- \frac{2GM}{r} \right) ~,
+$$<p>其中 $G$ 为牛顿引力常数，$c=1$ ，定义史瓦西半径（引力半径） $R_{S}\equiv\frac{2GM}{c^{2 }}=2GM$  ，那么弱场条件为</p>
+$$
+r\gg 2GM~,
+$$<p>对于太阳而言，$R_{S}=\frac{2GM_{\odot}}{c^{2 }}\simeq 3\ \mathrm{km}$，而太阳实际半径 $R_{\odot}\simeq 7 \times 10^{5 }\mathrm{km}$ ，可见太阳系内天体（即使太阳表明）的运动大都适用弱场条件 .</p>
+<ul>
+<li>下面我们计算弱引力场自由粒子运动方程可以约化为 $\frac{\mathrm{d}^{2 }x^{i }}{\mathrm{d}t^{2 }} = \frac{1}{2}\partial_{i}h_{00}$ .</li>
+</ul>
+<p>把联络展开到一阶小量</p>
+$$
+\begin{aligned}
+\Gamma ^{\mu }_{\alpha\beta} &= \frac{1}{2}g^{\mu \lambda }\left( \partial_{\alpha}g_{\lambda\beta}+\partial_{\beta}g_{\alpha\lambda}-\partial_{\lambda}g_{\alpha\beta} \right)  \\
+&\simeq  \frac{1}{2}\eta ^{\mu\lambda }\left( \partial_{\alpha}h_{\lambda\beta}+\partial_{\beta}h_{\alpha\lambda}-\partial_{\lambda}h_{\alpha\beta} \right) ~,
+\end{aligned}
+$$<p>根据 $\Gamma ^{\mu }_{ij}\frac{\mathrm{d}x^{i }}{\mathrm{d}\tau}  \frac{\mathrm{d}x^{j }}{\mathrm{d}\tau} \sim \partial h \cdot \vec{v}\to \mathcal{O}(h^{2 })$ ， 测地线方程保留到一阶有</p>
+$$
+\frac{\mathrm{d}^{2 }x^{\mu }}{\mathrm{d}\tau ^{2 }}=-\Gamma ^{\mu }_{00}\left( \frac{\mathrm{d}x^{0 }}{\mathrm{d}\tau} \right) ^{2 }~,
+$$<p>即</p>
+$$
+\begin{aligned}
+\frac{\mathrm{d}^{2 }x^{0 }}{\mathrm{d}\tau ^{2 }} &= -\Gamma ^{0 }_{00}\left( \frac{\mathrm{d}x^{0 }}{\mathrm{d}\tau} \right)^{2 }~,\quad   \\
+\frac{\mathrm{d}^{2 }x^{i }}{\mathrm{d}\tau ^{2 }} &= - \Gamma ^{i }_{00} \left( \frac{\mathrm{d}x^{0 }}{\mathrm{d}\tau} \right)^{2 }~,
+\end{aligned}
+$$<p>第一式 $\Gamma ^{0 }_{00}=0\implies t=\tau+Const$ ，根据此第二式给出</p>
+$$
+\frac{\mathrm{d} ^{2 } x^{i } }{\mathrm{d} \tau ^{2 } } = \frac{1}{2}\partial_{i}h_{00}~,
+$$<p>由此我们就得到了弱场条件下简化后的测地线方程 .</p>
+<h2 id="爱因斯坦方程及其牛顿近似">爱因斯坦方程及其牛顿近似
+</h2><p>爱因斯坦引力场方程：</p>
+$$
+G_{\mu \nu}+\Lambda g_{\mu \nu} = 8 \pi G T_{\mu \nu}~,
+$$<p>其中 $G_{\mu \nu}\equiv R_{\mu \nu}-\frac{1}{2}g_{\mu \nu}R$ 为爱因斯坦张量 ， $\Lambda$ 为宇宙学常数 . 取 $\Lambda=0$ 并对上式求 trace 可得</p>
+$$
+\begin{aligned}
+g^{\mu \nu }G_{\mu \nu} &= 8 \pi G T\; \Leftrightarrow \;-R=8\pi G T\\
+\implies R_{\mu \nu} &= 8\pi G (T_{\mu \nu} -g_{\mu \nu}T)~,
+\end{aligned}
+$$<p>那么对于真空就有 $R_{\mu \nu}=0$ .</p>
+<ul>
+<li><strong>下面是爱因斯坦方程的简要推导</strong></li>
+</ul>
+<p>考虑牛顿引力场方程的形式 $\nabla ^{2 }\Phi_{G}=4\pi G\rho$ ，在弱场情况下我们已知左边引力势 $\Phi_{G}\sim h_{00}$ ，因此考虑将其推广到张量形式. 对于 $\rho$ 的一个自然选择就是能动张量 $T_{\mu \nu}$ ，那么假设引力场方程数学形式为</p>
+$$
+F_{\mu \nu}(g_{\mu \nu}) = \kappa T_{\mu \nu}~, 
+$$<p>为了能退化回牛顿引力，且避免 Ostrogradsky Instability <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> ，另一方面也为了理论的简洁性，我们考虑 $F_{\mu \nu}(g_{\mu \nu})$ 最多只能含 $g_{\mu \nu}$ 的二阶导数，且线性依赖 $g_{\mu \nu}$ 二阶导，那么其一般形式为<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+$$
+F_{\mu \nu} = aR_{\mu \nu}+bg_{\mu \nu}R-\Lambda g_{\mu \nu}~,
+$$<p>其中系数 $a,b,\Lambda$ 都是常数 . 在狭义相对论中有能动量守恒，推广到GR的情形就是  $\nabla_{\mu}T^{\mu \nu }=0$ ，且 $T_{\mu \nu}=T_{\nu \mu}$ ，因此 $F_{\mu \nu}$ 也必须满足协变守恒 $\nabla_{\mu}F_{\mu \nu}=0$ . 然而，$R_{\mu \nu}$ 自身并不满足协变守恒 $\nabla_{\mu}R_{\mu \nu}\ne 0$ ，根据 Bianchi 恒等式，有</p>
+$$
+G_{\mu \nu}=R_{\mu \nu}-\frac{1}{2}g_{\mu \nu}R~, \quad \nabla_{\mu}G_{\mu \nu}=0~,
+$$<p>到这一步，我们可以得到形式如 $G_{\mu \nu}+\Lambda g_{\mu \nu}=\kappa T_{\mu \nu}$ 的引力场方程，接下来的任务就是找到 $\kappa$ 是多少 . 为此，考虑爱因斯坦方程退化为牛顿引力场方程的情形，假设物质分布为非相对论理想流体，对于
+</p>
+$$
+\rho\sim nmc^{2 }\ ,\  p\sim nmv^{2 }\implies p \sim \left( \frac{v}{c} \right)^{2 }\rho \implies p\ll \rho~,
+$$<p>所以其能动张量近似为</p>
+$$
+T^{\mu \nu } = \rho U^{\mu }U^{\nu }~,
+$$<p>对于流体静止系</p>
+$$
+g_{\mu \nu}U^{\mu }U^{\nu }=-1 \implies U^{\mu } = \sqrt{- \frac{1}{g_{00}} } \left( 1,0,0,0 \right) ~,\; U^{0 }=1+\frac{1}{2}h_{00}
+$$<p>其中 $g_{00}=-1+h_{00}\ ,g^{00 }=-1-h_{00}$ . 此外可知 $T^{00 }=-\frac{\rho}{g_{00}}\ , T_{00}=\rho\ , T=-g^{00 }T_{00}=-\rho$  . 同时有</p>
+$$
+\begin{aligned}
+R^{\lambda }_{\; \mu \nu\sigma }  \propto \partial \Gamma + \partial \Gamma+\Gamma\Gamma +\Gamma\Gamma \simeq \partial_{\nu} \Gamma ^{\lambda }_{\mu\sigma} - \partial_{\sigma} \Gamma ^{\lambda }_{\mu \nu}~,
+\end{aligned}
+$$<p>我们更关注的是 $R_{00}$ 分量，即</p>
+$$
+\begin{aligned}
+R_{00} &= R^{\lambda }_{\; 0\lambda {0}} = \partial_{\lambda}\Gamma ^{\lambda }_{00}-\partial_{0}\Gamma ^{\lambda }_{\lambda{0}} \\
+&=\partial_{i}\Gamma ^{i }_{00} \\
+&=\partial_{i} \left[  \frac{1}{2}g^{i\alpha }\left( 2\partial_{0}g_{\alpha 0} - \partial_{\alpha}g_{00}  \right)   \right]  \\
+&=-\frac{1}{2}\partial_{i}\partial_{i}h_{00}~,
+\end{aligned}
+$$<p>那么有</p>
+$$
+R_{00} = \kappa \left( T_{00}-\frac{1}{2}g_{00}T \right) \implies \partial_{i}\partial_{i}h_{00} = - \kappa \rho ~,
+$$<p>在弱场近似下 $\Phi_{G}=-\frac{1}{2}h_{00}$ ，对比牛顿引力场方程有 $\kappa = 8 \pi G /c^{4 }=8 \pi G$ .</p>
+<h3 id="宇宙学常数-lambda-的初步讨论">宇宙学常数 $\Lambda$ 的初步讨论
+</h3><p>宇宙学常数能解释观测上加速膨胀的宇宙，但它的来源的物理解释仍然不清楚，所以也被称为&quot;暗能量&quot;，这也是目前广义相对论与量子场论不兼容之处 . 例如，如果考虑宇宙学常数是真空中量子场论中的零点能，那么在场论中，谐振子的零点能为$E_0 = \hbar \omega$，其中色散关系为$\omega^2 = m^2+k^2$。如果真空中有无穷多个谐振子态，那么所有零点能求和必然是无穷，所以考虑以$k_{max}\sim M_{\textbf{P}}\sim 10^{18}\mathrm{MeV}$的紫外截断，那么真空零点能的贡献为</p>
+$$
+  \rho_{vac}^{QFT} \sim 10^{112} \mathrm{erg/cm^3}\,, 
+$$<p>实际观测值约为</p>
+$$
+\rho_\Lambda^{obs} \sim 10^{-8} \mathrm{erg/cm^3}~,
+$$<p>可见理论的真空零点能与观测相差 $120$ 个数量级，即使考虑 $1\mathrm{TeV}$ 的能量截断，仍然相差 $60$ 个数量级。实际上，无论是量子场论还是广义相对论，应该都属于有效理论 . 虽然目前大多数实验上在一定程度上证明广义相对论是正确的，但由于引力的不可重整化，我们更相信在其背后有更为基本的理论，只是目前人类没有手段去在更高的能标下去验证 . 就如牛顿万有引力是广义相对论的经典近似，经典力学是量子力学的近似，而看似更为本质的相对论和量子力学也十分可能是更基本理论的近似情形，有可能是弦论，也可能是圈量子引力，也可能都不是，这需要我们进行更精确的实验去验证 .</p>
+<h2 id="球对称引力场史瓦西度规">球对称引力场——史瓦西度规
+</h2><h3 id="史瓦西解">史瓦西解
+</h3><p>球对称星体外部时空</p>
+$$
+\mathrm{d}s^{2 } = - \left( 1- \frac{2GM}{r} \right) \mathrm{d}t^{2 }+\left( 1-\frac{2GM}{r} \right)^{-1 }\mathrm{d}r^{2 }+r^{2 }\mathrm{d}\Omega ^{2 }~,
+$$<p>具体求解过程可以看[史瓦西解](<a class="link" href="https://dawn-19.github.io/p/%e6%96%bd%e7%93%a6%e8%a5%bf%e5%ba%a6%e8%a7%84schwarzchild-metric/#%e6%96%bd%e7%93%a6%e8%a5%bf%e5%ba%a6%e8%a7%84%e7%9a%84%e6%b1%82%e8%a7%a3"  target="_blank" rel="noopener"
+    >施瓦西度规(Schwarzchild Metric)</a>) ，至于Birkhoff 定理随缘写 .</p>
+<h3 id="球壳内部解">球壳内部解
+</h3><p>假设薄球壳内部解为</p>
+$$
+\mathrm{d}s^{2 } = - \mathrm{e}^{ \lambda } \mathrm{d}t ^{2 } + \mathrm{d}r^{2 }+r^{2 }\mathrm{d}\Omega~,  
+$$<p>
+由于引力源在球壳处，这里积分常数 $\mathrm{e}^{ \lambda }$ 不能拿掉. 我们有理由认为时空度规是连续变化的，因此对于球壳处 $r=R$ ，始终有内外度规相同，即</p>
+$$
+\begin{aligned}
+-\left( 1-\frac{2GM}{r} \right)\mathrm{d}t^{2 }&+R^{2 }\mathrm{d}\Omega ^{2 } =  - \mathrm{e}^{ \lambda } \mathrm{d}t ^{2 } + R^{2 }\mathrm{d}\Omega \\
+\implies \mathrm{e}^{ \lambda } &= -\left( 1-\frac{2GM}{r} \right)~,
+\end{aligned}
+$$<p>注意这里不需要考虑 $r$ 的变化. 由此薄球壳内部的时空为</p>
+$$
+\mathrm{d} s ^{2 } = - \left( 1- \frac{2GM}{R} \right)\mathrm{d}t^{2 }+\mathrm{d}r^{2 }+r^{2 }\mathrm{d}\Omega ^{2 }~, 
+$$<p>这说明薄球壳内部有引力势，无引力场 . 相较于 $\infty$ 远，球壳内部时间流逝慢，即无穷远观测者流逝了无穷小时间 $\Delta t$ ，而球壳内部的人只感受到时间流逝了 $\Delta\tau = \sqrt{ 1- \frac{2GM}{R} }\Delta t&lt; \Delta t$ .</p>
+<h3 id="史瓦西时空中粒子的运动">史瓦西时空中粒子的运动
+</h3><p>在史瓦西时空中，度规 $g_{\mu \nu}$ 不显含坐标 $t$ 和 $\phi$ ，因此相应的 Killing 矢量场为</p>
+$$
+\xi_{(t)}^{\mu } = (1,0,0,0)~,\quad \xi ^{\mu }_{(\phi)}=(0,0,0,1)~.
+$$<p>对应的守恒量 $\xi_{\mu}p ^{\mu }$ 为</p>
+$$
+\begin{aligned}
+p_{t} &\equiv \xi_{\mu}^{(t) } p ^{\mu } = g_{00} p ^{0 } = -m \left( 1- \frac{2GM}{r} \right) \frac{\mathrm{d}t}{\mathrm{d}\tau} ~, \\
+p_{\phi} &\equiv \xi_{\mu}^{(\phi) }p ^{\mu } = g_{33} p ^{3 } =m r^{2 } \sin^{2 }\theta  \frac{\mathrm{d}\phi}{\mathrm{d}\tau} ~, 
+\end{aligned}
+$$<p>若 $M=0$ 则退回到 SR 的情形，这时 $-p_{t}$ 的物理意义是能量，$p_{\phi}$ 是角动量第三分量 （沿 $z$ 轴） .</p>
+<p>对于球对称的史瓦西时空，根据粒子的角动量守恒那么总是可以将粒子的运动限制在平面上 . 因此，为分析粒子在史瓦西时空中的运动，不妨选取赤道面作为粒子运动平面，即</p>
+$$
+\theta = \frac{\pi}{2}~,\quad \frac{\mathrm{d}\theta}{\mathrm{d}\tau} = 0~,
+$$<p>这时 $p_{\phi}=mr^{2 } \frac{\mathrm{d}\phi}{\mathrm{d}\tau}$ 为总角动量，定义能量密度和角动量密度：</p>
+$$
+\mathcal{E} \equiv \left( 1- \frac{2GM}{r} \right) \frac{\mathrm{d}t}{\mathrm{d}\tau}  ~,\quad
+\mathcal{L} = r^{2 } \frac{\mathrm{d}\phi}{\mathrm{d}\tau}~,
+$$<p>根据四速度归一化条件有</p>
+$$
+\begin{aligned}
+g_{\mu \nu}U^{\mu }U^{\nu } &= - \underbrace{ \left( 1- \frac{2GM}{r} \right) \left( \frac{\mathrm{d}t}{\mathrm{d}\tau} \right)^{2  } }_{ \propto \; \mathcal{E}^{2 } } + \left( 1- \frac{2GM}{r} \right)^{-1 } \left( \frac{\mathrm{d}r}{\mathrm{d}\tau} \right)^{2 } + \underbrace{ r^{2 } \left( \frac{\mathrm{d}\phi}{\mathrm{d}\tau} \right)^{2 } }_{ \mathcal{L}^{2 } / r^{2 } } =-1 \\
+\implies& \left( \frac{\mathrm{d}r}{\mathrm{d}\tau} \right)^{2 } = \mathcal{E}^{2 } - \left( 1- \frac{2GM}{r} \right)\left( 1+ \frac{\mathcal{L}^{2 }}{r^{2 }} \right)   \quad \text{[径向方程]}~.
+\end{aligned}
+$$<p>定义径向运动的有效势</p>
+$$
+V_{\mathrm{eff}}^{2 }(r) \equiv \left( 1- \frac{2GM}{r} \right)\left( 1+ \frac{\mathcal{L}^{2 }}{r^{2 }} \right) = 1- \frac{2GM}{r}+ \frac{\mathcal{L}^{2 }}{r^{2 }} {\color{orange} - \frac{2GM\mathcal{L}^{2 }}{r^{3 }} }~,
+$$<p>对比<strong>牛顿引力运动方程</strong></p>
+$$
+\frac{1}{2}m\left( \frac{\mathrm{d}r}{\mathrm{d}t} \right)^{2 } = E_{N}-V_{\mathrm{eff}}^{(N) }(r) ~,\quad V_{\mathrm{eff}}^{(N) }\equiv - \frac{GMm}{r}+ \frac{{L}^{2 }}{2mr^{2 }} ~,
+$$<p>可以看到明显的差别在于 $- \frac{2GM\mathcal{L}^{2 }}{r^{3 }}$ 这一项，在牛顿经典引力情形下，势能图像如下所示 (取 $GM=1,m=1$ )</p>
+<img src="Pasted%20image%2020251121150148.png" alt="Pasted image 20251121150148" style="zoom:50%;" />
+<p>由于经典运动必须保持动能大于 $0$ ，那么</p>
+<ul>
+<li>${L}=0$ ：吸收态，即粒子撞向力心或逃逸到无穷远，若 $E_{N}&lt;0$ 则只能撞向力心 .</li>
+<li>${L}\ne 0\ , \ E_{N}&lt;0$ ：束缚态，粒子做椭圆轨道运动或圆轨道运动 .</li>
+<li>${L}\ne 0\ ,\ E_{N}\geq 0$ ：散射态，粒子做抛物线或双曲线运动，可以运动到无穷远 .</li>
+</ul>
+<p>在史瓦西时空中，对粒子在有效势 $V_{\mathrm{eff}}^{2 }$ 下运动的分析和 $V_{\mathrm{eff}}^{2 }-1$ 的图像如下（同样取 $GM=1$，也可以认为图像中的 $\mathcal{L}$ 是指无量纲化后的 $\tilde{\mathcal{L}}=\mathcal{L} / GM$）</p>
+<ol>
+<li>$\mathcal{L}\geq {4}$ ：势垒始终存在，对于 $\mathcal{E}^{2 }&gt;1$ 为散射态；$1\leq\mathcal{E}^{2 }&lt; V_{\mathrm{eff}}^{2 }(r_{\mathrm{max}})$ 为散射态，其中 $r_{\mathrm{max}}$ 为有效势的极大值点；$\mathcal{E}^{2 }\geq V_{\mathrm{eff}}^{2 }(r_{\mathrm{max}})$ 为吸收态 . 此外，从图像可知 $\mathcal{L}=4$ 为有效势能是否极大值是否大于 $1$ 的临界值 .</li>
+</ol>
+<img src="Pasted%20image%2020251121152619.png" alt="Pasted image 20251121152619" style="zoom:50%;" />
+<ol start="2">
+<li>$2\sqrt{ 3 }\leq\mathcal{L}&lt;4$ ： 有效势的势垒仍然存在，但 $V_{\mathrm{eff}}^{2 }(r_{\mathrm{max}})&lt;1$ . 此时对于 $\mathcal{E}^{2 }\geq V_{\mathrm{eff}}(r_{\mathrm{max}})$ 为吸收态，且 $\mathcal{E}^{2 }&lt;1$ 只能撞向力心 ； $\mathcal{E}^{2 }&lt; V_{\mathrm{eff}}^{2 }(r_{\mathrm{max}})$ 为束缚态 . 此外， $\mathcal{L}=2\sqrt{ 3 }$ 是势垒是否存在的临界值 .</li>
+</ol>
+<img src="Pasted%20image%2020251121152605.png" alt="Pasted image 20251121152605" style="zoom:50%;" />
+<ol start="3">
+<li>$\mathcal{L}&lt;2 \sqrt{ 3 }$ ，势垒消失，只有吸收态，且 $\mathcal{E}^{2 }&lt;1$ 只能撞向力心，$\mathcal{L}=0$ 与牛顿情形完全一致 .</li>
+</ol>
+<img src="Pasted%20image%2020251121152544.png" alt="Pasted image 20251121152544" style="zoom:50%;" />
+<p>综上，对于史瓦西时空，<strong>质点被引力源吸收的可能性相对于牛顿引力情形大大增加 .</strong></p>
+<h2 id="史瓦西度规的应用">史瓦西度规的应用
+</h2><p>这一部分主要讨论史瓦西度规在太阳系尺度下的应用，包括水星近日点的进动，光线引力偏折，以及引力红移效应 . 其中前 $2$ 个效应在 GR 诞生之初作为验证 GR 的主要观测证据，为这一美丽的理论在早期广而传之起到不可磨灭的作用 .</p>
+<h3 id="水星轨道近日点的进动">水星轨道近日点的进动
+</h3><p>牛顿引力情形下的行星轨道公式——比内公式：</p>
+$$
+\frac{\mathrm{d}^{2 } u}{\mathrm{d} \phi ^{2 }} + u = \tilde{\mathcal{L}}^{-2 }~,\quad u = \tilde{\mathcal{L}}^{-2 }\left( 1+ e \cos \phi \right) ~,
+$$<p>其中 $u\equiv \frac{GM}{r},\tilde{\mathcal{L}}\equiv \frac{\mathcal{L}}{GM}$ ，而在史瓦西时空中对应的形式为</p>
+$$
+\frac{\mathrm{d}^{2 }u}{\mathrm{d}\phi ^{2 }} + u = \tilde{\mathcal{L}}^{-2 }+3 u^{2 }~.
+$$<p>对于太阳有 $GM_{\odot} \simeq 1.5 \times 10^{3 }\ \mathrm{m}$ ，而水星轨道半径约为 $r\simeq 5 \times 10^{10 } \mathrm{m}$ ，因此 $u ^{2 }$ 是一个小量，对 $u$ 作微扰展开：</p>
+$$
+u = \mathcal{\tilde{L}}^{-2 } u_{0}+ \mathcal{\tilde{L}}^{-4 } u_{1}+ \dots~,
+$$<p>其中
+</p>
+$$
+u _{0} = \left( 1+ e \cos \phi \right)~,\quad \frac{\mathrm{d}^{2 }u_{1}}{\mathrm{d}\phi ^{2 }} + u_{1} = 3 u_{0}^{2 } \simeq 3 (1+2e\cos \phi)~,
+$$<p>可以解得 $u_{1}=3 (1+e\cos \phi)+3e\phi \sin \phi$ ，由此</p>
+$$
+\begin{aligned}
+u&\simeq \tilde{\mathcal{L}}^{-2 }\left( 1+3e\cos \phi \right) +\mathcal{\tilde{L}}^{-4 } \left( 3 (1+e\cos \phi)+3e\phi \sin \phi \right)  \\
+&=\left( \tilde{\mathcal{L}}^{-2 } + 3\tilde{\mathcal{L}}^{-4 } \right) \left( 1+e\cos \phi \right) +3\tilde{\mathcal{L}}^{-4 } e \phi \sin \phi \\
+&\simeq \left( \mathcal{L}^{-2 }+3\mathcal{L}^{-4 } \right) \left( 1+e\cos \phi + 3 \tilde{\mathcal{L}}^{-2 }e\phi\sin \phi \right)  \\
+& = \left( \mathcal{L}^{-2 }+3\mathcal{L}^{-4 } \right)  \left[ 1+ e \cos \left( \phi-3\tilde{\mathcal{L}}^{-2 }\phi \right)  \right] ~,
+\end{aligned}
+$$<p>其中最后一步因为 $3 \tilde{\mathcal{L}}^{-2 }\phi\ll 1$ 所以</p>
+$$
+\cos \left( \phi-3\tilde{\mathcal{L}}^{-2 }\phi \right) =\cos \phi \cos \left( 3\tilde{\mathcal{L}}^{-2 }\phi \right)+\sin \phi \sin \left( 3\tilde{\mathcal{L}}^{-2 }\phi \right)\simeq \cos \phi + 3 \tilde{\mathcal{L}}^{-2 }\phi\sin \phi~.
+$$<p>对于近日点条件</p>
+$$
+\left( 1-3 \tilde{\mathcal{L}}^{-2 } \right)\phi = 2 n \pi~, 
+$$<p>所以有 $2$ 相邻近日点角度差</p>
+$$
+\delta \phi = 2 \pi (1-3 \mathcal{\tilde{L}}^{-2 })^{-1 }-2 \pi \simeq 6\pi \left( \frac{GM}{L} \right)^{2 } ~,
+$$<p>将观测值带入，可以得到水星每世纪近日点累积进动为 $43&rsquo;&rsquo;$ .</p>
+<hr>
+<p><strong>行星轨道方程的计算</strong></p>
+<ul>
+<li>牛顿情形</li>
+</ul>
+<p>对于运动方程</p>
+$$
+\frac{1}{2}m\left( \frac{\mathrm{d}r}{\mathrm{d}t} \right)^{2 } = E_{N} + \frac{GMm}{r}- \frac{{L}^{2 }}{2mr^{2 }}
+$$<p>代入角向方程 $\frac{\mathrm{d}\phi}{\mathrm{d}t}=L$</p>
+$$
+\left(  \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r} \right) ^{2 } = \frac{2mE_{N}}{ L^{2 }}+ \frac{2GMm ^{2 }}{r L^{2 }}- \frac{1}{r^{2 }}
+$$<p>对 $\phi$ 再求一次导数</p>
+$$
+\begin{aligned}
+2 \cancel{ \left( \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r} \right)}& \frac{\mathrm{d}^{2 }}{\mathrm{d}\phi ^{2 }} \frac{1}{r} = \frac{2}{\mathcal{\tilde{L}}^{2 } }\cancel{ \left( \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r} \right)} - \frac{2}{r}  \cancel{ \left( \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r} \right)} \\
+\implies &\frac{\mathrm{d}^{2 } u}{\mathrm{d} \phi ^{2 }} + u = \tilde{\mathcal{L}}^{-2 },
+\end{aligned}
+$$<p>再次强调 $\mathcal{\tilde{L}}\equiv \frac{L}{GMm},u\equiv \frac{GM}{r}$  .</p>
+<ul>
+<li>史瓦西情形</li>
+</ul>
+<p>角向方程 $\mathcal{L} = r^{2 } \frac{\mathrm{d}\phi}{\mathrm{d}\tau}$ 代入径向方程</p>
+$$
+\left( \frac{\mathrm{d}r}{\mathrm{d}\tau} \right)^{2 } = \mathcal{E}^{2 } - \left( 1- \frac{2GM}{r} \right)\left( 1+ \frac{\mathcal{L}^{2 }}{r^{2 }} \right)
+$$<p>得到</p>
+$$
+\begin{aligned}
+\left( \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r} \right)^{2 } &= \frac{\mathcal{E}^{2 }-1}{\mathcal{L}^{2 }} + \frac{2GM}{r \mathcal{L}^{2 }} - \frac{1}{r^{2 }} + \frac{2GM}{r^{3 }}  \\ 
+\frac{\mathrm{d}}{\mathrm{d}\phi} \left( \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r} \right)^{2 } &=\frac{\mathrm{d}}{\mathrm{d}\phi} \left\{    \frac{\mathcal{E}^{2 }-1}{\mathcal{L}^{2 }} + \frac{2GM}{r \mathcal{L}^{2 }} - \frac{1}{r^{2 }} + \frac{2GM}{r^{3 }} \right\} 
+\\
+\implies  \frac{\mathrm{d}^{2 }}{\mathrm{d}\phi ^{2 }} \frac{1}{r} + \frac{1}{r} &= \frac{GM}{L^{2 }} + \frac{3GM}{r^{2 }} \\
+\Longleftrightarrow \quad \frac{\mathrm{d}^{2 }}{\mathrm{d}\phi ^{2 }}u + u &= \mathcal{\tilde{L}}^{-2 }+3u ^{2 }~.
+\end{aligned}
+$$<hr>
+<h3 id="光线引力偏折">光线引力偏折
+</h3><p>讨论光子的运动时不能使用类时四速度归一化. 对于类光测地线仿射参量 $\lambda$ ，四动量为</p>
+$$
+p ^{\mu } \equiv \frac{\mathrm{d}  x^{\mu }}{\mathrm{d}\lambda}~,
+$$<p>其中 $p _{t}=\xi _{\mu }^{(t) }p ^{\mu }\ , p _{\phi} = \xi _{\mu}^{(\phi) }p ^{\mu }$ 仍然为守恒量，同样选取 $\theta=\frac{\pi}{2}$ 的赤道面作为光子运动轨迹平面，所以有运动方程</p>
+$$
+\left\{  
+\begin{aligned}
+&\left( 1- \frac{2GM}{r} \right) \frac{\mathrm{d}t}{\mathrm{d}\lambda} = E \\
+&r ^{2 } \frac{\mathrm{d}\phi}{\mathrm{d}\lambda} = L \\
+& \frac{\mathrm{d}\theta}{\mathrm{d}\lambda} = 0 \\
+&-\left( 1- \frac{2GM}{r} \right)\left( \frac{\mathrm{d}t}{\mathrm{d}\lambda} \right)^{2 } + \left( 1- \frac{2GM}{r} \right)^{-1 }\left( \frac{\mathrm{d}r}{\mathrm{d}\lambda} \right)^{2 } + r ^{2 } \left( \frac{\mathrm{d}\phi}{\mathrm{d}\lambda} \right)  ^{2 } = 0   
+\end{aligned}\right.
+$$<p>联立上 $4$ 式可得径向方程</p>
+$$
+\left( \frac{\mathrm{d}r}{\mathrm{d}\lambda} \right)^{2 } = E^{2 } - \frac{L^{2 }}{r^{2 }} \underbrace{ \left( 1- \frac{2GM}{r} \right)  }_{\text{ blackening factor} } ~,
+$$<p>对于有效势能 $V_{\mathrm{eff}}^{2 }=- \frac{L^{2 }}{r^{2 }}\left( 1- \frac{2GM}{r} \right)$ 的图像如下($GM=1$) ：</p>
+<img src="Pasted%20image%2020251121171745.png" alt="Pasted image 20251121171745" style="zoom:50%;" />
+<p>从图中可以看到，$\mathcal{L}\neq 0$ 时有效势在 $r_{\mathrm{max}}=3GM$ 处有峰值，且 $r=r_{\mathrm{max}}$ 的位置为不稳定圆轨道半径 . 此外，$r=2GM$ 时有 $V^{2 }_{\mathrm{eff}}=0$ .</p>
+<ul>
+<li>$E^{2 }&lt;V_{\mathrm{eff}}^{2 }(r_{\mathrm{max}})$ 时为散射态 .</li>
+<li>$E^{2 }\geq V_{\mathrm{eff}}^{2 }(r_{\mathrm{max}})$ 时为吸收态 .</li>
+</ul>
+<p>考虑光子的轨道方程，由 $\frac{\mathrm{d}}{\mathrm{d}\lambda}= \frac{\mathrm{d}\phi}{\mathrm{d}\lambda} \frac{\mathrm{d}}{\mathrm{d}\phi}=\frac{L}{r^{2 }}\frac{\mathrm{d}}{\mathrm{d}\phi}$ 可得</p>
+$$
+\left( \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r}\right)^{2 } = \frac{E^{2 }}{L^{2 }} - \frac{1}{r^{2 }} + \frac{2GM}{r^{3 }}~, 
+$$<p>在对 $\phi$ 求一次导数，令 $u=\frac{GM}{r}$ 有</p>
+$$
+\begin{aligned}
+\frac{\mathrm{d}}{\mathrm{d}\phi}\left( \frac{\mathrm{d}}{\mathrm{d}\phi} u \right)^{2 } &= \frac{\mathrm{d}}{\mathrm{d}\phi}\left(  \frac{E^{2 }}{L^{2 }}G^{2 }M^{2 } - u^{2 } + 2 u ^{3 }  \right)   \\
+2 \frac{\mathrm{d}u}{\mathrm{d}\phi} \frac{\mathrm{d^{2 }}}{\mathrm{d}\phi ^{2 }}u&=-2u \frac{\mathrm{d}u}{\mathrm{d}\phi} + 6 u ^{2 } \frac{\mathrm{d}u}{\mathrm{d}\phi} \\
+\frac{\mathrm{d}^{2 }}{\mathrm{d}\phi ^{2 }}u +u&=3 u ^{2 }~, 
+\end{aligned}
+$$<p>考虑掠过<strong>太阳表面的星光</strong>，与前文类似，取 $u ^{2 }$ 为小量处理，把 $u$ 作微扰展开：</p>
+$$
+u = \left( \frac{GM}{R_{\odot}} \right)  u_0+ \left( \frac{GM}{R_{\odot}} \right)^{2 }   u_{1}+\dots~,
+$$<p>其中</p>
+$$
+\frac{\mathrm{d}^{2 }}{\mathrm{d}\phi ^{2 }}u_{0} + u_{0} = 0~, \quad  \frac{\mathrm{d}^{2 }}{\mathrm{d}\phi ^{2 }}u_{1} + u_{1} = 3 u_{0}^{2 }~,
+$$<p>可以解得 $u_{0}= \cos \phi\ , \ u_{1}=1+\sin ^{2 } \phi$ . 如下图所示，设入射角度和出射角度分别为 $\phi = \pm \left( \frac{\pi}{2}+\alpha \right)$ 有</p>
+$$
+-\left( \frac{GM}{R_{\odot}} \right) \sin\alpha + \left( \frac{GM}{R_{\odot}} \right) ^{2 }\left( 1+\cos ^{2 }\alpha \right)  =0 \implies \alpha \simeq 2 \frac{GM}{R_{\odot}}~,
+$$<p>所以 $\Delta \phi = 2 \alpha= 4\frac{GM}{R_{\odot}} \approx 1.75^{\prime\prime }$  . 还可以看[史瓦西度规](<a class="link" href="https://dawn-19.github.io/p/%e6%96%bd%e7%93%a6%e8%a5%bf%e5%ba%a6%e8%a7%84schwarzchild-metric/#%e6%95%b0%e5%80%bc%e6%b1%82%e8%a7%a3%e6%b5%8b%e5%9c%b0%e7%ba%bf%e6%96%b9%e7%a8%8b"  target="_blank" rel="noopener"
+    >施瓦西度规(Schwarzchild Metric)</a>) 最后一张数值结果的图 .</p>
+<img src="999cb469c68761842ff944aadfdaf3fb.jpg" alt="999cb469c68761842ff944aadfdaf3fb" style="zoom:20%;" />
+<h3 id="引力红移">引力红移
+</h3><p>可以建立这样一个 GR 的局域观测，在时空点 $P$ 处的观测者四速度为 $U^{\mu }$ ，沿 $U^{\mu }$ 为时空轴建立局域的闵氏坐标系，再基于 SR 进行观测分析 . 在 SR 中观测到的能量为 $E_{l}=- p_{\mu}U^{\mu }$ 是洛伦兹不变的，稳态的静止观测者四速度为</p>
+$$
+U ^{\mu } = \frac{1}{\sqrt{ -g_{00} }}(-1,0,0,0)~, \implies p_{0}= -E_{l} \sqrt{ - g_{00} } \sim \text{守恒量} ~,
+$$<p>对于光子 $E_{l}=h\nu$ 是洛伦兹不变量，在史瓦西时空中 $p_{0}$ 是守恒量，那么有</p>
+$$
+\nu(r) \sqrt{ -g_{00}(r) } = \nu(\infty)\sqrt{ -g_{00}(\infty) }~ \implies \sqrt{ 1- \frac{2GM}{r} } \nu(r) = \nu (\infty)~,
+$$<p>这意味着在 $r$ 越小（离引力源越近）的地方观测到的光线频率越大，即在遥远的我们观测到的光的频率 $\nu(\infty)$ 相较于光在光源附近的频率 $\nu(R)$ 要低（红光能量低，频率低），因此这被称为引力红移效应 .</p>
+<h2 id="参考资料">参考资料：
+</h2><blockquote>
+<p>【1】国科大田雨老师的课堂笔记 .</p>
+<p>【2】Carroll, Sean M. Spacetime and Geometry: An Introduction to General Relativity. Benjamin Cummings, 2003.</p>
+<p>【3】陈斌. 2018. 《广义相对论》. 北京: 北京大学出版社.</p>
+<p>【4】David Tong. Lectures on General Relativity <a class="link" href="https://www.damtp.cam.ac.uk/user/tong/gr.html"  target="_blank" rel="noopener"
+    >https://www.damtp.cam.ac.uk/user/tong/gr.html</a></p>
+<p>【5】Google. Gemini: A Generative Artificial Intelligence Model. 2025.</p>
+</blockquote>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>拉格朗日形式下动能项超过二阶导数会出现能量不囿于下的情形 .&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>数学上可以证明 .&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/picture.ab2fe1240e550b000cdb7b4e07051904_hu_5d8d8f73002d695b.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 引力波与引力辐射"
+                        
+                        data-hash="md5-qy/hJA5VCwAM23tOBwUZBA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">引力波与引力辐射</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+        
+        
+            <div class="article-image">
+                <img src="/p/gr%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/picture.f05c6c608dfd7b93c221f4a1b500b436_hu_39e607f83e2b8054.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post GR的数学基础"
+                        
+                        data-hash="md5-8FxsYI39e5PCIfShtQC0Ng==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GR的数学基础</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%94%A8mathematica%E9%AA%8C%E8%AF%81%E5%85%8B%E5%B0%94%E5%BA%A6%E8%A7%84/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E7%94%A8mathematica%E9%AA%8C%E8%AF%81%E5%85%8B%E5%B0%94%E5%BA%A6%E8%A7%84/774px-Spinning_and_chargend_black_hole_with_accretion_disk.a163a6a7f65d22108cd2067b4e509995_hu_2422880b006d567a.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 用Mathematica验证克尔度规"
+                        
+                        data-hash="md5-oWOmp/ZdIhCM0gZ7TlCZlQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">用Mathematica验证克尔度规</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%96%BD%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84schwarzchild-metric/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E6%96%BD%E7%93%A6%E8%A5%BF%E5%BA%A6%E8%A7%84schwarzchild-metric/wallhaveny86gzx.96436f35145cc4b7362d1b53080115e0_hu_5931a1b6955ebdc0.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 施瓦西度规(Schwarzchild Metric)"
+                        
+                        data-hash="md5-lkNvNRRcxLc2LRtTCAEV4A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">施瓦西度规(Schwarzchild Metric)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E5%88%86/variation.21d5e70b37d9d9949a379bcc36820bf2_hu_97c73650a8b88881.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 学习笔记-相对论中的变分"
+                        
+                        data-hash="md5-IdXnCzfZ2ZSaN5vMNoIL8g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">学习笔记-相对论中的变分</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="Dawn-19/Dawn-19.github.io"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Dawn-19
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

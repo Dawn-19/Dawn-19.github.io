@@ -8,6 +8,347 @@
         <language>en-us</language>
         <copyright>Dawn-19</copyright>
         <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%8E%E5%AE%87%E5%AE%99%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>爱因斯坦引力场方程与实验检验</title>
+        <link>https://Dawn-19.github.io/p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/</link>
+        <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/picture.png" alt="Featured image of post 爱因斯坦引力场方程与实验检验" /&gt;&lt;h2 id=&#34;引力场的几何化与弱场近似&#34;&gt;引力场的几何化与弱场近似
+&lt;/h2&gt;&lt;h3 id=&#34;引力几何化&#34;&gt;引力几何化
+&lt;/h3&gt;&lt;p&gt;在闵氏时空 ${\tilde{x}^{\mu }}$ 中，自由粒子运动方程为 $\frac{\mathrm{d}^{2 }\tilde{x}^{\mu }}{\mathrm{d}\tau^{2 }}=0$ ，如果引入坐标变换&lt;/p&gt;
+$$
+x^{\mu } = x ^{\mu }(\tilde{x})~,\implies \text{运动方程：} \frac{\mathrm{d}^{2 }x^{\mu }}{\mathrm{d} \tau ^{2 }} + \Gamma ^{\mu }_{\alpha\beta} \frac{\mathrm{d} x^{\alpha } }{ \mathrm{d} \tau } \frac{\mathrm{d} x^{\beta } }{\mathrm{d}\tau}=0~,
+$$&lt;p&gt;其中 $\Gamma^{\mu}_{\alpha\beta}\equiv \frac{\partial ^{2 } \tilde{x}^{\nu }}{\partial x^{\alpha }\partial ^{\beta }} \frac{\partial x^{\mu } }{ \partial \tilde{x}^{\nu } }$ ， 多出的 $\Gamma$ 项代表了惯性力的作用，如此，引力场的场强蕴含在时空的几何——联络中，这就是引力几何化 . 此外，无论是惯性力场还是引力场，自由粒子的运动方程都是测地线方程 .&lt;/p&gt;
+$$
+\begin{matrix}
+\Gamma_{\mu \nu}^{\lambda } &amp; \longleftrightarrow &amp; E_{G} \\
+\uparrow \partial &amp;  &amp;\uparrow {\partial} \\
+g_{\mu \nu} &amp; \longleftrightarrow &amp; \Phi_{G}
+\end{matrix}
+$$&lt;p&gt;类比&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;静电势（标量） $\to$ 电四矢(矢量)   $\to$  Spin 1&lt;/li&gt;
+&lt;li&gt;引力势（标量） $\to$ 度规(二阶张量) $\to$ Spin 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;弱引力场中的自由粒子&#34;&gt;弱引力场中的自由粒子
+&lt;/h3&gt;&lt;p&gt;弱引力场中的自由粒子&lt;/p&gt;
+$$
+\frac{\mathrm{d}^{2 }x^{\mu }}{\mathrm{d}\tau ^{2 }} + \Gamma ^{\lambda }_{\mu \nu} \frac{\mathrm{d} x^{\alpha }}{\mathrm{d}\tau} \frac{\mathrm{d} x^{\beta } }{\mathrm{d}\tau} = 0\implies  \frac{\mathrm{d}^{2 }x^{i }}{\mathrm{d}t^{2 }} = \frac{1}{2}\partial_{i}h_{00} ~, \tag{$\star$}
+$$&lt;p&gt;对于如下条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;度规展开到一阶扰动： $g_{\mu\nu}=\eta_{\mu \nu}+h_{\mu \nu}~, |h|\ll 1$ .&lt;/li&gt;
+&lt;li&gt;稳态的引力场：$\partial_{0}g_{\mu \nu}=\partial_{0}h_{\mu \nu}=0$ .&lt;/li&gt;
+&lt;li&gt;空间缓慢变化：$|\partial_{i}g_{\mu \nu}|=|\partial_{i}h_{\mu \nu}|\ll 1$ .&lt;/li&gt;
+&lt;li&gt;粒子低速运动：$\big|\frac{\mathrm{d}x^{i }}{\mathrm{d}x^{0 }}\big|=|\vec{v}|\ll 1$ .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$(\star)$ 若可以回到牛顿方程：&lt;/p&gt;
+$$
+\frac{\mathrm{d}^{2 }x^{i }}{\mathrm{d}t^{2 }} = \frac{1}{2}\partial_{i}h_{00}\implies \Phi_{G}=-\frac{1}{2}h_{00}~.
+$$&lt;p&gt;对于球对称质量为 $M$ 的引力源 $\Phi_{G}=- \frac{GM}{r}$ ，则有&lt;/p&gt;
+$$
+g_{00} = -1-2 \Phi_{G} - \left( 1- \frac{2GM}{r} \right) ~,
+$$&lt;p&gt;其中 $G$ 为牛顿引力常数，$c=1$ ，定义史瓦西半径（引力半径） $R_{S}\equiv\frac{2GM}{c^{2 }}=2GM$  ，那么弱场条件为&lt;/p&gt;
+$$
+r\gg 2GM~,
+$$&lt;p&gt;对于太阳而言，$R_{S}=\frac{2GM_{\odot}}{c^{2 }}\simeq 3\ \mathrm{km}$，而太阳实际半径 $R_{\odot}\simeq 7 \times 10^{5 }\mathrm{km}$ ，可见太阳系内天体（即使太阳表明）的运动大都适用弱场条件 .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;下面我们计算弱引力场自由粒子运动方程可以约化为 $\frac{\mathrm{d}^{2 }x^{i }}{\mathrm{d}t^{2 }} = \frac{1}{2}\partial_{i}h_{00}$ .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;把联络展开到一阶小量&lt;/p&gt;
+$$
+\begin{aligned}
+\Gamma ^{\mu }_{\alpha\beta} &amp;= \frac{1}{2}g^{\mu \lambda }\left( \partial_{\alpha}g_{\lambda\beta}+\partial_{\beta}g_{\alpha\lambda}-\partial_{\lambda}g_{\alpha\beta} \right)  \\
+&amp;\simeq  \frac{1}{2}\eta ^{\mu\lambda }\left( \partial_{\alpha}h_{\lambda\beta}+\partial_{\beta}h_{\alpha\lambda}-\partial_{\lambda}h_{\alpha\beta} \right) ~,
+\end{aligned}
+$$&lt;p&gt;根据 $\Gamma ^{\mu }_{ij}\frac{\mathrm{d}x^{i }}{\mathrm{d}\tau}  \frac{\mathrm{d}x^{j }}{\mathrm{d}\tau} \sim \partial h \cdot \vec{v}\to \mathcal{O}(h^{2 })$ ， 测地线方程保留到一阶有&lt;/p&gt;
+$$
+\frac{\mathrm{d}^{2 }x^{\mu }}{\mathrm{d}\tau ^{2 }}=-\Gamma ^{\mu }_{00}\left( \frac{\mathrm{d}x^{0 }}{\mathrm{d}\tau} \right) ^{2 }~,
+$$&lt;p&gt;即&lt;/p&gt;
+$$
+\begin{aligned}
+\frac{\mathrm{d}^{2 }x^{0 }}{\mathrm{d}\tau ^{2 }} &amp;= -\Gamma ^{0 }_{00}\left( \frac{\mathrm{d}x^{0 }}{\mathrm{d}\tau} \right)^{2 }~,\quad   \\
+\frac{\mathrm{d}^{2 }x^{i }}{\mathrm{d}\tau ^{2 }} &amp;= - \Gamma ^{i }_{00} \left( \frac{\mathrm{d}x^{0 }}{\mathrm{d}\tau} \right)^{2 }~,
+\end{aligned}
+$$&lt;p&gt;第一式 $\Gamma ^{0 }_{00}=0\implies t=\tau+Const$ ，根据此第二式给出&lt;/p&gt;
+$$
+\frac{\mathrm{d} ^{2 } x^{i } }{\mathrm{d} \tau ^{2 } } = \frac{1}{2}\partial_{i}h_{00}~,
+$$&lt;p&gt;由此我们就得到了弱场条件下简化后的测地线方程 .&lt;/p&gt;
+&lt;h2 id=&#34;爱因斯坦方程及其牛顿近似&#34;&gt;爱因斯坦方程及其牛顿近似
+&lt;/h2&gt;&lt;p&gt;爱因斯坦引力场方程：&lt;/p&gt;
+$$
+G_{\mu \nu}+\Lambda g_{\mu \nu} = 8 \pi G T_{\mu \nu}~,
+$$&lt;p&gt;其中 $G_{\mu \nu}\equiv R_{\mu \nu}-\frac{1}{2}g_{\mu \nu}R$ 为爱因斯坦张量 ， $\Lambda$ 为宇宙学常数 . 取 $\Lambda=0$ 并对上式求 trace 可得&lt;/p&gt;
+$$
+\begin{aligned}
+g^{\mu \nu }G_{\mu \nu} &amp;= 8 \pi G T\; \Leftrightarrow \;-R=8\pi G T\\
+\implies R_{\mu \nu} &amp;= 8\pi G (T_{\mu \nu} -g_{\mu \nu}T)~,
+\end{aligned}
+$$&lt;p&gt;那么对于真空就有 $R_{\mu \nu}=0$ .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;下面是爱因斯坦方程的简要推导&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;考虑牛顿引力场方程的形式 $\nabla ^{2 }\Phi_{G}=4\pi G\rho$ ，在弱场情况下我们已知左边引力势 $\Phi_{G}\sim h_{00}$ ，因此考虑将其推广到张量形式. 对于 $\rho$ 的一个自然选择就是能动张量 $T_{\mu \nu}$ ，那么假设引力场方程数学形式为&lt;/p&gt;
+$$
+F_{\mu \nu}(g_{\mu \nu}) = \kappa T_{\mu \nu}~, 
+$$&lt;p&gt;为了能退化回牛顿引力，且避免 Ostrogradsky Instability &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; ，另一方面也为了理论的简洁性，我们考虑 $F_{\mu \nu}(g_{\mu \nu})$ 最多只能含 $g_{\mu \nu}$ 的二阶导数，且线性依赖 $g_{\mu \nu}$ 二阶导，那么其一般形式为&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+$$
+F_{\mu \nu} = aR_{\mu \nu}+bg_{\mu \nu}R-\Lambda g_{\mu \nu}~,
+$$&lt;p&gt;其中系数 $a,b,\Lambda$ 都是常数 . 在狭义相对论中有能动量守恒，推广到GR的情形就是  $\nabla_{\mu}T^{\mu \nu }=0$ ，且 $T_{\mu \nu}=T_{\nu \mu}$ ，因此 $F_{\mu \nu}$ 也必须满足协变守恒 $\nabla_{\mu}F_{\mu \nu}=0$ . 然而，$R_{\mu \nu}$ 自身并不满足协变守恒 $\nabla_{\mu}R_{\mu \nu}\ne 0$ ，根据 Bianchi 恒等式，有&lt;/p&gt;
+$$
+G_{\mu \nu}=R_{\mu \nu}-\frac{1}{2}g_{\mu \nu}R~, \quad \nabla_{\mu}G_{\mu \nu}=0~,
+$$&lt;p&gt;到这一步，我们可以得到形式如 $G_{\mu \nu}+\Lambda g_{\mu \nu}=\kappa T_{\mu \nu}$ 的引力场方程，接下来的任务就是找到 $\kappa$ 是多少 . 为此，考虑爱因斯坦方程退化为牛顿引力场方程的情形，假设物质分布为非相对论理想流体，对于
+&lt;/p&gt;
+$$
+\rho\sim nmc^{2 }\ ,\  p\sim nmv^{2 }\implies p \sim \left( \frac{v}{c} \right)^{2 }\rho \implies p\ll \rho~,
+$$&lt;p&gt;所以其能动张量近似为&lt;/p&gt;
+$$
+T^{\mu \nu } = \rho U^{\mu }U^{\nu }~,
+$$&lt;p&gt;对于流体静止系&lt;/p&gt;
+$$
+g_{\mu \nu}U^{\mu }U^{\nu }=-1 \implies U^{\mu } = \sqrt{- \frac{1}{g_{00}} } \left( 1,0,0,0 \right) ~,\; U^{0 }=1+\frac{1}{2}h_{00}
+$$&lt;p&gt;其中 $g_{00}=-1+h_{00}\ ,g^{00 }=-1-h_{00}$ . 此外可知 $T^{00 }=-\frac{\rho}{g_{00}}\ , T_{00}=\rho\ , T=-g^{00 }T_{00}=-\rho$  . 同时有&lt;/p&gt;
+$$
+\begin{aligned}
+R^{\lambda }_{\; \mu \nu\sigma }  \propto \partial \Gamma + \partial \Gamma+\Gamma\Gamma +\Gamma\Gamma \simeq \partial_{\nu} \Gamma ^{\lambda }_{\mu\sigma} - \partial_{\sigma} \Gamma ^{\lambda }_{\mu \nu}~,
+\end{aligned}
+$$&lt;p&gt;我们更关注的是 $R_{00}$ 分量，即&lt;/p&gt;
+$$
+\begin{aligned}
+R_{00} &amp;= R^{\lambda }_{\; 0\lambda {0}} = \partial_{\lambda}\Gamma ^{\lambda }_{00}-\partial_{0}\Gamma ^{\lambda }_{\lambda{0}} \\
+&amp;=\partial_{i}\Gamma ^{i }_{00} \\
+&amp;=\partial_{i} \left[  \frac{1}{2}g^{i\alpha }\left( 2\partial_{0}g_{\alpha 0} - \partial_{\alpha}g_{00}  \right)   \right]  \\
+&amp;=-\frac{1}{2}\partial_{i}\partial_{i}h_{00}~,
+\end{aligned}
+$$&lt;p&gt;那么有&lt;/p&gt;
+$$
+R_{00} = \kappa \left( T_{00}-\frac{1}{2}g_{00}T \right) \implies \partial_{i}\partial_{i}h_{00} = - \kappa \rho ~,
+$$&lt;p&gt;在弱场近似下 $\Phi_{G}=-\frac{1}{2}h_{00}$ ，对比牛顿引力场方程有 $\kappa = 8 \pi G /c^{4 }=8 \pi G$ .&lt;/p&gt;
+&lt;h3 id=&#34;宇宙学常数-lambda-的初步讨论&#34;&gt;宇宙学常数 $\Lambda$ 的初步讨论
+&lt;/h3&gt;&lt;p&gt;宇宙学常数能解释观测上加速膨胀的宇宙，但它的来源的物理解释仍然不清楚，所以也被称为&amp;quot;暗能量&amp;quot;，这也是目前广义相对论与量子场论不兼容之处 . 例如，如果考虑宇宙学常数是真空中量子场论中的零点能，那么在场论中，谐振子的零点能为$E_0 = \hbar \omega$，其中色散关系为$\omega^2 = m^2+k^2$。如果真空中有无穷多个谐振子态，那么所有零点能求和必然是无穷，所以考虑以$k_{max}\sim M_{\textbf{P}}\sim 10^{18}\mathrm{MeV}$的紫外截断，那么真空零点能的贡献为&lt;/p&gt;
+$$
+  \rho_{vac}^{QFT} \sim 10^{112} \mathrm{erg/cm^3}\,, 
+$$&lt;p&gt;实际观测值约为&lt;/p&gt;
+$$
+\rho_\Lambda^{obs} \sim 10^{-8} \mathrm{erg/cm^3}~,
+$$&lt;p&gt;可见理论的真空零点能与观测相差 $120$ 个数量级，即使考虑 $1\mathrm{TeV}$ 的能量截断，仍然相差 $60$ 个数量级。实际上，无论是量子场论还是广义相对论，应该都属于有效理论 . 虽然目前大多数实验上在一定程度上证明广义相对论是正确的，但由于引力的不可重整化，我们更相信在其背后有更为基本的理论，只是目前人类没有手段去在更高的能标下去验证 . 就如牛顿万有引力是广义相对论的经典近似，经典力学是量子力学的近似，而看似更为本质的相对论和量子力学也十分可能是更基本理论的近似情形，有可能是弦论，也可能是圈量子引力，也可能都不是，这需要我们进行更精确的实验去验证 .&lt;/p&gt;
+&lt;h2 id=&#34;球对称引力场史瓦西度规&#34;&gt;球对称引力场——史瓦西度规
+&lt;/h2&gt;&lt;h3 id=&#34;史瓦西解&#34;&gt;史瓦西解
+&lt;/h3&gt;&lt;p&gt;球对称星体外部时空&lt;/p&gt;
+$$
+\mathrm{d}s^{2 } = - \left( 1- \frac{2GM}{r} \right) \mathrm{d}t^{2 }+\left( 1-\frac{2GM}{r} \right)^{-1 }\mathrm{d}r^{2 }+r^{2 }\mathrm{d}\Omega ^{2 }~,
+$$&lt;p&gt;具体求解过程可以看[史瓦西解](&lt;a class=&#34;link&#34; href=&#34;https://dawn-19.github.io/p/%e6%96%bd%e7%93%a6%e8%a5%bf%e5%ba%a6%e8%a7%84schwarzchild-metric/#%e6%96%bd%e7%93%a6%e8%a5%bf%e5%ba%a6%e8%a7%84%e7%9a%84%e6%b1%82%e8%a7%a3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;施瓦西度规(Schwarzchild Metric)&lt;/a&gt;) ，至于Birkhoff 定理随缘写 .&lt;/p&gt;
+&lt;h3 id=&#34;球壳内部解&#34;&gt;球壳内部解
+&lt;/h3&gt;&lt;p&gt;假设薄球壳内部解为&lt;/p&gt;
+$$
+\mathrm{d}s^{2 } = - \mathrm{e}^{ \lambda } \mathrm{d}t ^{2 } + \mathrm{d}r^{2 }+r^{2 }\mathrm{d}\Omega~,  
+$$&lt;p&gt;
+由于引力源在球壳处，这里积分常数 $\mathrm{e}^{ \lambda }$ 不能拿掉. 我们有理由认为时空度规是连续变化的，因此对于球壳处 $r=R$ ，始终有内外度规相同，即&lt;/p&gt;
+$$
+\begin{aligned}
+-\left( 1-\frac{2GM}{r} \right)\mathrm{d}t^{2 }&amp;+R^{2 }\mathrm{d}\Omega ^{2 } =  - \mathrm{e}^{ \lambda } \mathrm{d}t ^{2 } + R^{2 }\mathrm{d}\Omega \\
+\implies \mathrm{e}^{ \lambda } &amp;= -\left( 1-\frac{2GM}{r} \right)~,
+\end{aligned}
+$$&lt;p&gt;注意这里不需要考虑 $r$ 的变化. 由此薄球壳内部的时空为&lt;/p&gt;
+$$
+\mathrm{d} s ^{2 } = - \left( 1- \frac{2GM}{R} \right)\mathrm{d}t^{2 }+\mathrm{d}r^{2 }+r^{2 }\mathrm{d}\Omega ^{2 }~, 
+$$&lt;p&gt;这说明薄球壳内部有引力势，无引力场 . 相较于 $\infty$ 远，球壳内部时间流逝慢，即无穷远观测者流逝了无穷小时间 $\Delta t$ ，而球壳内部的人只感受到时间流逝了 $\Delta\tau = \sqrt{ 1- \frac{2GM}{R} }\Delta t&amp;lt; \Delta t$ .&lt;/p&gt;
+&lt;h3 id=&#34;史瓦西时空中粒子的运动&#34;&gt;史瓦西时空中粒子的运动
+&lt;/h3&gt;&lt;p&gt;在史瓦西时空中，度规 $g_{\mu \nu}$ 不显含坐标 $t$ 和 $\phi$ ，因此相应的 Killing 矢量场为&lt;/p&gt;
+$$
+\xi_{(t)}^{\mu } = (1,0,0,0)~,\quad \xi ^{\mu }_{(\phi)}=(0,0,0,1)~.
+$$&lt;p&gt;对应的守恒量 $\xi_{\mu}p ^{\mu }$ 为&lt;/p&gt;
+$$
+\begin{aligned}
+p_{t} &amp;\equiv \xi_{\mu}^{(t) } p ^{\mu } = g_{00} p ^{0 } = -m \left( 1- \frac{2GM}{r} \right) \frac{\mathrm{d}t}{\mathrm{d}\tau} ~, \\
+p_{\phi} &amp;\equiv \xi_{\mu}^{(\phi) }p ^{\mu } = g_{33} p ^{3 } =m r^{2 } \sin^{2 }\theta  \frac{\mathrm{d}\phi}{\mathrm{d}\tau} ~, 
+\end{aligned}
+$$&lt;p&gt;若 $M=0$ 则退回到 SR 的情形，这时 $-p_{t}$ 的物理意义是能量，$p_{\phi}$ 是角动量第三分量 （沿 $z$ 轴） .&lt;/p&gt;
+&lt;p&gt;对于球对称的史瓦西时空，根据粒子的角动量守恒那么总是可以将粒子的运动限制在平面上 . 因此，为分析粒子在史瓦西时空中的运动，不妨选取赤道面作为粒子运动平面，即&lt;/p&gt;
+$$
+\theta = \frac{\pi}{2}~,\quad \frac{\mathrm{d}\theta}{\mathrm{d}\tau} = 0~,
+$$&lt;p&gt;这时 $p_{\phi}=mr^{2 } \frac{\mathrm{d}\phi}{\mathrm{d}\tau}$ 为总角动量，定义能量密度和角动量密度：&lt;/p&gt;
+$$
+\mathcal{E} \equiv \left( 1- \frac{2GM}{r} \right) \frac{\mathrm{d}t}{\mathrm{d}\tau}  ~,\quad
+\mathcal{L} = r^{2 } \frac{\mathrm{d}\phi}{\mathrm{d}\tau}~,
+$$&lt;p&gt;根据四速度归一化条件有&lt;/p&gt;
+$$
+\begin{aligned}
+g_{\mu \nu}U^{\mu }U^{\nu } &amp;= - \underbrace{ \left( 1- \frac{2GM}{r} \right) \left( \frac{\mathrm{d}t}{\mathrm{d}\tau} \right)^{2  } }_{ \propto \; \mathcal{E}^{2 } } + \left( 1- \frac{2GM}{r} \right)^{-1 } \left( \frac{\mathrm{d}r}{\mathrm{d}\tau} \right)^{2 } + \underbrace{ r^{2 } \left( \frac{\mathrm{d}\phi}{\mathrm{d}\tau} \right)^{2 } }_{ \mathcal{L}^{2 } / r^{2 } } =-1 \\
+\implies&amp; \left( \frac{\mathrm{d}r}{\mathrm{d}\tau} \right)^{2 } = \mathcal{E}^{2 } - \left( 1- \frac{2GM}{r} \right)\left( 1+ \frac{\mathcal{L}^{2 }}{r^{2 }} \right)   \quad \text{[径向方程]}~.
+\end{aligned}
+$$&lt;p&gt;定义径向运动的有效势&lt;/p&gt;
+$$
+V_{\mathrm{eff}}^{2 }(r) \equiv \left( 1- \frac{2GM}{r} \right)\left( 1+ \frac{\mathcal{L}^{2 }}{r^{2 }} \right) = 1- \frac{2GM}{r}+ \frac{\mathcal{L}^{2 }}{r^{2 }} {\color{orange} - \frac{2GM\mathcal{L}^{2 }}{r^{3 }} }~,
+$$&lt;p&gt;对比&lt;strong&gt;牛顿引力运动方程&lt;/strong&gt;&lt;/p&gt;
+$$
+\frac{1}{2}m\left( \frac{\mathrm{d}r}{\mathrm{d}t} \right)^{2 } = E_{N}-V_{\mathrm{eff}}^{(N) }(r) ~,\quad V_{\mathrm{eff}}^{(N) }\equiv - \frac{GMm}{r}+ \frac{{L}^{2 }}{2mr^{2 }} ~,
+$$&lt;p&gt;可以看到明显的差别在于 $- \frac{2GM\mathcal{L}^{2 }}{r^{3 }}$ 这一项，在牛顿经典引力情形下，势能图像如下所示 (取 $GM=1,m=1$ )&lt;/p&gt;
+&lt;img src=&#34;Pasted%20image%2020251121150148.png&#34; alt=&#34;Pasted image 20251121150148&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;由于经典运动必须保持动能大于 $0$ ，那么&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;${L}=0$ ：吸收态，即粒子撞向力心或逃逸到无穷远，若 $E_{N}&amp;lt;0$ 则只能撞向力心 .&lt;/li&gt;
+&lt;li&gt;${L}\ne 0\ , \ E_{N}&amp;lt;0$ ：束缚态，粒子做椭圆轨道运动或圆轨道运动 .&lt;/li&gt;
+&lt;li&gt;${L}\ne 0\ ,\ E_{N}\geq 0$ ：散射态，粒子做抛物线或双曲线运动，可以运动到无穷远 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在史瓦西时空中，对粒子在有效势 $V_{\mathrm{eff}}^{2 }$ 下运动的分析和 $V_{\mathrm{eff}}^{2 }-1$ 的图像如下（同样取 $GM=1$，也可以认为图像中的 $\mathcal{L}$ 是指无量纲化后的 $\tilde{\mathcal{L}}=\mathcal{L} / GM$）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$\mathcal{L}\geq {4}$ ：势垒始终存在，对于 $\mathcal{E}^{2 }&amp;gt;1$ 为散射态；$1\leq\mathcal{E}^{2 }&amp;lt; V_{\mathrm{eff}}^{2 }(r_{\mathrm{max}})$ 为散射态，其中 $r_{\mathrm{max}}$ 为有效势的极大值点；$\mathcal{E}^{2 }\geq V_{\mathrm{eff}}^{2 }(r_{\mathrm{max}})$ 为吸收态 . 此外，从图像可知 $\mathcal{L}=4$ 为有效势能是否极大值是否大于 $1$ 的临界值 .&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;Pasted%20image%2020251121152619.png&#34; alt=&#34;Pasted image 20251121152619&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;$2\sqrt{ 3 }\leq\mathcal{L}&amp;lt;4$ ： 有效势的势垒仍然存在，但 $V_{\mathrm{eff}}^{2 }(r_{\mathrm{max}})&amp;lt;1$ . 此时对于 $\mathcal{E}^{2 }\geq V_{\mathrm{eff}}(r_{\mathrm{max}})$ 为吸收态，且 $\mathcal{E}^{2 }&amp;lt;1$ 只能撞向力心 ； $\mathcal{E}^{2 }&amp;lt; V_{\mathrm{eff}}^{2 }(r_{\mathrm{max}})$ 为束缚态 . 此外， $\mathcal{L}=2\sqrt{ 3 }$ 是势垒是否存在的临界值 .&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;Pasted%20image%2020251121152605.png&#34; alt=&#34;Pasted image 20251121152605&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;$\mathcal{L}&amp;lt;2 \sqrt{ 3 }$ ，势垒消失，只有吸收态，且 $\mathcal{E}^{2 }&amp;lt;1$ 只能撞向力心，$\mathcal{L}=0$ 与牛顿情形完全一致 .&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;Pasted%20image%2020251121152544.png&#34; alt=&#34;Pasted image 20251121152544&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;综上，对于史瓦西时空，&lt;strong&gt;质点被引力源吸收的可能性相对于牛顿引力情形大大增加 .&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;史瓦西度规的应用&#34;&gt;史瓦西度规的应用
+&lt;/h2&gt;&lt;p&gt;这一部分主要讨论史瓦西度规在太阳系尺度下的应用，包括水星近日点的进动，光线引力偏折，以及引力红移效应 . 其中前 $2$ 个效应在 GR 诞生之初作为验证 GR 的主要观测证据，为这一美丽的理论在早期广而传之起到不可磨灭的作用 .&lt;/p&gt;
+&lt;h3 id=&#34;水星轨道近日点的进动&#34;&gt;水星轨道近日点的进动
+&lt;/h3&gt;&lt;p&gt;牛顿引力情形下的行星轨道公式——比内公式：&lt;/p&gt;
+$$
+\frac{\mathrm{d}^{2 } u}{\mathrm{d} \phi ^{2 }} + u = \tilde{\mathcal{L}}^{-2 }~,\quad u = \tilde{\mathcal{L}}^{-2 }\left( 1+ e \cos \phi \right) ~,
+$$&lt;p&gt;其中 $u\equiv \frac{GM}{r},\tilde{\mathcal{L}}\equiv \frac{\mathcal{L}}{GM}$ ，而在史瓦西时空中对应的形式为&lt;/p&gt;
+$$
+\frac{\mathrm{d}^{2 }u}{\mathrm{d}\phi ^{2 }} + u = \tilde{\mathcal{L}}^{-2 }+3 u^{2 }~.
+$$&lt;p&gt;对于太阳有 $GM_{\odot} \simeq 1.5 \times 10^{3 }\ \mathrm{m}$ ，而水星轨道半径约为 $r\simeq 5 \times 10^{10 } \mathrm{m}$ ，因此 $u ^{2 }$ 是一个小量，对 $u$ 作微扰展开：&lt;/p&gt;
+$$
+u = \mathcal{\tilde{L}}^{-2 } u_{0}+ \mathcal{\tilde{L}}^{-4 } u_{1}+ \dots~,
+$$&lt;p&gt;其中
+&lt;/p&gt;
+$$
+u _{0} = \left( 1+ e \cos \phi \right)~,\quad \frac{\mathrm{d}^{2 }u_{1}}{\mathrm{d}\phi ^{2 }} + u_{1} = 3 u_{0}^{2 } \simeq 3 (1+2e\cos \phi)~,
+$$&lt;p&gt;可以解得 $u_{1}=3 (1+e\cos \phi)+3e\phi \sin \phi$ ，由此&lt;/p&gt;
+$$
+\begin{aligned}
+u&amp;\simeq \tilde{\mathcal{L}}^{-2 }\left( 1+3e\cos \phi \right) +\mathcal{\tilde{L}}^{-4 } \left( 3 (1+e\cos \phi)+3e\phi \sin \phi \right)  \\
+&amp;=\left( \tilde{\mathcal{L}}^{-2 } + 3\tilde{\mathcal{L}}^{-4 } \right) \left( 1+e\cos \phi \right) +3\tilde{\mathcal{L}}^{-4 } e \phi \sin \phi \\
+&amp;\simeq \left( \mathcal{L}^{-2 }+3\mathcal{L}^{-4 } \right) \left( 1+e\cos \phi + 3 \tilde{\mathcal{L}}^{-2 }e\phi\sin \phi \right)  \\
+&amp; = \left( \mathcal{L}^{-2 }+3\mathcal{L}^{-4 } \right)  \left[ 1+ e \cos \left( \phi-3\tilde{\mathcal{L}}^{-2 }\phi \right)  \right] ~,
+\end{aligned}
+$$&lt;p&gt;其中最后一步因为 $3 \tilde{\mathcal{L}}^{-2 }\phi\ll 1$ 所以&lt;/p&gt;
+$$
+\cos \left( \phi-3\tilde{\mathcal{L}}^{-2 }\phi \right) =\cos \phi \cos \left( 3\tilde{\mathcal{L}}^{-2 }\phi \right)+\sin \phi \sin \left( 3\tilde{\mathcal{L}}^{-2 }\phi \right)\simeq \cos \phi + 3 \tilde{\mathcal{L}}^{-2 }\phi\sin \phi~.
+$$&lt;p&gt;对于近日点条件&lt;/p&gt;
+$$
+\left( 1-3 \tilde{\mathcal{L}}^{-2 } \right)\phi = 2 n \pi~, 
+$$&lt;p&gt;所以有 $2$ 相邻近日点角度差&lt;/p&gt;
+$$
+\delta \phi = 2 \pi (1-3 \mathcal{\tilde{L}}^{-2 })^{-1 }-2 \pi \simeq 6\pi \left( \frac{GM}{L} \right)^{2 } ~,
+$$&lt;p&gt;将观测值带入，可以得到水星每世纪近日点累积进动为 $43&amp;rsquo;&amp;rsquo;$ .&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;行星轨道方程的计算&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;牛顿情形&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于运动方程&lt;/p&gt;
+$$
+\frac{1}{2}m\left( \frac{\mathrm{d}r}{\mathrm{d}t} \right)^{2 } = E_{N} + \frac{GMm}{r}- \frac{{L}^{2 }}{2mr^{2 }}
+$$&lt;p&gt;代入角向方程 $\frac{\mathrm{d}\phi}{\mathrm{d}t}=L$&lt;/p&gt;
+$$
+\left(  \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r} \right) ^{2 } = \frac{2mE_{N}}{ L^{2 }}+ \frac{2GMm ^{2 }}{r L^{2 }}- \frac{1}{r^{2 }}
+$$&lt;p&gt;对 $\phi$ 再求一次导数&lt;/p&gt;
+$$
+\begin{aligned}
+2 \cancel{ \left( \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r} \right)}&amp; \frac{\mathrm{d}^{2 }}{\mathrm{d}\phi ^{2 }} \frac{1}{r} = \frac{2}{\mathcal{\tilde{L}}^{2 } }\cancel{ \left( \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r} \right)} - \frac{2}{r}  \cancel{ \left( \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r} \right)} \\
+\implies &amp;\frac{\mathrm{d}^{2 } u}{\mathrm{d} \phi ^{2 }} + u = \tilde{\mathcal{L}}^{-2 },
+\end{aligned}
+$$&lt;p&gt;再次强调 $\mathcal{\tilde{L}}\equiv \frac{L}{GMm},u\equiv \frac{GM}{r}$  .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;史瓦西情形&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;角向方程 $\mathcal{L} = r^{2 } \frac{\mathrm{d}\phi}{\mathrm{d}\tau}$ 代入径向方程&lt;/p&gt;
+$$
+\left( \frac{\mathrm{d}r}{\mathrm{d}\tau} \right)^{2 } = \mathcal{E}^{2 } - \left( 1- \frac{2GM}{r} \right)\left( 1+ \frac{\mathcal{L}^{2 }}{r^{2 }} \right)
+$$&lt;p&gt;得到&lt;/p&gt;
+$$
+\begin{aligned}
+\left( \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r} \right)^{2 } &amp;= \frac{\mathcal{E}^{2 }-1}{\mathcal{L}^{2 }} + \frac{2GM}{r \mathcal{L}^{2 }} - \frac{1}{r^{2 }} + \frac{2GM}{r^{3 }}  \\ 
+\frac{\mathrm{d}}{\mathrm{d}\phi} \left( \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r} \right)^{2 } &amp;=\frac{\mathrm{d}}{\mathrm{d}\phi} \left\{    \frac{\mathcal{E}^{2 }-1}{\mathcal{L}^{2 }} + \frac{2GM}{r \mathcal{L}^{2 }} - \frac{1}{r^{2 }} + \frac{2GM}{r^{3 }} \right\} 
+\\
+\implies  \frac{\mathrm{d}^{2 }}{\mathrm{d}\phi ^{2 }} \frac{1}{r} + \frac{1}{r} &amp;= \frac{GM}{L^{2 }} + \frac{3GM}{r^{2 }} \\
+\Longleftrightarrow \quad \frac{\mathrm{d}^{2 }}{\mathrm{d}\phi ^{2 }}u + u &amp;= \mathcal{\tilde{L}}^{-2 }+3u ^{2 }~.
+\end{aligned}
+$$&lt;hr&gt;
+&lt;h3 id=&#34;光线引力偏折&#34;&gt;光线引力偏折
+&lt;/h3&gt;&lt;p&gt;讨论光子的运动时不能使用类时四速度归一化. 对于类光测地线仿射参量 $\lambda$ ，四动量为&lt;/p&gt;
+$$
+p ^{\mu } \equiv \frac{\mathrm{d}  x^{\mu }}{\mathrm{d}\lambda}~,
+$$&lt;p&gt;其中 $p _{t}=\xi _{\mu }^{(t) }p ^{\mu }\ , p _{\phi} = \xi _{\mu}^{(\phi) }p ^{\mu }$ 仍然为守恒量，同样选取 $\theta=\frac{\pi}{2}$ 的赤道面作为光子运动轨迹平面，所以有运动方程&lt;/p&gt;
+$$
+\left\{  
+\begin{aligned}
+&amp;\left( 1- \frac{2GM}{r} \right) \frac{\mathrm{d}t}{\mathrm{d}\lambda} = E \\
+&amp;r ^{2 } \frac{\mathrm{d}\phi}{\mathrm{d}\lambda} = L \\
+&amp; \frac{\mathrm{d}\theta}{\mathrm{d}\lambda} = 0 \\
+&amp;-\left( 1- \frac{2GM}{r} \right)\left( \frac{\mathrm{d}t}{\mathrm{d}\lambda} \right)^{2 } + \left( 1- \frac{2GM}{r} \right)^{-1 }\left( \frac{\mathrm{d}r}{\mathrm{d}\lambda} \right)^{2 } + r ^{2 } \left( \frac{\mathrm{d}\phi}{\mathrm{d}\lambda} \right)  ^{2 } = 0   
+\end{aligned}\right.
+$$&lt;p&gt;联立上 $4$ 式可得径向方程&lt;/p&gt;
+$$
+\left( \frac{\mathrm{d}r}{\mathrm{d}\lambda} \right)^{2 } = E^{2 } - \frac{L^{2 }}{r^{2 }} \underbrace{ \left( 1- \frac{2GM}{r} \right)  }_{\text{ blackening factor} } ~,
+$$&lt;p&gt;对于有效势能 $V_{\mathrm{eff}}^{2 }=- \frac{L^{2 }}{r^{2 }}\left( 1- \frac{2GM}{r} \right)$ 的图像如下($GM=1$) ：&lt;/p&gt;
+&lt;img src=&#34;Pasted%20image%2020251121171745.png&#34; alt=&#34;Pasted image 20251121171745&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;从图中可以看到，$\mathcal{L}\neq 0$ 时有效势在 $r_{\mathrm{max}}=3GM$ 处有峰值，且 $r=r_{\mathrm{max}}$ 的位置为不稳定圆轨道半径 . 此外，$r=2GM$ 时有 $V^{2 }_{\mathrm{eff}}=0$ .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$E^{2 }&amp;lt;V_{\mathrm{eff}}^{2 }(r_{\mathrm{max}})$ 时为散射态 .&lt;/li&gt;
+&lt;li&gt;$E^{2 }\geq V_{\mathrm{eff}}^{2 }(r_{\mathrm{max}})$ 时为吸收态 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;考虑光子的轨道方程，由 $\frac{\mathrm{d}}{\mathrm{d}\lambda}= \frac{\mathrm{d}\phi}{\mathrm{d}\lambda} \frac{\mathrm{d}}{\mathrm{d}\phi}=\frac{L}{r^{2 }}\frac{\mathrm{d}}{\mathrm{d}\phi}$ 可得&lt;/p&gt;
+$$
+\left( \frac{\mathrm{d}}{\mathrm{d}\phi} \frac{1}{r}\right)^{2 } = \frac{E^{2 }}{L^{2 }} - \frac{1}{r^{2 }} + \frac{2GM}{r^{3 }}~, 
+$$&lt;p&gt;在对 $\phi$ 求一次导数，令 $u=\frac{GM}{r}$ 有&lt;/p&gt;
+$$
+\begin{aligned}
+\frac{\mathrm{d}}{\mathrm{d}\phi}\left( \frac{\mathrm{d}}{\mathrm{d}\phi} u \right)^{2 } &amp;= \frac{\mathrm{d}}{\mathrm{d}\phi}\left(  \frac{E^{2 }}{L^{2 }}G^{2 }M^{2 } - u^{2 } + 2 u ^{3 }  \right)   \\
+2 \frac{\mathrm{d}u}{\mathrm{d}\phi} \frac{\mathrm{d^{2 }}}{\mathrm{d}\phi ^{2 }}u&amp;=-2u \frac{\mathrm{d}u}{\mathrm{d}\phi} + 6 u ^{2 } \frac{\mathrm{d}u}{\mathrm{d}\phi} \\
+\frac{\mathrm{d}^{2 }}{\mathrm{d}\phi ^{2 }}u +u&amp;=3 u ^{2 }~, 
+\end{aligned}
+$$&lt;p&gt;考虑掠过&lt;strong&gt;太阳表面的星光&lt;/strong&gt;，与前文类似，取 $u ^{2 }$ 为小量处理，把 $u$ 作微扰展开：&lt;/p&gt;
+$$
+u = \left( \frac{GM}{R_{\odot}} \right)  u_0+ \left( \frac{GM}{R_{\odot}} \right)^{2 }   u_{1}+\dots~,
+$$&lt;p&gt;其中&lt;/p&gt;
+$$
+\frac{\mathrm{d}^{2 }}{\mathrm{d}\phi ^{2 }}u_{0} + u_{0} = 0~, \quad  \frac{\mathrm{d}^{2 }}{\mathrm{d}\phi ^{2 }}u_{1} + u_{1} = 3 u_{0}^{2 }~,
+$$&lt;p&gt;可以解得 $u_{0}= \cos \phi\ , \ u_{1}=1+\sin ^{2 } \phi$ . 如下图所示，设入射角度和出射角度分别为 $\phi = \pm \left( \frac{\pi}{2}+\alpha \right)$ 有&lt;/p&gt;
+$$
+-\left( \frac{GM}{R_{\odot}} \right) \sin\alpha + \left( \frac{GM}{R_{\odot}} \right) ^{2 }\left( 1+\cos ^{2 }\alpha \right)  =0 \implies \alpha \simeq 2 \frac{GM}{R_{\odot}}~,
+$$&lt;p&gt;所以 $\Delta \phi = 2 \alpha= 4\frac{GM}{R_{\odot}} \approx 1.75^{\prime\prime }$  . 还可以看[史瓦西度规](&lt;a class=&#34;link&#34; href=&#34;https://dawn-19.github.io/p/%e6%96%bd%e7%93%a6%e8%a5%bf%e5%ba%a6%e8%a7%84schwarzchild-metric/#%e6%95%b0%e5%80%bc%e6%b1%82%e8%a7%a3%e6%b5%8b%e5%9c%b0%e7%ba%bf%e6%96%b9%e7%a8%8b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;施瓦西度规(Schwarzchild Metric)&lt;/a&gt;) 最后一张数值结果的图 .&lt;/p&gt;
+&lt;img src=&#34;999cb469c68761842ff944aadfdaf3fb.jpg&#34; alt=&#34;999cb469c68761842ff944aadfdaf3fb&#34; style=&#34;zoom:20%;&#34; /&gt;
+&lt;h3 id=&#34;引力红移&#34;&gt;引力红移
+&lt;/h3&gt;&lt;p&gt;可以建立这样一个 GR 的局域观测，在时空点 $P$ 处的观测者四速度为 $U^{\mu }$ ，沿 $U^{\mu }$ 为时空轴建立局域的闵氏坐标系，再基于 SR 进行观测分析 . 在 SR 中观测到的能量为 $E_{l}=- p_{\mu}U^{\mu }$ 是洛伦兹不变的，稳态的静止观测者四速度为&lt;/p&gt;
+$$
+U ^{\mu } = \frac{1}{\sqrt{ -g_{00} }}(-1,0,0,0)~, \implies p_{0}= -E_{l} \sqrt{ - g_{00} } \sim \text{守恒量} ~,
+$$&lt;p&gt;对于光子 $E_{l}=h\nu$ 是洛伦兹不变量，在史瓦西时空中 $p_{0}$ 是守恒量，那么有&lt;/p&gt;
+$$
+\nu(r) \sqrt{ -g_{00}(r) } = \nu(\infty)\sqrt{ -g_{00}(\infty) }~ \implies \sqrt{ 1- \frac{2GM}{r} } \nu(r) = \nu (\infty)~,
+$$&lt;p&gt;这意味着在 $r$ 越小（离引力源越近）的地方观测到的光线频率越大，即在遥远的我们观测到的光的频率 $\nu(\infty)$ 相较于光在光源附近的频率 $\nu(R)$ 要低（红光能量低，频率低），因此这被称为引力红移效应 .&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料：
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;【1】国科大田雨老师的课堂笔记 .&lt;/p&gt;
+&lt;p&gt;【2】Carroll, Sean M. Spacetime and Geometry: An Introduction to General Relativity. Benjamin Cummings, 2003.&lt;/p&gt;
+&lt;p&gt;【3】陈斌. 2018. 《广义相对论》. 北京: 北京大学出版社.&lt;/p&gt;
+&lt;p&gt;【4】David Tong. Lectures on General Relativity &lt;a class=&#34;link&#34; href=&#34;https://www.damtp.cam.ac.uk/user/tong/gr.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.damtp.cam.ac.uk/user/tong/gr.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;【5】Google. Gemini: A Generative Artificial Intelligence Model. 2025.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;拉格朗日形式下动能项超过二阶导数会出现能量不囿于下的情形 .&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;数学上可以证明 .&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        </item>
+        <item>
         <title>引力波与引力辐射</title>
         <link>https://Dawn-19.github.io/p/%E5%BC%95%E5%8A%9B%E6%B3%A2%E4%B8%8E%E5%BC%95%E5%8A%9B%E8%BE%90%E5%B0%84/</link>
         <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
@@ -653,7 +994,8 @@ $$&lt;p&gt;这表明引力波使环状粒子的形变在随时间旋转，形成
 &lt;p&gt;【3】陈斌. 2018. 《广义相对论》. 北京: 北京大学出版社.&lt;/p&gt;
 &lt;p&gt;【4】David Tong. Lectures on General Relativity &lt;a class=&#34;link&#34; href=&#34;https://www.damtp.cam.ac.uk/user/tong/gr.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.damtp.cam.ac.uk/user/tong/gr.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;【5】Google. Gemini: A Generative Artificial Intelligence Model. 2025.&lt;/p&gt;
+&lt;p&gt;【5】Michele Maggiore. Gravitational Waves: Theory and Experiments, volume 1. Oxford University Press Inc., New York., 2008.&lt;/p&gt;
+&lt;p&gt;【6】Google. Gemini: A Generative Artificial Intelligence Model. 2025.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
