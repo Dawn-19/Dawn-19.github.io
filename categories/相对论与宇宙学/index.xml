@@ -7,7 +7,228 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Dawn-19</copyright>
-        <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%8E%E5%AE%87%E5%AE%99%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 21 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E7%9B%B8%E5%AF%B9%E8%AE%BA%E4%B8%8E%E5%AE%87%E5%AE%99%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>致密星体</title>
+        <link>https://Dawn-19.github.io/p/%E8%87%B4%E5%AF%86%E6%98%9F%E4%BD%93/</link>
+        <pubDate>Sun, 21 Dec 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E8%87%B4%E5%AF%86%E6%98%9F%E4%BD%93/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E8%87%B4%E5%AF%86%E6%98%9F%E4%BD%93/picture.png" alt="Featured image of post 致密星体" /&gt;&lt;h1 id=&#34;致密星体&#34;&gt;致密星体
+&lt;/h1&gt;&lt;h2 id=&#34;tov-方程&#34;&gt;TOV 方程
+&lt;/h2&gt;&lt;p&gt;TOV 方程形式为&lt;/p&gt;
+$$
+\frac{\mathrm{d}p}{\mathrm{d}r} = - \frac{\left[ \rho(r)+p(r) \right] \left[ Gm(r)+4\pi Gr^{3 }p(r) \right]  }{r\left( r-2Gm(r) \right) }~,\tag{$\star$}
+$$&lt;p&gt;对于固定密度球对称星体有 $R\geq \frac{9}{8}R_{S}$ ，否则无法维持引力平衡 .&lt;/p&gt;
+&lt;p&gt;考虑星体内部球对称度规&lt;/p&gt;
+$$
+\mathrm{d}s^{2 } = \mathrm{e}^{ -2 \alpha(r) }\mathrm{d}t^{2 } + \mathrm{e}^{ ^{2\beta }(r) } \mathrm{d}r^{2 } + r^{2 }\mathrm{d}\Omega ^{2 }~,
+$$&lt;p&gt;根据 Einstein 方程 $G_{\mu \nu}=8\pi GT_{\mu \nu}$ ，其中Einstein 张量分量为&lt;/p&gt;
+$$
+\left\{  
+\begin{aligned}
+G_{00} &amp;= \mathrm{e}^{ 2\left( \alpha-\beta \right)  }\left( 2 r\partial_{r}\beta-1+\mathrm{e}^{ 2\beta } \right)~,  \\
+G_{11}&amp;= \frac{1}{r^{2 }} \left( 2r\partial_{r}\alpha +1-\mathrm{e}^{ 2\beta }  \right) ~, \\
+G_{22}&amp;=r^{2 }\mathrm{e}^{ -2\beta }\left[ \partial_{r}^{2 }\alpha+\left( \partial_{r} \alpha \right)^{2 }-\partial_{r}\alpha \partial_{r}\beta - \frac{1}{r}\partial_{r}\left( \alpha-\beta \right)   \right]~,  \\
+G_{33}&amp;=G_{22}\sin ^{2 }\theta~.
+\end{aligned}\right.
+$$&lt;p&gt;对于理想流体 $T_{\mu \nu}=\left( \rho+ p \right)g_{\mu \nu}+pU_{\mu}U_{\nu}$ ，有&lt;/p&gt;
+$$
+\left\{ 
+\begin{aligned}
+T_{00}&amp;=\mathrm{e}^{ 2\alpha }\rho~, \\
+T_{11}&amp; = \mathrm{e}^{ 2\beta }p ~,\\
+T_{22}&amp;= r^{2 }p ~,\\
+T_{33}&amp;=\left( r^{2 }\sin ^{2 }\theta \right)p ~.
+\end{aligned}
+\right.
+$$&lt;p&gt;同时根据 $\mathrm{e}^{ 2\beta }=\left( 1- \frac{2Gm(r)}{r} \right)^{-1 }$ 代入 $G_{11}=8 \pi GT_{11}$ 中有&lt;/p&gt;
+$$
+\begin{aligned}
+\partial_{r}\alpha &amp;= \frac{8 \pi G \mathrm{e}^{ 2\beta }p \cdot r^{2 }+\mathrm{e}^{ 2\beta }-1 }{2r} \\
+&amp; = \frac{4\pi G r^{3 }p+Gm(r) }{r\left( r-2Gm(r) \right) }~,
+\end{aligned}
+$$&lt;p&gt;其中 $m(r)\equiv \int_{0}^{r }4\pi r^{\prime 2 }\rho(r^{\prime })\mathrm{d}r^{\prime }$ 为半径 $r$ 内的质量，且 $m(R)=M$ 为致密星体总质量 . 根据能动量守恒 $\nabla_{\mu}T^{\mu \nu }=0$ 可知&lt;/p&gt;
+$$
+\begin{aligned}
+\nabla_{\mu}T^{\mu 1 } =&amp; \frac{1}{\sqrt{ -g }} \partial_{\mu}\left( \sqrt{ -g }T^{\mu 1 } \right) + \Gamma ^{1 }_{\mu\sigma}T^{\mu\sigma } \\
+=&amp; r^{-2 }\mathrm{e}^{ \alpha-\beta }\partial_{r}\left( r^{2 }\mathrm{e}^{ -\alpha+\beta }p \right)  + \Gamma ^{1 }_{\mu\sigma}T^{\mu\sigma }  \\
+=&amp;0 \\
+\implies&amp; \frac{\mathrm{d}p}{\mathrm{d}r} = -\left( \rho+ p \right) \frac{\mathrm{d}\alpha}{\mathrm{d}r} ~,
+\end{aligned}
+$$&lt;p&gt;代入 $\partial_{r}\alpha$ 可得&lt;/p&gt;
+$$
+\frac{\mathrm{d}p}{\mathrm{d}r} = - \frac{\left[ \rho(r)+p(r) \right] \left[ Gm(r)+4\pi Gr^{3 }p(r) \right]  }{r\left( r-2Gm(r) \right) }~,\tag{$\star$}
+$$&lt;p&gt;此方程就是 Tolman-Oppenheimer-Volkoff （TOV）方程，在给的状态方程 $f(\rho,p)=0$ 以及边界条件可能有解 . 在 $r\gg R_{S}\ ,\rho\gg p$ 的情形下，方程退化&lt;/p&gt;
+$$
+\frac{\mathrm{d }p}{\mathrm{d}r} = - \frac{ G\rho(r) m(r)}{3r^{2 }}~.
+$$&lt;p&gt;对于均匀密度星，物态方程为&lt;/p&gt;
+$$
+\rho(r)=\rho_{0}~,\quad r\leq R~,
+$$&lt;p&gt;此时 $m(r)= \frac{4\pi}{3}\rho_{0}r^{3 }\ ,r\leq R$ ，代入 TOV 方程 $(\star)$ 中有&lt;/p&gt;
+$$
+\frac{\mathrm{d}p}{\mathrm{d}r} = -(\rho_0 + p)\frac{4\pi G r^3\left(\frac{\rho_0}{3} + p\right)}{r\left(r - \frac{8\pi G}{3}\rho_0 r^3\right)}~,
+$$&lt;p&gt;分离变量&lt;/p&gt;
+$$
+\begin{aligned}
+\frac{\mathrm{d}p}{(\rho_{0}+p)\left( \frac{\rho_{0}}{3}+p \right)  } &amp;= - \frac{4\pi Gr^{3 }}{ r\left( r- \frac{8\pi G}{3}\rho_{0}r^{3 } \right)  } \\
+\implies\frac{\mathrm{d}p}{\frac{\rho_{0}}{3}+p}- \frac{\mathrm{d}p}{\rho_{0}+p} &amp;= - \frac{4\pi Gr\mathrm{d}r}{1- \frac{8}{3} \pi G\rho_{0}r^{2 }}\cdot \frac{2}{3}\rho_{0}~,
+\end{aligned}
+$$&lt;p&gt;解得&lt;/p&gt;
+$$
+p(r) = \rho_0 \frac{\sqrt{1 - \frac{2GM r^2}{R^3}} - \sqrt{1 - \frac{2GM}{R}}}{3\sqrt{1 - \frac{2GM}{R}} - \sqrt{1 - \frac{2GM r^2}{R^3}}}~,
+$$&lt;p&gt;其中 $M=\frac{4\pi \rho_{0}R^{3 }}{3}$ 为星体的总质量 . 根据 $\partial_{r}\alpha$ 的表达式也能给出均匀密度球对称星体内部解为&lt;/p&gt;
+$$
+\mathrm{e}^{ \alpha } = \frac{3}{2}\sqrt{ 1- \frac{2GM}{R} }- \frac{1}{2}\sqrt{ 1- \frac{2GMr^{2 }}{R^{3 }} } \overset{r=R}{\longrightarrow }\mathrm{e}^{ \alpha }=\left( 1-\frac{2GM}{R} \right) ~,
+$$&lt;p&gt;同时星体中心压强为&lt;/p&gt;
+$$
+p_{c}=p(r=0)=\rho_{0} \frac{1-\sqrt{ 1-2GM / R }}{3\sqrt{ 1- 2GM / R }-1}~,
+$$&lt;p&gt;可见，当 $R= \frac{9}{8}R_{S}\ (R_{S}=2GM)$ 时有 $p_{c}\to \infty$ ，因此对于密度恒定球对称星体半径最小为 $\frac{9}{8}R_{S}$ ，在其半径尚未小到引力半径时就已经无法维持静力平衡 .&lt;/p&gt;
+&lt;h2 id=&#34;多方球物态&#34;&gt;多方球物态
+&lt;/h2&gt;&lt;p&gt;前面提到，在牛顿引力下，球对称静态流体的平衡方程为&lt;/p&gt;
+$$
+\frac{\mathrm{d}p}{\mathrm{d}r} = -\rho \frac{G m}{r^2}\implies \left( \frac{r^{2 }}{\rho} \frac{\mathrm{d}p}{\mathrm{d}r} \right) = - 4\pi Gr^{2 }\rho~,
+$$&lt;p&gt;其中 $m(r) = \int_0^r 4\pi r&amp;rsquo;^2 \rho(r&amp;rsquo;) \mathrm{d}r&amp;rsquo;$ 是半径 $r$ 内的质量 . 考虑多方物体方程&lt;/p&gt;
+$$
+p = K \rho^\gamma, \quad \gamma = 1 + \frac{1}{n},
+$$&lt;p&gt;其中 $K$ 和 $\gamma$（或多方指数 $n$）为常数 . 引入无量纲变量 $\theta$ 和 $\xi$：&lt;/p&gt;
+$$
+\rho = \rho_c \theta^n~, \quad p = p_c \theta^{n+1}~, \quad r = a \xi~,
+$$&lt;p&gt;其中中心密度 $\rho_c$ 和中心压强 $p_c = K \rho_c^\gamma$ 满足物态方程，尺度因子 $a$ 定义为：&lt;/p&gt;
+$$
+a = \left[ \frac{(n+1)K}{4\pi G} \rho_c^{\frac{1}{n}-1} \right]^{1/2}~,
+$$&lt;p&gt;代入平衡方程得到 Lane-Emden 方程：&lt;/p&gt;
+$$
+\frac{1}{\xi^2} \frac{d}{d\xi} \left( \xi^2 \frac{\mathrm{d}\theta}{d\xi} \right) = -\theta^n~.
+$$&lt;p&gt;边界条件为 $\theta(0)=1, \quad \theta&amp;rsquo;(0)=0$ . 方程的解称为 Lane-Emden 函数，在 $\xi\to{0}$ 时有近似行为&lt;/p&gt;
+$$
+\theta(\xi) \simeq 1- \frac{\xi ^{2 }}{6} + \frac{\xi ^{4 }}{120\left( \gamma-1 \right) }+\dots~.
+$$&lt;p&gt;星体半径 $R$ 对应第一个零点 $\xi_1$（即 $\theta(\xi_1)=0\to \rho=0$）：&lt;/p&gt;
+$$
+R=a \xi_{1}~,
+$$&lt;p&gt;那么总质量为&lt;/p&gt;
+$$
+M = \int_0^R 4\pi r^2 \rho \, \mathrm{d}r = 4\pi a^3 \rho_c \int_0^{\xi_1} \xi^2 \theta^n \, \mathrm{d}\xi~,
+$$&lt;p&gt;由 Lane-Emden 方程，积分可化为&lt;/p&gt;
+$$
+\int_0^{\xi_1} \xi^2 \theta^n \, d\xi = -\xi_1^2 \theta&#39;(\xi_1)\implies M = 4\pi a^3 \rho_c \left[ -\xi_1^2 \theta&#39;(\xi_1) \right]~,
+$$&lt;p&gt;同时根据 $R=a\xi_{1}$ 可以给出 $\rho_{c}$ 为&lt;/p&gt;
+$$
+\rho_{c} = \left( \frac{R^{2 }}{\xi_{1}^{2 }} \frac{4\pi G}{\left( n+1 \right)K } \right)^{n\over 1-n } ~,
+$$&lt;p&gt;可以给出&lt;/p&gt;
+$$
+M \propto  a^{3 } \left(\frac{R}{\xi}\right)^{2n/(1-n) }=\left( \frac{R}{\xi_{1} } \right)^{3-n\over {1}-n } =\left( \frac{R}{\xi_{1} } \right)^{3\gamma-4\over \gamma-2 }~,
+$$&lt;p&gt;所以 $\gamma&amp;gt; \frac{4}{3}$ 为稳定平衡 . 从另外一个角度 $E=U+V_{G}$ ，其中 $U\propto R^{-3\gamma+3 }$
+为内能，$V_{G}\propto -R^{-1 }$ 为引力势能，所以&lt;/p&gt;
+$$
+\frac{\mathrm{d}^{2 }E}{\mathrm{d}R^{2 }}\bigg|_{R_{0}}\propto \left( 3\gamma-4 \right)R_{0}^{-3\gamma+1 } ~,
+$$&lt;p&gt;当 $\gamma&amp;gt;4 /3\implies \dfrac{\mathrm{d}^{2 }E}{\mathrm{d}R^{2 }}\bigg| _{R _{0}} &amp;lt; 0$ 为稳定平衡 .&lt;/p&gt;
+&lt;h2 id=&#34;白矮星&#34;&gt;白矮星
+&lt;/h2&gt;&lt;p&gt;白矮星是耗尽核燃料的恒星残骸，其内部压强主要由电子的简并压支撑，引力与压强平衡形成静态球对称结构 . 其演化路径如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主序星阶段：氢核聚变为主；&lt;/li&gt;
+&lt;li&gt;氢耗尽后，核心收缩，外层膨胀形成红巨星；&lt;/li&gt;
+&lt;li&gt;核心温度升高至 $\sim 10^8 \mathrm{K}$ ，触发氦燃烧（若质量足够）；&lt;/li&gt;
+&lt;li&gt;当核心温度达到碳氧聚变阶段，若质量不足以点燃碳聚变，则核反应终止；&lt;/li&gt;
+&lt;li&gt;辐射压几乎消失，引力主导，导致电子简并压支撑星体不再坍缩 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最终形成的星体即为 &lt;strong&gt;白矮星&lt;/strong&gt;，其内部主要由电子简并气体构成 .&lt;/p&gt;
+&lt;p&gt;白矮星中电子简并压为主导，其中简并电子气体的电子数密度为&lt;/p&gt;
+$$
+n = \frac{2}{(2\pi \hbar)^{3 }}\int ^{k_{F} }_{0} 4 \pi k^{2 }\mathrm{d}k= \frac{k_{F}^{3 }}{3 \pi ^{2 }\hbar ^{3 }}~,\quad \mu(0)=\frac{k_{F}^{2 }}{2m}~,
+$$&lt;p&gt;其中 $k_{F}$ 为费米动量，$\mu(0)$ 为零温度时的电子化学势. 实际的白矮星费米温度$k_{B}T_{F}=\mu(0)$ 为&lt;/p&gt;
+$$
+T_{F}\simeq \sqrt{ k_{F}^{2 }-m_{e}^{2 } }-m_{e}\sim 10^{9 }\mathrm{K}\gg T_{n}\sim 10^{7 }K~,
+$$&lt;p&gt;其中 $T_{n}$ 为核心温度，这表明取零温极限是合理的 . 星体密度&lt;/p&gt;
+$$
+\rho = \mu m_{N}n_{e}~,\quad n_e = \frac{2}{(2\pi\hbar)^3} \int_0^{k_F} 4\pi k^2 \mathrm{d}k = \frac{k_F^3}{3\pi^2\hbar^3}
+$$&lt;p&gt;其中 $\mu$ 为核子数与电子数之比（对碳氧白矮星，$\mu\approx2$），$m_N$ 为核子质量 . 电子气的压强为：&lt;/p&gt;
+$$
+p = \frac{1}{3} \int_0^{p_F} \frac{k^2 c^2}{\sqrt{k^2 c^2 + m_e^2 c^4}} \, \frac{4\pi k^2 \mathrm{d}k}{(2\pi\hbar)^3}~.
+$$&lt;p&gt;物态方程在两种极限下可简化为多方形式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;非相对论情形 $p_F \ll m_e$：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+p \approx \frac{1}{15\pi^2\hbar^3 m_e} k_F^5 = K_{\text{NR}} \rho^{5/3}, \quad \gamma = \frac{5}{3}, \quad n=\frac{3}{2}~.
+$$&lt;p&gt;可得质量半径关系&lt;/p&gt;
+$$
+M \propto \rho_c^{1/2} R^{-3}, \quad \text{即} \quad M R^3 = Const~.
+$$&lt;ul&gt;
+&lt;li&gt;极端相对论情形$p_F \gg m_e c$：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+ p \approx \frac{c}{12\pi^2\hbar^3} p_F^4 = K_{\text{ER}} \rho^{4/3}, \quad \gamma = \frac{4}{3}, \quad n=3~.
+$$&lt;p&gt;对于极端相对论情形（$n=3$），质量与中心密度无关：&lt;/p&gt;
+$$
+M = M_{\text{Ch}} = 4\pi \left[ -\xi_1^2 \theta&#39;(\xi_1) \right]_{n=3} \left( \frac{K_{\text{ER}}}{4\pi G} \right)^{3/2}~,
+$$&lt;p&gt;代入数值（$\mu=2$）可得&lt;strong&gt;钱德拉塞卡极限&lt;/strong&gt;&lt;/p&gt;
+$$
+M_{\text{C}} \approx 1.44 M_\odot~,
+$$&lt;p&gt;对于一般的物态方程，质量随中心密度增加而增加，并在 $\rho_c \to \infty$ 时趋近于 $M_{\text{C}}$ . 因此，白矮星的最大质量约为 $1.44 M_\odot$ . 广义相对论效应虽然对白矮星的结构没有重要影响，但是白矮星表面的强引力场会引起引力红移，已被观测证实 .&lt;/p&gt;
+&lt;h2 id=&#34;中子星&#34;&gt;中子星
+&lt;/h2&gt;&lt;p&gt;较大质量（$M&amp;gt; 8M_{\odot}$）恒星的演化过程：铁核积累到超过钱德拉塞卡极限（$1.4M_{\odot}$）时，电子简并压无法抗衡引力，导致引力坍缩 . 坍缩过程中发生反 $\beta$ 衰变（电子被质子捕获形成中子并释放中微子），原子核结合能减小，中子从核中滴出，最终形成中子星 . 这一过程常伴随超新星爆发 .&lt;/p&gt;
+&lt;p&gt;考虑中子星内部由简并中子气体构成 . 设中子质量 $m_N$，费米动量 $k_F$，引入无量纲变量 $x = k_F/(m_N c)$（在自然单位制$c=1$ 下，$x = k_F/m_N$） . 中子数密度为&lt;/p&gt;
+$$
+n = \frac{2}{(2\pi\hbar)^3} \int_0^{k_F} 4\pi k^2 \, dk = \frac{k_F^3}{3\pi^2\hbar^3}= \dfrac{\rho_c}{m_N} x^3~,
+$$&lt;p&gt;其中定义特征密度 $\rho_c \equiv \dfrac{m_N^4}{3\pi^2\hbar^3}$ . 能量密度为&lt;/p&gt;
+$$
+\rho = \int E_k \, \mathrm{d}n = \frac{2}{(2\pi\hbar)^3} \int_0^{k_F} 4\pi \sqrt{k^2 + m_N^2} \, k^2 \mathrm{d}k = \frac{m_N^4}{\pi^2\hbar^3} \int_0^x \sqrt{u^2+1} \, u^2 \mathrm{d}u~.
+$$&lt;p&gt;定义函数 $g(x)$ ：&lt;/p&gt;
+$$
+g(x) = x(2x^2+1)\sqrt{x^2+1} - \sinh^{-1}x\implies\rho = 3\rho_c g(x)~,
+$$&lt;p&gt;引入新变量 $t = 4\sinh^{-1}x$ ，有&lt;/p&gt;
+$$
+g(x) = \frac{1}{4}(\sinh t - t)\implies \rho =  \frac{3}{4}\rho_c (\sinh t - t)~.
+$$&lt;p&gt;压强为&lt;/p&gt;
+$$
+p = \frac{1}{3} \int \frac{k^2}{E_k} \, \mathrm{d}n = \frac{8\pi}{3(2\pi\hbar)^3} \int_0^{k_F} \frac{k^4}{\sqrt{k^2+m_N^2}} \, \mathrm{d}k = \frac{m_N^4}{3\pi^2\hbar^3} \int_0^x \frac{u^4}{\sqrt{u^2+1}} \, \mathrm{d}u~.
+$$&lt;p&gt;积分可得&lt;/p&gt;
+$$
+f(x) = \frac{1}{4}\left( \sinh t - 8\sinh\frac{t}{2} + 3t \right)\implies p = \rho_c f(x)~,
+$$&lt;p&gt;
+因此&lt;/p&gt;
+$$
+\frac{\mathrm{d}p}{\mathrm{d}t}= \frac{\rho_{c}}{4}\left( \cosh t-4\cosh \frac{t}{2} + 3 \right) ~.
+$$&lt;p&gt;根据链式法则$\dfrac{\mathrm{d}p}{\mathrm{d}r} = \dfrac{\mathrm{d}p}{\mathrm{d}t} \dfrac{\mathrm{d}t}{\mathrm{d}r}$，TOV方程化为&lt;/p&gt;
+$$
+\begin{aligned}
+\frac{\mathrm{d}p}{\mathrm{d}r} &amp;= -G(\rho + p) \frac{m + 4\pi r^3 p}{r(r - 2Gm)} \\
+\implies\frac{\mathrm{d}t}{\mathrm{d}r} \frac{\mathrm{d}p}{\mathrm{d}t} &amp;= -G \rho_c \left( \sinh t - 2\sinh\frac{t}{2} \right) \frac{m + 4\pi r^3 p}{r(r - 2Gm)}~,
+\end{aligned}
+$$&lt;p&gt;同时，质量方程变为&lt;/p&gt;
+$$
+\frac{\mathrm{d}m}{\mathrm{d}r} = 4\pi r^2 \rho = 4\pi r^2 \cdot \frac{3}{4}\rho_c (\sinh t - t) = 3\pi \rho_c r^2 (\sinh t - t)~.
+$$&lt;p&gt;所以最终可以给出以下联立方程&lt;/p&gt;
+$$
+\begin{aligned}
+\dfrac{\mathrm{d}m}{\mathrm{d}r} &amp;= 3\pi r^2 (\sinh t - t)~, \\
+\frac{\mathrm{d}t}{\mathrm{d}r} &amp;= \frac{-G \rho_c}{\mathrm{d}p/\mathrm{d}t} (\sinh t - 2\sinh\frac{t}{2}) \frac{m + 4\pi r^3 p}{r(r - 2Gm)}~,
+\end{aligned}
+$$&lt;p&gt;边界条件为：&lt;/p&gt;
+$$
+\begin{aligned}
+r=0&amp;: \quad t(0) = t_0 \quad (\text{中心值}), \quad m(0)=0 ~,\\
+r=R&amp;: \quad t(R)=0 \quad ( p=0 \Rightarrow t=0), \quad m(R)=M ~.\quad 
+\end{aligned}
+$$&lt;p&gt;数值求解上述方程发现，中子星总质量$M$随中心密度增加先增大后减小，存在一个极大值 $M_{\text{OV}} \approx 0.71 M_\odot$，称为奥本海默-沃尔科夫极限（Oppenheimer–Volkoff limit）. 事实上，由于理想简并中子气体模型过于简单，其理论与实际观测并不吻合，实际中子星的内部组成和物态方程仍需进一步研究 .&lt;/p&gt;
+&lt;p&gt;实际的中子星结构更为复杂：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;星体表层存在原子核和电子；&lt;/li&gt;
+&lt;li&gt;内部可能出现超子、玻色子凝聚；&lt;/li&gt;
+&lt;li&gt;核心可能发生相变至夸克物质（奇异星）；&lt;/li&gt;
+&lt;li&gt;广义相对论效应和强相互作用修正物态方程 .
+考虑这些因素后，各种理论模型给出的中子星质量上限一般在 $1\sim 3 M_\odot$ 之间 . 现代天文观测已发现质量约 $2 M_\odot$ 的中子星（如PSR J0348+0432），表明实际物态方程比理想中子气体模型更“硬”，支持更大质量 . 目前，结合多信使天文观测（&lt;strong&gt;电磁波、引力波、中微子&lt;/strong&gt;）与核物理理论，是约束中子星物态方程的关键 .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料：
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;【1】国科大田雨老师的课堂笔记 .&lt;/p&gt;
+&lt;p&gt;【2】Carroll, Sean M. Spacetime and Geometry: An Introduction to General Relativity. Benjamin Cummings, 2003.&lt;/p&gt;
+&lt;p&gt;【3】陈斌. 2018. 《广义相对论》. 北京: 北京大学出版社.&lt;/p&gt;
+&lt;p&gt;【4】Google. Gemini: A Generative Artificial Intelligence Model. 2025.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>爱因斯坦引力场方程与实验检验</title>
         <link>https://Dawn-19.github.io/p/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%BC%95%E5%8A%9B%E5%9C%BA%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%A3%80%E9%AA%8C/</link>
         <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
