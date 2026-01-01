@@ -905,7 +905,7 @@ $$
 &amp; P _{ij}P _{ij} = 2~, \\
 &amp; \Lambda _{ij,kl}\Lambda _{kl,mn}=\Lambda _{ij,mn}~,
 \end{aligned}
-$$&lt;p&gt;注意这里 $P _{ii}$ 没有使用爱因斯坦求和，若是 $\delta ^{ij }P _{ij}=2$ . 此外， $\Lambda _{ij,kl}$ 可以展开为&lt;/p&gt;
+$$&lt;p&gt;注意这里 $P _{ii}$ 没有使用爱因斯坦求和 . 此外， $\Lambda _{ij,kl}$ 可以展开为&lt;/p&gt;
 $$
 \begin{split}
 \Lambda _{ij,kl}(\hat{\mathbf{n}}) &amp;= \delta _{ik}\delta _{jl} - \frac{1}{2}\delta _{ij}\delta _{kl} - \hat{n} _j \hat{n} _l \delta _{ik} - \hat{n} _i \hat{n} _k \delta _{jl} \\
@@ -3656,10 +3656,10 @@ $$
    $$&lt;/li&gt;
 &lt;li&gt;
 &lt;h2 id=&#34;klein-gorden方程&#34;&gt;Klein-Gorden方程
-&lt;/h2&gt;&lt;p&gt;在极早期宇宙学中，暴胀可以认为是由一种标量场——暴胀场驱动的，其作用量为&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;标量场作用量为&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 $$
    S = \int \mathrm{d}^4 x \sqrt{-g} [ -\frac{1}{2}g^{\mu\nu}\partial_\mu \phi \partial_\nu \phi - V(\phi) ]
-   $$&lt;p&gt;其中$V(\phi)$为暴胀场的potential，具体形式与选择的模型有关，对其变分有&lt;/p&gt;
+   $$&lt;p&gt;其中$V(\phi)$为标量场的potential，具体形式与选择的模型有关，对其变分有&lt;/p&gt;
 $$
    \begin{aligned}
    \delta S &amp;= \int \mathrm{d}^4 x \sqrt{-g} [-\frac{1}{2}g^{\mu\nu}\partial_\mu \phi \partial_\nu \delta \phi  -\frac{1}{2}g^{\mu\nu}\partial_\mu \delta \phi \partial_\nu  \phi - \frac{\mathrm{d}}{\mathrm{d}\phi}V(\phi)\delta\phi] \\
@@ -3671,7 +3671,7 @@ $$
    \Box \phi = V&#39;(\phi) \Leftrightarrow  \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} g^{\mu\nu} \partial_\nu \phi) = V&#39;(\phi)
    $$&lt;p&gt;其中$V^\prime (\phi) = \mathrm{d}V/\mathrm{d}\phi$，注意在广义相对论中有关系$\nabla_\mu\nabla^\mu \phi = \frac{1}{\sqrt{-g}}\partial_\mu (\sqrt{-g} g^{\mu\nu} \partial_\nu \phi)$，&lt;a class=&#34;link&#34; href=&#34;https://dawn-19.github.io/p/%E5%BA%A6%E8%A7%84%E6%81%92%E7%AD%89%E5%BC%8F%E6%80%BB%E7%BB%93/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;可见&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;此外，用能动量守恒能得到相同的结果，暴胀场的能动张量为：&lt;/p&gt;
+&lt;p&gt;此外，用能动量守恒能得到相同的结果，标量场的能动张量为：&lt;/p&gt;
 $$
    \begin{aligned}
    T_{\mu\nu} &amp;= -2 \frac{\partial \mathscr{L}}{\partial g^{\mu\nu}} + g_{\mu\nu}\mathscr{L}\\
@@ -3818,7 +3818,7 @@ $$
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;标量场当然不仅仅能描述暴胀场啦，这里只是举个例子( • ̀ω•́ )&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;例如在极早期宇宙学中，暴胀可以认为是由一种标量场——暴胀场驱动的 . 当然，标量场不仅仅能描述暴胀场啦，这里只是举个例子( • ̀ω•́ ) .&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
