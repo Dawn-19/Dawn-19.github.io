@@ -48,6 +48,7 @@
 &lt;li&gt;$4$ 个三次轴 $(R_{j})$， 正方体体对角线，三次轴不是双向轴.&lt;/li&gt;
 &lt;li&gt;群的秩为 $2$ ，生成元可以为 ${T_{x}^2,R_{1}}$；&lt;/li&gt;
 &lt;li&gt;子群：
+
 $$
 \begin{align}
 &amp;\{E,T_{i}^2\}~,\quad \{E,R_{j}, R_{j}^2\}~,

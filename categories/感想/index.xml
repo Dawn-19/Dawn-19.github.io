@@ -7,7 +7,33 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Dawn-19</copyright>
-        <lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E6%84%9F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E6%84%9F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>论学</title>
+        <link>https://Dawn-19.github.io/p/%E8%AE%BA%E5%AD%A6/</link>
+        <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://Dawn-19.github.io/p/%E8%AE%BA%E5%AD%A6/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E8%AE%BA%E5%AD%A6/picture1.png" alt="Featured image of post 论学" /&gt;&lt;h2 id=&#34;引子&#34;&gt;引子
+&lt;/h2&gt;&lt;p&gt;又临开学，从漫绿遍野的虔城来到草木未苏的怀柔，思绪却仍在悠哉悠哉的假期回荡，难以收心专注在Reseach和课业上。&lt;/p&gt;
+&lt;h2 id=&#34;论学&#34;&gt;论学
+&lt;/h2&gt;&lt;p&gt;回想起来，上学期期末的压力持续整整一个月，以至于考完后让我第一次对物理如此“失去”兴趣，一个寒假几乎没进行任何的物理学习和科研。不过转念一想，即使Einstein也曾厌恶考试，我这般心态或许还算正常。但现在假期已过，我需要一定的心态调整，因此写下本文。要说物理和科研的兴趣，我想我现在大抵还是有的，毕竟只要没有特别push我&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;，对于coding，reading，computing的生活还是挺适合我的，更何况游戏容易玩腻，思考物理是想不腻的。&lt;/p&gt;
+&lt;p&gt;还是回到本文的主题——论学，从小到大求学近二十年，可 “如何学习” 至今于我仍是一个值得深思的问题，尤其在LLM已发展得如此强大的当下。远古时期，人类只能依靠模仿他人行为来学习技能；语言出现后，知识与经验得以口口相传；文字诞生后，知识得以被记载传承；互联网兴起，知识获取无远弗届；而如今 AI 时代到来，学习的方式也理应与时俱进。但更重要的是：无论学习的方式多么先进，始终离不开的是自己的思考，“自己的思考”是无论如何不能被AI代替的，否则就是给AI当牛马，这样的路我想也是走不远的。&lt;/p&gt;
+&lt;p&gt;事实上，在上学期的课程学习中群论，广相基于本科的基础学习起来还算轻松，但是到了场论，学习起来却有一种不明的无力感。这并非面对我讨厌的课程中那种不感兴趣的排斥，而是理解上的困难，就如重整化，我的理解就是“裸物理量“由于发散而需要引入正规化的操作，如维数正规化等，但是正规化的方案为什么有效，无穷大的来源是什么，物理规律依赖于能标，诸如此类的问题看似理解细想起来还是不理解，即使这些问题的解答我已经看过好几遍了，但是总感觉差些什么。要说是计算细节的缺失但自己也算过几遍教材上的圈图了，一方面作为初学者有这些问题应该还算正常，另一方面我觉得我的天赋也就到这了，继续追求理论上的美感可能也无力了吧，更何况诸如弦论，圈量子引力也不太对得上我的taste。。。&lt;/p&gt;
+&lt;p&gt;不过即便我如此愚笨，在Gemini老师的帮助下我仍能把QFT学个七七八八，过去要琢磨半天才能摸到头绪的问题，G老师只需要几分钟就能解答，更何况那些计算繁杂的作业了，即使看鲜于中之老师的答案也不如直接问G老师来得快且细致。另一方面，在coding方面，AI的威力更不必而言，几秒钟就能给出一大段漂亮清晰的代码是人类程序员无法做到的，就如我对python代码几乎算是一窍不通也能在短时间内画出还算漂亮的数据图。&lt;/p&gt;
+&lt;p&gt;论完过去的学习，下面该论一论以后的学习了。按我现在的观点，抽象的理论学习到场论已经足够了，就我这短暂的科研经历来看，未来我大概率以写程序的工作为主，包括各种各样的数据处理，改改理论模型以及数值计算之类的。另一方面，&lt;strong&gt;我&lt;/strong&gt;如果做纯理论上的工作貌似更容易被AI替代，虽然推公式很爽，但我大概率只能从事为大牛的理论修补边界条件、进行繁琐微扰计算的边缘工作，而且这种符号推导和代数计算未来估计 AI 能够轻易接管，同时过于理论的东西我又太笨了做不了；反而是数据处理这类工作更多是利用AI，也与现实能更结合一些，万一做不下去了可以跑路，毕竟只是换种数据进行建模，处理和分析。&lt;/p&gt;
+&lt;p&gt;此外，我认为物理学未来的突破还是在实验中突破，而未来的实验注定离不开庞大的数据，那么未来AI在其中的作用更难以估量，甚至这样的突破可能就源于AI发现的某个数据异常有关。因此上世纪的理论美学可能已经不再适合我去学习了，诸如超弦超引力超对称。相比之下，天文学院那边的课程于我而言可能更具吸引力，多学点数据分析课程从现在看应当不失为一种不错的选择。&lt;/p&gt;
+&lt;p&gt;最后，我不知道以后我的想法会如何变化，在当下我也只能看到这一步，人生短暂不过三万天，二十几岁的朝阳时光岂可荒芜颓废，仍需不断学习，不断思考，不断进步。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;至于特别push的程度是多少可能取决于我的生活状态吧。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        </item>
+        <item>
         <title>2025年度总结</title>
         <link>https://Dawn-19.github.io/p/2025%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
         <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
