@@ -8,12 +8,12 @@
         <language>en-us</language>
         <copyright>Dawn-19</copyright>
         <lastBuildDate>Sat, 28 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Dawn-19.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>推导宇宙学标量扰动二阶作用量的整理</title>
-        <link>https://Dawn-19.github.io/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%A0%87%E9%87%8F%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/</link>
+        <title>推导宇宙学扰动二阶作用量的整理</title>
+        <link>https://Dawn-19.github.io/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/</link>
         <pubDate>Sat, 28 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://Dawn-19.github.io/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%A0%87%E9%87%8F%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/</guid>
-        <description>&lt;img src="https://Dawn-19.github.io/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%A0%87%E9%87%8F%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/picture.png" alt="Featured image of post 推导宇宙学标量扰动二阶作用量的整理" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://Dawn-19.github.io/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/</guid>
+        <description>&lt;img src="https://Dawn-19.github.io/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/picture.png" alt="Featured image of post 推导宇宙学扰动二阶作用量的整理" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;最近在整理一些inflation的内容，虽然本科做了一点原初扰动有关的工作，但其实一直没有对二阶的微扰作用量进行一个完整的推导，这里整理了一下推导的思路和部分结论，完整的推导实在太冗长了，还是放在草稿纸上吧 。。。&lt;/p&gt;
 &lt;h2 id=&#34;基本定义&#34;&gt;基本定义
 &lt;/h2&gt;&lt;p&gt;ADM度规为&lt;/p&gt;
@@ -52,8 +52,8 @@ $$&lt;p&gt;此外，时移函数和位移函数为&lt;/p&gt;
 $$
 N = 1+\alpha\,,\quad N  _{i} = \partial  _{i}\beta\,.
 $$&lt;p&gt;其中 $\alpha,\beta$ 都是一阶小量 .&lt;/p&gt;
-&lt;h2 id=&#34;变分得到能量约束方程和动量约束方程&#34;&gt;变分得到能量约束方程和动量约束方程
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;变分得到能量约束方程和动量约束方程&#34;&gt;变分得到能量约束方程和动量约束方程
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;对 $N$ 变分得到能量约束方程&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;其中 $K  _{ij}= \frac{1}{2N}\left( \dot{h}  _{ij} - D _{i}N  _{j}-D  _{j}N  _{i} \right)$ ，定义&lt;/p&gt;
@@ -74,8 +74,8 @@ $$
 $$&lt;p&gt;注意括号内部的$K^{ij }-h^{ij }K$ 关于指标 $i,j$ 对称，因此通过分部积分可以得到动量约束方程&lt;/p&gt;
 $$
 D _{i}\left( K^{ij }-h ^{ij }K \right) = 0\,.\tag{$\star$}
-$$&lt;h2 id=&#34;对---3-rkk-_ij-的微扰展开&#34;&gt;对 $ \ ^{(3) }R,K,K _{ij}$ 的微扰展开
-&lt;/h2&gt;&lt;p&gt;度规展开&lt;/p&gt;
+$$&lt;h3 id=&#34;对---3-rkk-_ij-的微扰展开&#34;&gt;对 $ \ ^{(3) }R,K,K _{ij}$ 的微扰展开
+&lt;/h3&gt;&lt;p&gt;度规展开&lt;/p&gt;
 $$
 \begin{aligned}
 h _{ij} &amp;= a^{2 }\mathrm{e}^{ 2\zeta }\delta _{ij}\simeq a^{2 }\left( 1+2\zeta + 2\zeta ^{2 } \right) \delta _{ij} \\
@@ -127,8 +127,8 @@ K^{(0) } &amp; = 3H\,, \\[6pt]
 K^{{(1)} } &amp; = 3 \left( \dot{\zeta} - H\alpha \right) - \frac{1}{a^{2 }}\partial ^{2 }\beta\,, \\
 K^{(2) } &amp;= 3 \left( H\alpha ^{2 }-\alpha \dot{\zeta} \right) + \frac{2 \zeta + \alpha }{a^{2 }}\partial ^{2 }\beta - \frac{1}{a^{2 }}\partial _{i}\zeta \partial ^{i }\beta\,.  
 \end{aligned}
-$$&lt;h2 id=&#34;把展开后的---3-rkk-_ij--代入到约束方程中解出-alphabeta-&#34;&gt;把展开后的 $ \ ^{(3) }R,K,K _{ij}$  代入到约束方程中，解出 $\alpha,\beta$ .
-&lt;/h2&gt;&lt;ul&gt;
+$$&lt;h3 id=&#34;把展开后的---3-rkk-_ij--代入到约束方程中解出-alphabeta-&#34;&gt;把展开后的 $ \ ^{(3) }R,K,K _{ij}$  代入到约束方程中，解出 $\alpha,\beta$ .
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;把微扰项带入到动量约束方程 $D _{i}\left( K^{i } _{;j}-\delta ^{i } _{;j}K \right)=0$ ，这里注意背景层面 $K^{{0}i } _{;;j}-K\delta ^{i } _{;j}\propto \delta ^{i } _{;j}$ ，因为&lt;/li&gt;
 &lt;/ul&gt;
 $$
@@ -154,8 +154,8 @@ RHS = \frac{1}{2(1+\alpha)^{2 }}\dot{\phi}^{2 } + V(\phi) \simeq \frac{1}{2}\lef
 $$&lt;p&gt;一阶项只有 $-\alpha \dot{\phi}^{2 }$ ，再根据背景方程 $\dot{\phi}^{2 } = -2M _{p}^{2 }\dot{H}$，最终有&lt;/p&gt;
 $$
 \partial ^{2 }\beta = - \frac{1}{H}\partial ^{2 }\zeta + \epsilon _{H}a^{2 }\dot{\zeta}\,.\tag{$\star$}
-$$&lt;h2 id=&#34;把展开后的---3-rkk-_ij--代入到作用量中&#34;&gt;把展开后的 $ \ ^{(3) }R,K,K _{ij}$  代入到作用量中
-&lt;/h2&gt;&lt;ul&gt;
+$$&lt;h3 id=&#34;把展开后的---3-rkk-_ij--代入到作用量中&#34;&gt;把展开后的 $ \ ^{(3) }R,K,K _{ij}$  代入到作用量中
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;标量场&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;这里需要利用背景方程&lt;/p&gt;
@@ -242,6 +242,90 @@ S_\zeta^{(2)} = M_p^2 \int \mathrm{d}t\, \mathrm{d}^3x\, a^3 \epsilon _{H}
 \right]\,.
 $$&lt;p&gt;
 其中 $\epsilon _{H} = -\frac{\dot{H}}{H^{2 }}$ .&lt;/p&gt;
+&lt;h2 id=&#34;张量扰动二阶作用量&#34;&gt;张量扰动二阶作用量
+&lt;/h2&gt;&lt;p&gt;只考虑张量扰动，取度规为&lt;/p&gt;
+$$
+h_{ij} = a^{2 }(t)\left( \mathrm{e}^{ \gamma } \right)_{ij}\,, 
+$$&lt;p&gt;其中 $\gamma_{ij}$ 满足横向无迹条件&lt;/p&gt;
+$$
+\partial_{i}\gamma_{ij} = \gamma ^{i }_{\;i}=0\,.
+$$&lt;p&gt;因此度规展开为&lt;/p&gt;
+$$
+\begin{aligned}
+h_{ij} &amp;\simeq a^{2 }\left( \delta_{ij} + \gamma_{ij} + \frac{1}{2}\gamma_{ik}\gamma ^{k }_{\;j} \right) \,, \\
+h^{ij} &amp;\simeq a^{2 }\left( \delta^{ij} + \gamma_{ij} + \frac{1}{2}\gamma^{ik}\gamma _{k }^{\;j} \right) \,, \\  
+\sqrt{ h } &amp;= a^{3 }\sqrt{ \det \left( \mathrm{e}^{ \gamma } \right)  } = a ^{3 }\,.
+\end{aligned}
+$$&lt;p&gt;对于纯张量扰动，线性阶的约束方程不会出现 $\zeta$ ，因此&lt;/p&gt;
+$$
+N = 1+\mathcal{O}(\gamma ^{2 })\,,\quad N_{i} = 1+ \mathcal{O}(\gamma ^{2 })\,,
+$$&lt;p&gt;所以度规为&lt;/p&gt;
+$$
+\mathrm{d}s^{2 } = - \mathrm{d}t ^{2 } + a^{2 }\left( \mathrm{e}^{ \gamma } \right)_{ij}\mathrm{d } x^{i }\mathrm{d}x ^{j }\,. 
+$$&lt;h3 id=&#34;外曲率&#34;&gt;外曲率
+&lt;/h3&gt;&lt;p&gt;对于 $K _{ij} = \frac{1}{2N}(\dot{h} _{ij} - D _{i}N _{j}-D _{j}N _{i})$ 有&lt;/p&gt;
+$$
+\begin{aligned}
+K_{ij} &amp; = \frac{1}{2}\dot{ h}_{ij} \\
+&amp; = 2a^{2 }H\left( \mathrm{e}^{ \gamma } \right)_{ij} + a^{2 }\left( \dot{\mathrm{e}}^{\gamma } \right) _{ij}\,. 
+\end{aligned}
+$$&lt;p&gt;对于混合指标形式更为简便&lt;/p&gt;
+$$
+\begin{aligned}
+K^{i }_{\;j} &amp;= h^{ik }K_{kj} = H\delta ^{i }_{\;j}+\frac{1}{2}\left( \mathrm{e}^{ -\gamma } \dot{\mathrm{e}}^{\gamma } \right)^{i }_{\;j}  \\
+&amp;  \simeq H\delta ^{i }_{\;j} + \frac{1}{2} \dot{\gamma} ^{i }_{\;j}\,.
+\end{aligned}
+$$&lt;p&gt;trace为&lt;/p&gt;
+$$
+K = K^{i }_{\;i} = 3H \,.
+$$&lt;p&gt;因此&lt;/p&gt;
+$$
+K_{ij}K^{ij }-K^{2 } = -6H ^{2 } + \frac{1}{4}\dot{\gamma}_{ij} \dot{\gamma}^{ij }\,.\tag{$\star$}
+$$&lt;h3 id=&#34;三维曲率&#34;&gt;三维曲率
+&lt;/h3&gt;&lt;p&gt;在线性阶，联络为&lt;/p&gt;
+$$
+\Gamma ^{i }_{jk} = \frac{1}{2}\left( \partial_{j}\gamma ^{i }_{\;k} + \partial_{k}\gamma ^{i }_{\;j} - \partial ^{i }\gamma_{jk} \right)\,, 
+$$&lt;p&gt;由于 $\Gamma ^{k }_{jk}=0$ ，则三维标量曲率为&lt;/p&gt;
+$$
+\begin{aligned}
+\ ^{(3) }R &amp;=  h ^{ij }\left( \partial_{k}\Gamma ^{k }_{ij} - \partial_{j}\Gamma ^{k }_{ik} + \Gamma ^{k }_{kl}\Gamma ^{l }_{ij} - \Gamma ^{l }_{ik}\Gamma ^{k }_{jl} \right)  \\
+&amp; = h^{ij }\left( \partial_{k}\Gamma ^{k }_{ij} - \Gamma ^{l }_{ik}\Gamma ^{k }_{jl} \right)  \\
+&amp; \simeq -\frac{1}{4a^2} (\partial_k \gamma_{ij} \partial^k \gamma^{ij})\,,
+\end{aligned} \tag{$\star$}
+$$&lt;p&gt;其中&lt;/p&gt;
+$$
+\begin{aligned}
+\int \mathrm{d}^3x \; h^{ij} \partial_k \Gamma^k_{ij} &amp;= -\int \mathrm{d}^3x \; (\partial_k h^{ij}) \Gamma^k_{ij} \\
+&amp;\simeq - \int \mathrm{d}^{3 }x\;  a^{-2} (-\partial_k \gamma^{ij}) \frac{1}{2}(\partial_i \gamma^k_{\;j} + \partial_j \gamma^k_{\;i} - \partial^k \gamma_{ij})  \\
+&amp;= -\int\mathrm{d}^3x \; \frac{1}{2a^2} (\partial_k \gamma_{ij} \partial^k \gamma^{ij}) \,,
+\end{aligned}
+$$&lt;p&gt;以及&lt;/p&gt;
+$$-h^{ij} \Gamma^l_{ik}\Gamma^k_{jl} \simeq -a^{-2} \delta^{ij} \Gamma^{l}_{ik} \Gamma^{k}_{jl} = \frac{1}{4a^2} (\partial_k \gamma_{ij} \partial^k \gamma^{ij}) \,.
+$$&lt;h3 id=&#34;作用量展开&#34;&gt;作用量展开
+&lt;/h3&gt;&lt;p&gt;引力部分为&lt;/p&gt;
+$$
+\begin{aligned}
+S_{G} &amp;= \int \mathrm{d}^{4 }x\; \frac{M_p^2}{2} N\sqrt{h} \left( \ ^{(3)}R + K_{ij}K^{ij} - K^2 \right) \\
+&amp;=\int \mathrm{d}^{4 }x\; \frac{M_{p}^{2 }}{2} a^{3 }\left[-6H^{2 } +\frac{1}{4a^{2 }}(\partial_k \gamma_{ij} \partial^k \gamma^{ij}) + \frac{1}{4}\dot{\gamma}_{ij}\dot{\gamma}^{ij } \right] \,,
+\end{aligned}
+$$&lt;p&gt;对于物质部分&lt;/p&gt;
+$$
+S_{\phi}  = \int \mathrm{d}^{4 }x a^{3 }\left( \frac{1}{2}\dot{\phi}^{2 } - V \right) \,,
+$$&lt;p&gt;都属于背景，因此二阶作用量为&lt;/p&gt;
+$$
+S^{2 }_{\gamma} = \frac{M_{p}^{2 }}{8}\int \mathrm{d}t\mathrm{d}^{3 }x a^{3 }\left[ \dot{\gamma}_{ij}^{2 } - \frac{\left( \partial_{k}\gamma_{ij} \right)^{2 }}{a^{2 }}  \right] \,.
+$$&lt;h2 id=&#34;zeta-gamma-项不起作用的原因&#34;&gt;$\zeta \gamma$ 项不起作用的原因
+&lt;/h2&gt;&lt;p&gt;由于 $\gamma_{ij}$ 横向无迹，从对称性来看，二阶混合项&lt;/p&gt;
+$$
+\Phi(\zeta)\gamma_{ij}T^{ij }\,,
+$$&lt;p&gt;其中 $\Phi(\zeta)$ 为 $\zeta$ 的线性函数，在各向同性背景中，$T^{ij }$ 最自然的选择是 $\delta ^{ij }$ ，因此 $\zeta \gamma_{ij}\delta ^{ij }=0$ 在作用量中不起作用 . 此外，也可能为&lt;/p&gt;
+$$
+\gamma ^{ij }\partial_{i}\partial_{j}\Phi(\zeta)\,,\quad \partial_{i}\Phi(\zeta)\partial_{j}\gamma ^{ij }\,,
+$$&lt;p&gt;这种结构，但是总可以通过分部积分得到 $\partial_{i}\gamma ^{ij }=0$ .&lt;/p&gt;
+&lt;p&gt;同时，在体积元中，&lt;/p&gt;
+$$
+\det \left( \mathrm{e}^{ \gamma } \right) = \mathrm{e}^{ \mathrm{tr}\gamma }=1  \implies\sqrt{ h } = a^{3 }\mathrm{e}^{ 3\zeta } \sqrt{ \det \left( \mathrm{e}^{ \gamma } \right)  } = a ^{3 }\mathrm{e}^{ 3\zeta }\,,
+$$&lt;p&gt;这里也不出现混合项 . 综上， $\zeta\gamma$ 混合项虽然在度规展开里存在，但在二阶作用量里不贡献 .&lt;/p&gt;
 &lt;h2 id=&#34;参考资料&#34;&gt;参考资料：
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/0907.5424&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
