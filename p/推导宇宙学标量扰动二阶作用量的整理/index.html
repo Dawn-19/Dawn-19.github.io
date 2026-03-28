@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="用AMD3+1分解形式度规，变分得到能量约束方程和动量约束方程，再将主要的曲率量做微扰展开，代入原始作用量中，展开并整理得到二阶微扰作用量 .">
+<title>推导宇宙学标量扰动二阶作用量的整理</title>
+
+<link rel='canonical' href='https://Dawn-19.github.io/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%A0%87%E9%87%8F%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/'>
+
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="推导宇宙学标量扰动二阶作用量的整理">
+<meta property='og:description' content="用AMD3+1分解形式度规，变分得到能量约束方程和动量约束方程，再将主要的曲率量做微扰展开，代入原始作用量中，展开并整理得到二阶微扰作用量 .">
+<meta property='og:url' content='https://Dawn-19.github.io/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%A0%87%E9%87%8F%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/'>
+<meta property='og:site_name' content='Dawn-19'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-03-28T00:00:00&#43;00:00'/><meta property='og:image' content='https://Dawn-19.github.io/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%A0%87%E9%87%8F%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/picture.png' />
+<meta name="twitter:title" content="推导宇宙学标量扰动二阶作用量的整理">
+<meta name="twitter:description" content="用AMD3+1分解形式度规，变分得到能量约束方程和动量约束方程，再将主要的曲率量做微扰展开，代入原始作用量中，展开并整理得到二阶微扰作用量 ."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://Dawn-19.github.io/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%A0%87%E9%87%8F%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/picture.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "light");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/photo_hu_3f0de22a74a5acde.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Dawn-19</a></h1>
+            <h2 class="site-description">深刻的思想总是朴素的。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://arxiv.org/'
+                        target="_blank"
+                        title="arXiv"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="792.000000pt" height="792.000000pt" viewBox="0 0 792.000000 792.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.14, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(0.000000,792.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M1285 7906 c-90 -30 -153 -77 -199 -151 -74 -117 -73 -216 1 -337 13
+-21 23 -42 23 -48 0 -5 4 -10 8 -10 4 0 16 -15 27 -32 10 -18 28 -42 38 -53
+10 -11 31 -36 45 -55 15 -19 29 -37 32 -40 6 -6 149 -177 167 -200 11 -14 153
+-186 212 -257 14 -17 40 -48 56 -69 17 -20 35 -42 40 -48 6 -6 23 -27 38 -46
+58 -72 103 -124 120 -142 9 -10 14 -18 10 -18 -5 0 -3 -4 3 -8 6 -4 58 -63
+114 -132 56 -69 106 -127 109 -130 4 -3 20 -23 37 -45 16 -22 34 -44 40 -50 6
+-5 42 -48 80 -95 38 -47 73 -88 79 -92 5 -4 7 -8 3 -8 -4 0 8 -16 27 -35 19
+-19 35 -37 35 -40 0 -4 24 -34 55 -69 6 -6 30 -36 55 -66 25 -30 49 -60 55
+-66 5 -6 24 -28 40 -48 17 -21 42 -52 56 -70 49 -58 424 -512 459 -556 19 -24
+49 -59 67 -79 17 -20 29 -38 27 -41 -3 -2 -8 1 -13 8 -5 8 -33 -12 -89 -65
+-46 -43 -123 -116 -173 -163 -172 -161 -186 -175 -233 -239 -78 -107 -135
+-257 -134 -351 0 -19 -1 -39 -3 -45 -6 -21 13 -122 33 -180 46 -130 90 -183
+378 -455 78 -74 164 -155 190 -180 l48 -46 -41 -50 c-23 -27 -48 -56 -55 -64
+-7 -8 -58 -71 -113 -140 -56 -69 -118 -145 -139 -170 -21 -25 -49 -58 -61 -75
+-13 -16 -37 -46 -53 -66 -17 -20 -41 -49 -53 -65 -12 -16 -34 -42 -48 -59 -15
+-16 -39 -45 -53 -64 -15 -19 -41 -51 -57 -70 -32 -38 -82 -99 -160 -196 -51
+-64 -98 -121 -158 -194 -20 -25 -41 -51 -46 -57 -63 -80 -193 -237 -214 -260
+-15 -16 -27 -32 -27 -35 0 -3 -10 -17 -22 -31 -47 -50 -127 -153 -127 -162 0
+-5 -3 -12 -9 -15 -22 -14 -62 -143 -66 -208 -13 -287 347 -473 559 -288 26 23
+153 140 259 240 45 41 244 226 281 259 17 15 57 53 90 84 33 31 112 104 174
+162 62 58 137 128 166 155 29 28 93 86 141 130 49 44 114 105 146 135 31 30
+79 75 106 100 26 25 97 90 156 145 60 55 119 110 132 123 13 12 27 22 33 22 5
+0 34 -24 64 -52 30 -29 97 -93 148 -142 52 -48 166 -157 254 -241 186 -178
+232 -222 419 -399 76 -72 174 -165 217 -206 179 -172 573 -546 809 -770 30
+-29 125 -119 210 -200 85 -81 184 -175 220 -209 92 -87 155 -116 250 -116 60
+0 85 5 124 25 86 44 141 107 170 197 36 110 11 179 -124 343 -25 30 -51 61
+-58 68 -7 8 -25 30 -40 50 -15 20 -34 44 -42 53 -8 9 -24 27 -35 40 -75 91
+-120 145 -124 149 -4 3 -24 28 -46 55 -22 28 -45 56 -52 63 -7 7 -29 34 -50
+60 -21 26 -42 52 -48 58 -5 6 -26 30 -45 54 -19 24 -40 48 -45 54 -6 6 -30 36
+-55 66 -25 30 -47 57 -50 60 -3 3 -22 26 -43 52 -21 26 -43 53 -50 60 -7 7
+-44 51 -82 98 -38 47 -74 90 -80 96 -5 6 -23 28 -40 49 -16 20 -35 42 -40 49
+-10 10 -260 311 -354 425 -20 24 -48 58 -63 75 -14 17 -155 186 -312 374
+l-285 344 36 31 c20 18 53 48 73 67 21 19 81 76 135 125 194 177 284 271 327
+340 46 74 85 168 92 226 3 19 5 34 6 34 1 0 3 29 4 65 2 67 -14 163 -35 215
+-7 17 -13 36 -15 44 -4 21 -75 133 -109 170 -48 53 -326 324 -496 483 -21 20
+-39 39 -39 43 0 5 134 171 150 185 3 3 25 30 50 60 25 30 52 61 60 70 8 8 33
+38 55 65 22 28 45 55 51 60 6 6 33 37 60 70 27 33 61 74 75 90 15 17 44 51 65
+76 82 96 129 152 139 163 6 6 32 38 59 71 28 33 60 71 72 85 13 14 42 48 64
+75 23 28 54 64 69 80 14 17 47 55 71 85 25 30 59 71 77 90 17 19 42 48 55 65
+13 16 30 37 38 46 8 8 24 26 35 40 11 13 57 68 103 122 110 130 139 171 172
+240 61 127 14 242 -145 349 -104 70 -192 79 -284 27 -47 -26 -135 -96 -201
+-159 -9 -8 -51 -46 -94 -85 -43 -38 -88 -79 -100 -90 -146 -134 -204 -186
+-222 -202 -12 -10 -63 -56 -115 -103 -51 -47 -103 -94 -115 -105 -118 -106
+-272 -246 -325 -295 -15 -14 -55 -50 -89 -80 -34 -30 -74 -66 -89 -80 -38 -35
+-134 -123 -225 -205 -43 -38 -101 -91 -129 -117 -29 -27 -55 -48 -59 -48 -6 0
+-70 60 -288 270 -43 41 -156 149 -250 240 -95 91 -215 206 -266 255 -52 50
+-94 90 -94 89 0 0 -50 47 -110 106 -61 58 -176 169 -257 246 -80 76 -176 168
+-213 204 -37 36 -119 114 -181 174 -63 60 -199 190 -303 290 -104 99 -210 201
+-236 226 -26 25 -97 93 -158 153 -62 59 -119 107 -127 107 -8 0 -15 5 -15 10
+0 6 -6 10 -12 10 -7 0 -24 6 -38 13 -34 17 -136 19 -185 3z m2014 -3200 c-2
+-2 -13 8 -23 22 l-19 27 24 -22 c12 -12 21 -24 18 -27z"/>
+</g>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/Dawn-19'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.overleaf.com/project'
+                        target="_blank"
+                        title="overleaf"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <path d="M9.817 8.036c-4.541 2.709-7.401 7.532-7.593 12.813 0.005 4.14 2.303 7.943 5.973 9.869 3.667 1.927 8.1 1.656 11.516-0.692 3.412-2.349 5.24-6.401 4.745-10.516-0.489-4.115-3.224-7.615-7.095-9.095-1.26-0.509-2.604-0.765-3.957-0.749-2.417 1.631-4.355 3.869-5.615 6.495 1.609-1.921 4.088-2.885 6.572-2.557 2.491 0.328 4.631 1.901 5.688 4.177 1.057 2.271 0.875 4.927-0.473 7.041-1.355 2.109-3.693 3.38-6.199 3.375-2.151 0-4.192-0.937-5.588-2.572-1.808-2.016-2.589-4.756-2.115-7.423 1.432-8.557 11.687-13.489 19.281-15.4-3.516 1.692-6.901 3.64-10.125 5.833 9.177 3.541 10.651-4.183 14.943-7.641-4.271-1.672-19.937-2.287-19.959 7.047z"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E7%AE%80%E4%BB%8B/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>简介</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#基本定义">基本定义</a></li>
+    <li><a href="#变分得到能量约束方程和动量约束方程">变分得到能量约束方程和动量约束方程</a></li>
+    <li><a href="#对---3-rkk-_ij-的微扰展开">对 $ \ ^{(3) }R,K,K _{ij}$ 的微扰展开</a></li>
+    <li><a href="#把展开后的---3-rkk-_ij--代入到约束方程中解出-alphabeta-">把展开后的 $ \ ^{(3) }R,K,K _{ij}$  代入到约束方程中，解出 $\alpha,\beta$ .</a></li>
+    <li><a href="#把展开后的---3-rkk-_ij--代入到作用量中">把展开后的 $ \ ^{(3) }R,K,K _{ij}$  代入到作用量中</a></li>
+    <li><a href="#参考资料">参考资料：</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%A0%87%E9%87%8F%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/">
+                <img src="/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%A0%87%E9%87%8F%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/picture_hu_475fd46abff3e0c3.png"
+                        srcset="/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%A0%87%E9%87%8F%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/picture_hu_475fd46abff3e0c3.png 800w, /p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%A0%87%E9%87%8F%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/picture_hu_b14bb64aa9f9f22c.png 1600w"
+                        width="800" 
+                        height="438" 
+                        loading="lazy"
+                        alt="Featured image of post 推导宇宙学标量扰动二阶作用量的整理" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" >
+                论文笔记
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E6%8E%A8%E5%AF%BC%E5%AE%87%E5%AE%99%E5%AD%A6%E6%A0%87%E9%87%8F%E6%89%B0%E5%8A%A8%E4%BA%8C%E9%98%B6%E4%BD%9C%E7%94%A8%E9%87%8F%E7%9A%84%E6%95%B4%E7%90%86/">推导宇宙学标量扰动二阶作用量的整理</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            用AMD3&#43;1分解形式度规，变分得到能量约束方程和动量约束方程，再将主要的曲率量做微扰展开，代入原始作用量中，展开并整理得到二阶微扰作用量 .
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 28, 2026</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="前言">前言
+</h2><p>最近在整理一些inflation的内容，虽然本科做了一点原初扰动有关的工作，但其实一直没有对二阶的微扰作用量进行一个完整的推导，这里整理了一下推导的思路和部分结论，完整的推导实在太冗长了，还是放在草稿纸上吧 。。。</p>
+<h2 id="基本定义">基本定义
+</h2><p>ADM度规为</p>
+$$
+\mathrm{d}s^{2 } = -N^{2 }\mathrm{d}t^{2 } + h _{ij}\left( N^{i }\mathrm{d}t + \mathrm{d}x^{i } \right)\left( N^{j }\mathrm{d}t + \mathrm{d} x^{j } \right)  \,,
+$$<p>其中</p>
+$$
+g _{\mu \nu} = \begin{pmatrix}
+-N^{2 }+N^{k }N _{k} & N _{i} \\
+N _{j} & h _{ij}
+\end{pmatrix}
+\,,\quad
+g^{\mu \nu } = \begin{pmatrix}
+-1 / N ^{2 } &  N ^{i } / N^{2 } \\
+N ^{j } / N ^{2 } & h ^{ij } - N^{i }N^{j } / N^{2 }
+\end{pmatrix}\,.
+$$<p>超曲面上的法矢量</p>
+$$
+n _{\mu} = (-N,0,0,0)\,,\quad n ^{\mu } = (1 / N, - N^{i } / N)\,.
+$$<p>外曲率为</p>
+$$
+K _{\mu \nu} = \frac{1}{2}\mathcal{L} _{n}(g _{\mu \nu} + n _{\mu} n _{\nu})\,,
+$$<p>三维曲率（不考虑全导数项）为</p>
+$$
+R = \ ^{(3) }R - K^{2 } + K^{\mu } _{\;\nu} K^{\nu } _{\;\mu} \,,
+$$<p>在幺正规范 $\delta \phi = 0$ 下，作用量为</p>
+$$
+\begin{aligned}
+S &= \int \mathrm{d}^{4 }x \sqrt{ -g }\left[ \frac{M _{p}^{2 }}{2}R- \frac{1}{2} g ^{\mu \nu } \partial _{\mu} \phi \partial _{\nu}\phi -V(\phi) \right]  \\
+& = \frac{M _{p} ^{2 }}{2} \int \mathrm{d} ^{4 }x \; N \sqrt{ h }\left( \ ^{(3) } R + K _{ij} K ^{ij } - K ^{2 } \right)  \\
+&\quad\quad + \int \mathrm{d } ^{4 }x N\sqrt{ h }\left[ \frac{1}{2N^{2 }}\left( \dot{\phi} - N^{i }\partial _{i}\phi \right)^{2 }- \frac{1}{2}h^{ij }\partial _{i}\phi \partial _{j}\phi-V(\phi)  \right]  \\[6pt]
+& =\frac{M _{p} ^{2 }}{2}\int \mathrm{d} ^{4 } x\; N\sqrt{ h }\left( \ ^{(3) }R + K _{ij}K^{ij } - K^{2 } \right)  \\
+&\quad\quad+\int \mathrm{d }^{4 }x N\sqrt{ h }\left[ \frac{1}{2N^{2 }}\dot{\phi} ^{2 }-V(\phi)  \right]\,,
+\end{aligned}
+$$<p>此外，时移函数和位移函数为</p>
+$$
+N = 1+\alpha\,,\quad N  _{i} = \partial  _{i}\beta\,.
+$$<p>其中 $\alpha,\beta$ 都是一阶小量 .</p>
+<h2 id="变分得到能量约束方程和动量约束方程">变分得到能量约束方程和动量约束方程
+</h2><ul>
+<li>对 $N$ 变分得到能量约束方程</li>
+</ul>
+<p>其中 $K  _{ij}= \frac{1}{2N}\left( \dot{h}  _{ij} - D _{i}N  _{j}-D  _{j}N  _{i} \right)$ ，定义</p>
+$$
+E _{ij} = NK _{ij} = \frac{1}{2}\left( \dot{h} _{ij} - D _{i}N _{j}-D _{j}N _{i} \right)\,,
+$$<p>把作用量中的 $K _{ij}$ 和 $K$ 全部用 $E _{ij}$ 和 $E$ 表示，对 $N$ 变分可以得到能量约束方程：</p>
+$$
+\frac{M _{p}^{2 }}{2} \left[  \ ^{(3) }R - \left(K _{ij} K^{ij }-K^{2 } \right)  \right] = \left( \frac{1}{2N^{2 }}\dot{\phi}^{2 } + V(\phi) \right)  \,.\tag{$\star$}
+$$<ul>
+<li>对 $N^{i }$ 变分得到（取 $\partial _{i}\phi = 0$ ）动量约束方程</li>
+</ul>
+<p>对于 $S _{\phi}$ 部分由于选取的是幺正规范，因此</p>
+$$
+\frac{\delta S _{\phi}}{\delta N _{i}}=0\,,
+$$<p>对于引力部分</p>
+$$
+\delta \left( K _{ij}K^{ij }-K^{2 } \right) = 2(K^{ij }-h^{ij }K)\left( - \frac{1}{2N} \right)\left[ D _{i}\delta N _{j}+D _{j}\delta N _{i} \right]  
+$$<p>注意括号内部的$K^{ij }-h^{ij }K$ 关于指标 $i,j$ 对称，因此通过分部积分可以得到动量约束方程</p>
+$$
+D _{i}\left( K^{ij }-h ^{ij }K \right) = 0\,.\tag{$\star$}
+$$<h2 id="对---3-rkk-_ij-的微扰展开">对 $ \ ^{(3) }R,K,K _{ij}$ 的微扰展开
+</h2><p>度规展开</p>
+$$
+\begin{aligned}
+h _{ij} &= a^{2 }\mathrm{e}^{ 2\zeta }\delta _{ij}\simeq a^{2 }\left( 1+2\zeta + 2\zeta ^{2 } \right) \delta _{ij} \\
+h^{ij} &= a^{-2 }\mathrm{e}^{ -2\zeta }\delta _{ij}\simeq a^{-2 }\left( 1-2\zeta + 2\zeta ^{2 } \right) \delta _{ij} 
+\end{aligned}
+$$<p>联络为</p>
+$$
+\begin{aligned}
+\Gamma ^{i } _{jk} &=h^{il}\left( \partial _{j}h _{lk}+\partial _{k}h _{jl}-\partial _{l}h _{jk} \right)   \\
+& \simeq \delta ^{i } _{\;j}\partial _{k}\zeta + \delta ^{i } _{\;k} \partial _{j}\zeta - \delta _{jk}\partial ^{i }\zeta\,.
+\end{aligned}
+$$<ul>
+<li>$ \ ^{(3) }R$ 的微扰展开为</li>
+</ul>
+$$
+\begin{aligned}
+ \ ^{(3) }R &= h ^{ij }\left( \partial _{k}\Gamma ^{k } _{ij} - \partial _{j}\Gamma ^{k } _{ik} + \Gamma ^{k } _{kl}\Gamma ^{l } _{ij} - \Gamma ^{l } _{ik}\Gamma ^{k } _{jl} \right)  \\
+&= a^{-2 }\mathrm{e}^{ -2\zeta }\left[ -4\partial ^{2 }\zeta - 2\left( \partial \zeta \right)^{2 }  \right]  \\
+&\simeq -\frac{4}{a^{2 }}\left[ \partial ^{2 }\zeta -2\zeta \partial ^{2 }\zeta + \frac{1}{2} \left( \partial \zeta \right)^{2 } \right] \,.
+\end{aligned} \tag{$\star$}
+$$<ul>
+<li>$K _{ij}$ 的微扰展开：</li>
+</ul>
+$$
+\begin{aligned}
+K _{ij} &= \frac{1}{2N}(\dot{h} _{ij} - D _{i}N _{j}-D _{j}N _{i}) \\
+& = \frac{1}{1+\alpha}\left[ (H+\dot{\zeta})h _{ij} - \partial _{i}\partial _{j}\beta + \Gamma ^{k } _{ij}\partial _{k}\beta \right] \,, \\
+\implies\qquad& \\
+K _{ij}^{(0) } &= a ^{2 }H \delta _{ij}\,, \\[6pt]
+K^{(1) } _{ij} & = a^{2 }H\left( 2\zeta - \alpha \right)\delta _{ij} + a^{2 }\dot{\zeta}\delta _{ij} - \partial _{i}\partial _{j}\beta\,, \\[6pt]
+K^{(2) } _{ij} &= a^{2 }H\left( 2\zeta - 2\alpha \zeta  + \alpha ^{2 }\right)   \delta _{ij} + a^{2 }\dot{\zeta}\left( 2\zeta-\alpha \right)\delta _{ij} + \alpha \partial _{i}\partial _{j}\beta \\
+& \quad +\partial _{i}\zeta \partial _{j}\beta + \partial _{j}\zeta \partial _{i}\beta - \delta _{ij}\partial _{k}\zeta \partial ^{k }\beta\,.
+\end{aligned}
+$$<p>根据 $K^{i } _{;j}=h^{ik }K _{kj},h^{ik }\simeq \frac{1}{a^{2 }}\left( 1-2\zeta \right)\delta ^{ik }$ ，有</p>
+$$
+\begin{aligned}
+K^{i } _{\;j} &\simeq H\delta ^{i } _{\;j} - H\alpha \delta ^{i } _{\;j} + \dot{\zeta} \delta ^{i } _{j}- \frac{1}{a^{2 }}\partial ^{i }\partial _{j}\beta\,. \\
+K &\simeq 3H + 3\left( \dot{\zeta}-H\alpha \right) - \frac{\partial^{2 }\beta}{a^{2 }}\,. 
+\end{aligned}
+$$<ul>
+<li>$K$ 的微扰展开（和上面的方法结果一致）：</li>
+</ul>
+$$
+\begin{aligned}
+K &= h^{ij }K _{ij }  = h ^{ij }\cdot \frac{1}{2N}\cdot \left[    2(H+\dot{\zeta})h _{ij}-2D^{j }N _{j}\right]  \\
+&= \frac{1}{N}\left[    3(H+\dot{\zeta})-D^{j }N _{j}\right]\,, \\
+\implies \qquad& \\
+K^{(0) } & = 3H\,, \\[6pt]
+K^{{(1)} } & = 3 \left( \dot{\zeta} - H\alpha \right) - \frac{1}{a^{2 }}\partial ^{2 }\beta\,, \\
+K^{(2) } &= 3 \left( H\alpha ^{2 }-\alpha \dot{\zeta} \right) + \frac{2 \zeta + \alpha }{a^{2 }}\partial ^{2 }\beta - \frac{1}{a^{2 }}\partial _{i}\zeta \partial ^{i }\beta\,.  
+\end{aligned}
+$$<h2 id="把展开后的---3-rkk-_ij--代入到约束方程中解出-alphabeta-">把展开后的 $ \ ^{(3) }R,K,K _{ij}$  代入到约束方程中，解出 $\alpha,\beta$ .
+</h2><ul>
+<li>把微扰项带入到动量约束方程 $D _{i}\left( K^{i } _{;j}-\delta ^{i } _{;j}K \right)=0$ ，这里注意背景层面 $K^{{0}i } _{;;j}-K\delta ^{i } _{;j}\propto \delta ^{i } _{;j}$ ，因为</li>
+</ul>
+$$
+D _{i}\delta ^{i } _{\;j} = \partial _{i}\delta ^{i } _{\;j}\,,
+$$<p>在线性阶、平直 FLRW 背景上，协变导数与普通导数的差别只会产生更高阶项，所以可以把协变导数转化为普通导数，即</p>
+$$
+\begin{aligned}
+D _{i}\left(  K^{i } _{\;j}-\delta ^{i } _{\;j}K \right)=0 \Leftrightarrow \partial _{i}\left(  K^{i } _{\;j}-\delta ^{i } _{\;j}K \right)=0  \\
+\implies \partial _{i}\left( K^{(1) i} _{\quad j}-\delta ^{i } _{\;j}K^{(1) } \right) =0\,.
+\end{aligned}
+$$<p>
+最终有</p>
+$$
+\alpha = \frac{\dot{\zeta}}{H}\,. \tag{$\star$}
+$$<ul>
+<li>把微扰项带入到能量约束方程 $\frac{M _{p}^{2 }}{2} \left[  \ ^{(3) }R - \left(K _{ij} K^{ij }-K^{2 } \right)  \right] = \left( \frac{1}{2N^{2 }}\dot{\phi}^{2 } + V(\phi) \right)$ ，展开到一阶，左边为</li>
+</ul>
+$$
+LHS \simeq 2M _{p}^{2 }\left[ - \frac{1}{a^{2 }}\partial ^{2 }\zeta + 3 H \dot{\zeta} - 3H^{2 } \alpha - H  \frac{\partial^{2 }\beta}{a^{2 }} \right] \,,
+$$<p>右边</p>
+$$
+RHS = \frac{1}{2(1+\alpha)^{2 }}\dot{\phi}^{2 } + V(\phi) \simeq \frac{1}{2}\left( 1-2\alpha \right)\dot{\phi}^{2 }+V(\phi)\,, 
+$$<p>一阶项只有 $-\alpha \dot{\phi}^{2 }$ ，再根据背景方程 $\dot{\phi}^{2 } = -2M _{p}^{2 }\dot{H}$，最终有</p>
+$$
+\partial ^{2 }\beta = - \frac{1}{H}\partial ^{2 }\zeta + \epsilon _{H}a^{2 }\dot{\zeta}\,.\tag{$\star$}
+$$<h2 id="把展开后的---3-rkk-_ij--代入到作用量中">把展开后的 $ \ ^{(3) }R,K,K _{ij}$  代入到作用量中
+</h2><ul>
+<li>标量场</li>
+</ul>
+<p>这里需要利用背景方程</p>
+$$
+\begin{aligned}
+\dot{H} = -4\pi G(\rho + p) &\implies \dot{\phi} ^{2 }= -2M _{p}^{2 } \dot{H} \,,\\
+-M _{p}^{2 }\left( 2\dot{H}+3H^{2 } \right) = \dot{\phi}^{2 }-\left( \frac{1}{2}\dot{\phi}^{2 } + V \right)&\implies  V=M _{p}^{2 }\left( 3H^{2 }  + \dot{H}\right) \,.
+\end{aligned}
+$$<p>体积元展开</p>
+$$
+\sqrt{ h }=a^{3 }\mathrm{e}^{ 3\zeta } \simeq a^{3 }\left( 1+3\zeta + \frac{9}{2}\zeta ^{2 } \right) \,,
+$$<p>
+最后把作用量展开为，其中二阶项为</p>
+$$
+\frac{\mathcal{L} _{\phi}^{(2) }}{M _{p}^{2 }} = a^{3 }\left[ -\dot{H}\alpha ^{2 } - 9H^{2 }{\color{Green} \alpha \zeta  }- \left( \frac{27}{2}H^{2 }+9\dot{H} \right){\color{red} \zeta ^{2 } }  \right] \,.
+\tag{$\star$}
+$$<ul>
+<li>曲率项</li>
+</ul>
+$$
+\begin{aligned}
+\mathcal{L} _{R} &= M _{p}^{2 }N\sqrt{ h } \ ^{(3) }R \\
+&\simeq -2M _{p}^{2 }\left( 1+\alpha + 3\zeta \right) a \left[ \partial ^{2 }\zeta - 2\zeta \partial ^{2 }\zeta + \frac{1}{2}(\partial \zeta)^{2 } \right] \,,
+\end{aligned}
+$$<p>利用分部积分 $\zeta \partial ^{2 }\zeta\to -(\partial \zeta)^{2 }$ ，最终二阶项为</p>
+$$
+\frac{\mathcal{L} _{ R}^{(2) }}{M _{p}^{2 }} = 2a\left( \frac{1}{2}(\partial \zeta) ^{2 } -\alpha \left( \partial ^{2 }\zeta \right)   \right) \,. \tag{$\star$}
+$$<ul>
+<li>外曲率动能项
+外曲率动能部分 $\mathcal{L}_K$ 为
+
+$$\mathcal{L}_K = \frac{M_p^2}{2} N\sqrt{h} (K _{ij}K^{ij} - K^2) = \frac{M_p^2}{2} \frac{\sqrt{h}}{N} (E _{ij}E^{ij} - E^2)$$</li>
+</ul>
+<p>其中 $E^i _{;j} \equiv (H+\dot{\zeta})\delta^i _{;j} - a^{-2}\mathrm{e}^{-2\zeta}D^iD_j \beta$。对其作迹与平方的二阶展开，其中</p>
+$$
+E _{ij}E^{ij } = E^{i } _{\;j}E^{j } _{\;i} = 3\left( H+\dot{\zeta} \right)^{2 } - 2 \left( H+\dot{\zeta} \right)a^{-2 }\mathrm{e}^{ -2\zeta } D^{2 }\beta + a^{-4 }\mathrm{e}^{ -4\zeta }\left( D^{i }D _{j}\beta \right)^{2 }\,,
+$$<p>以及</p>
+$$
+E^{2 } = 9 \left( H+\dot{\zeta} \right)^{2 } - 6\left( H+\dot{\zeta} \right)  a^{-2 }\mathrm{e}^{ -2\zeta } D^{2 }\beta + a^{-4 } \mathrm{e}^{ -4\zeta }\left( D^{2 }\beta \right) ^{2 }\,,
+$$<p>因此</p>
+$$
+E _{ij}E^{ij }-E^{2 } = -6\left( H+\dot{\zeta} \right)^{2 } +4\left( H+\dot{\zeta} \right)  a^{-2 }\mathrm{e}^{ -2\zeta } D^{2 }\beta + a^{-4 } \mathrm{e}^{ -4\zeta }\left[\left( D^{i }D _{j}\beta \right)^{2 } -\left( D^{2 }\beta \right) ^{2 } \right] \,,
+$$<p>同时</p>
+$$
+\begin{aligned}
+D _{i}D _{j}\beta &=\partial  _{i }\partial _{j}\beta - \partial _{j}\zeta \partial _{i}\beta - \partial _{i}\zeta \partial _{j}\beta + \delta _{ij}\partial ^{k } \zeta \partial _{k}\beta\,, \\
+D^{2 }\beta &= \partial ^{2 }\beta + \partial ^{k }\zeta \partial _{k}\beta\,.
+\end{aligned}
+$$<p>代入 $E _{ij}E^{ij }-E^{2 }$ 中，其中 纯空间全导数项 $\partial_i\partial_j\beta \partial^i\partial^j\beta - (\partial^2\beta)^2 = \partial_i (\dots)$ 在全空间积分后直接为零，被舍弃，最终乘以体积因子 $\frac{\sqrt{h}}{N} \simeq a^3(1 - \alpha + \alpha^2 + 3\zeta - 3\alpha\zeta + \frac{9}{2}\zeta^2)$，提取纯二阶项</p>
+$$
+\begin{aligned}  
+\frac{\mathcal{L}_K^{(2)}}{M_p^2} =& -3H^2 a^3 \alpha^2 + 9H^2 a^3 \alpha\zeta - \frac{27}{2}H^2 a^3 \zeta^2 \\  
+& + 6H a^3 \alpha\dot{\zeta} - 2H a \alpha\partial^2\beta  {\color{red} -18H a^3 \zeta\dot{\zeta} } + {\color{orange} 6H a \zeta\partial^2\beta }   \\
+& {\color{orange} - 4H a \zeta\partial^2\beta + 2H a (\partial_k\zeta)(\partial^k\beta) } - 3 a^3 \dot{\zeta}^2 + 2 a \dot{\zeta}\partial^2\beta + \text{边界项}  \\[6pt]
+ & = -3H^2 a^3 \alpha^2 + 9H^2 a^3 {\color{Green} \alpha\zeta } + 6H a^3 \alpha\dot{\zeta} - 2H a \alpha\partial^2\beta \\
+&\qquad +{\color{red} \zeta ^{2 } }\left[ -\frac{27}{2}H^{2 }a^{3 } + 27 a^{3 }H^{2 } +9 \dot{H} \right]  \\
+&\qquad - 3 a^3 \dot{\zeta}^2 + 2 a \dot{\zeta}\partial^2\beta
+\end{aligned} \tag{$\star$}
+$$<p>其中
+</p>
+$$
+{\color{red} - 18H a^3 \zeta\dot{\zeta} \to  a^{3 }\left( 27H^{2 } + 9 \dot{H} \right)\zeta ^{2 }\,. }
+$$<p>将 $\mathcal{L}_\phi^{(2)}, \mathcal{L}_R^{(2)}, \mathcal{L}_K^{(2)}$ 相加，把 $\zeta ^{2 },\alpha \zeta$ 项抵消掉后，有</p>
+$$
+\begin{aligned}
+\frac{\mathcal{L}^{(2)}}{M_p^2 } &= -a^3(\dot{H} + 3H^2)\alpha^2 + 6H a^3 \alpha\dot{\zeta}+ 2a(\underbrace{ \dot{\zeta} - H\alpha } _{ =0 })\partial^2\beta- 3a^3\dot{\zeta}^2 \\
+ &\qquad+ a(\partial\zeta)^2 - 2a\alpha\partial^2\zeta\\[6pt]
+&=-a^3(\dot{H} + 3H^2)\alpha^2 + 6H a^3 \alpha\dot{\zeta} - 3a^3\dot{\zeta}^2 + a(\partial\zeta)^2 - 2a\alpha\partial^2\zeta  \\
+&=a^3 (-\dot{H} - 3H^2) \frac{\dot{\zeta}^2}{H^2} + 6a^3 \dot{\zeta}^2 - 3a^3\dot{\zeta}^2 + a(\partial\zeta)^2 - 2a \frac{\dot{\zeta}}{H} \partial^2\zeta  \\
+& = a^{3 }\left( -\frac{\dot{H}}{H^{2 }} \right) \dot{\zeta}^{2 }+ a(\partial\zeta)^2 - 2a \frac{\dot{\zeta}}{H} \partial^2\zeta
+\end{aligned}
+$$<p>处理最后一项 $-2a \frac{\dot{\zeta}}{H}\partial^2\zeta$，先进行空间分部积分，再进行时间分部积分：</p>
+$$
+\begin{aligned}
+ \int \mathrm{d}t\mathrm{d}^3x \left( -2 \frac{a}{H} \dot{\zeta}\partial^2\zeta \right) &= \int \mathrm{d}t\mathrm{d}^3x \left( 2 \frac{a}{H} \partial_i\dot{\zeta}\partial_i\zeta \right) = \int \mathrm{d}t\mathrm{d}^3x \left[ \frac{a}{H} \frac{\mathrm{d}}{\mathrm{d}t}(\partial_i\zeta)^2 \right]\\
+&= -\int \mathrm{d}t\mathrm{d}^3x \; \frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{a}{H}\right) (\partial_i\zeta)^2 \\
+\implies& a(\partial\zeta)^2 - a\left( 1 - \frac{\dot{H}}{H^2} \right)(\partial\zeta)^2 = a \left( \frac{\dot{H}}{H^2} \right) (\partial\zeta)^2
+\end{aligned}
+$$<p>最终得到曲率扰动 $\zeta$ 表示的二阶作用量</p>
+$$
+S_\zeta^{(2)} = M_p^2 \int \mathrm{d}t\, \mathrm{d}^3x\, a^3 \epsilon _{H}  
+\left[  
+\dot{\zeta}^2 - \frac{(\partial \zeta)^2}{a^2}  
+\right]\,.
+$$<p>
+其中 $\epsilon _{H} = -\frac{\dot{H}}{H^{2 }}$ .</p>
+<h2 id="参考资料">参考资料：
+</h2><blockquote>
+<p><a class="link" href="https://arxiv.org/abs/0907.5424"  target="_blank" rel="noopener"
+    >TASI Lectures on Inflation</a></p>
+<p><a class="link" href="http://dx.doi.org/10.1088/0253-6102/62/1/19"  target="_blank" rel="noopener"
+    >Inflation, Cosmic Perturbations and Non-Gaussianities</a></p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/2501.14681-mukhanov-sasaki%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%B1%BB%E6%AF%94/">
+        
+        
+            <div class="article-image">
+                <img src="/p/2501.14681-mukhanov-sasaki%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8A%9B%E5%AD%A6%E7%B1%BB%E6%AF%94/IMAGE.c6dfa155506e19d0f821afe42d29070a_hu_2793128fc5ee1721.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 2501.14681-Mukhanov-Sasaki方程的力学类比"
+                        
+                        data-hash="md5-xt&#43;hVVBuGdD4Ia/kLSkHCg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2501.14681-Mukhanov-Sasaki方程的力学类比</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%A0%87%E9%87%8F%E8%AF%B1%E5%AF%BC%E5%BC%95%E5%8A%9B%E6%B3%A2/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E6%A0%87%E9%87%8F%E8%AF%B1%E5%AF%BC%E5%BC%95%E5%8A%9B%E6%B3%A2/wallhaven-9m7kwd.9378bcfd85f1578a618df5bb5c7dd6ab_hu_e269b823bbb2b0e4.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 标量诱导引力波"
+                        
+                        data-hash="md5-k3i8/YXxV4phjfW7XH3Wqw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">标量诱导引力波</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-strong_coupling/wallhaven-k7jmg6.27ed7e8dcf3d67af15d53a7e626ce8c4_hu_ac969899f65f5ae.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 论文笔记-strong_coupling"
+                        
+                        data-hash="md5-J&#43;1&#43;jc89Z68V1Tp&#43;YmzoxA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">论文笔记-strong_coupling</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="Dawn-19/Dawn-19.github.io"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 Dawn-19
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
